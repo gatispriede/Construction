@@ -1,0 +1,16 @@
+# Photo source data — kept locally, not versioned.
+#
+# Photos-1-001.zip is 100 MB, which is GitHub's hard per-file limit, and
+# Public/extracted/ is the same 18 images unpacked — another 100 MB of exact
+# duplicates. The model was built from them and every measurement they gave up
+# is recorded in model/params.json with a `src` note, so the repo does not need
+# the pixels to be reproducible.
+Public/Photos-1-001.zip
+Public/extracted/
+
+# Working copies of the same photos.
+refs/photos/
+
+# The one oversized drawing: 9.9 MB of scanned land survey. The other 11
+# paperwork PDFs are 121-667 KB and stay in.
+Public/paperwork/zemes robezu plans -paligeka ievietota.pdf

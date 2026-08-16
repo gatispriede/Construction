@@ -1,0 +1,35 @@
+# Construction — structural model
+
+A 3D model and sketch set of an in-progress house, built to work through outstanding
+stability and durability questions before they get closed up behind finishes.
+
+## Status
+
+Awaiting reference material. Nothing is modelled yet.
+
+## Layout
+
+```
+refs/photos/     site photos (input)
+refs/plans/      drawings, if any (input)
+docs/            checklists, assumptions, findings
+model/           parametric geometry + browser viewer
+```
+
+## Start here
+
+- [What to send](docs/photo-checklist.md) — the shots and the six numbers needed to get to real scale.
+
+## How this works
+
+1. Photos and key dimensions go in.
+2. Geometry is written as parameters (`model/params.json`), not hand-placed vertices —
+   so a corrected measurement re-renders the whole model instead of triggering a rebuild.
+3. The viewer renders structure by layer: foundation, floors, walls, roof.
+4. Anything I inferred rather than measured is recorded in `docs/assumptions.md`
+   and shown in the viewer, so a conclusion never rests on an invisible guess.
+5. Structural observations land in `docs/findings.md`, each tied to the geometry it came from.
+
+Load calculations produced here are for locating and reasoning about problems.
+Anything that ends up load-bearing should be signed off by a local structural engineer —
+codes are jurisdictional and I don't know yours yet.

@@ -1,0 +1,478 @@
+{
+ "_note": "Dimensions in metres. Two states are modelled: 'approved' (per the submitted paskaidrojuma raksts and drawings) and 'built' (measured/observed on 2026-08-14). The viewer can show either. 'src' marks provenance — see docs/assumptions.md.",
+ "project": {
+  "address": "Dārza iela 10, Sigulda, Latvia",
+  "cadastre": "8015 002 3804",
+  "classification": "I grupa — mazēka, single storey, up to 60 m2",
+  "use": "Noliktava dārza instrumentiem — garden tool store",
+  "src": "Skaidrojošais apraksts2.pdf"
+ },
+ "approved": {
+  "plan": {
+   "length": 10.0,
+   "width": 6.0
+  },
+  "area": 60.0,
+  "eavesHeight": 3.3,
+  "ridgeHeight": 7.7,
+  "roofRise": 4.0,
+  "rafterSlopeLength": 6.0,
+  "roofLength": 11.0,
+  "gableOverhang": 0.5,
+  "foundation": "Betona konstrukcija ar metāla armējumu — reinforced concrete",
+  "floor": "Betona — concrete",
+  "walls": "Koka stāvbūve: pamatguļbaļķu vainags, stāvbaļķi, augšējais guļbaļķu vainags, virsū sasienošas brusas ēkas platumā",
+  "roofStructure": "Koka spāru konstrukcija, divslīpu — timber rafters, dual pitch",
+  "roofCovering": "Metāla, pelēkā krāsā — grey metal",
+  "timberTreatment": "insecticide + fire retardant",
+  "src": "given — paperwork"
+ },
+ "plan": {
+  "length": 9.31,
+  "width": 6.0,
+  "src": "given - measured 2026-08-14, outer face to outer face"
+ },
+ "heights": {
+  "pier": 0.2,
+  "sillCourse": 0.185,
+  "sillCourses": 2,
+  "post": 2.7,
+  "plateCourse": 0.185,
+  "plateCourses": 2,
+  "frontPlateCourses": 1,
+  "girtBottom": 2.19,
+  "girtDepth": 0.18,
+  "src": "given - 3.44 m from the underside of the timber to the top of the wall. With 2.70 m posts that puts each of the 4 log courses at 185 mm, not the 150 mm nominal. Front gable carries one plate course fewer.",
+  "plannedTopCourse": 0.05,
+  "measuredTimberHeight": 3.44,
+  "_girtNote": "Girt bottom at 60% of the post height above the sill, photo-read from 20260814_155048.jpg and _155004.jpg where it sits clearly above mid-height (roughly 57-64% in two views). Was 1.50 m, which put it at 34%.",
+  "_plannedTopCourse": "50 mm levelling course, ripped from 50x250 into 50x150 (wall width) with 50x100 as byproduct. Let into the existing wall top, not stacked on it. 6 boards."
+ },
+ "sections": {
+  "post": [
+   0.179,
+   0.15
+  ],
+  "sill": [
+   0.15
+  ],
+  "plate": [
+   0.15
+  ],
+  "girt": [
+   0.05,
+   0.1
+  ],
+  "brace": [
+   0.1,
+   0.14
+  ],
+  "joist": [
+   0.1,
+   0.25
+  ],
+  "rafter": [
+   0.05,
+   0.15
+  ],
+  "src": "photo — hewn timbers are irregular, these are representative means",
+  "postRange": "0.15-0.25 wide, each one different (hand-hewn salvage); 0.25 nominal used because it is what makes the wall run close out",
+  "_girtNote": "100 x 50 given - 50 mm through the wall, 100 mm deep. Was assumed 140 x 180.",
+  "wallThickness": 0.15,
+  "_thickness": "Walls are 150 mm through. Post along-wall dimension 179 mm is the average that makes the measured bays close on 9.31 m.",
+  "_heights": "Course heights come from heights.sillCourse / heights.plateCourse ONLY. They used to be duplicated here at 150 and disagreed with the 185 there, leaving a 70 mm gap between sill and post.",
+  "_rafter": "50x150, dropped from 50x250 on 2026-08-15. The purlins break the 5.10 m backspan into two 2.55 m spans, so the rafter was never close to working: at 150 it runs 3.05 MPa against 16.6 (factor 5.4) and deflects 1.0 mm against an 8.5 mm limit. It is also BETTER for lateral-torsional buckling - h/b drops from 5.0 to 3.0 and kcrit goes from 0.827 to 0.992, so no intermediate restraint is needed. Ridge drops 0.17 m."
+ },
+ "bays": {
+  "longWallClearGaps": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.7,
+   1.0,
+   1.0
+  ],
+  "gableWallPosts": 7,
+  "nominalPostWidth": 0.179,
+  "_note": "9 posts, 8 clear gaps summing 7.70 m. With a 9.31 m wall that makes the posts average 179 mm - inside your 150-250 mm range. The 7-gap reading needed 326 mm posts, so there is an eighth gap of about 1 m.",
+  "src": "derived from the measured 9.31 m wall plus your gap list"
+ },
+ "piers": {
+  "spacing": 1.2,
+  "diameter": 0.3,
+  "depth": 1.2,
+  "material": "cast concrete with steel mesh reinforcement",
+  "type": "bored pile",
+  "src": "given 2026-08-15 - CORRECTS the earlier reading. The model previously had 250x250 dry-laid clay brick sitting on grade, taken from photographs. It is 300 mm diameter cast concrete, 1.2 m deep, reinforced.",
+  "_capacity": "Base area 0.0707 m2, shaft 1.13 m2. At 1.2 m depth in Latvian sandy/silty till allowable base pressure is 150-250 kPa, not the 50-75 kPa available at grade. End bearing 10.6-17.7 kN plus shaft friction 17-28 kN = 28-46 kN per pile, against 9.8 kN on a plain pile and 19.1 kN under a strut frame at ULS. Factor 1.4 to 2.4 on the worst pile.",
+  "_frost": "1.2 m IS the Latvian frost depth, so the base sits at the frost line rather than comfortably below it - the code minimum, not a margin. The mechanism that matters for a slender pile is ADFREEZE on the shaft, not heave under the base, and it threatens the LIGHTLY loaded piles, not the heavy ones. That is the opposite of the settlement risk. Mitigation: a smooth shaft, or a bituminous/polythene slip sleeve over the top 1.0 m.",
+  "_supersedes": "F1 and F2 were both written on the brick-on-grade premise and are now wrong.",
+  "sillAnchor": {
+   "size": "M12",
+   "onePer": "pile",
+   "src": "given 2026-08-15 - lowest wall course screwed into the concrete",
+   "_capacity": "Demand is trivial: 1.07 kN per anchor in uplift (F6 door-open, 9.7 kN per long wall over ~9 anchors) and 1.81 kN in shear (16.3 kN base shear per wall). An M12 in C20/25 gives 7-10 kN tension and 6-8 kN shear.",
+   "_washer": "USE 60x60 WASHERS MINIMUM. The anchor is not the weak link - the washer bearing on the sill is. At fc,90,d 1.73 MPa a 40x40 washer crushes the timber at 2.50 kN and a 50x50 at 4.06 kN, both below what the anchor can deliver. 60x60 gives 5.96 kN, 80x80 gives 10.8 kN."
+  },
+  "_frostNowMatters": "Anchoring the sill to the piles REMOVES the building's ability to ride out frost heave. Loose on dry-laid brick a heaving support just lifts off the frame. Bolted, 28-42 kN of adfreeze uplift goes straight into the sill - and nothing in the connection stops that: a 60x60 washer yields at 6.0 kN. Either the sill splits, the anchor pulls, or the corner lifts. The slip sleeve over the top 1.0 m of shaft is therefore no longer optional; it is what protects the anchors. Fit it before backfill is settled."
+ },
+ "joists": {
+  "direction": "across-width",
+  "cantilever": 0.0,
+  "src": "given - 100x250 ties, flush with the outer wall faces, notched 50 mm each end. NOT YET INSTALLED as of 2026-08-14 - still in the yard, so they draw on stock.",
+  "maxSpacing": 0.6,
+  "_spacing": "600 mm max, evenly divided: 17 ties at 576 mm. Was one tie per post at 1151 mm, which deflected 45.6 mm (L/132) under loft storage against a 24 mm limit. Halving the spacing halves the load per tie and brings it to 22.8 mm (L/263). 0.60 exactly gives 16 ties at 614 mm and 24.3 mm, 0.3 mm over - so round the count UP, not down. 576 mm also lets 18 mm OSB span the deck instead of 22 mm.",
+  "_offPost": "At 576 mm the ties no longer land on posts; every other one lands mid-bay and the plate carries it. Plate 150x185 over a 1.15 m bay under a 3.68 kN reaction runs at 1.2 MPa against 14.8 - fine.",
+  "spliceClashes": [
+   6,
+   8
+  ],
+  "_spliceClash": "J6 (x -1.727) sits 72 mm from the upper-layer splice at -1.655, and J8 (x -0.576) sits 79 mm from the lower-layer splice at -0.655. EN 1995 wants 7d = 98 mm end distance for a loaded M14. Lower and upper splices are never closer than 1.0 m to each other, so at both ties the OTHER plate layer is continuous and the load has a path - but strap those two splices (F16 detail) BEFORE bolting the ties down, not after. Alternative if you would rather not have the detail at all: 19 ties at 512 mm clears every splice by 120 mm and drops deflection to 20.3 mm, for 2 more boards.",
+  "endNotch": 0.05,
+  "installed": false
+ },
+ "plateOverhang": {
+  "gableEnd": 0.5,
+  "asBuiltLower": 0.5,
+  "asBuiltUpper": 1.0,
+  "src": "measured - lower plate course projects 0.50 m past each gable, upper 1.00 m.",
+  "_cutBack": "The upper course was run 1.00 m specifically to carry a 1.0 m verge. Bringing the verge in to 0.50 m means CUTTING THE UPPER COURSE BACK to 0.50 m at all four corners - 4 cuts. Left long it projects 0.50 m past the roof edge with nothing over it and will rot. This is work already done being undone, and it is the real cost of shortening the verge.",
+  "_notStructural": "F9 was about a 4.0 m purlin cantilever with NO gable bearing: 38.7 MPa and 113 mm droop. The gable studs fixed that. At 1.0 m the verge cantilever ran 2.4 MPa and 0.4 mm - comfortable. Shortening to 0.50 m is a material and appearance decision, not a structural fix."
+ },
+ "opening": {
+  "wall": "front",
+  "width": 3.0,
+  "height": 2.8,
+  "src": "width given (~3 m). Height scaled from the approved front elevation, which shows an opening ~2.6 m wide and ~3.1 m tall in a 3.70 m wall — CONFIRM height on site.",
+  "lintel": "none - the single 220x185 front plate course spans the 3 m opening"
+ },
+ "roof": {
+  "pitchDeg": 54.0,
+  "rafterFoot": "wallPlate",
+  "tailSlopeLength": 0.9,
+  "bearingOnWall": 0.05,
+  "bearingOnPurlin": 0.05,
+  "ridgeLength": 10.31,
+  "rafterSpacing": 0.576,
+  "src": "given - rafters 50x250x6.0 m, bearing 50 mm on the top wall beam. Backspan to the wall is 5.10 m, leaving 0.90 m of tail past it.",
+  "rafterTotalLength": 6.0,
+  "_ridgeNote": "9.31 m building + 0.50 m verge overhang each end. Was 11.31 m at a 1.0 m verge; shortened 2026-08-15 at owner's request. 0.50 m is also the approved figure.",
+  "rafterSetout": "oneBesideEachTie",
+  "_setout": "One rafter beside each tie. The tie spacing IS the rafter spacing now that ties are at 576 mm - at the old 1151 mm it took two rafters per tie bay to get there. Every rafter now has a tie against it instead of every second one, so every rafter foot has a direct thrust path into a tie rather than going via the plate.",
+  "ridgeSection": [
+   0.05,
+   0.25
+  ],
+  "ridgeDetail": "Rafters cut square at the top so the outer top corners meet; the triangle below is cut off and the rafters lap onto the 50x250x11 m ridge purlin, screwed through.",
+  "battens": {
+   "section": [
+    0.025,
+    0.1
+   ],
+   "spacing": 0.3,
+   "_note": "25x100 at 300 mm. Changed from 20x100 on 2026-08-15. Two reasons: sheet screws bite 25 mm instead of 20 - at ~200 mm rib spacing most fixings fall BETWEEN counter-battens, so the batten is all they get - and it puts the whole job on ONE thickness (25x100 roof battens, 25x50 counter-battens, 25x50 wall battens) instead of three to keep apart on site.",
+   "_noMixing": "Battens set the plane the sheeting lands on. A 5 mm step where 20 mm meets 25 mm telegraphs through the sheet as visible waves and preloads the fixings at the step. You cannot mix batten thicknesses on one slope - this is a defect, not a tolerance.",
+   "_screws": "25 mm gives proper hold. At 20 mm the numbers passed - 0.05 kN per screw over a 200x298 mm tributary, 0.15 kN in the corner suction zones, against 800-1200 N pull-over - but it was the thinnest link in the fixing chain.",
+   "counterBattenSection": [
+    0.025,
+    0.05
+   ],
+   "_counterBatten": "25 x 50 - width halved 2026-08-15. The DEPTH is the only structural dimension: it IS the ventilation cavity and must stay >= 25 mm (F21). The width only has to take the batten screws, so 50 is enough and it halves the volume. NOT mixing with the 20 mm battens - different member, different plane, they never meet edge to edge.",
+   "_alignment": "At 50 wide on a 50 wide rafter there is ZERO setting-out tolerance - the counter-batten must land square on the rafter or the fixing misses. Screw the counter-batten to the rafter first, where you can see both, then the battens to the counter-batten.",
+   "_sheetFixings": "Sheet screws land on the BATTEN, and at 200 mm rib spacing most of them fall between counter-battens - so they get 20 mm of timber, not 45. That is fine: uplift per screw is about 0.05 kN over a 200 x 298 mm tributary, even at the 0.84 kPa door-open worst case, and roughly 0.15 kN in the corner suction zones. Well inside pull-out from 20 mm.",
+   "jointOnRafter": true,
+   "_cutting": "Batten joints land ON a rafter line, one piece ending at the rafter centre and the next starting there. Rafter lines are at 576 mm, so every piece is a WHOLE NUMBER OF BAYS. A 6 m board yields 10 bays = 5.76 m, wasting 240 mm (4%). That is a purchasing correction, not a modelling one: 375.4 m short becomes 66 boards, not the 63 you get from dividing by 6.",
+   "_joints": "18 bays per run, so one 5.76 m piece + one 4.55 m piece = 1 joint per run, 42 joints. STAGGER them between adjacent runs so they do not line up in a column up the slope.",
+   "_jointPads": "A 50 mm counter-batten CANNOT take a butt joint: two batten ends meeting on it get 25 mm of bearing each and the screw sits ~12 mm from the end, which splits. A 4-5 mm screw wants 10-15d = 50-75 mm. Screw a 300 mm offcut of 25x50 alongside at each joint - 100 mm of bearing, 50 mm end distance each side. 42 pads x 300 mm = 12.6 m, 3 extra boards.",
+   "_cost": "EUR 119. Only EUR 68 of that is the thicker section; the other EUR 51 is the owner's 57.6 m of 20x100 becoming unusable - you cannot mix 20 and 25 in one roof plane, the step telegraphs through the sheet. The 20 mm is not wasted, it goes to trim, soffit or internal work."
+  }
+ },
+ "purlins": {
+  "count": 2,
+  "section": [
+   0.05,
+   0.25
+  ],
+  "positionOnRafter": 0.5,
+  "queenPostSection": [
+   0.05,
+   0.1
+  ],
+  "src": "given: 2 purlins 50x250 at mid-rafter. No new cross beams - struts land on the wall plate at every tie beam, so the purlin load bypasses the ties.",
+  "bearOnGables": true,
+  "_spans": "With gable bearing at +/-4.5 and frames at -3,-1,1,3 the purlin spans are 1.5, 2.0, 2.0, 2.0, 1.5 m plus a 1.0 m verge cantilever. Max 2.0 m.",
+  "support": "vertical post on the tie under each purlin, plus a diagonal brace out to the wall and a collar tying the two purlin lines together",
+  "strutSection": [
+   0.1,
+   0.1
+  ],
+  "strutsPerSide": 8,
+  "_note": "8 struts per slope, on 8 of the 9 tie beams.",
+  "strutBaseInset": 0.1,
+  "_strutFoot": "Strut foot stands on the tie beam 100 mm in from the outer wall face, so it is fully bearing on the 100 mm wide tie while still sitting essentially over the wall.",
+  "collarSection": [
+   0.05,
+   0.1
+  ],
+  "strutBearsOn": "tie",
+  "_strutBearing": "Strut drops past the tie and bears on the wall plate beside it, so the tie carries no roof load at all. Ties are at 1.18 m centres and 100 mm wide, leaving 1.08 m of clear plate between each pair. Set to 'tie' to land on the tie instead (costs 0.72 kNm and 2.3 mm of sag).",
+  "_sections": "Purlins and ridge stay 50x250 - the rafters bear on them. Everything supporting them (struts, verticals, collars) is 100x100.",
+  "collarAboveTie": 2.25,
+  "_collar": "50x100, dropped from 100x100 2026-08-15. The collar carries about 2 kN axial and nothing else - no transverse load, nothing bears on it. At 2.37 m the 50x100 buckles at 8.7 kN, a factor of 4.4. The strut cannot follow it down: at 2.19 m a 50x100 gives 10.2 kN against a 9.3 kN demand, factor 1.1, so strutSection stays 100x100.",
+  "_evened": "Was 5. Raised to 8 so the load lands on 8 of the 9 posts instead of 5: strut post 12.3 -> 9.4 kN, pier 197 -> 151 kPa. Not needed for capacity - needed so a foundation that is staying as-is settles evenly. F17.",
+  "_verticals": "50x100, not 100x100. They carry 0.06 kN - factor 302 even at 50x100. And they come FREE from the levelling-course rip: ripping 50x250 into 50x150 for the wall top leaves 36 m of 50x100 as byproduct, against 25.8 m of verticals needed.",
+  "_strutBearsOn": "Changed to 'tie' 2026-08-15 at owner's request. The struts and the purlin verticals now all sit ON the ties instead of dropping past them onto the wall plate, so the whole purlin frame sits in one plane. The old note - 'a post onto the tie adds 15 mm of sag to a beam already at its limit' - no longer applies: that was a post near MIDSPAN, and the ties were at 1151 mm deflecting 45.6 mm. The strut foot lands 25 mm inside the tie's bearing point, so it adds 0.36 mm. Tie goes 22.8 -> 23.2 mm against a 24 mm limit. Bearing on the tie top is 0.93 MPa against fc,90,d 1.73. The load drops straight through the tie depth into the plate - no bending path at all."
+ },
+ "loft": {
+  "floorThickness": 0.04,
+  "targetHeadroom": 2.2,
+  "src": "given — 50 mm floor over the 250 mm tie beams, 2.2 m walking height wanted in the middle bay between the rafter supports",
+  "_thickness": "40 mm. Comfortably clear at the 1.06 m clear span between ties - 1.0 mm final against a 3.5 mm limit, 3.7 MPa under a 1.5 kN point load. 32 mm was the minimum; 40 buys real margin for machinery and costs 137 EUR over it."
+ },
+ "site": {
+  "region": "Sigulda, Latvia",
+  "frostDepth": 1.2,
+  "snowGround_kPa": 1.5,
+  "windBasic_ms": 24,
+  "boundaryDistance": 7.0,
+  "src": "location given by paperwork; loads are EN 1991 Latvian NA typical values, to be confirmed"
+ },
+ "blocking": {
+  "rows": 3,
+  "thickness": 0.05,
+  "depth": 0.1,
+  "stagger": 0.07,
+  "fixing": "screwed through the tie from both faces; staggered so opposing screws miss each other",
+  "src": "given - 3 rows of 50 mm spacer blocks between the ties, screwed from both sides",
+  "_depth": "50x100, dropped from full 250 depth 2026-08-15. The tie does not need lateral restraint at all - 100x250 over 6 m has lambda,rel 0.749 and kcrit 1.00, it is too stocky for LTB. The blocking is there to hold the ties upright BEFORE the deck goes on, and to give a nailing edge where OSB sheets butt. Both jobs are at the TOP of the tie, so it sits flush with the top face. Free from the rip byproduct; saves 4 boards of 50x250.",
+  "position": "topFlush"
+ },
+ "braces": {
+  "longWall": 4,
+  "backGable": 4,
+  "frontGable": 3,
+  "_note": "As built. Front gable has 3 because bracing there is unfinished - it wants a 4th.",
+  "src": "given and photo-confirmed in 20260814_155048.jpg",
+  "geometry": "foot of a post up to the girt, within an end bay",
+  "upperPlanned": true,
+  "_upper": "Matching girt-to-top-corner braces are intended but not yet cut; shown as proposed."
+ },
+ "advice": {
+  "frostDepth": 1.2,
+  "padSize": 0.4,
+  "boltDia": 0.014,
+  "boltSpacing": 0.12,
+  "strapDrop": 0.3,
+  "windBraceRun": 2.5,
+  "_legend": "YELLOW = must. WHITE = required by the all-directions wind check. Orange precautions dropped 2026-08-14 - roof-plane bracing became mandatory (white), the extra purlin struts were superseded by the two-panel X, and the verge outriggers were declined.",
+  "src": "recommendation, not as-built",
+  "girderSection": [
+   0.1,
+   0.1
+  ],
+  "_girder": "100x100, BOUGHT - changed 2026-08-15 at owner's request so the girder no longer eats 100x250. It works now only because the ties moved to 576 mm: the girder is screwed to every tie it crosses, which at 576 mm in x is a restraint every 917 mm along the diagonal. lambda 31.8, kc 0.939, capacity 136 kN against a 7.1 kN demand. At the old 1151 mm tie spacing the restraint was 1834 mm, kc 0.633 - which is why the schedule previously insisted on 100x125. Fixing to EVERY crossing is not optional.",
+  "reinforceSection": [
+   0.1,
+   0.125
+  ],
+  "gableStudSection": [
+   0.1,
+   0.1
+  ],
+  "_gableStud": "100x100. NOT an axial check - the stud spans 3.54 m carrying wind pressure on the gable, so bending governs. At 50x100 the combined ratio is 1.03 and deflection 25.0 mm against an L/200 limit of 17.7 mm; both fail. 100x100 gives 0.37 and 12.5 mm. It also cannot be ripped from 100x250 any more - the 17-tie run consumes every 100x250 on site.",
+  "gableStudSpacing": 0.6,
+  "_white": "Required by the all-directions wind check. Gable studs frame the triangle above the eaves; roof-plane diagonals carry its 12.9 kN along the roof into the walls. 100x100 - a 100x50 diagonal buckles at 2.4 kN against 7.17.",
+  "maxPieceLength": 6.0,
+  "_maxLength": "Longest available piece is 6.0 m. The wind girder was 6.73 m over 3 tie bays; at 1 bay it is 5.83 m, fits, and carries LESS force (6.14 vs 7.08 kN) because the diagonal is steeper. Plates, purlins and ridge all exceed 6 m and must be spliced - see docs/findings.md F16.",
+  "spliceScrews": "4 x 6x200 each side of every joint, spread over ~600 mm, staggered",
+  "windGirderLayout": "two-panel X - each diagonal gable corner to mid-wall, 7.36 m, 4 off",
+  "_roofBracing": "Owner decision 2026-08-14: the 4 corner-to-ridge roof-plane braces are NOT being fitted. The 12.9 kN gable-triangle load then relies entirely on the metal roof sheeting acting as a diaphragm. See F19.",
+  "_builtUp": "Two 50x100 screwed face to face is NOT a 100x100. EN 1995 Annex B/C: the joint slips, so gamma is 0.06-0.15 over these short lengths and the effective second moment of area is a quarter of solid. At 2.19 m it gives 24-27 kN against 71 kN solid. Still passes the 9.3 kN strut demand at a factor of 2.6-2.9, so it is a valid FALLBACK if 100x100 is not available in 6 m - but it costs more in ripped 50x250 than buying 100x100 and doubles the screwing. Screws at 100 mm, not 200.",
+  "tieToWall": {
+   "detail": "galvanised angle bracket each side of the tie, screwed; 45 deg knee brace below as the second path",
+   "bracketsPerEnd": 2,
+   "screwsPerLeg": 6,
+   "screwSize": "5 x 40 connector screw",
+   "coating": "Z275 hot-dip galvanised",
+   "src": "owner 2026-08-15 - through-bolting 700 mm of tie plus wall is not realistic",
+   "_supersedes": "Replaces the 2 x M14 through-rod detail. That needed a 700 mm hole through the 250 mm tie and 450 mm of wall top; the owner's drill reaches 800 mm but the hole is not a realistic site operation.",
+   "_capacity": "Demand 3.13 kN horizontal and 0.92 kN uplift per tie end. A 5x40 connector screw through thin steel gives 0.98 kN design (EN 1995 8.2.3, mode a governs). 6 per leg x 2 brackets = 11.8 kN, factor 3.8. The angle steel itself rates 5-8 kN for a 2.5 mm 90x90, so the pair is 10-12 kN whichever way it is counted.",
+   "_secondPath": "The 45 deg knee braces give the horizontal force an independent route - tie to brace to wall, 320 mm below the plate top - taking most of the 1.96 kN thrust component off the bracket. Neither detail is relied on alone, which is what you want in a joint that cannot be inspected once the loft is decked.",
+   "_notTheNotch": "Do NOT count the 50 mm housing as restraint. The tie runs out to the wall face and on into the building, so the trench is open at both ends along the tie axis. It locates the tie sideways and carries it vertically; it resists nothing along its length.",
+   "_workmanship": "1. Z275 HOT-DIP galvanised, not electroplated - unheated building, Baltic winter, condensation off a metal roof. 2. Manufacturer's hardened connector screws, NOT drywall screws: drywall screws are brittle in shear and this is a pure shear connection, they snap without warning. 3. FILL EVERY HOLE in both legs - the rating assumes it, and a part-filled bracket is an eccentric joint that peels rather than a weaker one. 4. BOTH sides, or the tie rotates about the single bracket and pries the screws out. 5. Knee brace screws SKEWED, 2 into the face and 2 angled - four square screws let the joint hinge, and a hinged knee brace does nothing."
+  },
+  "_gableStudSpacing": "600 mm (588 actual), changed from 800 on 2026-08-15. NOT a strength fix - 800 already passed at combined ratio 0.36 and 12.2 mm deflection. The reason is the CLADDING GRID: gable battens sit on the studs, so at 800 the sheet would land on 600 mm spacing up the wall and 800 across the gable. 600 makes it one grid top to bottom. Costs 10.3 m more 100x100, 2 boards, EUR 37. At 588 mm the tallest stud is now 4.08 m (a stud lands at the centre, where there was none before): combined 0.38, 16.2 mm against an L/200 limit of 20.4 mm."
+ },
+ "plateSplices": {
+  "lowerLayerPieces": [
+   4.5,
+   5.81
+  ],
+  "upperLayerPieces": [
+   3.5,
+   3.0,
+   2.0,
+   1.81
+  ],
+  "_note": "Top plate is not continuous - lower layer 2 pieces, upper 4. The joints are LAP joints with M14 through, and the two courses are bolted to each other with M14 as well. Corrected 2026-08-15: the model previously assumed BUTT joints, which was the basis of F16 as a critical finding.",
+  "src": "given 2026-08-14",
+  "_recut": "Piece lengths restated for the 10.31 m run after the 0.50 m cut-back. The SPLICE POSITIONS are unchanged - lower at -0.655, upper at -1.655, +1.345, +3.345 - because the cut comes off the ends, not the middle. F16a still applies: J6 and J8 still sit 72 and 79 mm from a splice.",
+  "jointType": "lap",
+  "lapLength": 0.3,
+  "boltFromJoint": 0.1,
+  "layersBoltedTogether": true,
+  "_capacity": "Chord demand is 4.46 kN - the along-span component of the 7.1 kN wind-girder diagonal. One M14 in the lap gives 7.1 kN (factor 1.6), two give 14.2 kN (factor 3.2). A butt joint gives zero, which is why F16 was critical. EN 1995 spacing for M14 parallel to grain: a1 = 5d = 70 mm bolt to bolt, a3,t = 7d = 98 mm to a loaded end, a4 = 3d = 42 mm to the edge. Two bolts each side needs 266 mm of lap; 300 mm is specified. The 150 mm plate width allows ONE bolt line only.",
+  "_composite": "Bolting the two 150x185 courses together turns them into a 150x370 section: I goes from 158 to 633 x10^-6 m4, four times stiffer, if the bolts stop slip. Even partial composite action is a large gain and is exactly what F16 asked for."
+ },
+ "cladding": {
+  "thickness": 0.022,
+  "area_m2": 134.5,
+  "spec": "Dekorativo delu apsuvums per the permit; 22 mm boarding",
+  "_note": "Walls 105.3 m2 + gable triangles 29.1 m2 = 134.5 m2, 2.96 m3, ~918 EUR. Not yet ordered."
+ },
+ "rafterSpacers": {
+  "section": [
+   0.05,
+   0.1
+  ],
+  "rows": [
+   "eaves",
+   "purlin"
+  ],
+  "_why": "NOT for lateral-torsional buckling - kcrit is 0.99 at 50x150, the rafter does not need it. Three other reasons: (a) EN 1995 wants the rafter held upright where it bears on the plate and on the purlin; (b) F19 deleted the roof-plane braces, so the 12.9 kN gable triangle now relies on the sheeting acting as a diaphragm, and sheeting cannot do that unless the rafters are tied to one another; (c) they hold the 576 mm setout while you work. No ridge row - the rafters are screwed to the ridge purlin, which already does it.",
+  "_qty": "2 rows x 20 bays x 2 slopes = 80 spacers, 526 mm long, cut from rafter offcuts.",
+  "_section": "50x100, free. Ripping 42 rafters from 50x250 down to 50x150 throws off 252 m of 50x100; the 80 spacers need 42 m of it. They are not bending members - they hold the rafters upright and tie them together - so 100 deep is ample."
+ },
+ "stair": {
+  "atX": 4.029,
+  "_which": "J16 only, the bay between J15 and the end tie J17. J17 sits at +4.605 and the gable wall at +4.655, so the opening's far edge IS the end wall - the stair runs tight against it and the middle of the loft floor stays clear. Owner decision 2026-08-15.",
+  "openingLength": 2.0,
+  "openingFromY": -1.0,
+  "trimmerSection": [
+   0.05,
+   0.15
+  ],
+  "tailJoistSection": [
+   0.05,
+   0.15
+  ],
+  "_headroom": "The binding constraint is NOT the opening, it is loft headroom. Full standing height exists only within +/-1.23 m of the centre (2.20 m at 1.23 m, 1.82 m at 1.50 m), so the stair has to EMERGE near the middle. Running from the wall at y=-3.0 to y=+1.0 gives a 4.00 m run over a 3.68 m rise: 21 risers at 175 mm, 200 mm going, 41.2 deg. Steep - a domestic stair wants 220 going - but this is a workshop.",
+  "_opening": "Only 2.0 m of opening is needed, not the whole 4.0 m run. The loft floor only blocks your head once you are above 1.88 m of climb, which is the top 49% of the run. The rest of the bay is closed by a tail joist from the trimmer to the wall.",
+  "_structure": "Tail joist 1.9 m delivers 1.09 kN to the trimmer; the trimmer spans 1.151 m between J14 and J16 at 1.7 MPa against 14.8. The rafter at J15 loses its tie, so its 0.98 kN thrust goes into the plate instead - plate bending about the vertical axis is 0.41 MPa. Both negligible.",
+  "_tailJoist": "50x150, not 100x250 - changed 2026-08-15. Over its 1.9 m span it runs 2.77 MPa against 14.8 and deflects 2.3 mm final against a 7.6 mm limit. It is a FLOOR JOIST, not a rafter tie: the tie at J15 is gone entirely and that rafter's thrust already goes into the plate. Trimmer and tail joist together are 3.05 m, so both come out of one ripped 50x250 - which removes 100x250 from the order completely.",
+  "flight": {
+   "risers": 21,
+   "going": 0.2,
+   "width": 0.9,
+   "treadThickness": 0.05,
+   "startY": -3.0,
+   "floorLevel": 0.2,
+   "_status": "SHOWN IN RED, NOT IN THE TAKE-OFF. It bears on a concrete floor that is not poured yet - that comes after the roof is on. Drawn only to check it clears the opening and the rafters. stock.js does not know about it.",
+   "_geometry": "21 risers at 175 mm over a 3.68 m rise, 200 mm going, 4.00 m run, 41.2 deg. Steep: a domestic stair wants 220 going. The run is fixed by loft HEADROOM, not by the opening - full standing height exists only within 1.23 m of the centre, so the flight has to top out there.",
+   "stringSection": [
+    0.05,
+    0.15
+   ],
+   "stringType": "housed",
+   "newelAtMidFlight": true,
+   "treadSection": [
+    0.05,
+    0.25
+   ],
+   "_strings": "50x150 HOUSED, and the mid-flight newel is now MANDATORY, not optional. A cut string is impossible at 150: notching for a 175 mm rise removes 132 mm, leaving 18 mm. Housed keeps the depth but takes the thickness from 50 to ~35 at each housing. Over the full 5.44 m that gives 29.6 MPa and 110 mm of deflection against an 18.1 mm limit - it FAILS. With one newel the span halves: 7.4 MPa and 6.9 mm against 9.1 mm. Passes, but the margin is modest, so the newel is structural, not a handrail post.",
+   "_decideBeforeSlab": "41.2 deg at a 200 mm going is steep - domestic wants 220+. This CANNOT be fixed later: the run is fixed by loft headroom (you must emerge within 1.23 m of the centre) and by the 6 m width. A 220 going needs 4.40 m of run, 0.40 m more than exists, which means a winder or a half-landing - and a landing has to be set out in the slab. Decide before the concrete goes down.",
+   "_material": "2 strings x 5.44 m of 50x250 (2 boards), 20 treads x 0.90 m of 40x250 (3 boards), 1 newel 1.9 m of 100x100. About 0.33 m3, EUR 102. NOT in the current order - it waits for the slab, which waits for the roof.",
+   "_straight": "STAYS STRAIGHT. A turn was considered and rejected: the scarce dimension is the 6 m width, and a landing eats the same 3.85 m the flight needs. Every landing variant came out at 170-209 mm going against 196 mm straight - no better, mostly worse. And a turn is precisely what stops you carrying sheets: a 2.5 m board can round a right angle between 1.2 m widths only ON EDGE, which needs 2.5 m of headroom, and a mid-height landing has 2.04 m under the loft floor. Straight is better for both the pitch and the boards.",
+   "newelSection": [
+    0.1,
+    0.1
+   ],
+   "inTakeOff": true,
+   "_treads": "50x250, NOT 50x150. Strength was never the issue - 50 thick over the 900 mm between strings is 5.4 MPa and 1.33 mm under a 1.5 kN point load. DEPTH is: the going is 200 mm, so a 150 board leaves a 50 mm GAP between consecutive treads and drops the effective going to 150. Open risers need treads to OVERLAP by at least 16 mm. 250 gives 50 mm of overlap. Taken free from the 4 spare 50x250 (18 m needed, 24 m available)."
+  },
+  "omitTies": [
+   16
+  ],
+  "_widened": "REVERTED to one omitted tie. I had sized the opening at 1627 mm on the premise that a 1200 x 2500 board has to pass through horizontally. It does not - carried ON EDGE, 1200 vertical and the long axis up the slope, the board's plan footprint is its THICKNESS. It needs about 250 mm of width including hands, against 1051 mm available. What actually has to fit is the LENGTH: 2500 tilted at 41.2 deg projects 1881 mm against a 2.0 m opening, 119 mm spare. Owner confirmed they carry board vertically.",
+  "_trimmer": "50x150 over the widened 1.727 m span carrying two tail joists: 3.5 MPa, 0.6 mm.",
+  "baseSupport": {
+   "subBase": "50-200 mm rock",
+   "slab": ">=70 mm reinforced concrete",
+   "solePlate": [
+    0.1,
+    1.2
+   ],
+   "_bearing": "No separate foundation needed. 5.6 kN reaches the bottom, 2.8 kN per string. Bearing the 50x250 string end directly is 447 kPa and will craze and dish a 70 mm slab. A 100 x 1200 SOLE PLATE drops it to 47 kPa, against roughly 100-150 kPa locally available. Costs one offcut.",
+   "_slabPrep": "BLIND THE STONE before pouring - 25-50 mm of sand or crushed fines, compacted. 50-200 mm stone has huge voids and 70 mm of concrete poured straight onto it loses half its depth into the gaps with the mesh ending up on the stone. Compact in 200 mm lifts. Mesh on chairs in the middle of the slab. 70 mm is below the usual 100 mm for a ground slab - fine for the stair, marginal for a workshop floor, so thicken to 150 mm under the stair base and wherever a machine will stand.",
+   "_movement": "DO NOT BOLT THE BOTTOM DOWN. The stair top is fixed to the trimmer, which sits on ties on 1.2 m piles; the bottom sits on a slab at grade. Same split as F23 - the slab heaves seasonally, the piles do not, and a stair fixed rigidly at both ends racks every winter. Fix the top properly and let the bottom simply BEAR on a sole plate over a DPC, located against sideways movement only."
+  },
+  "_topPosition": "The flight can START anywhere; where it ENDS is fixed by the roof. Headroom over the top tread: 2.51 m at y=1.0, 2.20 m at y=1.23, 1.82 m at y=1.5, 1.14 m at y=2.0. Top out beyond 1.23 m from the centre and you hit the roof standing on the last tread. That is geometry from the 54 deg pitch and the 3.88 m floor, not a preference - so the stair tops out at y=+1.0 and cannot be pushed further toward the long wall."
+ },
+ "slab": {
+  "material": "reinforced concrete",
+  "underEntrance": true,
+  "apronOutside": 0.5,
+  "src": "given 2026-08-15 - floor slab continues under the entrance and about 0.5 m beyond it",
+  "_mixedSupport": "THE RISK IS MIXED SUPPORT, not capacity. The frame now stands on 300 x 1.2 m piles, below frost, and is BOLTED to them with M12. A ground-bearing slab at grade heaves; those piles do not. If the two entrance jamb posts bear on the slab they move seasonally while the other 24 supports do not - at the most heavily loaded and least supported point in the building, in the wall that is already half missing. Bearing under a jamb is 9 kN over 220x150 = 273 kPa; a domestic slab is not a pad footing and will punch or dish.",
+  "_fix": "PREFERRED: 2 more piles under the jambs, same 300 x 1.2 m, and let the slab float free around them - the frame then stands on one system throughout. Alternative: thicken the slab locally to a 400-500 mm pad under each jamb and insulate the perimeter against heave.",
+  "_apron": "The 0.5 m apron outside is a threshold, not a footing - fine either way. Keep it on a compressible joint against the sill so it cannot lever the frame when it heaves.",
+  "_separation": "Slab stays structurally separate from the frame elsewhere - compressible perimeter joint, never tied to the sill.",
+  "isolation": {
+   "concreteTouchesTimber": false,
+   "barrier": "insulation/membrane between slab and wall (owner: 'poly-' material)",
+   "ventilatedUnderside": true,
+   "drainage": "graded fall away from the building to collect water",
+   "src": "given 2026-08-15",
+   "_serviceClass": "This is what keeps the frame in SERVICE CLASS 2. Every deflection number in the model assumes kdef 0.80. Timber bearing on concrete with no capillary break drifts to service class 3, kdef 2.00, and the tie goes 22.8 -> 36.6 mm against a 24 mm limit. The barrier is not a finish detail, it is load-bearing on the numbers.",
+   "_material": "NAME IT CAREFULLY - 'poly-' splits two ways and they do different jobs. POLYSTYRENE (EPS/XPS) is thermal and compressible, good as a movement joint, but it is NOT a capillary break: water wicks at the joints. POLYETHYLENE (PE) is a damp-proof membrane and IS a capillary break, but is not compressible. At a timber/concrete interface use a bituminous DPC or EPDM strip for the break, and EPS only where a compressible joint is wanted.",
+   "_pierced": "The barrier is pierced 24 times. The sill is bolted to the piles with M12, so at every pile head timber meets concrete at a point and the bolt wicks straight through any sheet. Fit a DPC PAD under the sill at each pile head and seal the anchor where it passes through. This is the detail that gets missed, and it is where sills rot first.",
+   "_ventilation": "Perimeter 30.6 m needs only ~0.046 m2 of opening at 1500 mm2/m - trivially met by leaving the perimeter open. But it must be open on OPPOSITE sides or it does not cross-ventilate; a void open on one side only is a moisture trap."
+  }
+ },
+ "eaves": {
+  "fasciaSection": [
+   0.05,
+   0.15
+  ],
+  "fasciaPieces": 2,
+  "src": "given 2026-08-15 - board at the rafter ends to carry the gutter",
+  "_height": "2 x 150 = 300 mm. ONE board cannot do it: the rafter is 150 deep perpendicular to the slope but cut PLUMB, so the vertical face it presents is 150/cos(54) = 255 mm. A 250 board misses by 5 mm. Adding the batten build-up (25+20)xcos(54) = 26.5 mm gives 282 mm for full cover to the underside of the sheet; 300 leaves 18 mm of adjustment.",
+  "_thickness": "50 mm. Gutter bracket screws want 25 mm minimum; 50 if the brackets fix to the fascia alone rather than through into the rafter end. 20 mm batten stock is NOT suitable here.",
+  "_snowSlide": "Statically the fascia is nothing - a full gutter is 0.10 kN/m over a 576 mm span, 0.02 MPa. The real load is snow SLIDING off a 54 deg roof. The snow load is small (mu1 0.16, 0.24 kPa on plan) but it arrives as an impact when the slab lets go, not as a static load. Mount the gutter LOW so sliding snow passes over it, or fit snow stops. Do not hang a gutter in the slide path of a 54 deg roof.",
+  "_quantity": "2 runs x 10.31 m x 2 pieces = 41.2 m -> 7 boards of 50x150."
+ },
+ "kneeBraces": {
+  "section": [
+   0.05,
+   0.1
+  ],
+  "angleDeg": 45,
+  "count": 32,
+  "length": 0.453,
+  "src": "owner 2026-08-15 - braces below the ties, lowest top-wall course to tie, 45 deg",
+  "_geometry": "Lowest top-wall course bottom 3.270, tie underside 3.590 - 320 mm of rise, so at 45 deg the run is 320 and the brace is 453 mm. Short: this is a corner gusset, not a long knee brace.",
+  "_why": "TRANSVERSE stability, which nothing else provides between the gables. The wind girder fixes longitudinal racking (F0/F16). Across the width, posts + ties + sills form a rectangle with pinned corners - a mechanism - resisted only by the two gable walls and eventually the loft deck. These make every tie a portal frame.",
+  "_capacity": "Wind on the long wall is 1.11 kN per tie bay, half arriving at tie level, so the brace takes 0.78 kN axial at 45 deg. A 50x100 at 453 mm has lambda 31, kc 0.94 and 68.4 kN capacity - a factor of 87. Buckling is irrelevant at this length.",
+  "_connection": "THE CONNECTION IS THE WHOLE DESIGN, not the timber. 0.78 kN axial resolves to 0.55 kN horizontal and 0.55 kN vertical at each end. A 6x100 screw gives about 1.4 kN in single shear, so 3 would do - use 4 each end: 2 into the face and 2 skewed, so the joint cannot rotate open. A knee brace that can hinge at its ends does nothing.",
+  "_material": "32 x 453 mm = 14.5 m of 50x100, free from the rafter rip byproduct (118 m spare before this). One 6 m board yields 13 braces if cut as 45 deg pairs."
+ },
+ "wallBattens": {
+  "section": [
+   0.025,
+   0.05
+  ],
+  "spacing": 0.6,
+  "orientation": "vertical",
+  "sheetOrientation": "horizontal",
+  "src": "owner decision 2026-08-15 - metal wall cladding, horizontal sheet",
+  "_why": "ONE layer. A vertical batten both drains the cavity and carries the sheet, so no counter-batten is needed. Vertical sheeting would need vertical counter-battens PLUS horizontal battens - 93 m + 184 m and EUR 150 against EUR 69.",
+  "_drainage": "The 25 mm depth IS the drained cavity, same as the roof counter-batten. On a roof gravity drains it for you; on a wall only a VERTICAL member does. A horizontal batten laid on the membrane is a shelf that holds water against the frame - that is why the sheet direction decides the whole build-up, not just the look.",
+  "_fixing": "At 600 mm the battens only land on a post every 1151 mm. Between posts they fix to the sill, the girt at 2.19 m and the plate - 3 points over 3.44 m, spans of 1.2-1.6 m. Fine for a batten carrying sheet.",
+  "_gables": "The 24.8 m2 of gable triangle above the eaves is battened too, following the STUDS - which are now at 600 mm to match the wall grid, so the sheet lands on the same spacing top to bottom. A batten sitting on a stud is the rainscreen detail.",
+  "_quantity": "182 m plain wall + 42 m gables and over-head = 225 m of 25x50.",
+  "_corners": "Corners were already covered: the 600 mm grid runs spaced() over the FULL length and width, which puts a station at each end, so every corner gets TWO battens - one on the long-wall face at (+/-4.655, +/-3.012) and one on the gable face at (+/-4.668, +/-3.000). They sit 12.5 mm apart in each direction and form an L, which is the correct detail: each sheet edge lands on its own timber and the corner trim covers the joint.",
+  "_entranceJambs": "ADDED 2026-08-15. The sheet edge stops at the reveal, y = +/-1.50, while the nearest grid batten is at +/-1.80 - 300 mm of edge screwed into air. Two full-height jamb battens fix that. The 270 mm strip of wall ABOVE the opening head (3.37 to 3.64) also gets battens on the grid, otherwise the sheet there spans the full 3.0 m opening with nothing behind it."
+ }
+}

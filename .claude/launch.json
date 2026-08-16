@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "model",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["model/serve.py", "8099"],
+      "port": 8099
+    }
+  ]
+}
