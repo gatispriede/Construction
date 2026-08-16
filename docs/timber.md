@@ -202,14 +202,20 @@ allocation queue in `model/src/stock.js`, and why the last rafters show yellow.
 Board counts have **10% already included** in every line, on top of nesting waste
 that is already inside the raw counts.
 
-| Section | Length | Boards | m³ | € |
-|---|---|---|---|---|
-| 50 × 150 | 6.0 m | **18** | 0.810 | 251 |
-| 100 × 100 | 6.0 m | **21** | 1.260 | 391 |
-| 25 × 100 roof battens | 6.0 m | **84** | 1.260 | 391 |
-| 25 × 50 roof counter-battens | 6.0 m | **46** | 0.345 | 107 |
-| 25 × 50 wall battens | 6.0 m | **65** | 0.488 | 151 |
-| | | **234** | **4.163** | **€1,290** |
+Four sections, four lines.
+
+| Section | Board length | Boards | Total m | m³ | € | What it is |
+|---|---|---|---|---|---|---|
+| 50 × 150 | 6.0 m | **18** | 108 | 0.810 | 251 | levelling course, stair trimmer and tail joist, stair strings, eaves fascia |
+| 100 × 100 | 6.0 m | **21** | 126 | 1.260 | 391 | purlin struts, gable studs, wind girder, stair newel |
+| 25 × 100 | 6.0 m | **84** | 504 | 1.260 | 391 | roof battens |
+| 25 × 50 | 6.0 m | **111** | 666 | 0.833 | 258 | roof counter-battens 276 m + wall battens 390 m |
+| **TOTAL** | | **234** | **1,404** | **4.163** | **€1,290** | |
+
+The two 25 × 50 uses are ordered as **one line** — same section, no reason to split
+it at the yard. `model/src/stock.js` still tracks them as separate counts
+(`25x50_roof_m` and `25x50_wall_m`) so each can be checked against the model
+independently.
 
 **Ask for 3.5 m or 7 m on the wall battens.** They are 3.44 m each, so a 6 m board
 throws away 2.56 m of every one — 43% waste. At 3.5 m it is 2%, and that line drops
