@@ -229,15 +229,15 @@
   },
   {
     "id": "F20",
-    "title": "No floor — and a workshop needs one",
-    "severity": "high",
+    "title": "Floor: slab specified, 150 mm on 150 hardcore",
+    "severity": "medium",
     "at": [
       0,
       0,
       0.35
     ],
     "layer": "ground",
-    "one_line": "Approved betona grida is not built. A timber floor cannot span 6 m (55 mm at 200x50). Pour the slab, but keep it structurally SEPARATE from the frame - the piers settle, the slab will not."
+    "one_line": "Specified 2026-08-16. 150 mm C25/30 with A252 at mid-depth, on 50 mm blinding on 150 mm compacted hardcore, over a 0.3 mm DPM. Slab TOP at 150 mm - 50 mm below the sill underside - which gives a continuous ventilated slot under the wall and means the slab never touches timber. Dig 200 mm below grade. Thicken to 200 mm for 1.5 m at the entrance: free corner plus all the wheel traffic."
   },
   {
     "id": "F21",
@@ -285,6 +285,6 @@
       0.1
     ],
     "layer": "piers",
-    "one_line": "The frame is bolted to 1.2 m piles everywhere except the entrance, where a ground-bearing slab is planned. Piles below frost do not move; a slab at grade does. Two systems under one rigidly connected frame is how you get a cracked wall in the third winter. Either pile the jambs too, or thicken and insulate the slab locally."
+    "one_line": "The frame is bolted to 1.2 m piles; the slab bears at grade. Piles below frost do not move, a slab does. PARTLY resolved by the slab detail: finishing 50 mm below the sill with a 20 mm compressible perimeter gap means the slab can heave without levering the frame. What is still open is the entrance JAMBS - put 2 more piles under them rather than standing them on the slab."
   }
 ]

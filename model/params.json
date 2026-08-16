@@ -411,25 +411,28 @@
   "_topPosition": "The flight can START anywhere; where it ENDS is fixed by the roof. Headroom over the top tread: 2.51 m at y=1.0, 2.20 m at y=1.23, 1.82 m at y=1.5, 1.14 m at y=2.0. Top out beyond 1.23 m from the centre and you hit the roof standing on the last tread. That is geometry from the 54 deg pitch and the 3.88 m floor, not a preference - so the stair tops out at y=+1.0 and cannot be pushed further toward the long wall."
  },
  "slab": {
-  "material": "reinforced concrete",
-  "underEntrance": true,
-  "apronOutside": 0.5,
-  "src": "given 2026-08-15 - floor slab continues under the entrance and about 0.5 m beyond it",
-  "_mixedSupport": "THE RISK IS MIXED SUPPORT, not capacity. The frame now stands on 300 x 1.2 m piles, below frost, and is BOLTED to them with M12. A ground-bearing slab at grade heaves; those piles do not. If the two entrance jamb posts bear on the slab they move seasonally while the other 24 supports do not - at the most heavily loaded and least supported point in the building, in the wall that is already half missing. Bearing under a jamb is 9 kN over 220x150 = 273 kPa; a domestic slab is not a pad footing and will punch or dish.",
-  "_fix": "PREFERRED: 2 more piles under the jambs, same 300 x 1.2 m, and let the slab float free around them - the frame then stands on one system throughout. Alternative: thicken the slab locally to a 400-500 mm pad under each jamb and insulate the perimeter against heave.",
-  "_apron": "The 0.5 m apron outside is a threshold, not a footing - fine either way. Keep it on a compressible joint against the sill so it cannot lever the frame when it heaves.",
-  "_separation": "Slab stays structurally separate from the frame elsewhere - compressible perimeter joint, never tied to the sill.",
-  "isolation": {
-   "concreteTouchesTimber": false,
-   "barrier": "insulation/membrane between slab and wall (owner: 'poly-' material)",
-   "ventilatedUnderside": true,
-   "drainage": "graded fall away from the building to collect water",
-   "src": "given 2026-08-15",
-   "_serviceClass": "This is what keeps the frame in SERVICE CLASS 2. Every deflection number in the model assumes kdef 0.80. Timber bearing on concrete with no capillary break drifts to service class 3, kdef 2.00, and the tie goes 22.8 -> 36.6 mm against a 24 mm limit. The barrier is not a finish detail, it is load-bearing on the numbers.",
-   "_material": "NAME IT CAREFULLY - 'poly-' splits two ways and they do different jobs. POLYSTYRENE (EPS/XPS) is thermal and compressible, good as a movement joint, but it is NOT a capillary break: water wicks at the joints. POLYETHYLENE (PE) is a damp-proof membrane and IS a capillary break, but is not compressible. At a timber/concrete interface use a bituminous DPC or EPDM strip for the break, and EPS only where a compressible joint is wanted.",
-   "_pierced": "The barrier is pierced 24 times. The sill is bolted to the piles with M12, so at every pile head timber meets concrete at a point and the bolt wicks straight through any sheet. Fit a DPC PAD under the sill at each pile head and seal the anchor where it passes through. This is the detail that gets missed, and it is where sills rot first.",
-   "_ventilation": "Perimeter 30.6 m needs only ~0.046 m2 of opening at 1500 mm2/m - trivially met by leaving the perimeter open. But it must be open on OPPOSITE sides or it does not cross-ventilate; a void open on one side only is a moisture trap."
-  }
+  "thickness": 0.15,
+  "thicknessMin": 0.125,
+  "entranceThickness": 0.2,
+  "entranceRun": 1.5,
+  "topLevel": 0.15,
+  "mesh": "A252",
+  "concrete": "C25/30",
+  "hardcore": 0.15,
+  "blinding": 0.05,
+  "dpm": "0.3 mm / 1200 gauge polythene",
+  "digBelowGrade": 0.2,
+  "perimeterGap": 0.02,
+  "src": "owner 2026-08-16 - concrete floor, steel reinforcement, leftover rock and brick as fill",
+  "_levels": "The LEVELS govern, not the loads. Sill underside sits at 200 mm (pile top). Finish the slab top at 150 mm and you get a continuous 50 mm slot under the whole sill, 150 mm deep, open to outside between the piles. That is the '5 cm layer between floor and wall' - it is an AIR GAP, not a material. Filling it with foam would close the ventilated underside the owner explicitly wants.",
+  "_fourJobs": "The single move of finishing at 150 does four things: the slab never touches timber; the void vents inside-to-outside all round; there is no capillary path because there is no contact; and the slab can shrink and heave without levering the frame (F23).",
+  "_perimeterGap": "20 mm horizontal at the slab edge with a compressible closed-cell strip. That is a MOVEMENT joint, not a moisture one - concrete shrinks ~0.5 mm/m, so 9.31 m of slab moves 4.7 mm before thermal. The moisture job is done by the air gap above it.",
+  "_thickness": "125 mm MINIMUM, 150 RECOMMENDED. Judged on CORNER loading, not interior: a slab is weakest at a free corner and the entrance is exactly that. Under a 10 kN machine foot, C25/30 allowable 1.73 MPa - 70 mm gives 2.63 MPa at a corner and fails; 100 mm gives 1.54, passing with almost nothing spare; 125 gives 1.08; 150 gives 0.79. Punching is never critical (57-124 kN against 10). Thicken to 200 mm for 1.5 m in from the entrance - free corner AND every wheel load.",
+  "_dpm": "The DPM is the PRIMARY moisture barrier and it does a second job: old brick and mortar carry SULFATES, which attack ordinary Portland cement from below in wet ground - the slab expands, cracks and delaminates over years. The membrane breaks that path too. Lap 300 mm, tape, turn up at the edges.",
+  "_hardcore": "Owner's leftover rock and brick. CLEAN brick and stone only - no plaster, gypsum, plasterboard, wood or soil. Gypsum is the worst sulfate source there is. Compact in 150 mm lifts, not one dumped layer. BLIND IT with 50 mm of sand or crushed fines: 50-200 mm rock has huge voids and concrete poured straight onto it loses depth into the gaps.",
+  "_mesh": "A252 - 8 mm at 200 mm both ways, 252 mm2/m. If using loose rod, tie it to the same grid and get it at MID-DEPTH on chairs. Mesh lying on the blinding does nothing; it has to be in the tension zone.",
+  "_quantities": "150 mm over 55.9 m2 with the entrance thickened = 8.6 m3 concrete. Hardcore 8.4 m3 (owner's). Blinding 2.8 m3 (buy). DPM 64 m2. Mesh 61 m2.",
+  "_doors": "Doors are automatic and hang off the wall and ties, so they put almost nothing on the floor. The entrance thickening is for wheel and foot traffic and the free corner, not the door."
  },
  "eaves": {
   "fasciaSection": [
