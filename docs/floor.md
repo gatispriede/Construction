@@ -90,6 +90,47 @@ If you are using loose rod, tie it to the same grid and get it at **mid-depth on
 chairs**. Mesh lying on the blinding does nothing at all — it has to be in the
 tension zone.
 
+## Cost — Latvian prices, checked 2026-08-16
+
+Vidzemes Betons price list, valid from 15.03.2026, **excluding 21% VAT**:
+
+| Class | €/m³ ex VAT | incl. VAT |
+|---|---|---|
+| C20/25 | 88.00 | 106.48 |
+| **C25/30** | **93.00** | **112.53** |
+| C30/37 | 98.00 | 118.58 |
+
+**Order 9.5 m³** — 8.61 m³ net plus 7% for losses and an uneven formation.
+
+| | ex VAT | incl. VAT |
+|---|---|---|
+| Concrete 9.5 m³ × 93.00 | 883.50 | |
+| Transport, ~50 km × 1.60 | 80.00 | |
+| **Delivered, no pump** | **963.50** | **1,165.84** |
+| Pump, 2 h × 90.00 (optional) | +180.00 | |
+| **With pump** | **1,143.50** | **1,383.63** |
+
+Everything else:
+
+| | | ex VAT |
+|---|---|---|
+| A252 mesh, 61 m² | ~4.50 €/m² | 274 |
+| DPM 0.5 mm, 64 m² | ~1.20 €/m² | 77 |
+| XPS 20 mm perimeter, ~31 m | ~2.50 €/m | 78 |
+| Blinding sand, 2.8 m³ | ~20 €/m³ | 56 |
+| Chairs, tape, sealant | allowance | 60 |
+| | | **545** |
+
+**Floor total: €1,508 ex VAT, €1,825 incl.** — €2,043 with a pump. Hardcore is
+yours, so €0.
+
+**Pour in the warm months.** Winter heating is +3–7 €/m³ and frost additive
++2.00–6.50 €/m³ — €48–128 on this volume, for nothing.
+
+**The 50 km transport figure is Cēsis.** JC Betons (Rīga/Pierīga) and Siguldas
+Bloks are both closer; Betons 97 has an online delivery calculator. Worth two
+phone calls — on a 9.5 m³ load, halving the distance saves more than the mesh.
+
 ## Quantities
 
 | | |

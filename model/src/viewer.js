@@ -1,11 +1,12 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { buildFrame } from './frame.js?v=1786880932';
-import { derive } from './geometry.js?v=1786880932';
-import { buildDims } from './dims.js?v=1786880932';
-import { buildFasteners, schedule } from './fasteners.js?v=1786880932';
-import { labelOf, inOrder, letterOf } from './layers.js?v=1786880932';
-import { buildMarks } from './marks.js?v=1786880932';
+import { buildFrame } from './frame.js?v=1786881486';
+import { derive } from './geometry.js?v=1786881486';
+import { buildDims } from './dims.js?v=1786881486';
+import { buildFasteners, schedule } from './fasteners.js?v=1786881486';
+import { labelOf, inOrder, letterOf } from './layers.js?v=1786881486';
+import { buildFloorNotes } from './floornotes.js?v=1786881486';
+import { buildMarks } from './marks.js?v=1786881486';
 
 const params = await (await fetch('./params.json')).json();
 const findings = await (await fetch('./findings.json')).json();
@@ -43,6 +44,7 @@ const { layers, derived } = buildFrame(params);
 layers.dimensions = buildDims(params);
 layers.fasteners = buildFasteners(params);
 layers.memberMarks = buildMarks(params);
+layers.floorNotes = buildFloorNotes(params);
 const root = new THREE.Group();
 for (const g of Object.values(layers)) root.add(g);
 scene.add(root);
@@ -112,7 +114,7 @@ addEventListener('pointerdown', (e) => {
 // --- UI -------------------------------------------------------------------
 const ui = document.getElementById('layers');
 const OFF_BY_DEFAULT = new Set([
-  'loftDeck', 'cladding_white', 'fasteners', 'dimensions', 'memberMarks',
+  'loftDeck', 'floorSlab', 'floorNotes', 'cladding_white', 'fasteners', 'dimensions', 'memberMarks',
 ]);
 for (const name of inOrder(Object.keys(layers))) {
   const id = 'L_' + name;

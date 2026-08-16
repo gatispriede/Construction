@@ -6,8 +6,8 @@
 // decides length — 6 x 100 is not always enough.
 
 import * as THREE from 'three';
-import { derive } from './geometry.js?v=1786880932';
-import { letterOf as Z } from './layers.js?v=1786880932';
+import { derive } from './geometry.js?v=1786881486';
+import { letterOf as Z } from './layers.js?v=1786881486';
 
 function tag(text, sub, pos, scale = 0.34) {
   const F = 40, S = 30, pad = 10;

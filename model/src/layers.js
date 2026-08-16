@@ -10,7 +10,7 @@ const ALPHABET = 'ABCDEFGHJKLMNPRSTUVWXYZ';
 
 export const LAYER_ORDER = [
   // as built
-  'ground', 'piers', 'sills', 'posts', 'girts', 'plates', 'plateSplices',
+  'ground', 'piers', 'floorSlab', 'floorNotes', 'sills', 'posts', 'girts', 'plates', 'plateSplices',
   'braces', 'ties', 'kneeBraces', 'blocking', 'stairOpening', 'stairs',
   // your design, not yet built
   'loftDeck', 'roof', 'rafterSpacers', 'fascia', 'battens', 'wallBattens', 'purlins',

@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1786880932';
-import { derive, stations, spaced } from './geometry.js?v=1786880932';
+import { allocator } from './stock.js?v=1786881486';
+import { derive, stations, spaced } from './geometry.js?v=1786881486';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -11,6 +11,9 @@ const MAT = {
   brace:    new THREE.MeshStandardMaterial({ color: 0xa8894f, roughness: 0.85 }),
   brick:    new THREE.MeshStandardMaterial({ color: 0xb5563a, roughness: 1.0 }),
   concrete: new THREE.MeshStandardMaterial({ color: 0x9aa0a6, roughness: 0.95 }),
+  // Sub-base — the owner's rock and brick, compacted. Drawn so the DIG is
+  // visible: 200 mm below grade is the real constraint on the whole build-up.
+  hardcore: new THREE.MeshStandardMaterial({ color: 0x7a6f60, roughness: 1.0 }),
   // Colour now says ONE thing: can you build this today?
   //   BLUE   the material is in the yard
   //   YELLOW you have to buy it first
@@ -402,6 +405,35 @@ export function buildFrame(p) {
     }
   }
   layers.blocking = blocking;
+
+  // --- Floor slab ---------------------------------------------------------
+  // Ground-bearing, structurally SEPARATE from the frame. The levels are the
+  // whole design: the sill underside sits at 200 mm, so the slab top finishes
+  // at 150 and leaves a continuous 50 mm slot under the wall, open to outside
+  // between the piles. That slot IS the "5 cm layer between floor and wall" —
+  // an air gap, not a material. Fill it and you close the ventilated underside.
+  const slab = layer('floorSlab');
+  {
+    const sb = p.slab;
+    // Stops at the wall INNER face — that is what keeps the 150 mm strip
+    // under the sill open to outside and preserves the drying path, even
+    // though the slab top is now 50 mm ABOVE where the timber starts.
+    const inset = p.sections.wallThickness + sb.perimeterGap;
+    const sx = L - 2 * inset, sy = W - 2 * inset;
+    // Slab body, top at sb.topLevel.
+    bar(slab, MAT.concrete, [0, 0, sb.topLevel - sb.thickness / 2], [sx, sy, sb.thickness]);
+    // Entrance thickening: a free corner AND every wheel load in the building.
+    const et = sb.entranceThickness;
+    bar(slab, MAT.concrete,
+        [-L / 2 + inset + sb.entranceRun / 2, 0, sb.topLevel - et / 2],
+        [sb.entranceRun, p.opening.width, et]);
+    // Sub-base: blinding over compacted hardcore, drawn as one mass so the
+    // 200 mm dig below grade reads.
+    const base = sb.hardcore + sb.blinding;
+    const slabBot = sb.topLevel - sb.thickness;
+    bar(slab, MAT.hardcore, [0, 0, slabBot - base / 2], [sx, sy, base]);
+  }
+  layers.floorSlab = slab;
 
   // --- Stair opening ------------------------------------------------------
   // J15 is left out so a stair can come up to the loft. What closes the rest
