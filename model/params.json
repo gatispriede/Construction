@@ -319,7 +319,11 @@
    0.05,
    0.25
   ],
-  "_gablePanelSection": "50x250, matching the 2 boards in the take-off. The model drew these at 160x60, a section that appears nowhere in the order. Caught in the same audit."
+  "_gablePanelSection": "50x250, matching the 2 boards in the take-off. The model drew these at 160x60, a section that appears nowhere in the order. Caught in the same audit.",
+  "gableStudBearsOn": "end tie",
+  "_gableStudBearsOn": "Owner 2026-08-16: the gable studs stand on the END TIE, not on the wall plate. The tie sits at x = +-4.605 and the gable wall at +-4.655, so they are parallel and 50 mm apart for the tie's whole length. Each stud gets 200 mm shorter - tallest 4.08 -> 3.88 m - which improves it: bending 5.14 -> 4.64 MPa, deflection 16.2 -> 13.2 mm against an L/200 limit of 19.4. 18 studs x 200 mm = 3.6 m less 100x100.",
+  "_gableStudCondition": "CORRECTED 2026-08-16. I raised a 79 mm deflection concern by treating the end tie as free-spanning between the long walls like the other 14. It is not. The end tie occupies x 4.555-4.655 and the gable wall 4.505-4.655: the tie's FULL 100 mm width sits over the gable wall, notched 50 mm into its plate, for the whole 6 m. It is continuously supported, so the studs' horizontal reaction goes straight down into the gable wall exactly as it did when they bore on the plate. There is no free-span weak-axis case and the 79 mm never existed.",
+  "_gableStudFixing": "Still fix the end tie down to the gable plate - not for the bending that does not happen, but because the studs deliver a horizontal push at the tie top and the tie has to be held against sliding and lifting. The 2 x M14 already scheduled at every tie end cover the ends; add fixings along the length at each gable post."
  },
  "plateSplices": {
   "lowerLayerPieces": [

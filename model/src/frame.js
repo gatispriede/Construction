@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1786947802';
-import { derive, stations, spaced } from './geometry.js?v=1786947802';
+import { allocator } from './stock.js?v=1786948041';
+import { derive, stations, spaced } from './geometry.js?v=1786948041';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -926,11 +926,22 @@ export function buildFrame(p) {
   // 1. Gable studs, collecting the triangle load down to the wall plate.
   for (const sx of [-1, 1]) {
     const gx = sx * (L / 2 - rgw / 2);
+    // Studs bear on the END TIE, not on the wall plate. The tie sits at
+    // x = ±4.605 and the gable wall at ±4.655 — 50 mm apart, parallel for the
+    // tie's whole length — so the stud lands on solid timber instead of on a
+    // plate face already shared with the levelling course and the rafter seat.
+    //
+    // The end tie is NOT free-spanning: its full 100 mm width sits over the
+    // gable wall (tie 4.555-4.655, wall 4.505-4.655), notched 50 mm into the
+    // plate for the whole 6 m. So the studs' reaction goes straight down into
+    // the gable wall, exactly as when they bore on the plate. Still fix the tie
+    // down along its length — the studs push horizontally at its top and it has
+    // to be held against sliding, which is a fixing question, not a span one.
     for (const y of spaced(2 * d.roofRun, adv.gableStudSpacing)) {
       if (Math.abs(y) > d.bearingRun) continue;
-      const h2 = underAt(Math.abs(y)) - d.plateTop;
+      const h2 = underAt(Math.abs(y)) - d.tieTop;
       if (h2 < 0.15) continue;
-      bar(reinStud, MAT.need, [gx, y, d.plateTop + h2 / 2], [rgw, rgd, h2]);
+      bar(reinStud, MAT.need, [gx, y, d.tieTop + h2 / 2], [rgw, rgd, h2]);
     }
   }
   layers.reinforce_gableStuds = reinStud;
