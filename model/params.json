@@ -261,8 +261,8 @@
   "_note": "As built. Front gable has 3 because bracing there is unfinished - it wants a 4th.",
   "src": "given and photo-confirmed in 20260814_155048.jpg",
   "geometry": "foot of a post up to the girt, within an end bay",
-  "upperPlanned": true,
-  "_upper": "Matching girt-to-top-corner braces are intended but not yet cut; shown as proposed.",
+  "upperPlanned": false,
+  "_upper": "NOT DRAWN. Owner is supplying and detailing the girt-to-corner wall braces from separate material, so they are out of both the model and the take-off - keeping them in only invited them to be confused with the new order. The capability is still here: set upperPlanned true to draw them again at braces.upperSection.",
   "upperSection": [
    0.05,
    0.1
