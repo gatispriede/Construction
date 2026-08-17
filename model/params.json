@@ -267,7 +267,8 @@
    0.05,
    0.1
   ],
-  "_upperSection": "50x100, free from the rafter rip. The model used to DRAW these at 100x140 - inherited from the built lower braces - while the take-off ordered them as 50x100. Caught in the 2026-08-16 audit: the model was showing 22.1 m of a section nobody owns and nobody was buying. 100x140 would be EUR 96 for a member carrying almost no load."
+  "_upperSection": "50x100 nominal. OWNER SUPPLIES SEPARATELY - removed from the take-off 2026-08-16 so it does not mix with the new material order. It previously drew 22.1 m off the rafter-rip byproduct; that is now free, taking the 50x100 spare from 82 m to 104 m. The order does not change either way, because these were never bought.",
+  "upperFromOwnerStock": true
  },
  "advice": {
   "frostDepth": 1.2,

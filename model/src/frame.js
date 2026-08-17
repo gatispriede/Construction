@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1786947504';
-import { derive, stations, spaced } from './geometry.js?v=1786947504';
+import { allocator } from './stock.js?v=1786947686';
+import { derive, stations, spaced } from './geometry.js?v=1786947686';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -344,18 +344,20 @@ export function buildFrame(p) {
   const zGirtBot = p.heights.girtBottom;
   const zGirtTop = p.heights.girtBottom + gd;
 
-  // The upper set is 50 x 100 out of the rafter-rip byproduct, so it costs
-  // nothing — 100 x 140 to match the built lower braces would be EUR 96 of
-  // timber for a member carrying almost no load. The SECTION is passed through
-  // to strut(): it used to inherit the 100 x 140 of the built braces, so the
-  // model drew a section nobody owns and nobody was buying.
+  // The upper set comes from the owner's OWN separate material, kept out of
+  // the timber order on purpose so the two do not get mixed at the yard.
+  // Drawn blue unconditionally: the material exists, it is just not on this
+  // order and not drawn from the rip byproduct either.
+  //
+  // The SECTION is still passed through to strut(). It used to inherit the
+  // 100 x 140 of the built lower braces, so the model drew a section nobody
+  // owned and nobody was buying.
   const [ubw, ubd] = p.braces.upperSection;
-  let ub = 0;
   function pair(place) {
     return (lo, hi) => {
       place(MAT.brace, lo, hi, d.sillTop, zGirtBot, bw, bd);
       if (nb.upperPlanned) {
-        place(M('upperWallBraces', ub++, 15), lo, hi, zGirtTop, d.postTop, ubw, ubd);
+        place(MAT.have, lo, hi, zGirtTop, d.postTop, ubw, ubd);
       }
     };
   }

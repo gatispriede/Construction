@@ -70,9 +70,10 @@ const QUEUE = [
   // Queued explicitly now. They were drawn blue unconditionally, which meant
   // 37.3 m of 50 x 100 sat outside the take-off entirely.
   { group: 'rafterSpacers',   section: '50x100_m', boards: 37.3 },
-  // The 15 planned girt-to-corner wall braces. 100x140 as built would
-  // cost EUR 83; 50x100 from the rip does the same job for nothing.
-  { group: 'upperWallBraces', section: '50x100_m', boards: 22.1 },
+  // The 15 girt-to-corner wall braces are NOT queued: owner is supplying
+  // them from separate material, deliberately kept out of this order. They
+  // used to draw 22.1 m off the rip byproduct — that is now free for
+  // something else. frame.js draws them blue unconditionally.
   { group: 'purlinVerticals', section: '50x100_m', boards: 33.4 },
   { group: 'collars',         section: '50x100_m', boards: 19.0 },
 
