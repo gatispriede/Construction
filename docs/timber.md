@@ -205,13 +205,13 @@ Confirmed quantities, 2026-08-16. Contingency is already inside each figure.
 schedule treated 310 as ex-VAT and added 21% on top, which overstated every
 inclusive total by a factor of 1.21.
 
-| Section | Length | **Order** | Need | Spare | m³ | ex VAT | **incl VAT** |
-|---|---|---|---|---|---|---|---|
-| 50 × 150 | 6.0 m | **25** | 23 | 2 (9%) | 1.125 | 288.22 | 348.75 |
-| 100 × 100 | 6.0 m | **20** | 18 | 2 (11%) | 1.200 | 307.44 | 372.00 |
-| 25 × 100 roof battens | 6.0 m | **84** | 76 | 8 (11%) | 1.260 | 322.81 | 390.60 |
-| 25 × 50 counter + wall battens | 6.0 m | **110** | 100 | 10 (10%) | 0.825 | 211.36 | 255.75 |
-| **TOTAL** | | **239** | | | **4.410** | **1,129.83** | **€1,367.10** |
+| Section | Length | **Order** | Metres | Need | Spare | m³ | ex VAT | **incl VAT** |
+|---|---|---|---|---|---|---|---|---|
+| 50 × 150 | 6.0 m | **25** | 150 | 23 | 2 (9%) | 1.125 | 288.22 | 348.75 |
+| 100 × 100 | 6.0 m | **20** | 120 | 18 | 2 (11%) | 1.200 | 307.44 | 372.00 |
+| 25 × 100 roof battens | 6.0 m | **84** | 504 | 76 | 8 (11%) | 1.260 | 322.81 | 390.60 |
+| 25 × 50 counter + wall battens | 6.0 m | **110** | 660 | 100 | 10 (10%) | 0.825 | 211.36 | 255.75 |
+| **TOTAL** | | **239** | **1,434** | | | **4.410** | **1,129.83** | **€1,367.10** |
 
 €237.27 of that is VAT. **Budget €1,367.10 all in.**
 
