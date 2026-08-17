@@ -48,20 +48,21 @@ const QUEUE = [
   // 100 x 250 — 16 boards, now all available for ties: the wind girder moved to
   // bought 100 x 100 so it no longer takes 3 of them.
   { group: 'ties',            section: '100x250', boards: 16 },
+  // The stair OPENING stays: the trimmer spans between ties and has to be
+  // framed when they go in. The stair ITSELF — strings, treads, newel — is
+  // deferred, so it is no longer queued. It waits on the slab, which waits
+  // on the roof, and buying it now would leave 50 x 250 with zero margin.
   { group: 'stairOpening',    section: '50x150',  boards: 1  },
 
   // 50 x 250 — 40 boards
   { group: 'levelling',       section: '50x150',  boards: 6  },
   { group: 'fascia',          section: '50x150',  boards: 7  },
-  { group: 'stairStrings',    section: '50x150',  boards: 2  },
   { group: 'purlins',         section: '50x250',  boards: 4  },
   { group: 'ridgePurlin',     section: '50x250',  boards: 2  },
   { group: 'gablePanels',     section: '50x250',  boards: 2  },
   // Rafters last: they are the biggest claim and the latest work, so this is
   // where the yard runs out. At 50 x 150 they still take one board each.
   { group: 'rafters',         section: '50x250',  boards: 38 },
-  // Treads come out of the 4 spare 50 x 250 — 18 m of 24 m.
-  { group: 'stairTreads',     section: '50x250',  boards: 3  },
 
   // 50 x 100 — 36 m of rip byproduct
   // Blocking moved here from 50 x 250 — it is 50 x 100 now, and free.
@@ -81,7 +82,6 @@ const QUEUE = [
   { group: 'struts',          section: '100x100', boards: 8  },
   { group: 'gableStuds',      section: '100x100', boards: 7  },
   { group: 'windGirder',      section: '100x100', boards: 6  },
-  { group: 'stairNewel',      section: '100x100', boards: 1  },
 
   // Roof battens, 25 x 100. All bought — see the note on OWNED above.
   { group: 'battens',         section: '25x100_m', boards: 433.0 },

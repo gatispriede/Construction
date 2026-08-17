@@ -409,8 +409,10 @@
     0.1,
     0.1
    ],
-   "inTakeOff": true,
-   "_treads": "50x250, NOT 50x150. Strength was never the issue - 50 thick over the 900 mm between strings is 5.4 MPa and 1.33 mm under a 1.5 kN point load. DEPTH is: the going is 200 mm, so a 150 board leaves a 50 mm GAP between consecutive treads and drops the effective going to 150. Open risers need treads to OVERLAP by at least 16 mm. 250 gives 50 mm of overlap. Taken free from the 4 spare 50x250 (18 m needed, 24 m available)."
+   "inTakeOff": false,
+   "_treads": "50x250, NOT 50x150. Strength was never the issue - 50 thick over the 900 mm between strings is 5.4 MPa and 1.33 mm under a 1.5 kN point load. DEPTH is: the going is 200 mm, so a 150 board leaves a 50 mm GAP between consecutive treads and drops the effective going to 150. Open risers need treads to OVERLAP by at least 16 mm. 250 gives 50 mm of overlap. Taken free from the 4 spare 50x250 (18 m needed, 24 m available).",
+   "_deferred": "DEFERRED 2026-08-16. Strings, treads and newel are out of this order. They wait on the slab, which waits on the roof, so nothing is held up - and buying them now left 50x250 at 50 of 50 with zero margin on the section that matters most. Deferring restores 4 spare boards. When it comes: 2 x 50x150 strings (5.44 m), 20 x 50x250 treads (0.90 m, 6 per board = 4 boards), 1 x 100x100 newel (1.90 m). About EUR 150 at 2026 prices.",
+   "_openingStays": "The stair OPENING is NOT deferred. The trimmer spans between J15 and J17 and the tail joist runs back to the wall - both have to be framed when the ties go in, or you are cutting into a finished loft floor later."
   },
   "omitTies": [
    16
