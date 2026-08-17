@@ -199,47 +199,41 @@ allocation queue in `model/src/stock.js`, and why the last rafters show yellow.
 
 ## Buy — order this
 
-Board counts have **10% already included** in every line, on top of nesting waste
-that is already inside the raw counts.
+Confirmed quantities, 2026-08-16. Contingency is already inside each figure.
 
-Four sections, four lines.
-
-| Section | Board length | Boards | Total m | m³ | € | What it is |
+| Section | Length | **Order** | Need | Spare | m³ | € |
 |---|---|---|---|---|---|---|
-| 50 × 150 | 6.0 m | **18** | 108 | 0.810 | 251 | levelling course, stair trimmer and tail joist, stair strings, eaves fascia |
-| 100 × 100 | 6.0 m | **21** | 126 | 1.260 | 391 | purlin struts, gable studs, wind girder, stair newel |
-| 25 × 100 | 6.0 m | **84** | 504 | 1.260 | 391 | roof battens |
-| 25 × 50 | 6.0 m | **111** | 666 | 0.833 | 258 | roof counter-battens 276 m + wall battens 390 m |
-| **TOTAL** | | **234** | **1,404** | **4.163** | **€1,290** | |
+| 50 × 150 | 6.0 m | **25** | 23 | 2 (9%) | 1.125 | 348.75 |
+| 100 × 100 | 6.0 m | **20** | 18 | 2 (11%) | 1.200 | 372.00 |
+| 25 × 100 roof battens | 6.0 m | **84** | 76 | 8 (11%) | 1.260 | 390.60 |
+| 25 × 50 counter + wall battens | 6.0 m | **110** | 100 | 10 (10%) | 0.825 | 255.75 |
+| **TOTAL** | | **239** | | | **4.410** | **€1,367.10** |
 
-The two 25 × 50 uses are ordered as **one line** — same section, no reason to split
-it at the yard. `model/src/stock.js` still tracks them as separate counts
-(`25x50_roof_m` and `25x50_wall_m`) so each can be checked against the model
-independently.
+**€1,654.19** including 21% VAT.
 
-**Ask for 3.5 m or 7 m on the wall battens.** They are 3.44 m each, so a 6 m board
-throws away 2.56 m of every one — 43% waste. At 3.5 m it is 2%, and that line drops
-from €151 to about €84. Nothing else benefits from a different length.
+### Nothing to buy in these — all from your own stock
 
-### Nothing to buy in
+| Section | Used | Own | |
+|---|---|---|---|
+| 50 × 250 | 46 | 50 | 38 ripped for rafters, 6 roof support, 2 gable diagonals — **4 spare** |
+| 100 × 250 | 16 | 16 | the 16 ties, exactly |
+| 50 × 100 | 124.2 m | 228 m | all from the rafter rip — blocking, spacers, collars, verticals |
 
-| Section | Need | Have |
-|---|---|---|
-| 100 × 250 | 16 ties | exactly 16 |
-| 50 × 250 | 49 boards | 50 |
-| 50 × 100 | 147 m | 228 m from the rafter rip |
+### Sort the 50 × 150 before you cut
 
-### One rip, 38 passes
+Of the 23 boards needed, **13 are used at full 6.00 m** — 6 levelling course and
+7 eaves fascia. A defect anywhere in one of those costs the whole board; you
+cannot cut around it. The 2 spare cover exactly 2 such boards.
 
-**50 × 250 is the only section that gets ripped** — 38 boards down to 50 × 150 for
-the rafters, throwing off 228 m of 50 × 100 that covers blocking, knee braces,
-upper wall braces, purlin verticals, collars and all 72 rafter spacers. Without it
-those six would cost €228. Everything else is cross-cut to length only.
+The other 10 go to short pieces — stair treads at 0.90 m, strings 5.44, trimmer
+1.15, tail joist 2.00, newel 1.84 — and those are forgiving, because a knot just
+moves the cut.
 
-### Excluded
+**So put the straightest, cleanest boards into the levelling course and fascia
+first, and let the stair take what is left.**
 
-Metal sheeting, breather membrane, 18 mm OSB loft deck, brackets and connector
-screws, concrete. Stair treads come free from the 4 spare 50 × 250.
+Ask the yard about **3.5 m or 7 m** for the wall battens: they are 3.44 m each, so
+a 6 m board wastes 2.56 m of every one.
 
 ## Roof battens at 25 × 100, not 20
 
