@@ -257,7 +257,12 @@
   "src": "given and photo-confirmed in 20260814_155048.jpg",
   "geometry": "foot of a post up to the girt, within an end bay",
   "upperPlanned": true,
-  "_upper": "Matching girt-to-top-corner braces are intended but not yet cut; shown as proposed."
+  "_upper": "Matching girt-to-top-corner braces are intended but not yet cut; shown as proposed.",
+  "upperSection": [
+   0.05,
+   0.1
+  ],
+  "_upperSection": "50x100, free from the rafter rip. The model used to DRAW these at 100x140 - inherited from the built lower braces - while the take-off ordered them as 50x100. Caught in the 2026-08-16 audit: the model was showing 22.1 m of a section nobody owns and nobody was buying. 100x140 would be EUR 96 for a member carrying almost no load."
  },
  "advice": {
   "frostDepth": 1.2,
@@ -303,7 +308,12 @@
    "_notTheNotch": "Do NOT count the 50 mm housing as restraint. The tie runs out to the wall face and on into the building, so the trench is open at both ends along the tie axis. It locates the tie sideways and carries it vertically; it resists nothing along its length.",
    "_workmanship": "1. Z275 HOT-DIP galvanised, not electroplated - unheated building, Baltic winter, condensation off a metal roof. 2. Manufacturer's hardened connector screws, NOT drywall screws: drywall screws are brittle in shear and this is a pure shear connection, they snap without warning. 3. FILL EVERY HOLE in both legs - the rating assumes it, and a part-filled bracket is an eccentric joint that peels rather than a weaker one. 4. BOTH sides, or the tie rotates about the single bracket and pries the screws out. 5. Knee brace screws SKEWED, 2 into the face and 2 angled - four square screws let the joint hinge, and a hinged knee brace does nothing."
   },
-  "_gableStudSpacing": "600 mm (588 actual), changed from 800 on 2026-08-15. NOT a strength fix - 800 already passed at combined ratio 0.36 and 12.2 mm deflection. The reason is the CLADDING GRID: gable battens sit on the studs, so at 800 the sheet would land on 600 mm spacing up the wall and 800 across the gable. 600 makes it one grid top to bottom. Costs 10.3 m more 100x100, 2 boards, EUR 37. At 588 mm the tallest stud is now 4.08 m (a stud lands at the centre, where there was none before): combined 0.38, 16.2 mm against an L/200 limit of 20.4 mm."
+  "_gableStudSpacing": "600 mm (588 actual), changed from 800 on 2026-08-15. NOT a strength fix - 800 already passed at combined ratio 0.36 and 12.2 mm deflection. The reason is the CLADDING GRID: gable battens sit on the studs, so at 800 the sheet would land on 600 mm spacing up the wall and 800 across the gable. 600 makes it one grid top to bottom. Costs 10.3 m more 100x100, 2 boards, EUR 37. At 588 mm the tallest stud is now 4.08 m (a stud lands at the centre, where there was none before): combined 0.38, 16.2 mm against an L/200 limit of 20.4 mm.",
+  "gablePanelSection": [
+   0.05,
+   0.25
+  ],
+  "_gablePanelSection": "50x250, matching the 2 boards in the take-off. The model drew these at 160x60, a section that appears nowhere in the order. Caught in the same audit."
  },
  "plateSplices": {
   "lowerLayerPieces": [

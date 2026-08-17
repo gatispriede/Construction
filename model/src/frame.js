@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1786896090';
-import { derive, stations, spaced } from './geometry.js?v=1786896090';
+import { allocator } from './stock.js?v=1786946923';
+import { derive, stations, spaced } from './geometry.js?v=1786946923';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -345,26 +345,29 @@ export function buildFrame(p) {
   const zGirtTop = p.heights.girtBottom + gd;
 
   // The upper set is 50 x 100 out of the rafter-rip byproduct, so it costs
-  // nothing — 100 x 140 to match the built lower braces would be EUR 83 of
-  // timber for a member carrying almost no load.
+  // nothing — 100 x 140 to match the built lower braces would be EUR 96 of
+  // timber for a member carrying almost no load. The SECTION is passed through
+  // to strut(): it used to inherit the 100 x 140 of the built braces, so the
+  // model drew a section nobody owns and nobody was buying.
+  const [ubw, ubd] = p.braces.upperSection;
   let ub = 0;
   function pair(place) {
     return (lo, hi) => {
-      place(MAT.brace, lo, hi, d.sillTop, zGirtBot);
+      place(MAT.brace, lo, hi, d.sillTop, zGirtBot, bw, bd);
       if (nb.upperPlanned) {
-        place(M('upperWallBraces', ub++, 15), lo, hi, zGirtTop, d.postTop);
+        place(M('upperWallBraces', ub++, 15), lo, hi, zGirtTop, d.postTop, ubw, ubd);
       }
     };
   }
 
   for (const y of [-wy(qd), wy(qd)]) {
-    braceWall(xs, nb.longWall, pair((mat, lo, hi, z0, z1) =>
-      strut(braces, mat, [lo, y, z0], [hi, y, z1], bw, bd)));
+    braceWall(xs, nb.longWall, pair((mat, lo, hi, z0, z1, w, dd) =>
+      strut(braces, mat, [lo, y, z0], [hi, y, z1], w, dd)));
   }
-  braceWall(ys, nb.backGable, pair((mat, lo, hi, z0, z1) =>
-    strut(braces, mat, [wx(qw), lo, z0], [wx(qw), hi, z1], bw, bd)));
-  braceWall(ys, nb.frontGable, pair((mat, lo, hi, z0, z1) =>
-    strut(braces, mat, [-wx(qw), lo, z0], [-wx(qw), hi, z1], bw, bd)));
+  braceWall(ys, nb.backGable, pair((mat, lo, hi, z0, z1, w, dd) =>
+    strut(braces, mat, [wx(qw), lo, z0], [wx(qw), hi, z1], w, dd)));
+  braceWall(ys, nb.frontGable, pair((mat, lo, hi, z0, z1, w, dd) =>
+    strut(braces, mat, [-wx(qw), lo, z0], [-wx(qw), hi, z1], w, dd)));
   layers.braces = braces;
 
   // --- Tie beams across the width, cantilevering 0.5 m each side ----------
@@ -872,7 +875,8 @@ export function buildFrame(p) {
   let gi = 0;
   for (const [y0, y1] of panelYs) {
     // Diagonal in the plane of the wall, sill to plate — no interior intrusion.
-    strut(mGable, M('gablePanels', gi++, 2), [-wx(qw), y0, d.sillTop], [-wx(qw), y1, d.postTop], 0.06, 0.16);
+    strut(mGable, M('gablePanels', gi++, 2), [-wx(qw), y0, d.sillTop],
+          [-wx(qw), y1, d.postTop], ...p.advice.gablePanelSection);
     // Hold-down strap at each end post, post head down to the sill.
     for (const y of [y0, y1]) {
       bar(mGable, MAT.steel, [-wx(qw) + qw / 2 + 0.015, y, (d.sillTop + d.postTop) / 2],

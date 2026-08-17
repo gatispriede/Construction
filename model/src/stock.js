@@ -62,16 +62,17 @@ const QUEUE = [
   { group: 'rafters',         section: '50x250',  boards: 38 },
   // Treads come out of the 4 spare 50 x 250 — 18 m of 24 m.
   { group: 'stairTreads',     section: '50x250',  boards: 3  },
-  // Rafter spacers are not queued: they are cut from rafter offcuts and cost
-  // nothing, so frame.js draws them blue unconditionally.
 
   // 50 x 100 — 36 m of rip byproduct
   // Blocking moved here from 50 x 250 — it is 50 x 100 now, and free.
-  { group: 'blocking',        section: '50x100_m', boards: 22.8 },
+  { group: 'blocking',        section: '50x100_m', boards: 20.0 },
   { group: 'kneeBraces',      section: '50x100_m', boards: 14.5 },
+  // Queued explicitly now. They were drawn blue unconditionally, which meant
+  // 37.3 m of 50 x 100 sat outside the take-off entirely.
+  { group: 'rafterSpacers',   section: '50x100_m', boards: 37.3 },
   // The 15 planned girt-to-corner wall braces. 100x140 as built would
   // cost EUR 83; 50x100 from the rip does the same job for nothing.
-  { group: 'upperWallBraces', section: '50x100_m', boards: 19.1 },
+  { group: 'upperWallBraces', section: '50x100_m', boards: 22.1 },
   { group: 'purlinVerticals', section: '50x100_m', boards: 33.4 },
   { group: 'collars',         section: '50x100_m', boards: 19.0 },
 
