@@ -511,5 +511,14 @@
   "_quantity": "182 m plain wall + 42 m gables and over-head = 225 m of 25x50.",
   "_corners": "Corners were already covered: the 600 mm grid runs spaced() over the FULL length and width, which puts a station at each end, so every corner gets TWO battens - one on the long-wall face at (+/-4.655, +/-3.012) and one on the gable face at (+/-4.668, +/-3.000). They sit 12.5 mm apart in each direction and form an L, which is the correct detail: each sheet edge lands on its own timber and the corner trim covers the joint.",
   "_entranceJambs": "ADDED 2026-08-15. The sheet edge stops at the reveal, y = +/-1.50, while the nearest grid batten is at +/-1.80 - 300 mm of edge screwed into air. Two full-height jamb battens fix that. The 270 mm strip of wall ABOVE the opening head (3.37 to 3.64) also gets battens on the grid, otherwise the sheet there spans the full 3.0 m opening with nothing behind it."
+ },
+ "timberPrice": {
+  "eurPerM3": 310.0,
+  "vatIncluded": true,
+  "eurPerM3ExVat": 256.2,
+  "vatRate": 0.21,
+  "src": "owner, confirmed VAT-inclusive 2026-08-16",
+  "_correction": "310 EUR/m3 INCLUDES 21% VAT. Every timber figure produced before 2026-08-16 treated it as ex-VAT and added 21% on top, so the inclusive totals were 1.21x too high. The ex-VAT rate is 256.20. Board costs and comparisons between sections were unaffected - only the VAT line was wrong.",
+  "_note": "Concrete is priced separately from the Vidzemes Betons list, which IS quoted ex VAT (93 EUR/m3 for C25/30). Do not apply this rate to the floor."
  }
 }
