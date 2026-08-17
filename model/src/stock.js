@@ -48,11 +48,12 @@ const QUEUE = [
   // 100 x 250 — 16 boards, now all available for ties: the wind girder moved to
   // bought 100 x 100 so it no longer takes 3 of them.
   { group: 'ties',            section: '100x250', boards: 16 },
-  // The stair OPENING stays: the trimmer spans between ties and has to be
-  // framed when they go in. The stair ITSELF — strings, treads, newel — is
-  // deferred, so it is no longer queued. It waits on the slab, which waits
-  // on the roof, and buying it now would leave 50 x 250 with zero margin.
   { group: 'stairOpening',    section: '50x150',  boards: 1  },
+  // Stair back in, built entirely from 50 x 150: 2 strings, 40 tread pieces
+  // (two per step — a single 150 leaves a 50 mm gap against a 200 going) and
+  // the newel. 9 boards, and EUR 14 cheaper than the mixed-section version
+  // because 0.90 m treads nest 6 to a board.
+  { group: 'stair',           section: '50x150',  boards: 9  },
 
   // 50 x 250 — 40 boards
   { group: 'levelling',       section: '50x150',  boards: 6  },

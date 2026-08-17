@@ -399,20 +399,24 @@
    "newelAtMidFlight": true,
    "treadSection": [
     0.05,
-    0.25
+    0.15
    ],
    "_strings": "50x150 HOUSED, and the mid-flight newel is now MANDATORY, not optional. A cut string is impossible at 150: notching for a 175 mm rise removes 132 mm, leaving 18 mm. Housed keeps the depth but takes the thickness from 50 to ~35 at each housing. Over the full 5.44 m that gives 29.6 MPa and 110 mm of deflection against an 18.1 mm limit - it FAILS. With one newel the span halves: 7.4 MPa and 6.9 mm against 9.1 mm. Passes, but the margin is modest, so the newel is structural, not a handrail post.",
    "_decideBeforeSlab": "41.2 deg at a 200 mm going is steep - domestic wants 220+. This CANNOT be fixed later: the run is fixed by loft headroom (you must emerge within 1.23 m of the centre) and by the 6 m width. A 220 going needs 4.40 m of run, 0.40 m more than exists, which means a winder or a half-landing - and a landing has to be set out in the slab. Decide before the concrete goes down.",
    "_material": "2 strings x 5.44 m of 50x250 (2 boards), 20 treads x 0.90 m of 40x250 (3 boards), 1 newel 1.9 m of 100x100. About 0.33 m3, EUR 102. NOT in the current order - it waits for the slab, which waits for the roof.",
    "_straight": "STAYS STRAIGHT. A turn was considered and rejected: the scarce dimension is the 6 m width, and a landing eats the same 3.85 m the flight needs. Every landing variant came out at 170-209 mm going against 196 mm straight - no better, mostly worse. And a turn is precisely what stops you carrying sheets: a 2.5 m board can round a right angle between 1.2 m widths only ON EDGE, which needs 2.5 m of headroom, and a mid-height landing has 2.04 m under the loft floor. Straight is better for both the pitch and the boards.",
    "newelSection": [
-    0.1,
-    0.1
+    0.05,
+    0.15
    ],
-   "inTakeOff": false,
+   "inTakeOff": true,
    "_treads": "50x250, NOT 50x150. Strength was never the issue - 50 thick over the 900 mm between strings is 5.4 MPa and 1.33 mm under a 1.5 kN point load. DEPTH is: the going is 200 mm, so a 150 board leaves a 50 mm GAP between consecutive treads and drops the effective going to 150. Open risers need treads to OVERLAP by at least 16 mm. 250 gives 50 mm of overlap. Taken free from the 4 spare 50x250 (18 m needed, 24 m available).",
    "_deferred": "DEFERRED 2026-08-16. Strings, treads and newel are out of this order. They wait on the slab, which waits on the roof, so nothing is held up - and buying them now left 50x250 at 50 of 50 with zero margin on the section that matters most. Deferring restores 4 spare boards. When it comes: 2 x 50x150 strings (5.44 m), 20 x 50x250 treads (0.90 m, 6 per board = 4 boards), 1 x 100x100 newel (1.90 m). About EUR 150 at 2026 prices.",
-   "_openingStays": "The stair OPENING is NOT deferred. The trimmer spans between J15 and J17 and the tail joist runs back to the wall - both have to be framed when the ties go in, or you are cutting into a finished loft floor later."
+   "_openingStays": "The stair OPENING is NOT deferred. The trimmer spans between J15 and J17 and the tail joist runs back to the wall - both have to be framed when the ties go in, or you are cutting into a finished loft floor later.",
+   "treadPiecesPerStep": 2,
+   "_allOneSection": "Owner 2026-08-16: build the whole stair from 50x150 and put it back in the order. Works, and it comes out EUR 14 CHEAPER than the mixed-section version (125.55 against 139.50) because 0.90 m tread pieces nest 6 to a board while 50x250 treads waste a third of every board. One section instead of three.",
+   "_treadsDoubled": "TWO 50x150 per tread, butted - 300 mm deep. A SINGLE 150 board does not work: the going is 200 mm, so one board leaves a 50 mm GAP between consecutive treads and drops the effective going to 150. Open risers need treads to OVERLAP by at least 16 mm. Doubled gives 100 mm of overlap. 40 pieces for 20 treads.",
+   "_newel150": "50x150 newel carries it: the strings' mid-span reaction is about 7.1 kN and even on the weak axis (lambda 127.5, kc 0.195) capacity is 21.2 kN, factor 3.0. 100x100 would give 12.9 but needs a section bought for one 1.84 m piece."
   },
   "omitTies": [
    16
