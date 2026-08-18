@@ -1,43 +1,52 @@
-// Canonical layer order and their reference letters.
+// Layers grouped by WHERE THEY GO in the building.
 //
-// One source of truth, because the fastener labels are baked into canvas
-// textures at build time and cannot ask the viewer what letter a layer ended
-// up with. Both modules read this.
+// The list used to be one flat run of 30 entries with a reference letter each.
+// It outgrew that: 30 letters is a lookup table you have to learn, and a flat
+// list gives no clue that `fascia` and `battens` are the same trade on the same
+// day while `sills` and `piers` are months earlier. Grouping by location makes
+// the panel readable without any letters at all.
 //
-// I, O and Q are skipped — on a drawing they read as 1, 0 and a smudged O.
+// Order within a group is bottom-up / outside-in, which is also build order.
 
-const ALPHABET = 'ABCDEFGHJKLMNPRSTUVWXYZ';
-
-export const LAYER_ORDER = [
-  // as built
-  'ground', 'piers', 'floorSlab', 'floorNotes', 'sills', 'posts', 'girts', 'plates', 'plateSplices',
-  'braces', 'ties', 'kneeBraces', 'blocking', 'stairOpening', 'stairs',
-  // your design, not yet built
-  'loftDeck', 'roof', 'rafterSpacers', 'fascia', 'battens', 'wallBattens', 'purlins',
-  // must add
-  'must_tieBolts', 'must_rafterStraps', 'must_frontGablePanels', 'must_windGirder',
-  // wind reinforcement
-  'reinforce_gableStuds', 'cladding_white',
-  // annotation
-  'dimensions', 'fasteners', 'memberMarks',
+export const LAYER_GROUPS = [
+  ['Ground and foundation', [
+    'ground', 'piers', 'floorSlab', 'floorNotes',
+  ]],
+  ['Walls', [
+    'sills', 'posts', 'girts', 'braces', 'plates', 'plateSplices',
+    'must_frontGablePanels', 'wallBattens', 'cladding_white',
+  ]],
+  ['Loft floor', [
+    'ties', 'kneeBraces', 'blocking', 'must_tieBolts',
+    'must_windGirder', 'loftDeck',
+  ]],
+  ['Stair', [
+    'stairOpening', 'stairs',
+  ]],
+  ['Roof', [
+    'roof', 'rafterSpacers', 'must_rafterStraps', 'purlins',
+    'reinforce_gableStuds', 'fascia', 'battens',
+  ]],
+  ['Annotation', [
+    'dimensions', 'fasteners', 'memberMarks',
+  ]],
 ];
 
-// Past Z, carry on with AA, AB, ... The list outgrew a single letter when the
-// stair opening and rafter spacers were added — 24 layers, 23 letters.
-function letterAt(i) {
-  const n = ALPHABET.length;
-  return i < n ? ALPHABET[i] : ALPHABET[Math.floor(i / n) - 1] + ALPHABET[i % n];
+// Flat order, derived — nothing else should hand-maintain a second list.
+export const LAYER_ORDER = LAYER_GROUPS.flatMap(([, names]) => names);
+
+// Which group a layer belongs to, for the fastener schedule's connection
+// labels. Reads as "loft floor -> walls" instead of "J -> F".
+const GROUP_OF = new Map(
+  LAYER_GROUPS.flatMap(([group, names]) => names.map((n) => [n, group])));
+
+export function groupOf(name) {
+  return GROUP_OF.get(name) ?? '';
 }
 
-const LETTER = new Map(LAYER_ORDER.map((n, i) => [n, letterAt(i)]));
-
-export function letterOf(name) {
-  return LETTER.get(name) ?? '?';
-}
-
-// "girts" -> "E girts", for the layer panel.
+// The layer's own name is the label now. No letters to cross-reference.
 export function labelOf(name) {
-  return `${letterOf(name)}  ${name}`;
+  return name;
 }
 
 // Sort a set of layer names into canonical order, unknowns last.

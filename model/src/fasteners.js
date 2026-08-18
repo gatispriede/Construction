@@ -6,8 +6,12 @@
 // decides length — 6 x 100 is not always enough.
 
 import * as THREE from 'three';
-import { derive } from './geometry.js?v=1786948772';
-import { letterOf as Z } from './layers.js?v=1786948772';
+import { derive } from './geometry.js?v=1787033258';
+// Connections are labelled with the LAYER NAMES they join, not reference
+// letters. The letters were a 30-row lookup table you had to learn; the layer
+// name is already in the panel on the left, so "ties -> plates" points at two
+// checkboxes you can actually tick.
+const Z = (name) => name;
 
 function tag(text, sub, pos, scale = 0.34) {
   const F = 40, S = 30, pad = 10;

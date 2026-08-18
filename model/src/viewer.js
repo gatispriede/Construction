@@ -1,12 +1,12 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { buildFrame } from './frame.js?v=1786948772';
-import { derive } from './geometry.js?v=1786948772';
-import { buildDims } from './dims.js?v=1786948772';
-import { buildFasteners, schedule } from './fasteners.js?v=1786948772';
-import { labelOf, inOrder, letterOf } from './layers.js?v=1786948772';
-import { buildFloorNotes } from './floornotes.js?v=1786948772';
-import { buildMarks } from './marks.js?v=1786948772';
+import { buildFrame } from './frame.js?v=1787033258';
+import { derive } from './geometry.js?v=1787033258';
+import { buildDims } from './dims.js?v=1787033258';
+import { buildFasteners, schedule } from './fasteners.js?v=1787033258';
+import { LAYER_GROUPS, inOrder } from './layers.js?v=1787033258';
+import { buildFloorNotes } from './floornotes.js?v=1787033258';
+import { buildMarks } from './marks.js?v=1787033258';
 
 const params = await (await fetch('./params.json')).json();
 const findings = await (await fetch('./findings.json')).json();
@@ -116,21 +116,43 @@ const ui = document.getElementById('layers');
 const OFF_BY_DEFAULT = new Set([
   'loftDeck', 'floorSlab', 'floorNotes', 'cladding_white', 'fasteners', 'dimensions', 'memberMarks',
 ]);
-for (const name of inOrder(Object.keys(layers))) {
-  const id = 'L_' + name;
-  const on = !OFF_BY_DEFAULT.has(name);
-  layers[name].visible = on;
-  ui.insertAdjacentHTML('beforeend',
-    `<label><input type="checkbox" id="${id}"${on ? ' checked' : ''}>` +
-    `<span class="key">${letterOf(name)}</span>${name}</label>`);
-  document.getElementById(id).onchange = (e) => { layers[name].visible = e.target.checked; };
+// Grouped by where it goes in the building, not lettered. A flat 30-row list
+// with a reference letter each was a lookup table you had to learn.
+for (const [group, names] of LAYER_GROUPS) {
+  const present = names.filter((n) => layers[n]);
+  if (!present.length) continue;
+  ui.insertAdjacentHTML('beforeend', `<div class="grp">${group}</div>`);
+  for (const name of present) {
+    const id = 'L_' + name;
+    const on = !OFF_BY_DEFAULT.has(name);
+    layers[name].visible = on;
+    ui.insertAdjacentHTML('beforeend',
+      `<label><input type="checkbox" id="${id}"${on ? ' checked' : ''}>${name}</label>`);
+    document.getElementById(id).onchange = (e) => { layers[name].visible = e.target.checked; };
+  }
+}
+// Anything not claimed by a group still has to appear, or it becomes invisible
+// AND untoggleable — a silent way to lose a layer.
+{
+  const claimed = new Set(LAYER_GROUPS.flatMap(([, n]) => n));
+  const rest = inOrder(Object.keys(layers).filter((n) => !claimed.has(n)));
+  if (rest.length) {
+    ui.insertAdjacentHTML('beforeend', '<div class="grp">Other</div>');
+    for (const name of rest) {
+      const id = 'L_' + name;
+      layers[name].visible = true;
+      ui.insertAdjacentHTML('beforeend',
+        `<label><input type="checkbox" id="${id}" checked>${name}</label>`);
+      document.getElementById(id).onchange = (e) => { layers[name].visible = e.target.checked; };
+    }
+  }
 }
 document.getElementById('approved').onchange = (e) => { envelope.visible = e.target.checked; };
 document.getElementById('markers').onchange = (e) => { markers.visible = e.target.checked; };
 
 // --- Screw schedule, grouped by what you buy -------------------------------
 {
-  const rows = schedule(params, derived, letterOf);
+  const rows = schedule(params, derived, (n) => n);
   const byType = new Map();
   for (const [conn, spec, type] of rows) {
     if (!byType.has(type)) byType.set(type, []);
@@ -155,6 +177,22 @@ document.getElementById('markers').onchange = (e) => { markers.visible = e.targe
   const panel = document.getElementById('screws-panel');
   panel.innerHTML = html;
   document.getElementById('screws').onchange = (e) => {
+    panel.classList.toggle('on', e.target.checked);
+  };
+}
+
+// --- Floor build-up section ------------------------------------------------
+// A drawing, not geometry. The floor is five bought items stacked 350 mm deep,
+// and none of them is legible as a solid block in 3D — so this is the one place
+// a 2D section explains more than the model can. Loaded on first open.
+{
+  const panel = document.getElementById('section-panel');
+  let loaded = false;
+  document.getElementById('section').onchange = async (e) => {
+    if (e.target.checked && !loaded) {
+      loaded = true;
+      panel.insertAdjacentHTML('beforeend', await (await fetch('./floor-section.svg')).text());
+    }
     panel.classList.toggle('on', e.target.checked);
   };
 }

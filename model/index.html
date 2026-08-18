@@ -34,6 +34,13 @@
   #screws-panel li { padding:2px 0; border-bottom:1px solid #eef1f4; }
   #screws-panel .m { font-weight:700; color:#8a3a00; }
   #screws-panel .s { color:#57606a; font-size:11px; display:block; }
+  .grp { margin:10px 0 3px; font-size:10px; letter-spacing:.08em;
+         text-transform:uppercase; color:#8a3a00; font-weight:700; }
+  .grp:first-child { margin-top:2px; }
+  #section-panel { bottom:14px; left:14px; width:520px; display:none; }
+  #section-panel.on { display:block; }
+  #section-panel h3 { margin:0 0 6px; font-size:12px; letter-spacing:.03em; }
+  #section-panel svg { width:100%; height:auto; display:block; }
   #finding.on { display:block; }
   #finding h3 { margin:7px 0 5px; font-size:13px; }
   #finding p { margin:0 0 8px; }
@@ -57,6 +64,7 @@
   <label><input type="checkbox" id="approved"> approved envelope</label>
   <label><input type="checkbox" id="markers" checked> findings</label>
   <label><input type="checkbox" id="screws"> screw schedule</label>
+    <label><input type="checkbox" id="section"> floor section</label>
   <div class="legend">
     <b>Colour = can you build it today?</b><br><span class="swatch" style="background:#4f8fbf"></span>blue = material is in the yard<br><span class="swatch" style="background:#f5c518"></span>yellow = has to be bought<br><span class="swatch" style="background:#f5f7fa;border:1px solid #b0b6bd"></span>white = steel (bolts, straps)<br><span class="swatch" style="background:#8a6a45"></span>brown = already standing
   </div>
@@ -71,6 +79,7 @@
 <div class="panel" id="readout"></div>
 <div class="panel" id="finding"></div>
 <div class="panel" id="screws-panel"></div>
+<div class="panel" id="section-panel"><h3>Floor build-up — what each item is</h3></div>
 
 <script type="importmap">
 { "imports": {
@@ -78,4 +87,4 @@
     "three/addons/": "https://unpkg.com/three@0.169.0/examples/jsm/"
 } }
 </script>
-<script type="module" src="./src/viewer.js?v=1786948772"></script>
+<script type="module" src="./src/viewer.js?v=1787033258"></script>
