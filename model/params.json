@@ -469,18 +469,29 @@
   "_foamRealJob": "What the foam is actually earning its place for is MOVEMENT, not moisture. The slab shrinks 4.7 mm over 9.31 m and heaves seasonally while the piles do not (F23). A rigid fill there would lever the frame; foam absorbs it.",
   "_vehicleLoads": "CHECKED 2026-08-16: yes, the slab takes a car easily. Westergaard on 150 mm C25/30, allowable 1.73 MPa (plain-concrete basis, conservative - the A252 only helps after cracking). Worst case is always the free CORNER, which is where you drive in: 2000 kg car (5 kN wheel) 0.38 MPa, factor 4.6; loaded 3500 kg van (10 kN) 0.75 MPa, factor 2.3; 20 kN truck axle 1.50 MPa, still inside. Only a 40 kN mixer wheel goes over at a corner, and that is a delivery problem, not a parking one. In the 200 mm entrance zone a van corner is 0.46 MPa, factor 3.7. Punching never governs (151 kN at 150 mm against a 10 kN wheel) and subgrade pressure spreads to 49 kPa.",
   "ramp": {
-   "required": true,
+   "length": 2.5,
+   "width": 3.0,
+   "thickness": 0.15,
    "rise": 0.25,
-   "lengthAt1in10": 2.5,
-   "lengthAt1in8": 2.0,
-   "_why": "THE SLAB IS NOT THE CONSTRAINT - THE THRESHOLD IS. The floor sits 250 mm above outside grade, which was the whole point of raising it 50 above the sill, and a car cannot climb a 250 mm step. The 0.50 m apron is a 1:2 gradient: a kerb, not a ramp. 1:10 needs 2.50 m, 1:8 needs 2.00 m and is about the limit before cars ground out.",
-   "_breakover": "Ease the top transition over the last 300-500 mm. A ramp meeting the level floor at a sharp angle catches the belly of anything long and low.",
-   "_drainage": "A ramp falling toward the building funnels rain straight at the opening. Fall it AWAY at the bottom or put a channel drain across the threshold. This is the one that does damage, and the entrance is the wall with no sill and no piers under it (F8)."
+   "gradient": "1:10",
+   "angleDeg": 5.7,
+   "mesh": "A252, continuous",
+   "src": "owner decision 2026-08-16",
+   "_why": "2.5 m at 1:10. 1.0 m was proposed first and gives 1:4, 14 deg - that is a threshold, not a car ramp. The ramp itself is not what stops you: approach angle is fine at 14 deg for most cars. It is the BREAKOVER at the top. Low saloon 10.2 deg, hatchback 12.5, estate 12.2 - every ordinary car has a breakover under 14, so it drives up and beaches on the crease. At 1:10 the crease is 5.7 deg and everything clears. The extra 1.5 m is 0.67 m3 of concrete, EUR 76.",
+   "_isolationJoint": "20 mm compressible joint at the threshold, same as the slab perimeter. The ramp sits at grade and WILL heave in winter; the slab on 150 hardcore inside will not. Cast monolithic and the ramp levers the slab edge every spring.",
+   "_transition": "Ease the top over 300-500 mm. Even at 5.7 deg a sharp crease is where the surface spalls first - every wheel loads it twice.",
+   "_drainage": "Fall AWAY at the bottom, or a channel drain. A ramp draining toward the building funnels rain at the one wall with no sill and no piers under it (F8).",
+   "_reinforcement": "A252 continuous through the ramp. A 2.5 x 3.0 m unreinforced panel sitting on a wedge of fill cracks across the middle.",
+   "_fill": "0.94 m3 of wedge fill under it, 250 down to 0 mm, plus 150 hardcore. Compact in 150 mm lifts - it is directly under the thing carrying every wheel that enters.",
+   "concreteM3": 1.12,
+   "fillM3": 0.94,
+   "hardcoreM3": 1.12
   },
   "thicknessDecided": true,
   "_thicknessDecision": "150 mm CONFIRMED by the owner 2026-08-16. 100 mm was costed at EUR 289 less and would have carried the car perfectly well - driving is an INTERIOR case almost everywhere (0.27 MPa at 100 mm against a 1.73 allowable) and the threshold is covered by the 200 mm entrance zone regardless. What 150 buys is the machine case: a 10 kN foot on a small 100x100 pad near a free edge is 1.97 MPa at 100 mm and OVER, against 0.95 at 150. Plus a thinner slab curls more as it dries, and curled edges are what crack under wheels. Decision closed - thicknessMin 125 is retained only as a record of the calculated floor.",
   "_independence": "The slab is NOT connected to the pile foundation carrying the frame - confirmed by the owner 2026-08-16. It stops at the wall inner face (y = +-2.85) while the piles sit on the centreline (+-2.925), so there is 75 mm of clear ground plus the 20 mm XPS gap. This is what makes the Westergaard analysis correct rather than optimistic: every figure already treats the perimeter as a free edge carried by the subgrade alone.",
-  "_pileBackfill": "BUILDABILITY: the slab edge runs 75 mm inboard of 24 pile holes, so the slab's worst-loaded zone bears on the ground the piling disturbed. Loose backfill drops the subgrade modulus from about 54 to 20 MN/m3 - edge stress only goes 0.29 -> 0.32 MPa so it does not fail, but the slab deflects more and that is what cracks it over years. Compact the pile-head backfill before the hardcore goes in. Free at the right moment, impossible after."
+  "_pileBackfill": "BUILDABILITY: the slab edge runs 75 mm inboard of 24 pile holes, so the slab's worst-loaded zone bears on the ground the piling disturbed. Loose backfill drops the subgrade modulus from about 54 to 20 MN/m3 - edge stress only goes 0.29 -> 0.32 MPa so it does not fail, but the slab deflects more and that is what cracks it over years. Compact the pile-head backfill before the hardcore goes in. Free at the right moment, impossible after.",
+  "_orderWithRamp": "floor 8.61 + ramp 1.12 = 9.73 m3 net, order 10.5 m3 with 7% over."
  },
  "eaves": {
   "fasciaSection": [

@@ -100,13 +100,13 @@ Vidzemes Betons price list, valid from 15.03.2026, **excluding 21% VAT**:
 | **C25/30** | **93.00** | **112.53** |
 | C30/37 | 98.00 | 118.58 |
 
-**Order 9.5 m³** — 8.61 m³ net plus 7% for losses and an uneven formation.
+**Order 10.5 m³** — floor 8.61 + ramp 1.12 = 9.73 m³ net, plus 7% for losses and an uneven formation.
 
 | | ex VAT | incl. VAT |
 |---|---|---|
-| Concrete 9.5 m³ × 93.00 | 883.50 | |
+| Concrete 10.5 m³ × 93.00 | 976.50 | |
 | Transport, ~50 km × 1.60 | 80.00 | |
-| **Delivered, no pump** | **963.50** | **1,165.84** |
+| **Delivered, no pump** | **1,056.50** | **1,278.37** |
 | Pump, 2 h × 90.00 (optional) | +180.00 | |
 | **With pump** | **1,143.50** | **1,383.63** |
 
@@ -185,22 +185,42 @@ The floor is **250 mm above outside grade** — the whole point of raising it 50
 the sill. A car cannot climb a 250 mm step, and the 0.50 m apron is a **1:2
 gradient: a kerb, not a ramp.**
 
-| Gradient | Ramp length | |
-|---|---|---|
-| 1:6 | 1.50 m | too steep, most cars ground out |
-| **1:8** | **2.00 m** | steep but usable |
-| **1:10** | **2.50 m** | comfortable |
-| 1:12 | 3.00 m | comfortable loaded or with a trailer |
+**Decided: 2.5 m at 1:10**, 3.0 m wide, 150 mm thick, A252 continuous.
 
-Two details the ramp has to get right:
+1.0 m was considered first and gives 1:4 — 14°. The ramp itself is not what
+stops you; approach angle is fine at 14° for most cars. **It is the breakover at
+the top:**
 
-**Breakover at the top.** Ease the transition over the last 300–500 mm — a ramp
-meeting the level floor at a sharp angle catches the belly of anything long and low.
+| | Clearance | Breakover | vs 14° crease |
+|---|---|---|---|
+| Low saloon | 120 mm | 10.2° | grounds |
+| Hatchback | 140 mm | 12.5° | grounds |
+| Estate | 150 mm | 12.2° | grounds |
+| SUV | 200 mm | 16.6° | ok |
 
-**Drainage.** A ramp falling toward the building funnels rain straight at the
-opening. Fall it **away** at the bottom, or put a channel drain across the
-threshold. This is the one that does damage, and the entrance is the wall with no
-sill and no piers under it (F8).
+Every ordinary car beaches on the crease. At 1:10 the crease is **5.7°** and
+everything clears. The extra 1.5 m is 0.67 m³ of concrete — **€76**.
+
+| Item | |
+|---|---|
+| Concrete | 1.12 m³ |
+| Wedge fill under it | 0.94 m³ — 250 down to 0 mm |
+| Hardcore | 1.12 m³ — your rock |
+
+Five things the ramp has to get right:
+
+1. **Isolation joint at the threshold.** 20 mm compressible, same as the slab
+   perimeter. The ramp sits at grade and **will** heave in winter; the slab on
+   150 hardcore inside will not. Cast monolithic and the ramp levers the slab edge
+   every spring.
+2. **Ease the top over 300–500 mm.** Even at 5.7° a sharp crease is where the
+   surface spalls first — every wheel loads it twice.
+3. **Fall away at the bottom**, or a channel drain. A ramp draining toward the
+   building funnels rain at the one wall with no sill and no piers under it (F8).
+4. **Mesh through it.** A252 continuous. A 2.5 × 3.0 m unreinforced panel on a
+   wedge of fill cracks across the middle.
+5. **Compact the wedge in 150 mm lifts.** It is 0.94 m³ of new fill directly under
+   the thing carrying every wheel that enters.
 
 ### And check it fits
 
