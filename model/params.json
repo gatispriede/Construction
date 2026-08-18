@@ -466,7 +466,17 @@
   "perimeterFill": "XPS, closed cell",
   "_dpmPuncture": "The DPM is why the 50 mm blinding is not optional. Laid straight onto 50-200 mm rock it gets punctured in a dozen places by the first person who walks on it, and a punctured membrane is no membrane. It sits on sand or crushed fines, never on the stone.",
   "_foam": "Owner 2026-08-16: XPS foam in the perimeter gap so slab and sill never touch. Correct on the main point - no contact means no capillary bridge. Three qualifications. (1) Use XPS, not EPS: closed cell, under 0.7% water absorption against 2-5% for EPS, and on a 20 mm strip the price difference is pennies. (2) Foam is NOT a DPC - vapour crosses it much as it crosses air, and unlike an air gap it HOLDS water that gets in. (3) The joint must DRAIN: it is only 50 mm tall before it breaks out into the ventilated strip under the sill at 200 mm, so seal the TOP with flexible sealant against hose water and swarf, and leave the BOTTOM open. Run the foam past 200 mm and the joint becomes a reservoir.",
-  "_foamRealJob": "What the foam is actually earning its place for is MOVEMENT, not moisture. The slab shrinks 4.7 mm over 9.31 m and heaves seasonally while the piles do not (F23). A rigid fill there would lever the frame; foam absorbs it."
+  "_foamRealJob": "What the foam is actually earning its place for is MOVEMENT, not moisture. The slab shrinks 4.7 mm over 9.31 m and heaves seasonally while the piles do not (F23). A rigid fill there would lever the frame; foam absorbs it.",
+  "_vehicleLoads": "CHECKED 2026-08-16: yes, the slab takes a car easily. Westergaard on 150 mm C25/30, allowable 1.73 MPa (plain-concrete basis, conservative - the A252 only helps after cracking). Worst case is always the free CORNER, which is where you drive in: 2000 kg car (5 kN wheel) 0.38 MPa, factor 4.6; loaded 3500 kg van (10 kN) 0.75 MPa, factor 2.3; 20 kN truck axle 1.50 MPa, still inside. Only a 40 kN mixer wheel goes over at a corner, and that is a delivery problem, not a parking one. In the 200 mm entrance zone a van corner is 0.46 MPa, factor 3.7. Punching never governs (151 kN at 150 mm against a 10 kN wheel) and subgrade pressure spreads to 49 kPa.",
+  "ramp": {
+   "required": true,
+   "rise": 0.25,
+   "lengthAt1in10": 2.5,
+   "lengthAt1in8": 2.0,
+   "_why": "THE SLAB IS NOT THE CONSTRAINT - THE THRESHOLD IS. The floor sits 250 mm above outside grade, which was the whole point of raising it 50 above the sill, and a car cannot climb a 250 mm step. The 0.50 m apron is a 1:2 gradient: a kerb, not a ramp. 1:10 needs 2.50 m, 1:8 needs 2.00 m and is about the limit before cars ground out.",
+   "_breakover": "Ease the top transition over the last 300-500 mm. A ramp meeting the level floor at a sharp angle catches the belly of anything long and low.",
+   "_drainage": "A ramp falling toward the building funnels rain straight at the opening. Fall it AWAY at the bottom or put a channel drain across the threshold. This is the one that does damage, and the entrance is the wall with no sill and no piers under it (F8)."
+  }
  },
  "eaves": {
   "fasciaSection": [

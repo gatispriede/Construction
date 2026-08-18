@@ -144,6 +144,53 @@ phone calls — on a 9.5 m³ load, halving the distance saves more than the mesh
 At 125 mm the concrete is 7.3 m³ instead of 8.6 — about €140 less. The extra 25 mm
 buys a slab you stop thinking about when you move a machine.
 
+## Driving a car on it
+
+**Yes — the slab is not the constraint.** Westergaard on 150 mm C25/30, allowable
+1.73 MPa. The worst case is always the free **corner**, which is exactly where you
+drive in:
+
+| Vehicle | Wheel | Interior | Edge | **Corner** | |
+|---|---|---|---|---|---|
+| Car, 1600 kg | 4 kN | 0.10 | 0.12 | **0.30** | OK |
+| Car, 2000 kg | 5 kN | 0.13 | 0.14 | **0.38** | 4.6× |
+| Loaded van, 3500 kg | 10 kN | 0.26 | 0.29 | **0.75** | 2.3× |
+| Truck axle | 20 kN | 0.52 | 0.58 | **1.50** | inside |
+| Mixer wheel | 40 kN | 1.04 | 1.16 | **3.01** | over, at a corner |
+
+In the 200 mm entrance zone a van corner is 0.46 MPa — factor 3.7. Punching never
+governs (151 kN against a 10 kN wheel) and the load spreads to 49 kPa on the
+subgrade.
+
+### But you cannot get a car in without a ramp
+
+The floor is **250 mm above outside grade** — the whole point of raising it 50 above
+the sill. A car cannot climb a 250 mm step, and the 0.50 m apron is a **1:2
+gradient: a kerb, not a ramp.**
+
+| Gradient | Ramp length | |
+|---|---|---|
+| 1:6 | 1.50 m | too steep, most cars ground out |
+| **1:8** | **2.00 m** | steep but usable |
+| **1:10** | **2.50 m** | comfortable |
+| 1:12 | 3.00 m | comfortable loaded or with a trailer |
+
+Two details the ramp has to get right:
+
+**Breakover at the top.** Ease the transition over the last 300–500 mm — a ramp
+meeting the level floor at a sharp angle catches the belly of anything long and low.
+
+**Drainage.** A ramp falling toward the building funnels rain straight at the
+opening. Fall it **away** at the bottom, or put a channel drain across the
+threshold. This is the one that does damage, and the entrance is the wall with no
+sill and no piers under it (F8).
+
+### And check it fits
+
+Internal floor **9.01 × 5.70 m**, entrance 3.0 m wide. An estate parked centrally
+leaves 1.90 m each side — a walkway, not a bench. A car fits; a car *plus* a
+workshop is the real question.
+
 ## Still open
 
 **The entrance jambs.** F23: the frame is bolted to 1.2 m piles, the slab bears at
