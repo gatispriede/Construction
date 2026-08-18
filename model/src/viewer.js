@@ -1,12 +1,12 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { buildFrame } from './frame.js?v=1787033258';
-import { derive } from './geometry.js?v=1787033258';
-import { buildDims } from './dims.js?v=1787033258';
-import { buildFasteners, schedule } from './fasteners.js?v=1787033258';
-import { LAYER_GROUPS, inOrder } from './layers.js?v=1787033258';
-import { buildFloorNotes } from './floornotes.js?v=1787033258';
-import { buildMarks } from './marks.js?v=1787033258';
+import { buildFrame } from './frame.js?v=1787033584';
+import { derive } from './geometry.js?v=1787033584';
+import { buildDims } from './dims.js?v=1787033584';
+import { buildFasteners, schedule } from './fasteners.js?v=1787033584';
+import { LAYER_GROUPS, inOrder } from './layers.js?v=1787033584';
+import { buildFloorNotes } from './floornotes.js?v=1787033584';
+import { buildMarks } from './marks.js?v=1787033584';
 
 const params = await (await fetch('./params.json')).json();
 const findings = await (await fetch('./findings.json')).json();
@@ -187,14 +187,20 @@ document.getElementById('markers').onchange = (e) => { markers.visible = e.targe
 // a 2D section explains more than the model can. Loaded on first open.
 {
   const panel = document.getElementById('section-panel');
+  const box = document.getElementById('section');
   let loaded = false;
-  document.getElementById('section').onchange = async (e) => {
-    if (e.target.checked && !loaded) {
+  const show = async (on) => {
+    if (on && !loaded) {
       loaded = true;
       panel.insertAdjacentHTML('beforeend', await (await fetch('./floor-section.svg')).text());
     }
-    panel.classList.toggle('on', e.target.checked);
+    panel.classList.toggle('on', on);
+    box.checked = on;
   };
+  box.onchange = (e) => show(e.target.checked);
+  // The panel is big enough to bury the control panel on a small window, so it
+  // closes from itself as well as from the checkbox.
+  document.getElementById('section-close').onclick = () => show(false);
 }
 
 // Frame the model rather than guessing distances — the ridge height moves
