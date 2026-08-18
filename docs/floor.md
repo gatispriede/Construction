@@ -82,13 +82,44 @@ Rules for the fill:
 - **Blind it.** 50–200 mm rock has huge voids; concrete poured straight on loses
   depth into the gaps and the mesh ends up sitting on the stone.
 
-## Reinforcement — mesh, not loose rods
+## Reinforcement — owner's own steel
 
-**A252**: 8 mm bars at 200 mm both ways, 252 mm²/m.
+Not bought. The target is **A252: 252 mm²/m each way.** Anything meeting that works:
 
-If you are using loose rod, tie it to the same grid and get it at **mid-depth on
-chairs**. Mesh lying on the blinding does nothing at all — it has to be in the
-tension zone.
+| Bar | Spacing | mm²/m |
+|---|---|---|
+| 6 mm | 100 | 283 |
+| 8 mm | 150 | 335 |
+| **8 mm** | **200** | **251 — this *is* A252** |
+| 10 mm | 250 | 314 |
+| 10 mm | 300 | 262 |
+| 12 mm | 400 | 283 |
+
+**The steel is not carrying the load checks.** Every Westergaard figure in this
+spec — 0.13 MPa for a car, 0.95 for a machine foot, against 1.73 allowable — was
+computed on **plain concrete**. The slab passes with no steel at all.
+
+What it does:
+
+1. Holds shrinkage cracks **tight**, so they don't open, spall, or let water down
+   to the DPM
+2. Holds the slab together across a soft spot — a real possibility in hand-placed
+   brick hardcore
+3. Gives ductility at the edges and the entrance corner: it cracks and **holds**
+   rather than cracking and hinging
+
+### Three rules whatever the material
+
+**Lap 40 bar diameters, staggered** — 240 mm for 6 mm bar, 320 for 8, 400 for 10,
+480 for 12.
+
+**Mid-depth, on chairs.** Steel lying on the DPM does nothing and punctures the
+membrane at every crossing.
+
+**Tie every second intersection minimum.** Loose rod that shifts during the pour
+ends up in the bottom 30 mm, which is where it is useless.
+
+Chairs and tying wire still have to be bought — allow €70.
 
 ## Cost — Latvian prices, checked 2026-08-16
 
@@ -114,12 +145,13 @@ Everything else:
 
 | | | ex VAT |
 |---|---|---|
-| A252 mesh, 61 m² | ~4.50 €/m² | 274 |
-| DPM 0.5 mm, 64 m² | ~1.20 €/m² | 77 |
-| XPS 20 mm perimeter, ~31 m | ~2.50 €/m | 78 |
+| **Reinforcement** | **owner's own steel** | **0** |
+| DPM 0.5 mm, 70 m² | ~1.20 €/m² | 84 |
+| XPS 20 mm perimeter + threshold, ~34 m | ~2.50 €/m | 85 |
 | Blinding sand, 2.8 m³ | ~20 €/m³ | 56 |
-| Chairs, tape, sealant | allowance | 60 |
-| | | **545** |
+| Chairs + tying wire | | 70 |
+| Tape, sealant | | 40 |
+| | | **335** |
 
 **Floor total: €1,508 ex VAT, €1,825 incl.** — €2,043 with a pump. Hardcore is
 yours, so €0.
