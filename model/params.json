@@ -476,7 +476,11 @@
    "_why": "THE SLAB IS NOT THE CONSTRAINT - THE THRESHOLD IS. The floor sits 250 mm above outside grade, which was the whole point of raising it 50 above the sill, and a car cannot climb a 250 mm step. The 0.50 m apron is a 1:2 gradient: a kerb, not a ramp. 1:10 needs 2.50 m, 1:8 needs 2.00 m and is about the limit before cars ground out.",
    "_breakover": "Ease the top transition over the last 300-500 mm. A ramp meeting the level floor at a sharp angle catches the belly of anything long and low.",
    "_drainage": "A ramp falling toward the building funnels rain straight at the opening. Fall it AWAY at the bottom or put a channel drain across the threshold. This is the one that does damage, and the entrance is the wall with no sill and no piers under it (F8)."
-  }
+  },
+  "thicknessDecided": true,
+  "_thicknessDecision": "150 mm CONFIRMED by the owner 2026-08-16. 100 mm was costed at EUR 289 less and would have carried the car perfectly well - driving is an INTERIOR case almost everywhere (0.27 MPa at 100 mm against a 1.73 allowable) and the threshold is covered by the 200 mm entrance zone regardless. What 150 buys is the machine case: a 10 kN foot on a small 100x100 pad near a free edge is 1.97 MPa at 100 mm and OVER, against 0.95 at 150. Plus a thinner slab curls more as it dries, and curled edges are what crack under wheels. Decision closed - thicknessMin 125 is retained only as a record of the calculated floor.",
+  "_independence": "The slab is NOT connected to the pile foundation carrying the frame - confirmed by the owner 2026-08-16. It stops at the wall inner face (y = +-2.85) while the piles sit on the centreline (+-2.925), so there is 75 mm of clear ground plus the 20 mm XPS gap. This is what makes the Westergaard analysis correct rather than optimistic: every figure already treats the perimeter as a free edge carried by the subgrade alone.",
+  "_pileBackfill": "BUILDABILITY: the slab edge runs 75 mm inboard of 24 pile holes, so the slab's worst-loaded zone bears on the ground the piling disturbed. Loose backfill drops the subgrade modulus from about 54 to 20 MN/m3 - edge stress only goes 0.29 -> 0.32 MPa so it does not fail, but the slab deflects more and that is what cracks it over years. Compact the pile-head backfill before the hardcore goes in. Free at the right moment, impossible after."
  },
  "eaves": {
   "fasciaSection": [

@@ -144,6 +144,23 @@ phone calls — on a 9.5 m³ load, halving the distance saves more than the mesh
 At 125 mm the concrete is 7.3 m³ instead of 8.6 — about €140 less. The extra 25 mm
 buys a slab you stop thinking about when you move a machine.
 
+## Thickness: 150 mm — decided
+
+Confirmed 2026-08-16. 100 mm was costed at €289 less and would have carried the
+car perfectly well — driving is an **interior** case almost everywhere (0.27 MPa at
+100 mm against 1.73 allowable) and the threshold is covered by the 200 mm entrance
+zone whatever the rest of the slab is.
+
+What 150 buys is the **machine** case:
+
+| 10 kN foot on a 100 × 100 pad, near a free edge | |
+|---|---|
+| 100 mm slab | **1.97 MPa — over** |
+| 150 mm slab | 0.95 MPa |
+
+Plus a thinner slab curls more as it dries, and curled edges are what crack under
+wheel loads.
+
 ## Driving a car on it
 
 **Yes — the slab is not the constraint.** Westergaard on 150 mm C25/30, allowable
