@@ -97,14 +97,14 @@
   },
   {
     "id": "F8",
-    "title": "Entrance: lintel now passes, jamb support is the open item",
-    "severity": "medium",
+    "title": "Entrance: lintel passes and the jambs are now piled — closed",
+    "severity": "low",
     "at": [
       -4.5,
       0,
       1.6
     ],
-    "one_line": "Re-checked 2026-08-15 with the lighter roof. The 220x185 plate as a lintel over 3.0 m runs 2.07 MPa against 14.8 and deflects 3.4 mm final against a 10 mm limit - it PASSES, which it did not with the 250 rafters. What is still open is what the two jambs stand on: the floor slab will run under the entrance, but a ground-bearing slab heaves while the 1.2 m piles do not, and the frame is now bolted to those piles. Put 2 more piles under the jambs.",
+    "one_line": "Re-checked 2026-08-15 with the lighter roof: the 220x185 plate as a lintel over 3.0 m runs 2.07 MPa against 14.8 and deflects 3.4 mm final against a 10 mm limit - it PASSES, which it did not with the 250 rafters. The open item was what the jambs stand on. CLOSED 2026-08-21: each side of the entrance is built on THREE piles counting the corner, one of them directly under the jamb. The header puts 3.5 kN into that pile against 28 kN of capacity, factor 8, and it bears on a 1.2 m pile like the rest of the frame instead of on a slab that heaves independently of it.",
     "layer": "opening"
   },
   {
@@ -289,15 +289,15 @@
   },
   {
     "id": "F23",
-    "title": "Two foundation systems under one bolted frame",
-    "severity": "high",
+    "title": "Two foundation systems under one bolted frame — closed",
+    "severity": "low",
     "at": [
       -4.5,
       0,
       0.1
     ],
     "layer": "piers",
-    "one_line": "The frame is bolted to 1.2 m piles; the slab bears at grade. Piles below frost do not move, a slab does. PARTLY resolved by the slab detail: finishing 50 mm below the sill with a 20 mm compressible perimeter gap means the slab can heave without levering the frame. What is still open is the entrance JAMBS - put 2 more piles under them rather than standing them on the slab."
+    "one_line": "The frame is bolted to 1.2 m piles; the slab bears at grade. Piles below frost do not move, a slab does. Resolved in two steps. (1) The slab detail: finishing 50 mm below the sill with a 20 mm compressible perimeter gap lets the slab heave without levering the frame. (2) The entrance jambs, which were the last part of the frame standing on slab rather than pile - as built 2026-08-21 each side of the opening has three piles counting the corner, so the jambs are piled like everything else. NOTE what that adds: the four new piles are lightly loaded, about 3.5 kN each, and adfreeze threatens the LIGHTLY loaded piles hardest (F2). Slip-sleeve these four with the rest - do not skip them because they carry least."
   },
   {
     "id": "F25",
@@ -309,6 +309,6 @@
       2.0
     ],
     "layer": "must_frontGablePanels",
-    "one_line": "From the 2026-08-21 stability re-run, docs/stability.md. Wind across the ridge is 44 kN characteristic and half this building's side elevation is roof, so 32 kN arrives at loft-deck level. On the diaphragm route that is 24 kN design into each gable, and the 3 m entrance leaves the front gable two 1.5 m piers at 2.3:1 - 28 kN of hold-down at each jamb against about 16 kN of pile. Factor 0.6. The answer is not to rebuild the gable: it is that the knee-brace PORTALS carry the width - 95 kN of capacity against a 48.6 kN demand with the deck ignored - and the gables are the second path. That is the other reason F24 is a must-do. If you want the front gable to count, put 2 more piles under the entrance jambs and anchor into them, which F23 asks for anyway."
+    "one_line": "From the 2026-08-21 stability re-run, docs/stability.md. Wind across the ridge is 44 kN characteristic and half this building's side elevation is roof, so 32 kN arrives at loft-deck level - 49 kN design. Hand the gables a tributary half-share each and the front one cannot take it: the 3 m entrance leaves two 1.5 m piers at 2.3:1, and rocking one needs 41.8 kNm against the 18 kNm its pile group can hold (three piles a side counting the corner; two would have given 12). Inverted, the front gable is good for about 22% of the transverse shear, not 50%. That is NOT a failure, because the tributary split is not how the load actually goes: the knee-brace PORTALS have 77 kN of capacity against the 49 kN total, so they can carry everything the gable does not take. What it means is that the front gable is not a shear wall you may rely on, and F24 - the brace seats and the ledger - is what makes the building stable across its width. The insulation and the loft deck do not change this: the deck is what DELIVERS the load to the gables, and insulation carries nothing."
   }
 ]

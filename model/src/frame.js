@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1787331069';
-import { derive, stations, spaced } from './geometry.js?v=1787331069';
+import { allocator } from './stock.js?v=1787331868';
+import { derive, stations, spaced } from './geometry.js?v=1787331868';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -164,10 +164,18 @@ export function buildFrame(p) {
   const openY = p.opening.width / 2;
   // Gable piers only between the corners — the corners are already piered by
   // the long-wall run above, and doubling them up read as a clash.
-  for (const y of spaced(W, p.piers.spacing).slice(1, -1)) {
-    // Rear gable is fully piered; the front has none across the entrance.
-    pile(wx(sillW), y);
-    if (Math.abs(y) >= openY) pile(-wx(sillW), y);
+  // Rear gable runs the plain 1.2 m grid.
+  for (const y of spaced(W, p.piers.spacing).slice(1, -1)) pile(wx(sillW), y);
+  // Front gable carries the entrance, so it is NOT on the grid. As built
+  // 2026-08-21: three piles each side counting the corner, spread evenly over
+  // the 1.5 m from jamb to corner, so one lands directly under each jamb and
+  // nothing across the opening. That is what closes F8 and F23 — the jambs
+  // bear on 1.2 m piles instead of on a slab that heaves independently.
+  const jambN = p.opening.jambPiles;
+  for (const s of [-1, 1]) {
+    for (let i = 0; i < jambN - 1; i++) {     // the corner comes from the long wall
+      pile(-wx(sillW), s * (openY + (W / 2 - openY) * i / (jambN - 1)));
+    }
   }
   layers.piers = piers;
 

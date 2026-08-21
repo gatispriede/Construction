@@ -213,12 +213,25 @@ diagAng = math.atan2(h['girtBottom'], postSp)
 check(A, 'back gable, force per built diagonal', V_gable / nb_back / math.cos(diagAng),
       P['sections']['brace'][0] * P['sections']['brace'][1] * 1e6 * FC_D / 1000,
       'kN', f"{nb_back} diagonals, timber is fine - the ENDS are not specified")
+# The front gable's two piers rock about their compression edge, so what
+# resists is the pile GROUP under each pier, each pile at its own lever arm
+# from that edge. The pile sitting on the toe contributes nothing.
 front_len = Wd - P['opening']['width']
 pier = front_len / 2
-check(A, 'front gable pier, hold-down at the opening jamb',
-      V_gable / 2 * wallH / pier, 2 * PILE_UPLIFT, 'kN',
-      f"{P['opening']['width']:.0f} m opening leaves two {pier:.1f} m piers, "
-      f"{wallH/pier:.1f}:1 - this is why the portal path matters")
+nJamb = P['opening']['jambPiles']
+arms = [pier * i / (nJamb - 1) for i in range(1, nJamb)]   # toe excluded
+check(A, 'front gable pier, overturning on its pile group', V_gable / 2 * wallH,
+      sum(PILE_UPLIFT * a for a in arms), 'kNm',
+      f"{P['opening']['width']:.0f} m opening leaves two {pier:.1f} m piers at "
+      f"{wallH/pier:.1f}:1. {nJamb} piles a side counting the corner - two would "
+      f"give {PILE_UPLIFT*pier:.0f} kNm. Tributary half-share assumed; see the note")
+# What the jamb piles are actually for, and here they are comfortable: the
+# header. UDL back-figured from the F8 lintel check, 2.07 MPa on 220 x 185.
+w_lintel = 2.07 * (220 * 185 ** 2 / 6) * 8 / (P['opening']['width'] * 1000) ** 2
+check(A, 'jamb pile, vertical from the entrance header',
+      w_lintel * P['opening']['width'] / 2, 28.0, 'kN',
+      'the job the jamb piles actually do - and they now do it on a pile '
+      'instead of on a slab that heaves (F8, F23)')
 
 # Sway, portal only, no deck: pinned bases, corners made rigid by the knee
 # braces, so each post is 3EI/h^3 and the pair is 6EI/h^3.
@@ -353,7 +366,12 @@ ASSUMPTIONS = [
     "wind row has 22% more cover than it shows.",
     "cpe,10 walls +0.8 / -0.55, roof +0.7 / -0.25 at 54 deg, cpi +-0.2.",
     "Racking capacity of the built diagonals is stated as force per diagonal, "
-    "not kN/m: their end connections have never been specified (F10).",
+    "not kN/m: their end connections have never been specified (F10). That is "
+    "also why the gable/portal SHARE cannot be computed properly: with 4 x 6 mm "
+    "screws the joint slip dominates, and a braced gable panel comes out no "
+    "stiffer than a handful of portals. So the front gable is checked on a "
+    "tributary half-share, which is conservative, and the line above says what "
+    "share it can actually take.",
     "Pile uplift 8 kN: 2 kN of concrete plus shaft friction at 10 kPa, /1.5. "
     "Confirm against the real soil.",
 ]
@@ -367,6 +385,11 @@ def report(md=False):
              f"arrives at loft-deck level; the rest goes straight into the sills")
     o.append(f"Per tie bay at {tieSp*1000:.0f} mm: {H_bay:.2f} kN design, "
              f"knee brace {N_brace:.2f} kN axial")
+    share = sum(PILE_UPLIFT * a for a in arms) / wallH * 2 / (VA_deck * GQ)
+    o.append(f"The front gable is good for {share*100:.0f}% of the transverse "
+             f"shear, not the 50% a tributary split hands it. The portals carry "
+             f"the rest: {H_portal*tieBays:.0f} kN of capacity against "
+             f"{VA_deck*GQ:.0f} kN total.")
     o.append("")
     grp = None
     if md:

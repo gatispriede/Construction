@@ -152,7 +152,10 @@
   "width": 3.0,
   "height": 2.8,
   "src": "width given (~3 m). Height scaled from the approved front elevation, which shows an opening ~2.6 m wide and ~3.1 m tall in a 3.70 m wall — CONFIRM height on site.",
-  "lintel": "none - the single 220x185 front plate course spans the 3 m opening"
+  "lintel": "none - the single 220x185 front plate course spans the 3 m opening",
+  "jambPiles": 3,
+  "_jambPiles": "AS BUILT, owner 2026-08-21: each side of the entrance stands on THREE piles counting the corner, not the two the 1.2 m grid gave. Drawn evenly over the 1.5 m from jamb to corner - 1.500, 2.250, 3.000 - so one lands directly under each jamb. That is what F8 and F23 were asking for and it closes both: the jambs bear on 1.2 m piles like the rest of the frame instead of standing on a ground-bearing slab that heaves independently of it.",
+  "_jambPileConsequence": "One thing it adds. The four new piles are LIGHTLY loaded - about 3.5 kN each from the header - and adfreeze threatens the lightly loaded piles, not the heavy ones (F2). Slip-sleeve these four along with the rest, and do not skip them on the grounds that they carry least."
  },
  "roof": {
   "pitchDeg": 54.0,

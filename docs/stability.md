@@ -55,9 +55,11 @@ pair; it never governs.
 shear walls in their own plane. The deck is fine at 4.05 kN/m against 9.33,
 provided the panel edges are screwed at 150 mm and not at the flat 300 mm the
 fastener schedule used to say. The back gable is fine. The front gable is not: a
-3 m entrance in a 6 m wall leaves two 1.5 m piers at 2.3:1, and a half share of
-the shear needs **27.8 kN of hold-down at each opening jamb** against about
-16 kN of pile. Factor 0.6. See F25.
+3 m entrance in a 6 m wall leaves two 1.5 m piers at 2.3:1, and rocking one on a
+half share needs **41.8 kNm** against the **18 kNm** its pile group can hold —
+three piles a side counting the corner, as built; two would have given 12.
+Inverted, **the front gable is good for about 22% of the transverse shear, not
+50%.** See F25.
 
 **The portal route** — every tie plus its two knee braces, taking its own bay's
 load down the posts. With 6 screws at each brace end this path is good for 77 kN
@@ -108,7 +110,8 @@ member fixed to the posts.
 | loft deck diaphragm, unit shear | 4.05 kN/m | 9.33 kN/m | **2.3** | 6x100 at 150 mm on panel EDGES. At the 300 mm the schedule used to say, it is 4.7 kN/m and a factor of 1.2 |
 | deck chord force in the edge tie | 9.41 kN | 242.31 kN | **25.8** | the two edge ties are the chords - the SPLICES carry this |
 | back gable, force per built diagonal | 12.94 kN | 203.54 kN | **15.7** | 4 diagonals, timber is fine - the ENDS are not specified |
-| front gable pier, hold-down at the opening jamb | 27.83 kN | 16.00 kN | **0.6** | 3 m opening leaves two 1.5 m piers, 2.3:1 - this is why the portal path matters |
+| front gable pier, overturning on its pile group | 41.75 kNm | 18.00 kNm | **0.4** | 3 m opening leaves two 1.5 m piers at 2.3:1. 3 piles a side counting the corner - two would give 12 kNm. Tributary half-share assumed; see the note |
+| jamb pile, vertical from the entrance header | 3.46 kN | 28.00 kN | **8.1** | the job the jamb piles actually do - and they now do it on a pile instead of on a slab that heaves (F8, F23) |
 | sway at tie level, portal only, deck ignored | 12.82 mm | 12.08 mm | **0.9** | characteristic wind, H/250; = H/236 |
 | roof sheeting as a diaphragm (F19) | 0.81 kN/m | 1.50 kN/m | **1.9** | no roof-plane braces: the sheeting is the only path |
 | wind girder diagonal, 100x100 | 12.57 kN | 129.35 kN | **10.3** | restrained every 700 mm along it, kc 0.89 |
@@ -129,10 +132,14 @@ member fixed to the posts.
 
 ## The three that are not comfortable
 
-**Front gable hold-down, 0.6** — do not rely on the front gable for transverse
-shear. Build the brace connections to schedule and it becomes a second path
-carrying whatever it attracts. To make it count, put two more piles under the
-entrance jambs and anchor into them — which F23 asks for anyway.
+**Front gable, 22% not 50%** — do not rely on the front gable for transverse
+shear. Build the brace connections to schedule and the gable becomes a second
+path carrying whatever it attracts, which is fine: the portals have 77 kN
+against a 49 kN total and can absorb the rest. The tributary half-share this
+table checks is deliberately conservative — with 4 × 6 mm screws at the diagonal
+ends (F10) the joint slip dominates and a braced gable panel comes out no
+stiffer than a handful of portals, so the real split is nothing like 50/50. It
+cannot be computed properly until those joints are specified.
 
 **Overturning across the ridge, 0.8** — 75 kN of building against 243 kNm of
 overturning leaves a 42 kNm shortfall, which is 7 kN spread over the 9 piles
