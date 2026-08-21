@@ -251,38 +251,81 @@ Nothing about the section fixes that; 250 mm is already the deepest stock on sit
 **Spacing is the only lever**, and it is a direct one — halve the spacing, halve the
 load each tie carries, halve the deflection.
 
-**Ties are now at 576 mm — 17 of them, not 9.** Final deflection 22.8 mm, L/263,
-inside the L/250 limit with the full 2.0 kPa workshop floor load. No spine beam, no
-posts landing in the floor, and 18 mm OSB now spans the deck instead of 40 mm boards.
+**Ties are at 700 mm — 13 of them, not 9.** 700 mm centres on a 100 mm tie is
+**600 mm clear**, which is what takes the owner's 600 × 1000 mm insulation packs
+uncut. Set out on site and reported 2026-08-21. Superseded 576 mm (an even division)
+and a brief 600 mm centres.
 
-600 mm was the target and does not divide evenly: 16 ties gives 614 mm and lands
-24.3 mm, 0.3 mm over. The count rounds **up**, so spacing never exceeds 600.
+**This spacing does not pass on a plain span, and that is the finding.**
+
+| How the tie is modelled | Instant | **Final, with creep** | |
+|---|---|---|---|
+| Simply supported, 6.00 m — the basis of every earlier figure here | 16.4 mm | **27.3 mm** | **14% over**, L/220 |
+| Simply supported on the true bearing centres, 5.85 m | 14.8 mm | **24.6 mm** | 2.5% over |
+| **Propped by the knee braces — 5.06 m span** | 7.9 mm | **13.2 mm** | factor 1.8 ✓ |
+
+Limit is L/250 = 24 mm on the full 2.0 kPa workshop floor load. The method reproduces
+the model's own 22.8 mm at 576 mm exactly, so the load basis is sound.
+
+**The two bounds straddle the limit.** Unpropped it fails; propped it passes with real
+margin. Which one you get is decided by a joint detail — see F24.
 
 Still to watch:
 
-- These beams do **three jobs** — loft floor, rafter tie, and eaves cantilever. The
-  tie job means the ends must be positively fixed to the plate, not just resting on
-  it. That is 17 × 2 = **34 tie ends, 68 M14 bolts**, up from 36.
-- **The ties no longer land on posts.** At 576 mm every other one lands mid-bay and
-  the plate carries it. The plate takes that easily — 150 × 185 over a 1.15 m bay
-  under a 3.68 kN reaction runs at 1.2 MPa against 14.8. But see F16a.
+- The tie does **three jobs** — loft floor, rafter tie, eaves cantilever. Bending is
+  8.41 MPa against 14.8 unpropped, 5.98 propped: never the problem. The rafter-tie
+  horizontal goes 3.13 → 3.80 kN per tie end against 11.8 kN of bracket, factor 3.1.
+- **Deck goes to 22 mm OSB.** 18 mm is rated to 600 mm centres, not 700.
+- **1200 mm sheet no longer lands on a tie** — 1200 is not a multiple of 700, so a
+  sheet edge meets a tie only every sixth bay. Cut edges need noggins.
+- **Batten waste goes up**, 4% → 6.7%: a 6 m batten is 8 bays of 700, using 5.60 m.
 
-### F16a — Two ties land on plate splices
+### F16a — resolved by the 700 mm setout
 
-A consequence of decoupling the ties from the posts. **J6** (x = −1.727) sits 72 mm
-from the upper-layer splice at −1.655, and **J8** (x = −0.576) sits 79 mm from the
-lower-layer splice at −0.655. EN 1995 wants 7d = **98 mm** end distance for a loaded
-M14, so both bolts land in a short end block.
+Two ties used to land within the end distance of a plate splice. At 700 mm centres
+they no longer do.
 
-It is not critical, because the lower and upper splices are never closer than 1.0 m
-to each other — at both ties the other plate layer is continuous and the load has a
-path. But it removes the redundancy exactly where F16 says the wall is already weak.
+| | 576 mm | 600 mm (considered) | **700 mm (built)** |
+|---|---|---|---|
+| worst clearance, tie to splice | 72 mm | 50 mm | **150 mm** |
 
-**Fix: strap those two splices before bolting the ties down, not after.** Same detail
-F16 already calls for — 4 × 6×200 each side, staggered over 600 mm.
+EN 1995 wants 7d = 98 mm for a loaded M14. Splices sit at −0.65 (lower) and −1.65,
++1.35, +3.35 (upper), and are as-built — they do not move. The nearest tie to any of
+them is now 150 mm. **Nothing to do.** Strapping the splices is still worth doing for
+F16's own reasons, but it is no longer a tie-bolt problem.
 
-If you would rather not have the detail at all, **19 ties at 512 mm** clears every
-splice by 120 mm and drops deflection to 20.3 mm, for two more boards (€93).
+### F24 — The knee braces are now primary supports, and the joint is wrong for it
+
+**New 2026-08-21, and it is the open item on the loft floor.**
+
+The 30 → 26 knee braces prop each tie **395 mm inboard of its bearing**, cutting the
+span from 6.00 m to 5.06 m. That is the entire difference between a floor at 27.3 mm
+and one at 13.2 mm. They are no longer optional.
+
+But they were designed as **wind braces** — 0.78 kN axial, held by 4 × 6×100 connector
+screws each end. As props the demand is **4.07 kN vertical, 5.75 kN axial**, against
+about **5.6 kN of screw capacity**. At capacity, nothing spare, on a joint that had a
+factor of 7. And screw slip — the pair of joints is only ~2.2 kN/mm — hands several
+millimetres of the benefit straight back.
+
+**Fix: bear the brace, do not screw it.** Cut the brace head to a flat level face
+bearing directly on the tie underside. 50 × 100 cut square at 45° gives 7071 mm²;
+4.07 kN on it is **0.58 MPa against fc,90,d 1.73**, factor 3.0. Locate sideways with a
+shallow **10 mm** housing or a cleat each side; screws only stop it falling out. Same
+at the foot on the post top. Same principle as the purlin/post joint: **cut the
+compression member, not the bending one.**
+
+**Do not house it 25 mm into the tie.** A rebate on the underside of a beam at a
+support is the case EN 1995 6.5.2 singles out — the re-entrant corner starts a shear
+crack and the prop point is where shear peaks.
+
+**The thrust is contained.** Each brace pushes the wall top outward 4.07 kN; the two
+braces on a tie push against each other and the tie takes 4.07 kN of axial compression
+between the heads. Euler on the weak axis over 5.06 m is 88 kN, factor 22, and it
+partly cancels the 2.38 kN of rafter-thrust tension already there.
+
+**Do not deck the loft until the seats are cut.** After the deck goes on, the joint
+cannot be inspected or improved.
 
 ### F8 — The 3 m entrance removes half the front wall
 
@@ -417,17 +460,21 @@ choice to make now, because it changes every rafter length.
    straps cast in, sill raised to 300 mm+.
 3. **Birdsmouth and strap every rafter (F3).** Do not cut a single rafter until
    this is settled — it changes the setting-out.
-4. **Loft (F7) is decided** — 17 ties at 576 mm, sized for full workshop floor
+4. **Loft (F7) is decided** — 13 ties at 700 mm, sized for full workshop floor
+   load **only with the F24 brace seats cut**. Without them it is 14% over on
    load. Order the ties before setting any out, because the run is continuous.
    Previously this read: decide before the last ties go in — ceiling only,
    or a real floor with a centre beam.
 5. **Treat the timber (F11)** while every face is still reachable.
-6. **Cut the knee-brace seats and fit the ledger before the deck goes down
-   (F24).** The 2026-08-21 stability re-run in [stability.md](stability.md)
-   moved the knee-brace portals from a nicety to the primary transverse system,
-   because the front gable cannot take its half of the width (F25). Every brace
-   end is now a structural connection: 6 screws, not 4, and a cut bearing seat
-   at both ends. None of it can be inspected once the loft is decked.
+6. **Cut the brace seats and fit the ledger before the deck goes down (F24).**
+   The braces carry the floor now, and a prop needs something to stand on: below
+   the plate the wall between posts is open frame, so most brace feet land on
+   air. A 100 × 100 ledger down each long wall fixes it, and it has to be that
+   thick for stiffness — a 50 mm one sags 3.5 mm and gives back three quarters
+   of what the braces buy. The 2026-08-21 re-run in [stability.md](stability.md)
+   adds a second reason: the front gable cannot take its half of the transverse
+   wind (F25), so the brace portals are the primary system across the width too.
+   None of it can be inspected once the loft is decked.
 
 Steps 2 and 3 are worth doing before anything else goes on the frame. Everything
 above the sill is reversible; the foundation stops being reversible the moment

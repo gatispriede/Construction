@@ -124,20 +124,38 @@ export function derive(p) {
 // limit. Spacing is the only lever that works, because the section is already
 // the deepest stock on site.
 //
-// The count is rounded UP so the spacing never EXCEEDS maxSpacing: 0.60 exactly
-// divides into 16 ties at 614 mm, which lands 0.3 mm over the limit. 17 ties at
-// 576 mm clears it and lets 18 mm OSB span the deck.
+// SPACING IS NOW EXACTLY 600 mm CENTRES, not an even division of the wall.
+// Owner decision 2026-08-21: insulation and board come in 600 and 1200 mm
+// widths, so a sheet edge has to land on a tie centreline. 576 mm was an even
+// division and put every sheet joint in mid-air. The setout therefore runs at
+// a hard 600 from the FRONT gable and lets the wall close out where it closes
+// out, instead of spreading the residual.
 //
 // End ties sit flush with the outer face of the gable walls, so the run is
-// measured between tie CENTRELINES, half a tie in from each end.
+// measured between tie CENTRELINES, half a tie in from each end — 9.20 m on a
+// 9.30 m building. 9.20 does not divide by 600, so 200 mm has to go somewhere.
+// It goes into the LAST bay, which becomes 800 mm and is the bay whose tie is
+// omitted for the stair anyway: the stair opening ends up 1.40 m centre to
+// centre, 1.30 m clear, and every bay a sheet lands in is exactly 600.
+//
 // NOTE: this is the SETOUT, not the built list. One tie is omitted for the
 // stair opening — see builtTieStations. Keeping them separate matters: the
-// rafter beside the omitted tie still exists, and the wind girder is still
-// screwed to the plate at that station.
+// rafter beside the omitted tie still exists, the tail joist that closes the
+// deck past the opening lands on it, and the wind girder is still screwed to
+// the plate at that station.
 export function tieStations(p) {
   const jw = p.sections.joist[0];
   const run = p.plan.length - jw;
-  return stations(run, Math.ceil(run / p.joists.maxSpacing));
+  const s = p.joists.spacing;
+  const full = Math.floor(run / s + 1e-9);
+  // Never leave a sliver bay against the gable: if the run does not divide
+  // exactly, drop one full bay and let the remainder ride with it, giving a
+  // close-out bay somewhere in [s, 2s) rather than one of 200 mm.
+  const n = Math.abs(run - full * s) < 1e-6 ? full : full - 1;
+  const out = [];
+  for (let i = 0; i <= n; i++) out.push(-run / 2 + i * s);
+  if (out[out.length - 1] < run / 2 - 1e-6) out.push(run / 2);
+  return out;
 }
 
 // `gaps` are CLEAR openings between posts, measured on site. The first and last

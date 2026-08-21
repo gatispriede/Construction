@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1787317534';
-import { derive, stations, spaced } from './geometry.js?v=1787317534';
+import { allocator } from './stock.js?v=1787331069';
+import { derive, stations, spaced } from './geometry.js?v=1787331069';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -130,7 +130,7 @@ export function buildFrame(p) {
   const own = allocator();
   const M = (group, i, n) => (own(group, i, n) ? MAT.have : MAT.need);
 
-  // 9.31 x 6.00 are OUTER dimensions, so every wall member is set in by half
+  // 9.30 x 6.00 are OUTER dimensions, so every wall member is set in by half
   // its own thickness — its outer face lands on the boundary, not its centre.
   const wy = (t) => W / 2 - t / 2;   // long-wall members
   const wx = (t) => L / 2 - t / 2;   // gable-wall members
@@ -376,9 +376,9 @@ export function buildFrame(p) {
   const joists = layer('ties');
   const [jw, jd] = p.sections.joist;
   const zJ = d.tieBottom + jd / 2;
-  // Set out at 576 mm, NOT one per post — see tieStations() for why. Every
-  // other tie now lands mid-bay and is carried by the plate rather than by a
-  // post directly beneath it.
+  // Set out at a hard 600 mm, NOT one per post and NOT an even division of the
+  // wall — see tieStations() for why. Roughly every other tie lands mid-bay and
+  // is carried by the plate rather than by a post directly beneath it.
   const tieXs = d.tieStations;          // setout — rafters, struts, girder
   const builtTies = d.builtTieStations;  // one short: the stair opening
   builtTies.forEach((x, i) => {
@@ -452,9 +452,14 @@ export function buildFrame(p) {
   const stairs = layer('stairOpening');
   if (p.stair) {
     const st = p.stair;
-    // Centre of the run of omitted ties.
+    // The opening is bounded by the ties that SURVIVE either side of the
+    // omitted run, not by the omitted stations themselves. That distinction
+    // matters now the setout is non-uniform: the stair bay is the close-out
+    // bay, so it is 1.40 m centre to centre while every other bay is 0.60.
     const om = st.omitTies;
-    const sx = (d.tieStations[om[0] - 1] + d.tieStations[om[om.length - 1] - 1]) / 2;
+    const oA = d.tieStations[om[0] - 2];             // last tie before the hole
+    const oB = d.tieStations[om[om.length - 1]];     // first tie after it
+    const sx = (oA + oB) / 2;
     const yTrim = st.openingFromY + st.openingLength;
     const [tmw, tmd] = st.trimmerSection;
     // Trimmer spans between the two ties that survive, top flush with them.
@@ -462,8 +467,9 @@ export function buildFrame(p) {
     // the tie between them is the one taken out. One spacing would leave it
     // hanging in mid-air over the opening.
     // Reaches from the last surviving tie on one side to the first on the
-    // other, so it spans however many were taken out.
-    const openSpan = (om.length + 1) * (d.tieStations[1] - d.tieStations[0]);
+    // other, so it spans however many were taken out — measured, not counted
+    // in bays, because the bays are no longer all the same size.
+    const openSpan = oB - oA;
     bar(stairs, M('stairOpening', 0, 2), [sx, yTrim, d.tieTop - tmd / 2],
         [openSpan, tmw, tmd]);
     // Tail joist closes the bay from the trimmer out to the far wall.
@@ -487,7 +493,7 @@ export function buildFrame(p) {
   if (p.stair && p.stair.flight) {
     const st = p.stair, fl = st.flight;
     const om = st.omitTies;
-    const sx = (d.tieStations[om[0] - 1] + d.tieStations[om[om.length - 1] - 1]) / 2;
+    const sx = (d.tieStations[om[0] - 2] + d.tieStations[om[om.length - 1]]) / 2;
     const floorZ = fl.floorLevel;
     const rise = (d.loftFloorTop - floorZ) / fl.risers;
     const y0 = fl.startY;

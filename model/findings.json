@@ -85,14 +85,14 @@
   },
   {
     "id": "F7",
-    "title": "Tie beams: fixed by going to 17 at 576 mm",
+    "title": "Tie beams: 13 at 700 mm, and they need the knee braces",
     "severity": "low",
     "at": [
       0,
       0,
       3.65
     ],
-    "one_line": "The 100x250 passes on strength (10.0 MPa vs 14.8) and failed on deflection: 45.6 mm at the old 1.151 m spacing, against a 24 mm limit. Span/depth is 24:1 and creep doubles it. Spacing is the only lever - 17 ties at 576 mm gives 22.8 mm, L/263, with the full workshop floor load and no spine beam.",
+    "one_line": "700 mm centres = 600 mm clear, set out on site so the 600x1000 insulation packs go in uncut. On a plain 6 m span that is 27.3 mm against a 24 mm limit - 14% OVER. What makes it pass is the knee braces propping each tie inboard of its bearing. At 600 mm braces the prop lands 574 mm in and the floor runs 12.1 mm final, factor 2.0 - and that figure INCLUDES the ledger the props stand on flexing 1.8 mm, which the earlier 13.2 mm did not. The braces are therefore structural now, and so is the ledger: see F24. Deck goes to 22 mm OSB, not 18.",
     "layer": "ties"
   },
   {
@@ -249,7 +249,19 @@
       7.0
     ],
     "layer": "roof",
-    "one_line": "Warm moist air on cold steel drips onto everything below. Needs an anti-condensation membrane, counter-battens for a vented cavity, and vented ridge and eaves. Cheapest detail to design in, worst to retrofit."
+    "one_line": "Warm moist air on cold steel drips onto everything below. Needs THREE things and the membrane is only one: an anti-condensation layer against the steel, the 25 mm counter-batten cavity (already in the design), and VENTED EAVES AND RIDGE so that cavity can actually breathe. A membrane over a sealed cavity just moves the wet from the steel to the felt. The wall build-up - breather membrane behind vertical 25x50 battens - is correct as the owner proposes; the roof needs the openings too."
+  },
+  {
+    "id": "F24",
+    "title": "Knee braces are primary supports: cut the seats, and give the feet something to stand on",
+    "severity": "high",
+    "at": [
+      0,
+      2.43,
+      3.59
+    ],
+    "layer": "kneeBraces",
+    "one_line": "At 700 mm tie centres the loft floor only passes because the knee braces prop each tie inboard of its bearing - 27.3 mm becomes 12.1 mm. They were designed as 0.78 kN wind braces held by 4 x 6x100 screws. As props the demand is 5.1 kN vertical per foot, 7.3 kN axial, and up to 8.2 / 11.6 kN where a foot lands over a post and the prop goes rigid. TWO FIXES, both before the loft is decked, because neither can be inspected afterwards. (1) CUT THE SEATS. Flat bearing face on the brace head against the tie underside - 1.16 MPa against fc,90,d 2.31 - located with a 10 mm housing or cleats, NEVER a 25 mm notch in the tie. (2) THE FEET NEED A LEDGER. Below 3.270 the wall between posts is open frame, so a foot landing mid-bay has AIR under it, and at 700 mm ties against 1163 mm posts most of them do. A continuous 100x100 along the inner wall face, top at 3.166, housed 20 mm into every post and screwed 6 x 8x200, carries them. It has to be 100 thick for STIFFNESS, not strength: at 50 thick the ledger sags 3.5 mm under the prop and the tie finishes at 20.1 mm instead of 12.1, giving back three quarters of what the braces were fitted to buy. Braces went 453 -> 600 mm to reach it, which also moves the prop 104 mm further inboard. 4 boards of 100x100, EUR 74.40."
   },
   {
     "id": "F22",
@@ -266,14 +278,14 @@
   {
     "id": "F16a",
     "title": "Tie bolts near a lap: check spacing, not end distance",
-    "severity": "low",
+    "severity": "resolved",
     "at": [
       -1.727,
       -3.0,
       3.55
     ],
     "layer": "plateSplices",
-    "one_line": "Rewritten 2026-08-15 now the joints are laps. There is no loaded END at a lap - the timber runs through, doubled - so the 98 mm end distance no longer applies. What governs is bolt-to-bolt spacing a1 = 5d = 70 mm. J6 at 72 mm and J8 at 79 mm both clear it, but only just: set the lap bolts deliberately, not by eye."
+    "one_line": "RESOLVED by the 700 mm setout. Ties used to sit 72 mm from a plate splice (and 50 mm at the 600 mm spacing that was briefly considered), against the 98 mm EN 1995 wants. At 700 mm the nearest tie to any splice is 150 mm. Nothing to do."
   },
   {
     "id": "F23",
@@ -288,18 +300,6 @@
     "one_line": "The frame is bolted to 1.2 m piles; the slab bears at grade. Piles below frost do not move, a slab does. PARTLY resolved by the slab detail: finishing 50 mm below the sill with a 20 mm compressible perimeter gap means the slab can heave without levering the frame. What is still open is the entrance JAMBS - put 2 more piles under them rather than standing them on the slab."
   },
   {
-    "id": "F24",
-    "title": "Knee brace feet: a ledger and a cut seat, before the deck goes on",
-    "severity": "high",
-    "at": [
-      0,
-      -2.85,
-      3.17
-    ],
-    "layer": "braceLedger",
-    "one_line": "The knee braces are load-bearing now (F25), and the joint they were given is not sized for it. Their feet run onto a continuous 100x100 ledger along the inner wall face, top at 3.166 - 424 mm below the tie underside, 104 mm below the plate courses, so the thrust lands on the POSTS and not on the lapped plate. CUT THE SEAT: a 12 mm locating housing in the ledger top and a squared toe, not a deep notch, and the same at the brace head against the tie. Screws are not the bearing - but they ARE the tension path, because the leeward brace of every pair pulls: 6 x 6x120 each end, 2 into the face and 4 skewed. The ledger is 100 mm thick, not 50, because between posts it spans 1.16 m and a 50 mm board is pulled off the wall by the tension brace at 21 MPa against 16.6. 3 x 8x200 into every post. All of it has to be cut and inspected BEFORE the loft is decked - afterwards you cannot see any of it."
-  },
-  {
     "id": "F25",
     "title": "The front gable cannot take its half of the transverse wind",
     "severity": "high",
@@ -309,6 +309,6 @@
       2.0
     ],
     "layer": "must_frontGablePanels",
-    "one_line": "From the 2026-08-21 stability re-run. Wind across the ridge is 44.4 kN characteristic and half the building's side elevation is roof, so 32.4 kN arrives at loft-deck level. On the diaphragm route that is 24.3 kN design into each gable, and the 3 m entrance leaves the front gable two 1.5 m piers at 2.3:1 - 27.9 kN of hold-down at each jamb against about 16 kN of pile. Factor 0.6. The answer is not to rebuild the gable: it is that the knee-brace PORTALS carry the width (95 kN capacity against 48.6 kN demand, deck ignored) and the gables are the second path. That is what makes F24 a critical detail rather than a nicety. If you want the front gable to count, put 2 more piles under the entrance jambs and anchor into them - which F23 asks for anyway."
+    "one_line": "From the 2026-08-21 stability re-run, docs/stability.md. Wind across the ridge is 44 kN characteristic and half this building's side elevation is roof, so 32 kN arrives at loft-deck level. On the diaphragm route that is 24 kN design into each gable, and the 3 m entrance leaves the front gable two 1.5 m piers at 2.3:1 - 28 kN of hold-down at each jamb against about 16 kN of pile. Factor 0.6. The answer is not to rebuild the gable: it is that the knee-brace PORTALS carry the width - 95 kN of capacity against a 48.6 kN demand with the deck ignored - and the gables are the second path. That is the other reason F24 is a must-do. If you want the front gable to count, put 2 more piles under the entrance jambs and anchor into them, which F23 asks for anyway."
   }
 ]

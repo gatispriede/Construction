@@ -6,7 +6,7 @@
 // decides length — 6 x 100 is not always enough.
 
 import * as THREE from 'three';
-import { derive } from './geometry.js?v=1787317534';
+import { derive } from './geometry.js?v=1787331069';
 // Connections are labelled with the LAYER NAMES they join, not reference
 // letters. The letters were a 30-row lookup table you had to learn; the layer
 // name is already in the panel on the left, so "ties -> plates" points at two
@@ -95,15 +95,18 @@ export function schedule(p, d, Z) {
     // The deck is a diaphragm, not a floor: at a flat 300 mm it runs 4.7 kN/m
     // against a 4.05 kN/m demand, factor 1.2. Halving the EDGE spacing is free
     // and takes it to 2.3. See docs/stability.md.
+    // The brace is a PROP now, not a wind brace: it is the cut seat that carries
+    // the 8.2 kN, and the screws are there for the wind case and to stop the
+    // joint falling open. See params.kneeBraces._seat and F24.
     [`${Z('kneeBraces')}→${Z('ties')}  brace head to tie`,
-      '12 mm locating housing + 6 × 6×120 · 2 face, 4 skewed', '6×120',
-      [xs[3], bear - d.kneeRun - 0.15, d.tieBottom - 0.15]],
+      'FLAT BEARING CUT + 10 mm locating housing, then 6 × 6×120 · never a 25 mm notch',
+      '6×120', [xs[3], bear - d.kneeRun - 0.15, d.tieBottom - 0.15]],
     [`${Z('kneeBraces')}→${Z('braceLedger')}  brace foot to ledger`,
-      'cut seat, 12 mm housing + 6 × 6×120 · the pair works in TENSION', '6×120',
+      'seat cut on the ledger top, 12 mm housing, then 6 × 6×120', '6×120',
       [xs[5], bear - 0.55, d.ledgerTop - 0.45]],
     [`${Z('braceLedger')}→${Z('posts')}  ledger to post`,
-      '3 × 8×200 at EVERY post · withdrawal governs · 12 kN', '8×200',
-      [xs[6], -bear + 0.5, d.ledgerTop - 0.45]],
+      '20 mm housing so the shoulder bears + 6 × 8×200 · 8 kN of FLOOR per post',
+      '8×200', [xs[6], -bear + 0.5, d.ledgerTop - 0.45]],
 
     [`${Z('plateSplices')}  plate splice`, '4 × 6×200 each side, staggered over 600 mm', '6×200',
       [-0.66, -3.0, 3.95]],

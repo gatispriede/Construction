@@ -47,7 +47,9 @@ export const OWNED = {
 const QUEUE = [
   // 100 x 250 — 16 boards, now all available for ties: the wind girder moved to
   // bought 100 x 100 so it no longer takes 3 of them.
-  { group: 'ties',            section: '100x250', boards: 16 },
+  // 13 ties at 700 mm centres = 600 mm CLEAR, as built. Down from 16 at 576.
+  // THREE BOARDS SPARE, the first real margin this section has had.
+  { group: 'ties',            section: '100x250', boards: 13 },
   { group: 'stairOpening',    section: '50x150',  boards: 1  },
   // Stair back in, built entirely from 50 x 150: 2 strings, 40 tread pieces
   // (two per step — a single 150 leaves a 50 mm gap against a 200 going) and
@@ -63,15 +65,22 @@ const QUEUE = [
   { group: 'gablePanels',     section: '50x250',  boards: 2  },
   // Rafters last: they are the biggest claim and the latest work, so this is
   // where the yard runs out. At 50 x 150 they still take one board each.
-  { group: 'rafters',         section: '50x250',  boards: 38 },
+  // 30, down from 38: the rafters follow the tie setout, and 700 mm centres
+  // over 9.30 m is 15 lines where 576 mm gave 19.
+  { group: 'rafters',         section: '50x250',  boards: 30 },
 
   // 50 x 100 — 36 m of rip byproduct
   // Blocking moved here from 50 x 250 — it is 50 x 100 now, and free.
-  { group: 'blocking',        section: '50x100_m', boards: 20.0 },
-  { group: 'kneeBraces',      section: '50x100_m', boards: 19.2 },
+  // 11 blocked bays x 3 rows x 0.60 m clear (the stair bay is an opening, not
+  // a bay). Was 20.0 m at 16 ties and 476 mm clear.
+  { group: 'blocking',        section: '50x100_m', boards: 19.8 },
+  // 26 x 600 mm. These are now PRIMARY SUPPORTS, not wind braces - see
+  // params.kneeBraces._STRUCTURAL. The timber is still free; the seat cut and
+  // the ledger under it are the cost.
+  { group: 'kneeBraces',      section: '50x100_m', boards: 15.6 },
   // Queued explicitly now. They were drawn blue unconditionally, which meant
   // 37.3 m of 50 x 100 sat outside the take-off entirely.
-  { group: 'rafterSpacers',   section: '50x100_m', boards: 37.3 },
+  { group: 'rafterSpacers',   section: '50x100_m', boards: 36.4 },
   // The 15 girt-to-corner wall braces are NOT queued: owner is supplying
   // them from separate material, deliberately kept out of this order. They
   // used to draw 22.1 m off the rip byproduct — that is now free for
@@ -93,7 +102,8 @@ const QUEUE = [
   // 25 x 50 — same section, separate counts. Roof counter-battens make the
   // roof's ventilation cavity; wall battens make the wall's drained cavity and
   // also carry the sheet. Different jobs, different lines.
-  { group: 'counterBattens',  section: '25x50_roof_m', boards: 239.1 },
+  // One per rafter line, full slope length. 15 lines now, not 19.
+  { group: 'counterBattens',  section: '25x50_roof_m', boards: 188.8 },
   // 182 m plain wall (incl. 8 corner battens and 2 entrance jambs)
   // + 42 m of gable triangle and over-head strip = 225 m.
   { group: 'wallBattens',     section: '25x50_wall_m', boards: 225.0 },

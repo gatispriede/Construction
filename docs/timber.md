@@ -1,7 +1,17 @@
 # Timber schedule
 
-As of 2026-08-15. Ties are **not** installed — the light members in the photos are
+As of 2026-08-21. Ties are **not** installed — the light members in the photos are
 temporary and cannot come out until the permanent bracing is in, so they are not stock.
+
+**Re-set out at 700 mm centres — 600 mm CLEAR — 2026-08-21, AS BUILT.** The wall was
+re-measured along the tie run at **9.30 m** front outer edge to back outer edge, and
+the owner has set the ties out at 700 mm centres so the **600 × 1000 mm insulation
+packs drop into every bay uncut**. Counts below reflect it: **13 ties, 30 rafters**.
+
+> **This spacing only passes because the knee braces are now structural props.**
+> On a plain 6 m span the loft floor runs 27.3 mm against a 24 mm limit. Propped by
+> the braces it runs 13.2 mm. **The brace bearing seat is therefore mandatory** — see
+> *Knee braces are now primary supports* below. Do not deck the loft until it is in.
 
 ## Sections, and why
 
@@ -14,34 +24,38 @@ temporary and cannot come out until the permanent bracing is in, so they are not
 | Purlin verticals | 50 × 100 | carry 0.06 kN; free from the rips |
 | Tie spacers (blocking) | 50 × 100 | tie is too stocky to need restraint — kcrit 1.00 |
 | Rafter spacers | 50 × 100 | not bending members; free from the rips |
-| Ties | 100 × 250 | 6 m span, loft floor — **all 16 from stock** |
+| Ties | 100 × 250 | 6 m span, loft floor — **13 from stock, 3 spare** |
 | **Wind girder** | **100 × 100** | bought — no longer eats 100 × 250 |
 | Gable studs | 100 × 100 | **bending** governs — wind on the gable over 3.54 m |
+| **Knee braces** | 50 × 100 | **props now, not wind braces** — 11.6 kN worst case, factor 4.9 |
+| **Brace ledger** | **100 × 100** | stiffness, not strength: a 50 mm ledger sags 3.5 mm under the prop |
 | Levelling course | 50 × 150 | **bought**, not ripped — see below |
 
 ## Members still to make
 
-Cut list off the model, 2026-08-15. 16 ties @ 576 mm (J15 omitted), 0.50 m verge.
+Cut list off the model, 2026-08-21. 13 ties @ 700 mm centres, 0.50 m verge. 14 setout
+stations; the one at 8,450 mm from the front face carries a rafter and a tail joist
+but no tie — that is the stair opening.
 
 | member | section | length m | off |
 |---|---|---|---|
-| rafter | 50 × 150 — ripped from 50 × 250 | 6.00 | 38 |
-| rafter spacer | 50 × 100 — free from the rip | 0.53 | 72 |
-| purlin | 50 × 250 | 6.00 + 4.31 spliced | 2 runs |
-| ridge purlin | 50 × 250 | 6.00 + 4.31 spliced | 1 run |
-| tie spacer (blocking) | 50 × 100 — free from the rip | 0.48 | 42 |
+| rafter | 50 × 150 — ripped from 50 × 250 | 6.00 | 30 |
+| rafter spacer | 50 × 100 — free from the rip | 0.65 | 56 |
+| purlin | 50 × 250 | 6.00 + 4.30 spliced | 2 runs |
+| ridge purlin | 50 × 250 | 6.00 + 4.30 spliced | 1 run |
+| tie spacer (blocking) | 50 × 100 — free from the rip | 0.60 | 33 |
 | gable panel diagonal | 50 × 250 | 3.60 | 2 |
 | levelling course | 50 × 150 — **bought** | 6.00 | 6 |
-| **TIE** | 100 × 250 | 6.00 | **16** |
-| stair trimmer | 50 × 150 — bought | 1.15 | 1 |
+| **TIE** | 100 × 250 | 6.00 | **13** |
+| stair trimmer | 50 × 150 — bought | 1.50 | 1 |
 | stair tail joist | 50 × 150 — bought | 2.00 | 1 |
 | purlin strut | 100 × 100 | 1.94 — bears on the tie | 16 |
 | collar | 50 × 100 — free from the rip | 2.37 | 8 |
 | gable stud | 100 × 100 | 0.30 / 1.38 / 2.46 / 3.54 | 4 each |
 | wind girder | 100 × 100 | 6.00 + 1.33 spliced | 4 diagonals |
 | purlin vertical | 50 × 100 — free from the rip | 1.61 / 1.81 / 2.00 | 16 / 2 / 2 |
-| knee brace | 50 × 100 — free from the rip | 0.60, 45° both ends | 32 |
-| **brace ledger** | **100 × 100 — bought** | 6.00 + 3.01 spliced | **2 runs** |
+| **knee brace** | 50 × 100 — free from the rip | 0.60, 45° both ends, **seat cut** | **26** |
+| **brace ledger** | **100 × 100 — bought** | 5.82 + 3.18 spliced over a post | **2 runs** |
 
 ## Rafters at 50 × 150
 
@@ -73,9 +87,9 @@ Ripping is **€381 cheaper**, and the byproduct is the point: 252 m of 50 × 10
 falls out, which covers the purlin verticals (33.4 m), the collars (19.0 m) and the
 rafter spacers (42 m) with 194 m to spare. **Nothing in 50 × 100 is bought.**
 
-## Rafter spacers — 80 of them, 2 rows per slope
+## Rafter spacers — 56 of them, 2 rows per slope
 
-Short 50 × 100 blocks between rafters, 526 mm long, at **two lines**: on the wall
+Short 50 × 100 blocks between rafters, 550 mm long in the 600 mm bays, at **two lines**: on the wall
 plate, and over each purlin. **No ridge row** — the rafters are screwed to the ridge
 purlin, which already holds them.
 
@@ -86,21 +100,22 @@ need help. Three other reasons:
 2. **Diaphragm.** F19 deleted the roof-plane braces, so the 12.9 kN gable triangle
    now relies on the sheeting acting as a plate. Sheeting cannot do that unless the
    rafters are tied to one another. This is the important one.
-3. They hold the 576 mm setout while you work.
+3. They hold the 700 mm setout while you work.
 
-2 rows × 18 bays × 2 slopes = **72**, cut from the rip byproduct. **€0.**
+2 rows × 14 bays × 2 slopes = **56**, cut from the rip byproduct. **€0.**
 
 ## Wind girder at 100 × 100
 
 Changed from 100 × 125 so it no longer consumes 100 × 250. **It only works because
-the ties moved to 576 mm.**
+the ties are close.**
 
-The girder is screwed to every tie it crosses. At 576 mm in x that is a restraint
-every **917 mm** along the 7.33 m diagonal:
+The girder is screwed to every tie it crosses. At 700 mm in x that is a restraint
+every **1114 mm** along the 7.33 m diagonal:
 
 | tie spacing | restraint along girder | λ | kc | capacity | vs 7.1 kN |
 |---|---|---|---|---|---|
-| 576 mm (now) | 917 mm | 31.8 | 0.939 | **136 kN** | 19.2 |
+| **700 mm (now)** | 1114 mm | 38.6 | ~0.90 | **~130 kN** | 18.3 |
+| 576 mm (was) | 917 mm | 31.8 | 0.939 | 136 kN | 19.2 |
 | 1151 mm (old) | 1834 mm | 63.4 | 0.633 | 92 kN | 13.0 |
 
 That is why the schedule previously insisted on 100 × 125. **Fixing to every crossing
@@ -111,8 +126,8 @@ is not optional** — it is what the capacity depends on.
 Measured 2026-08-15: 40 × 20 × 100 × 2000 (80 m) + 10 × 20 × 100 × 6000 (60 m) =
 **140 m, 0.28 m³**.
 
-**As battens it works.** Over the 576 mm rafter gap: 1.32 MPa against 16.6, and
-0.42 mm deflection. Covers **29%** of the 475 m needed.
+**As battens it works.** Over the 700 mm rafter gap: 1.95 MPa against 16.6, and
+0.93 mm deflection. Covers **29%** of the 475 m needed.
 
 **As counter-battens it does not.** 20 mm is under the 25 mm minimum, and that
 dimension *is* the ventilation cavity (F21). Counter-battens must be bought.
@@ -133,10 +148,16 @@ All three happen at the **top** of the tie, so it sits flush with the top face.
 At the bottom it does none of them. Free from the rip byproduct; saves 4 boards
 of 50 × 250 (€93).
 
-## Stair opening — J15 omitted
+## Stair opening — the close-out bay at the back
 
-Owner decision 2026-08-15: leave out **J15 (x +3.454)**, 3rd from the rear gable.
-**1051 mm clear** between J14 and J16 — fine for a 900 mm stair.
+Owner decision 2026-08-15, re-set out on the 700 mm grid 2026-08-21: no tie on the
+setout station at **8,450 mm from the front face**, which is the 13th of 14. That
+leaves **1400 mm clear** between the tie at 7,750 and the end tie at 9,250 — 1500 mm
+centre to centre. Was 1051 mm.
+
+The opening got wider for free: the remainder that a 9.20 m centreline run leaves over
+after eleven 700 mm bays lands in exactly this bay. Owner asked for 1200 mm minimum
+for the stair; this beats it by 200.
 
 **The binding constraint is loft headroom, not the opening.** Full standing height
 only exists within ±1.23 m of the centre:
@@ -154,13 +175,20 @@ to y = +1.0 is 4.00 m over a 3.68 m rise: **21 risers at 175 mm, 200 mm going,
 
 **The opening only needs to be 2.0 m long, not 4.0.** The loft floor does not
 threaten your head until you are 1.88 m up, which is the top 49% of the climb.
-Below that you walk under a floor that is 3.88 m away. A **trimmer** (50 × 150
-between J14 and J16) and a **tail joist** (100 × 250, 1.9 m back to the wall) close
-the rest of the bay — both off one board.
+Below that you walk under a floor that is 3.88 m away. A **trimmer** (50 × 150 over the
+1.40 m between the two ties) and a **tail joist** (50 × 150, 2.0 m back to the wall,
+landing on the omitted station at 8,450) close the rest of the bay — both off one
+board. The tail joist is what keeps the decked part of that bay at 600 and 800 mm
+centres instead of one 1400 mm span.
 
-Structure is trivial: tail joist delivers 1.09 kN to the trimmer, which runs at
-1.7 MPa against 14.8. The rafter at J15 loses its tie, so its 0.98 kN thrust goes
-into the plate instead — 0.41 MPa about the vertical axis.
+Structure is trivial: tail joist delivers about 1.15 kN to the trimmer, which over
+1.40 m runs at 3.0 MPa against 14.8. The rafter on the omitted station has no tie, so
+its 0.98 kN thrust goes into the plate instead — 0.41 MPa about the vertical axis.
+
+The tie flanking the opening is **no worse than a typical one**, which is worth
+stating because it looks like it should be: it picks up half the trimmer reaction,
+but it also loses the deck over four of the six metres on the stair side. It comes
+out at 13.8 mm instant against 14.3 for a typical tie.
 
 ## Rafter seat — birdsmouth + M14 to every second tie
 
@@ -187,13 +215,13 @@ the birdsmouth does nothing for it.
 
 | section | need | have | **buy** |
 |---|---|---|---|
-| 50 × 250 × 6 m | 46 | 50 (40 free + 10 in temporary bracing) | **0** — 4 spare |
+| 50 × 250 × 6 m | 38 | 50 (40 free + 10 in temporary bracing) | **0** — 12 spare |
 | 50 × 150 × 6 m | 39.1 m | 0 | **7** |
-| 100 × 250 × 6 m | 16 ties | 16 | **0** |
+| 100 × 250 × 6 m | 13 ties | 16 | **0** — 3 spare |
 | 100 × 100 × 6 m | 20 | 0 | **20** |
-| 50 × 100 | 128.9 m | 228 m from the rafter rip | **0** |
+| 50 × 100 | 124.2 m | 228 m from the rafter rip | **0** |
 | 25 × 100 battens | 433 m | 140 m @ 20 mm | **293 m** |
-| 25 × 100 counter-battens | 228 m | 0 | **228 m** |
+| 25 × 50 counter-battens | 188.8 m | 0 | **188.8 m** |
 
 The 10 boards holding the temporary diagonals cannot be released until the wind
 girder and gable panels are in — which is why rafters sit at the tail of the
@@ -211,24 +239,27 @@ inclusive total by a factor of 1.21.
 |---|---|---|---|---|---|---|---|---|
 | 50 × 150 | 6.0 m | **25** | 150 | 23 | 2 (9%) | 1.125 | 288.22 | 348.75 |
 | 100 × 100 | 6.0 m | **24** | 144 | 22 | 2 (9%) | 1.440 | 368.93 | 446.40 |
-| 25 × 100 roof battens | 6.0 m | **84** | 504 | 76 | 8 (11%) | 1.260 | 322.81 | 390.60 |
-| 25 × 50 counter + wall battens | 6.0 m | **110** | 660 | 100 | 10 (10%) | 0.825 | 211.36 | 255.75 |
-| **TOTAL** | | **243** | **1,458** | | | **4.650** | **1,191.33** | **€1,441.50** |
+| 25 × 100 roof battens | 6.0 m | **86** | 516 | 78 | 8 (10%) | 1.290 | 330.50 | 399.90 |
+| 25 × 50 counter + wall battens | 6.0 m | **98** | 588 | 89 | 9 (10%) | 0.735 | 188.31 | 227.85 |
+| **TOTAL** | | **233** | **1,398** | | | **4.590** | **1,175.96** | **€1,422.90** |
 
-€250.17 of that is VAT. **Budget €1,441.50 all in.**
+€246.94 of that is VAT. **Budget €1,422.90 all in.**
 
-The 100 × 100 line went 20 → 24 on 2026-08-21: 4 boards, €74.40, for the
-**brace ledger** under the knee braces. It is the only thing that change buys —
-the longer braces themselves come out of the rip byproduct. See
-[stability.md](stability.md) for why it has to be 100 mm thick and not 50.
+Down €18.60 from the 576 mm setout on the battens, and back up €74.40 on the
+100 × 100 — which is the **brace ledger** the knee braces now stand on (F24).
+Four boards, and it is the only cash the whole knee-brace rework costs: the
+longer braces come out of the rip byproduct and the seat cuts are labour. The
+ties and rafters come out of stock either way, so the 8 boards saved there show
+up as spare, not as money. See [stability.md](stability.md) for why the ledger
+has to be 100 mm thick and not 50.
 
 ### Nothing to buy in these — all from your own stock
 
 | Section | Used | Own | |
 |---|---|---|---|
-| 50 × 250 | 46 | 50 | 38 ripped for rafters, 6 roof support, 2 gable diagonals — **4 spare** |
-| 100 × 250 | 16 | 16 | the 16 ties, exactly |
-| 50 × 100 | 128.9 m | 228 m | all from the rafter rip — blocking, spacers, collars, verticals, knee braces |
+| 50 × 250 | 38 | 50 | 30 ripped for rafters, 6 roof support, 2 gable diagonals — **12 spare** |
+| 100 × 250 | 13 | 16 | the 13 ties, **3 spare** — real margin at last |
+| 50 × 100 | 124.2 m | 228 m | all from the rafter rip — blocking, spacers, collars, verticals, knee braces |
 
 ### Sort the 50 × 150 before you cut
 
@@ -266,35 +297,108 @@ of lumpy, which is what a timber frame tolerates. Costs €130.
 
 ## Covering notes
 
-**Deck: 18 mm OSB, not 40 mm boards.** The 40 mm figure was driven by the 1.06 m
-clear span between ties at the old 1.15 m spacing. At 576 mm the deck spans half as
-far and 18 mm OSB carries it — which is why the tie spacing had to be settled before
-the deck was ordered. Cheaper, lighter, and a better diaphragm than loose boards.
+**Deck: 22 mm OSB, not 18.** 18 mm OSB/3 is rated to 600 mm *centres*; at 700 it is
+off the span tables. The 40 mm boarding in the model carries the 600 mm clear span
+easily (0.10 mm) and is the alternative if boards are preferred to sheet. **Do not buy
+18 mm for this floor** — that figure was written when the ties were at 576.
 
-## Why the ties went from 9 to 17
+## Why the ties are at 700 mm — and what it costs
 
-The ties were set out one per post, at 1.151 m. That is fine for a ceiling and fails
-for a loft floor:
+**As built, owner 2026-08-21.** 700 mm centres on a 100 mm tie is **600 mm clear**,
+which is what takes a 600 × 1000 mm insulation pack with no cutting. That is the whole
+reason, and it is a good one — the alternative was binning 100 mm off every pack across
+55 m² of floor.
 
-| | Instant | Final, with creep | Limit |
+But it is not free, and this is the part to read before decking anything.
+
+### The loft floor does not pass on a plain span
+
+100 × 250 over 6 m, w = 1391 N/m at 700 centres, limit L/250 = **24 mm**:
+
+| How the tie is modelled | Instant | **Final, with creep** | |
 |---|---|---|---|
-| 9 ties @ 1.151 m | 27.3 mm | **45.6 mm** — L/132 | 24 mm |
-| 17 ties @ 0.576 m | 13.7 mm | **22.8 mm** — L/263 | 24 mm |
+| Simply supported, 6.00 m — every earlier figure in this project | 16.4 mm | **27.3 mm** | **14% over**, L/220 |
+| Simply supported on the true bearing centres, 5.85 m | 14.8 mm | **24.6 mm** | 2.5% over |
+| **Propped by the knee braces — 5.06 m span, 0.47 m overhangs** | 7.9 mm | **13.2 mm** | **factor 1.8** ✓ |
 
-The beam is not the problem. 100 × 250 over 6 m runs at 10.0 MPa against a 14.8
-capacity — a factor of 1.5 on strength. It fails on **deflection**, because
-span-to-depth is 24:1 where a floor wants 16–18:1, and kdef 0.80 roughly doubles the
-day-one sag. Deflection grows with span to the fourth power, so nothing about the
-section fixes it; only spacing does, and halving the spacing halves the load each tie
-carries.
+The method reproduces the model's own 22.8 mm at 576 mm exactly, so the load basis is
+sound. What it says is that **the answer depends entirely on whether the knee braces
+count.** Unpropped it fails; propped it passes with real margin; and the two bounds
+straddle the limit, which is precisely why the model was conservative before.
 
-600 mm was the target. It does not divide evenly — 16 ties gives 614 mm and lands
-24.3 mm, 0.3 mm over. The count is rounded **up** so spacing never exceeds 600.
+### So the knee braces are now primary supports
 
-**Battens at 300 mm.** Suits tile-profile metal, and the grid ties all 42 rafters
+They prop the tie **395 mm inboard of each bearing** — head at y = ±2.53 m, bearing at
+±2.925 — which cuts the span from 6.00 m to **5.06 m**. Deflection goes as span⁴, so
+that is worth 44%.
+
+Demand per brace is now **4.07 kN vertical, 5.75 kN axial** at 45°, against the
+**0.78 kN of wind** they were designed for. See *Knee braces* below — the detail has
+to change.
+
+### The other three jobs, checked
+
+| | at 700 mm | |
+|---|---|---|
+| Bending | 8.41 MPa unpropped, 5.98 propped, vs 14.8 | factor 1.8 — never the problem |
+| Rafter tie, horizontal | 3.80 kN per tie end vs 11.8 kN of bracket | factor 3.1, was 3.8 |
+| Strut bearing on the tie | 0.93 MPa vs fc,90,d 1.73 | unchanged — 8 struts per side either way |
+| **Plate splices (F16a)** | nearest tie to any splice **150 mm** | **resolved** — was 72 mm, and 600 mm centres would have made it 50 |
+
+### And two things that got worse
+
+**Deck goes to 22 mm OSB, not 18.** 18 mm OSB/3 is rated to 600 mm *centres*; at 700
+it is off the span tables. The 40 mm boarding already in the model carries 600 clear
+easily (0.10 mm) and is the alternative.
+
+**1200 mm sheet no longer lands on a tie.** 1200 is not a multiple of 700, so a sheet
+edge meets a tie only every sixth bay. Cut edges falling between ties need noggins.
+The insulation module won this argument over the sheet module — that is a real
+trade, not a free win.
+
+## Knee braces — now primary supports, not wind braces
+
+30 → **26**, 50 × 100, 453 mm, 45°. Same timber, same count per tie. What changes is
+the **joint**.
+
+**Bear the brace. Do not screw it.**
+
+Cut the brace head to a flat level face so it bears directly up against the tie
+underside. 50 × 100 cut square at 45° gives a **7071 mm² bearing face**, and 4.07 kN on
+it is **0.58 MPa against fc,90,d 1.73** — factor 3.0. Locate it sideways with a shallow
+**10 mm** housing or a cleat each side. Screws then do one job: stop it falling out.
+Same at the foot on the post top.
+
+This is the principle the purlin/post joint already follows: **cut the compression
+member, not the bending one.**
+
+**Do not house it 25 mm into the tie.** A rebate on the *underside* of a beam at a
+support is the one case EN 1995 6.5.2 singles out — the re-entrant corner starts a
+shear crack along the grain and it runs, and the prop point is exactly where shear
+peaks. 10 mm to locate is not a structural notch. Deeper than that, radius the internal
+corner to 8–10 mm and never square it.
+
+**Why screws cannot do it.** 4 × 6×100 connector screws give about **5.6 kN against a
+5.75 kN demand** — at capacity, nothing spare, on a joint designed with a factor of 7
+against a load 5× smaller. Worse, the pair of joints is only about 2.2 kN/mm in slip,
+soft enough to hand several millimetres of the deflection benefit straight back.
+Bearing on wood does not slip.
+
+**The thrust is contained.** Each brace pushes the wall top outward by 4.07 kN, and the
+two braces on a tie push against each other — the tie picks up 4.07 kN of axial
+compression between the heads. Euler on the weak axis over 5.06 m is 88 kN, factor 22,
+and it partly cancels the 2.38 kN of rafter-thrust tension already there. Nothing to do,
+but know it is there before anyone leaves a brace out.
+
+**Battens at 300 mm.** Suits tile-profile metal, and the grid ties all 30 rafters
 together every 300 mm up the slope — lateral restraint that partly covers what the
 deleted roof-plane braces would have done (F19). The battens are nowhere near
-working: 1.32 MPa at 20 mm over the 576 mm rafter gap, against 16.6.
+working: 1.95 MPa over the 700 mm rafter gap, against 16.6.
+
+**A 6 m batten is 8 bays at 700 mm.** Batten joints land on a rafter line, so every
+piece has to be a whole number of bays: 8 × 700 = 5.60 m used, 400 mm binned — **6.7%
+waste**, worse than the 4% at 576 and much worse than the zero at 600. 433 m of batten
+is **78 boards**. Buying the insulation fit costs a little here.
 
 **Counter-battens are not optional** if the workshop is heated or used wet — they
 create the ventilated cavity that stops condensation dripping off the underside of
@@ -305,8 +409,8 @@ the sheeting. See F21.
 - **All lengths assume 6 m stock.** At 4 m the 100 × 100 count goes to 30, at 3 m to 33,
   and the 5.52 m girder pieces no longer fit at all — every one would need an extra
   splice. Confirm 100 × 100 comes in 6 m before ordering.
-- The 17 ties now take all 16 owned 100 × 250 plus 1 bought — the wind girder moving
-  to 100 × 100 freed the 3 boards it used to rip.
+- The 13 ties come out of the 16 owned 100 × 250 with **three spare**. At 576 mm it was
+  16 of 16, exactly, with nothing to cover a bad board.
 - Wind girder: 100 × 100, each 7.33 m diagonal spliced 6.00 + 1.33 so the joint lands
   on a tie crossing. 4 diagonals.
 - Both rips throw off 50 × 100: the levelling course 36 m, the rafters 252 m. Total

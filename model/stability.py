@@ -58,10 +58,15 @@ ridgeZ = plateTop + roofRise
 slopeHalf = (Wd / 2) / math.cos(pitch)          # eaves to ridge, on slope
 wallH = plateTop - h['pier']
 
+# Tie setout: a hard spacing from the front gable with the residual thrown into
+# the close-out bay — same rule as geometry.js tieStations(), not an even divide.
 tieRun = L - P['sections']['joist'][0]
-tieBays = math.ceil(tieRun / P['joists']['maxSpacing'])
-tieSp = tieRun / tieBays                        # 576 mm
-nTies = tieBays + 1
+tieSp = P['joists']['spacing']
+tieBays = math.floor(tieRun / tieSp + 1e-9)
+if abs(tieRun - tieBays * tieSp) > 1e-6:
+    tieBays -= 1
+nTies = tieBays + 2 if abs(tieRun - (tieBays) * tieSp) > 1e-6 else tieBays + 1
+tieBays = nTies - 1
 postSp = L / len(P['bays']['longWallClearGaps'])  # 8 gaps, ~1.16 m
 
 kb = P['kneeBraces']
@@ -266,7 +271,81 @@ check(C, 'net uplift per rafter foot',
       max(F_up - GG_FAV * 0.25 * slopeHalf * P['roof']['rafterSpacing'], 0.01),
       2 * 4.0, 'kN', 'strap per F3/F6')
 
+# === D. The loft floor: the braces as props ==============================
+# The braces stopped being wind braces on 2026-08-21 — at 700 mm tie centres the
+# floor only passes because they prop each tie inboard of its bearing. That
+# makes the LEDGER part of the floor's load path, and a ledger that spans
+# between posts is a spring, not a support: every millimetre it sags is a
+# millimetre handed back to the tie.
+#
+# Four supports, not two: the wall bearing at each end and a prop at each brace
+# head. Solved by the flexibility method with the two props as the redundants,
+# so the prop can be given a real stiffness instead of being assumed rigid.
+TIE_W = 1.391                      # N/mm on one tie at 700 mm centres
+CREEP = 1.665                      # instantaneous -> final, same factor as F7
+TIE_SPAN = 6000.0
+I_TIE = P['sections']['joist'][0] * 1e3 * (P['sections']['joist'][1] * 1e3) ** 3 / 12
+EI_TIE = E_MEAN * I_TIE
+
+def propped_tie(prop_in, kprop=None):
+    """Uniform load, ends simply supported, props `prop_in` mm in from each end.
+    kprop = N/mm at the props, None for rigid. Returns (final mid deflection mm,
+    prop reaction kN, end reaction kN)."""
+    Lb, w = TIE_SPAN, TIE_W
+    d_udl = lambda x: w * x * (Lb ** 3 - 2 * Lb * x * x + x ** 3) / (24 * EI_TIE)
+    def pt(a, x):                                   # unit point load at a, defl at x
+        b = Lb - a
+        return (b * x * (Lb * Lb - b * b - x * x) / (6 * Lb * EI_TIE) if x <= a
+                else a * (Lb - x) * (Lb * Lb - a * a - (Lb - x) ** 2) / (6 * Lb * EI_TIE))
+    inv = 0.0 if kprop is None else 1.0 / kprop
+    R = d_udl(prop_in) / (pt(prop_in, prop_in) + pt(Lb - prop_in, prop_in) + inv)
+    mid = d_udl(Lb / 2) - R * (pt(prop_in, Lb / 2) + pt(Lb - prop_in, Lb / 2))
+    return mid * CREEP, R / 1000, (w * Lb / 2 - R) / 1000
+
+D = 'D. The loft floor, with the braces propping it'
+# The tie BEARS on the outer wall face and the brace head sits `braceRun` in
+# from the INNER face, so the prop is a wall thickness further in than the run.
+propIn = (P['sections']['wallThickness'] + braceRun) * 1000
+if lg:
+    b_t, b_d = lg['section']
+    I_led = b_t * 1e3 * (b_d * 1e3) ** 3 / 12
+    k_led = 48 * E_MEAN * I_led / (postSp * 1000) ** 3      # mid-bay, worst case
+else:
+    k_led = None
+mid_soft, R_soft, end_soft = propped_tie(propIn, k_led)
+mid_rigid, R_rigid, end_rigid = propped_tie(propIn, None)
+mid_plain = 5 * TIE_W * TIE_SPAN ** 4 / (384 * EI_TIE) * CREEP
+
+check(D, 'tie deflection, braces propping it', mid_soft, TIE_SPAN / 250, 'mm',
+      f"{mid_plain:.1f} mm unpropped; {mid_rigid:.1f} where a foot lands on a post")
+check(D, 'brace as a prop, axial', R_rigid * math.sqrt(2),
+      kc * A_br * (21 * 0.8 / GM) / 1000, 'kN',
+      f"{R_soft*math.sqrt(2):.1f} kN mid-bay, {R_rigid*math.sqrt(2):.1f} on a post. kmod 0.8, floor load")
+check(D, 'brace head bearing on the tie underside',
+      R_rigid * 1000 / (kb['section'][0] * kb['section'][1] * 1e6 / math.cos(kbAng)),
+      2.5 * 0.8 / GM * 1.5, 'MPa', 'flat cut face, 7071 mm2 - NOT a notch in the tie')
+check(D, 'tie end hold-down, uplift', max(-end_rigid, 0.01), 14.2, 'kN',
+      '2 x M14. The props take more than the whole floor, so the ends LIFT')
+check(D, 'tie axial compression between the brace heads', R_soft,
+      math.pi ** 2 * E_05 * (P['sections']['joist'][1] * 1e3
+      * (P['sections']['joist'][0] * 1e3) ** 3 / 12) / ((Wd - 2 * braceRun) * 1000) ** 2 / 1000,
+      'kN', 'Euler, weak axis, between the props - self-contained, see _thrust')
+if lg:
+    check(D, 'ledger bending under the prop, mid-bay',
+          (R_soft * postSp / 4) * 1e6 / (b_t * 1e3 * (b_d * 1e3) ** 2 / 6),
+          24 * 0.8 / GM, 'MPa', f"k = {k_led/1000:.1f} kN/mm, sags {R_soft*1000/k_led:.1f} mm")
+    check(D, 'brace foot bearing on the ledger seat, floor load',
+          R_rigid * 1000 / (kb['section'][0] * 1e3 * lg['seatDepth'] * 1e3),
+          2.5 * 0.8 / GM * 1.5, 'MPa', '100 mm seat, 12 mm locating housing')
+    check(D, 'ledger into each post, vertical', R_rigid,
+          lg['screwsPerPost'] * 3.0, 'kN',
+          f"{lg['screwsPerPost']} x {lg['screwSize']} in shear, PLUS a 20 mm housing "
+          'so the shoulder bears')
+
 ASSUMPTIONS = [
+    f"Floor load on one tie is {TIE_W*1000:.0f} N/m at {tieSp*1000:.0f} mm centres, and "
+    f"final deflection is {CREEP:.3f}x instantaneous - both taken from the 700 mm "
+    "setout in params.joists so this file and F7 cannot drift apart.",
     f"vb = {VB:.0f} m/s, terrain III. Terrain II would raise qp from "
     f"{QP*1000:.0f} to {QP_II*1000:.0f} Pa - divide every wind factor by "
     f"{QP_II/QP:.2f} to see it.",
