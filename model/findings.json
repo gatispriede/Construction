@@ -310,5 +310,17 @@
     ],
     "layer": "must_frontGablePanels",
     "one_line": "From the 2026-08-21 stability re-run, docs/stability.md. Wind across the ridge is 44 kN characteristic and half this building's side elevation is roof, so 32 kN arrives at loft-deck level - 49 kN design. Hand the gables a tributary half-share each and the front one cannot take it: the 3 m entrance leaves two 1.5 m piers at 2.3:1, and rocking one needs 41.8 kNm against the 18 kNm its pile group can hold (three piles a side counting the corner; two would have given 12). Inverted, the front gable is good for about 22% of the transverse shear, not 50%. That is NOT a failure, because the tributary split is not how the load actually goes: the knee-brace PORTALS have 77 kN of capacity against the 49 kN total, so they can carry everything the gable does not take. What it means is that the front gable is not a shear wall you may rely on, and F24 - the brace seats and the ledger - is what makes the building stable across its width. The insulation and the loft deck do not change this: the deck is what DELIVERS the load to the gables, and insulation carries nothing."
+  },
+  {
+    "id": "F26",
+    "title": "Rise-up door gear does not fit above the opening",
+    "severity": "medium",
+    "at": [
+      -4.6,
+      0,
+      3.45
+    ],
+    "layer": "plates",
+    "one_line": "Planned 2026-08-21: automatic rise-up doors. The opening head sits at 3.370 and the tie underside at 3.590, so the gear gets 220 mm - 85 mm before it meets the lintel. A standard-lift sectional door wants 300-450 mm for the shaft and curved track; a roller shutter needs a 350-450 mm barrel and does not fit at all internally. Three ways out: a LOW-HEADROOM sectional kit (double track, front shaft, about 180-200 mm - price this first, it changes nothing about the building); drop the opening head 2.8 -> 2.5 m for 520 mm of space; or face-fix a roller outside in a hood, which puts the barrel in the rainscreen and clashes with the cladding grid. Settle it BEFORE the opening is trimmed. Two other things come with the door: hang the horizontal tracks off the TIES, spread over two each, remembering they are propped members already at 12.0 of 24 mm (F24); and through-bolt the torsion shaft to the lintel rather than screwing into the underside of a single 220x185 plate course that is carrying the gable (F8). Specify the door's wind class, EN 12424 Class 2-3 at this site. The door does NOT help F25 - it carries no in-plane shear - and it does not retire the door-open wind case, because an automatic door standing open in a gale is exactly that case."
   }
 ]
