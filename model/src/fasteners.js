@@ -6,7 +6,7 @@
 // decides length — 6 x 100 is not always enough.
 
 import * as THREE from 'three';
-import { derive } from './geometry.js?v=1787332281';
+import { derive } from './geometry.js?v=1787333718';
 // Connections are labelled with the LAYER NAMES they join, not reference
 // letters. The letters were a 30-row lookup table you had to learn; the layer
 // name is already in the panel on the left, so "ties -> plates" points at two
@@ -57,7 +57,12 @@ export function schedule(p, d, Z) {
   const xs = d.longWallStations;
   return [
 // --- already built ---
-    [`${Z('girts')}→${Z('posts')}  girt to post`, '4 × 6×100 · through 50 girt, 50 into post', '6×100',
+    // AS BUILT, owner 2026-08-21 — this is what closed F10. The girt is HOUSED
+    // into the post, so the 2.77 kN along-girt component crosses as bearing on
+    // wood (0.55 MPa against fc,90,d 1.73, factor 3.1) rather than as screws in
+    // shear. The screws became a retaining fixing — and carry it alone anyway,
+    // 6 × 10 mm giving 24.6 kN design against 3.92.
+    [`${Z('girts')}→${Z('posts')}  girt to post`, 'HOUSED into the post + 6 × 10 mm · bearing carries it', '10 mm',
       [xs[2], -bear, p.heights.girtBottom + 0.05]],
     [`${Z('braces')}→${Z('girts')}  brace to girt`, '4 × 6×100 · skew, catch the post behind', '6×100',
       [xs[1], -bear, p.heights.girtBottom - 0.35]],
@@ -107,6 +112,16 @@ export function schedule(p, d, Z) {
     [`${Z('braceLedger')}→${Z('posts')}  ledger to post`,
       '20 mm housing so the shoulder bears + 6 × 8×200 · 8 kN of FLOOR per post',
       '8×200', [xs[6], -bear + 0.5, d.ledgerTop - 0.45]],
+
+    // The roof sheeting is the ONLY path for the 12.9 kN gable triangle, because
+    // the corner-to-ridge braces were deleted (F19). That makes these two lines
+    // structural fixings, not weatherproofing. 0.81 kN/m demand against 1.50
+    // capacity, factor 1.9 — but only if BOTH lines are done.
+    [`${Z('battens')}  sheet to batten`, 'screw EVERY rib · owner confirms 2026-08-21', 'sheet screw',
+      [xs[2], bear - 1.4, puTop + 0.55]],
+    [`${Z('battens')}  sheet SIDE LAPS`,
+      'STITCH sheet-to-sheet at ~500 mm · unstitched there is no diaphragm', 'stitch screw',
+      [xs[5], bear - 2.2, puTop + 0.95]],
 
     [`${Z('plateSplices')}  plate splice`, '4 × 6×200 each side, staggered over 600 mm', '6×200',
       [-0.66, -3.0, 3.95]],

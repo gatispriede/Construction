@@ -375,24 +375,71 @@ with 100 × 250. See F4.
 
 ## Medium
 
-### F10 — No permanent racking system
+### F10 — Brace-to-girt joint: closed 2026-08-21
 
-Lateral load currently goes into knee braces and the temporary diagonals. The
-paperwork specifies boarding as a *finish*, not a diaphragm, and nothing shows a
-permanent racking design. Decide: structural sheathing, let-in bracing, or
-designed knee braces every bay — then keep the temporary diagonals up until that
-thing exists.
+**Two different things were filed under F10, and only one of them was ever about
+this joint.** Both are now answered, separately.
 
-### F11 — Decay and insect damage in salvaged posts
+**The joint (closed).** The girt is **housed into the posts** and screwed with
+**6 × 10 mm** — owner, 2026-08-21. The timber was never the question (factor 19);
+the question was whether the 3.92 kN per brace could cross into the post at all,
+because the finding read the joint as 4 × 6 mm screws that had to bite the post
+behind, and if they missed it there was no path.
 
-Boring holes and softened surface on several reused timbers, clearest in
-`refs/photos/20260814_155102.jpg`. The permit requires treatment against pests
-**and fire** (*degšanas aizsardzības līdzekļi*); nothing in the photos suggests
-that has happened.
+Housed, the load crosses as **bearing on wood**:
 
-Sound every post with a mallet and probe with an awl before the roof goes on.
-Soft more than ~15 mm deep is not carrying its section. Treat while the frame is
-open — you will not reach these faces again.
+| | |
+|---|---|
+| Along-girt component of the brace force | 2.77 kN |
+| Bearing, girt end 50 × 100 on the post | **0.55 MPa** vs fc,90,d 1.73 — **factor 3.1** |
+| Screws, now a retaining fixing only | 6 × 10 mm = **24.6 kN** vs 3.92 — **factor 6.3** |
+| *(what the finding assumed)* | *4 × 6 mm = 8.9 kN, factor 2.3* |
+
+Screw values are EN 1995 8.2.2 mode (f), 50 mm side member, C24, kmod 0.9,
+γM 1.3.
+
+**One caveat worth knowing.** A housing works in **compression only** — it stops
+the girt being driven into the post, not pulled out of it. Racking reverses, so
+on the return gust that brace goes into tension and the housing does nothing.
+That is fine here: braced frames are designed compression-only, with the brace on
+the other hand taking the reversed case, and the screws carry it alone at factor
+6.3 anyway. It matters only if a bay ends up with a brace in one direction and
+nothing in the other.
+
+**Still to record:** the **housing depth**. Anything from ~25 mm gives a positive
+joint without eating the 179 mm post. Measure one.
+
+**The permanent racking system (answered elsewhere).** The other half of F10 —
+"the paperwork specifies boarding as a *finish*, not a diaphragm, and nothing
+shows a permanent racking design" — is not this joint. It is answered by the wind
+girder, the gable panels and the knee braces, and the numbers are in
+[stability.md](stability.md). **Keep the temporary diagonals up until the girder
+and gable panels are in** (F0).
+
+### F11 — Salvaged posts: insecticide done, two things still open
+
+**Owner 2026-08-21: the timber was treated with a standard insecticidal
+preservative before use.** That closes one of the three things filed here. The
+other two are not the same job and are not covered by it.
+
+**1. Fire retardant is a separate product.** An insecticidal preservative does
+not make timber fire-retardant — different chemistry, different application rate,
+usually a different coat. The permit names it explicitly: *degšanas aizsardzības
+līdzekļi*. A workshop raises the duty beyond the permit anyway — solvents,
+sawdust, electrical load. This is both a code item and a real one.
+
+**2. Treatment does not reverse damage already there.** The boring holes and
+softened surface in `refs/photos/20260814_155102.jpg` are section already lost;
+a preservative stops it getting worse, it does not put timber back. **Sound every
+post with a mallet and probe with an awl before the roof goes on. Soft more than
+~15 mm deep is not carrying its section.**
+
+**3. Write down the product and the date** for the permit file. "A standard
+fluid" is not what an inspector accepts, and it is one line to record now and
+impossible to reconstruct later.
+
+Do the fire retardant while the frame is open — you will not reach these faces
+again.
 
 ### F12 — Eaves beams cantilever with no hold-down
 

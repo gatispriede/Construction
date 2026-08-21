@@ -25,6 +25,8 @@
   "roofStructure": "Koka spāru konstrukcija, divslīpu — timber rafters, dual pitch",
   "roofCovering": "Metāla, pelēkā krāsā — grey metal",
   "timberTreatment": "insecticide + fire retardant",
+  "timberTreatmentDone": "insecticidal preservative only, applied before use",
+  "_timberTreatment": "OWNER 2026-08-21: a standard insecticidal preservative fluid was applied to the timber before it went in. That is the pest half of the permit requirement. The FIRE RETARDANT half - degsanas aizsardzibas lidzekli - is a SEPARATE PRODUCT and is not a property of an insecticidal preservative; it is still outstanding, and a workshop raises the duty beyond what the permit asks. Product name and date are not recorded and should be, for the permit file. See F11.",
   "src": "given — paperwork"
  },
  "plan": {
@@ -78,6 +80,10 @@
   "src": "photo — hewn timbers are irregular, these are representative means",
   "postRange": "0.15-0.25 wide, each one different (hand-hewn salvage); 0.25 nominal used because it is what makes the wall run close out",
   "_girtNote": "100 x 50 given - 50 mm through the wall, 100 mm deep. Was assumed 140 x 180.",
+  "girtJoint": "housed into the post, 6 x 10 mm screws",
+  "_girtJoint": "OWNER 2026-08-21, and it CLOSES F10. The girt is let into the posts, not butted and screwed to their faces. That changes the load path from screws-in-shear to BEARING ON WOOD, which is what F10 was actually worried about - the finding read the joint as 4 x 6 mm screws that had to bite the post behind, and if they missed it there was no path at all. Numbers: brace delivers 3.92 kN, the along-girt component is 2.77 kN, bearing on the 50 x 100 girt end is 0.55 MPa against fc,90,d 1.73 - factor 3.1. The screws are now a retaining fixing, and 6 x 10 mm carry it alone anyway: 4.10 kN design each (EN 1995 8.2.2 mode f, 50 mm side member, kmod 0.9, gammaM 1.3), 24.6 kN for six, factor 6.3.",
+  "_girtJointReversal": "A housing works in COMPRESSION ONLY - it stops the girt being driven into the post, not pulled out of it. Racking reverses, so on the return gust the brace on that side goes into tension and the housing does nothing. That is fine here for two reasons: braced frames are designed compression-only, with the brace on the other hand picking up the reversed case, and the 6 x 10 mm screws cover it on their own at factor 6.3 regardless. Worth knowing before anyone leaves a brace out of a bay.",
+  "_girtJointToConfirm": "HOUSING DEPTH is not recorded. Anything from about 25 mm gives a positive joint without eating the 179 mm post; a 10 mm locating notch still bears the same 0.55 MPa but is less forgiving of a sloppy shoulder. Measure one and write it down.",
   "wallThickness": 0.15,
   "_thickness": "Walls are 150 mm through. Post along-wall dimension 179 mm is the average that makes the measured bays close on 9.31 m.",
   "_heights": "Course heights come from heights.sillCourse / heights.plateCourse ONLY. They used to be duplicated here at 150 and disagreed with the 185 there, leaving a 70 mm gap between sill and post.",
@@ -209,7 +215,9 @@
     0.025,
     0.05
    ],
-   "_counterBatten": "25 x 50 - width halved 2026-08-15. The DEPTH is the only structural dimension: it IS the ventilation cavity and must stay >= 25 mm (F21). The width only has to take the batten screws, so 50 is enough and it halves the volume. NOT mixing with the 20 mm battens - different member, different plane, they never meet edge to edge.",
+   "roofMembrane": "breather membrane over the rafters, under the counter-battens, drained to outside the wall line",
+  "_roofMembrane": "OWNER 2026-08-21 and it is the F21 answer: the membrane catches condensate off the underside of the steel and guides it out of the building rather than letting it drip inside. Standard cold-roof detail, and coherent with the 25 mm counter-batten cavity already specified. THE DISCHARGE POINT IS THE WHOLE DETAIL - the membrane must run out OVER the fascia into the gutter, outside the wall line. Stopped short at the wall top it delivers every drop into the eaves, onto the wall plate and the tie ends, which is the one zone that cannot be inspected once the loft is decked. Laps shingle-style, upper sheet over lower. Breather/HPV type, NOT a vapour barrier - a closed membrane condenses on its own underside. Same product on the walls behind the vertical 25x50 battens is correct.",
+  "_counterBatten": "25 x 50 - width halved 2026-08-15. The DEPTH is the only structural dimension: it IS the ventilation cavity and must stay >= 25 mm (F21). The width only has to take the batten screws, so 50 is enough and it halves the volume. NOT mixing with the 20 mm battens - different member, different plane, they never meet edge to edge.",
    "_alignment": "At 50 wide on a 50 wide rafter there is ZERO setting-out tolerance - the counter-batten must land square on the rafter or the fixing misses. Screw the counter-batten to the rafter first, where you can see both, then the battens to the counter-batten.",
    "_sheetFixings": "Sheet screws land on the BATTEN, and at 200 mm rib spacing most of them fall between counter-battens - so they get 20 mm of timber, not 45. That is fine: uplift per screw is about 0.05 kN over a 200 x 298 mm tributary, even at the 0.84 kPa door-open worst case, and roughly 0.15 kN in the corner suction zones. Well inside pull-out from 20 mm.",
    "jointOnRafter": true,
