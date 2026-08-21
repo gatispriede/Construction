@@ -28,9 +28,9 @@
   "src": "given — paperwork"
  },
  "plan": {
-  "length": 9.31,
+  "length": 9.3,
   "width": 6.0,
-  "src": "given - measured 2026-08-14, outer face to outer face"
+  "src": "given - re-measured 2026-08-21 along the tie run, front outer edge to back outer edge: 9.30 m. Was 9.31 from the 2026-08-14 wall measurement. 10 mm, but it is the number the 600 mm setout closes on, so it is the one to hold."
  },
  "heights": {
   "pier": 0.2,
@@ -122,14 +122,20 @@
   "direction": "across-width",
   "cantilever": 0.0,
   "src": "given - 100x250 ties, flush with the outer wall faces, notched 50 mm each end. NOT YET INSTALLED as of 2026-08-14 - still in the yard, so they draw on stock.",
-  "maxSpacing": 0.6,
-  "_spacing": "600 mm max, evenly divided: 17 ties at 576 mm. Was one tie per post at 1151 mm, which deflected 45.6 mm (L/132) under loft storage against a 24 mm limit. Halving the spacing halves the load per tie and brings it to 22.8 mm (L/263). 0.60 exactly gives 16 ties at 614 mm and 24.3 mm, 0.3 mm over - so round the count UP, not down. 576 mm also lets 18 mm OSB span the deck instead of 22 mm.",
-  "_offPost": "At 576 mm the ties no longer land on posts; every other one lands mid-bay and the plate carries it. Plate 150x185 over a 1.15 m bay under a 3.68 kN reaction runs at 1.2 MPa against 14.8 - fine.",
+  "spacing": 0.7,
+  "spacingExact": true,
+  "maxSpacing": 0.7,
+  "_spacing": "700 mm CENTRES = 600 mm CLEAR. AS BUILT - the owner set the ties out at 700 and reported it 2026-08-21. The driver is the insulation: it comes in 600 x 1000 mm packs, and 600 clear between 100 mm ties is what takes a pack without cutting. History: one tie per post at 1151 mm deflected 45.6 mm (L/132) against a 24 mm limit; 576 mm gave 22.8 mm; 600 mm centres gave 23.8 mm. THIS SPACING DOES NOT PASS ON THE MODEL'S ORIGINAL BASIS - see _deflection. It passes on the knee braces acting as props, which is now a REQUIRED detail, not an optional one.",
+  "_deflection": "THE ONE THING TO GET RIGHT ON THIS FLOOR. Three ways to model the same tie at 700 mm centres, w = 1391 N/m, 100x250, limit L/250 = 24 mm:  (a) simply supported over the modelled 6.00 m, which is what every earlier figure in this project used: 16.4 mm instant, 27.3 mm final - 14% OVER, L/220.  (b) simply supported over the TRUE bearing centres, 5.85 m: 14.8 -> 24.6 mm, 2.5% over.  (c) propped by the knee braces at +-2.53 m, so a 5.06 m span with 0.47 m overhangs: 7.9 -> 13.2 mm, factor 1.8 - PASSES with real margin. The truth is between (b) and (c) and the bounds straddle the limit, which is exactly why the model was conservative before. The BEARING SEAT on the knee brace is what turns (c) from an argument into a fact. Fit it and the floor is 13 mm; leave the braces screwed-only and the honest answer is somewhere in 13-25 mm and you cannot say which.",
+  "_otherJobs": "The tie does three more jobs and 700 mm centres was checked against all of them 2026-08-21. BENDING: 8.41 MPa against 14.8 unpropped, 5.98 propped - factor 1.8 either way, bending was never the problem. RAFTER TIE: horizontal demand per tie end goes 3.13 -> 3.80 kN against 11.8 kN of bracket, factor 3.1 (was 3.8). STRUT BEARING: unchanged, 8 struts per side whatever the tie count, 0.93 MPa against fc,90,d 1.73. PLATE SPLICES: F16a is GONE - at 700 mm the nearest tie to any splice is 150 mm, against the 98 mm EN 1995 wants and the 50 mm that 600 mm centres produced.",
+  "_closeOut": "9.30 m outer to outer, end ties flush, so the centreline run is 9.20 m, and 9.20 does not divide by 700 either. The remainder goes into the LAST bay against the back gable, which becomes 800 mm centres - and that is the bay whose tie is omitted for the stair, so the odd dimension lands in the one opening where nothing spans. Result: eleven bays at exactly 600 mm CLEAR, a stair bay 1.50 m centre to centre and 1.40 m clear, and 13 ties. Setout from the front outer face: 50, 750, 1450, 2150, 2850, 3550, 4250, 4950, 5650, 6350, 7050, 7750, [8450 - rafter and tail joist, no tie], 9250.",
+  "_insulationClear": "600 mm CLEAR in every loft-floor bay, which is what the 600 x 1000 mm insulation packs are bought to fill. This is the reason for the spacing. NOTE the packs will sit in a true 600 gap rather than friction-fit - a batt made for 600 mm CENTRES expects about 550 clear and grips. In a floor that does not matter, the pack sits on the ceiling below. In a ceiling plane it would, so if any of this insulation ends up overhead rather than underfoot, net it or fit retainers. Between the RAFTERS the packs friction-fit properly: 700 mm rafter centres on a 50 mm rafter leaves 650 clear, so there the 600 pack is LOOSE - use 600 centres on any ceiling grid, not 700.",
+  "_offPost": "At 600 mm the ties do not land on posts; posts are at 1151 mm, so roughly every other tie lands mid-bay and the plate carries it. Plate 150x185 over a 1.15 m bay under a 3.83 kN reaction runs at 1.3 MPa against 14.8 - fine.",
   "spliceClashes": [
    6,
-   8
+   11
   ],
-  "_spliceClash": "J6 (x -1.727) sits 72 mm from the upper-layer splice at -1.655, and J8 (x -0.576) sits 79 mm from the lower-layer splice at -0.655. EN 1995 wants 7d = 98 mm end distance for a loaded M14. Lower and upper splices are never closer than 1.0 m to each other, so at both ties the OTHER plate layer is continuous and the load has a path - but strap those two splices (F16 detail) BEFORE bolting the ties down, not after. Alternative if you would rather not have the detail at all: 19 ties at 512 mm clears every splice by 120 mm and drops deflection to 20.3 mm, for 2 more boards.",
+  "_spliceClash": "RECOMPUTED 2026-08-21 for the 600 mm setout, and it got tighter. Plate splices are as-built and do not move: lower -0.65, upper -1.65, +1.35, +3.35. Ties now land at -1.60 and +1.40 - 50 mm from an upper-layer splice, against 72 and 79 mm before. EN 1995 wants 7d = 98 mm end distance for a loaded M14. It is still not critical for the same reason as before: the LOWER layer is continuous at both of those stations (its only splice is at -0.65, a metre away), so the load has a path. Two things make it less of a problem than it looks: the tie-to-wall connection is now a bracket pair, not the 2 x M14 through-rod that F16a was written about, and the rafter-seat M14 goes rafter-to-tie, not into the plate. STILL strap those two splices (F16 detail, 4 x 6x200 each side, staggered over 600 mm) BEFORE the ties go down.",
   "endNotch": 0.05,
   "installed": false
  },
@@ -154,13 +160,15 @@
   "tailSlopeLength": 0.9,
   "bearingOnWall": 0.05,
   "bearingOnPurlin": 0.05,
-  "ridgeLength": 10.31,
-  "rafterSpacing": 0.576,
+  "ridgeLength": 10.3,
+  "rafterSpacing": 0.7,
   "src": "given - rafters 50x250x6.0 m, bearing 50 mm on the top wall beam. Backspan to the wall is 5.10 m, leaving 0.90 m of tail past it.",
   "rafterTotalLength": 6.0,
-  "_ridgeNote": "9.31 m building + 0.50 m verge overhang each end. Was 11.31 m at a 1.0 m verge; shortened 2026-08-15 at owner's request. 0.50 m is also the approved figure.",
+  "_ridgeNote": "9.30 m building + 0.50 m verge overhang each end. Was 11.31 m at a 1.0 m verge; shortened 2026-08-15 at owner's request. 0.50 m is also the approved figure.",
   "rafterSetout": "oneBesideEachTie",
-  "_setout": "One rafter beside each tie. The tie spacing IS the rafter spacing now that ties are at 576 mm - at the old 1151 mm it took two rafters per tie bay to get there. Every rafter now has a tie against it instead of every second one, so every rafter foot has a direct thrust path into a tie rather than going via the plate.",
+  "_setout": "One rafter beside each SETOUT station, so the rafters run at exactly 600 mm centres like the ties, and there is a rafter beside the station at +3.80 even though no tie is built there. Every rafter foot has a direct thrust path into a tie rather than going via the plate, except the one at the stair station, which goes into the plate as it always did at the omitted tie.",
+  "_rafterCloseOut": "The 600 mm grid runs out against the back gable and the widest rafter bay in the roof becomes 650 mm - not 800, because the last rafter sits on the INNER face of the end tie while the rest sit on the outer face, which gives 75 mm back. Checked 2026-08-21 and it is nowhere near close: 50x150 rafter goes 3.05 -> 3.44 MPa against 16.6 (factor 4.8) and 1.0 -> 1.13 mm against an 8.5 mm limit; 25x100 battens at 300 mm centres over 650 go to about 1.1 MPa against 16.6. The purlin bears on the gable 0.5 m away, so nothing accumulates there. Verge close-outs are 575 mm, tighter than the grid, which is the harmless direction.",
+  "_battenModule": "600 mm rafter centres make a 6.0 m batten EXACTLY 10 bays with zero waste. At 576 it was 5.76 m used out of 6.0 - 4% thrown away, and the take-off had to be corrected from 63 boards to 66 for it. That correction goes away.",
   "ridgeSection": [
    0.05,
    0.25
@@ -183,7 +191,7 @@
    "_alignment": "At 50 wide on a 50 wide rafter there is ZERO setting-out tolerance - the counter-batten must land square on the rafter or the fixing misses. Screw the counter-batten to the rafter first, where you can see both, then the battens to the counter-batten.",
    "_sheetFixings": "Sheet screws land on the BATTEN, and at 200 mm rib spacing most of them fall between counter-battens - so they get 20 mm of timber, not 45. That is fine: uplift per screw is about 0.05 kN over a 200 x 298 mm tributary, even at the 0.84 kPa door-open worst case, and roughly 0.15 kN in the corner suction zones. Well inside pull-out from 20 mm.",
    "jointOnRafter": true,
-   "_cutting": "Batten joints land ON a rafter line, one piece ending at the rafter centre and the next starting there. Rafter lines are at 576 mm, so every piece is a WHOLE NUMBER OF BAYS. A 6 m board yields 10 bays = 5.76 m, wasting 240 mm (4%). That is a purchasing correction, not a modelling one: 375.4 m short becomes 66 boards, not the 63 you get from dividing by 6.",
+   "_cutting": "Batten joints land ON a rafter line, one piece ending at the rafter centre and the next starting there. Rafter lines are at 600 mm, so every piece is a WHOLE NUMBER OF BAYS - and a 6 m board is EXACTLY 10 bays, 6.00 m, zero waste. At 576 it was 5.76 m of every 6 m board, 4% thrown away, and the take-off carried a correction from 63 boards to 66 to cover it. That correction is gone: divide the length by 6 and buy that.",
    "_joints": "18 bays per run, so one 5.76 m piece + one 4.55 m piece = 1 joint per run, 42 joints. STAGGER them between adjacent runs so they do not line up in a column up the slope.",
    "_jointPads": "A 50 mm counter-batten CANNOT take a butt joint: two batten ends meeting on it get 25 mm of bearing each and the screw sits ~12 mm from the end, which splits. A 4-5 mm screw wants 10-15d = 50-75 mm. Screw a 300 mm offcut of 25x50 alongside at each joint - 100 mm of bearing, 50 mm end distance each side. 42 pads x 300 mm = 12.6 m, 3 extra boards.",
    "_cost": "EUR 119. Only EUR 68 of that is the thicker section; the other EUR 51 is the owner's 57.6 m of 20x100 becoming unusable - you cannot mix 20 and 25 in one roof plane, the step telegraphs through the sheet. The 20 mm is not wasted, it goes to trim, soffit or internal work."
@@ -234,7 +242,10 @@
   "floorThickness": 0.04,
   "targetHeadroom": 2.2,
   "src": "given — 50 mm floor over the 250 mm tie beams, 2.2 m walking height wanted in the middle bay between the rafter supports",
-  "_thickness": "40 mm. Comfortably clear at the 1.06 m clear span between ties - 1.0 mm final against a 3.5 mm limit, 3.7 MPa under a 1.5 kN point load. 32 mm was the minimum; 40 buys real margin for machinery and costs 137 EUR over it."
+  "_thickness": "40 mm. The old note here was written for the 1.06 m clear span of the 1151 mm setout - 1.0 mm final against a 3.5 mm limit, 3.7 MPa under a 1.5 kN point load. At 600 mm centres on 100 mm ties the clear span is 500 mm and the deck is nowhere: 0.05 mm and 1.8 MPa. 32 mm was the calculated minimum; 40 buys real margin for machinery and costs 137 EUR over it.",
+  "_sheetModule": "700 mm centres do NOT suit 1200 mm sheet - 1200 is not a multiple of 700, so a sheet edge lands on a tie only every 6th bay (4200 mm). The insulation module won this argument over the sheet module. Consequences, both real: cut sheet edges have to be supported on noggins where they fall between ties, and 18 mm OSB is no longer enough. See _deckThickness.",
+  "_deckThickness": "22 mm OSB, NOT 18. 18 mm OSB/3 is rated to 600 mm CENTRES; at 700 mm centres it is outside the span tables. The 40 mm boarding in loft.floorThickness carries 600 mm clear easily (0.10 mm) and is the fallback if boards are preferred to sheet. Do not buy 18 mm for this floor.",
+  "_stairBaySpan": "CHECKED 2026-08-21: there is no soft span in the stair bay. The only decked part of it is y +1.0 to +3.0 - everything from the wall at y -3.0 up to the trimmer at +1.0 is the opening - and the tail joist on the setout station at +3.80 splits that 1.40 m bay into 600 and 800 mm centres, 500 and 700 mm clear. 40 mm boarding over 700 is 0.2 mm and 2.4 MPa. Nothing to do."
  },
  "site": {
   "region": "Sigulda, Latvia",
@@ -283,7 +294,7 @@
    0.1,
    0.1
   ],
-  "_girder": "100x100, BOUGHT - changed 2026-08-15 at owner's request so the girder no longer eats 100x250. It works now only because the ties moved to 576 mm: the girder is screwed to every tie it crosses, which at 576 mm in x is a restraint every 917 mm along the diagonal. lambda 31.8, kc 0.939, capacity 136 kN against a 7.1 kN demand. At the old 1151 mm tie spacing the restraint was 1834 mm, kc 0.633 - which is why the schedule previously insisted on 100x125. Fixing to EVERY crossing is not optional.",
+  "_girder": "100x100, BOUGHT - changed 2026-08-15 at owner's request so the girder no longer eats 100x250. It works only because the ties are close: the girder is screwed to every tie it crosses, which at 600 mm in x is a restraint every 955 mm along the diagonal. lambda 33.1, kc 0.93, capacity about 135 kN against a 7.1 kN demand. At the old 1151 mm tie spacing the restraint was 1834 mm, kc 0.633 - which is why the schedule previously insisted on 100x125. Going 576 -> 600 mm changes nothing here. Fixing to EVERY crossing is not optional.",
   "reinforceSection": [
    0.1,
    0.125
@@ -328,17 +339,17 @@
  "plateSplices": {
   "lowerLayerPieces": [
    4.5,
-   5.81
+   5.8
   ],
   "upperLayerPieces": [
    3.5,
    3.0,
    2.0,
-   1.81
+   1.8
   ],
   "_note": "Top plate is not continuous - lower layer 2 pieces, upper 4. The joints are LAP joints with M14 through, and the two courses are bolted to each other with M14 as well. Corrected 2026-08-15: the model previously assumed BUTT joints, which was the basis of F16 as a critical finding.",
   "src": "given 2026-08-14",
-  "_recut": "Piece lengths restated for the 10.31 m run after the 0.50 m cut-back. The SPLICE POSITIONS are unchanged - lower at -0.655, upper at -1.655, +1.345, +3.345 - because the cut comes off the ends, not the middle. F16a still applies: J6 and J8 still sit 72 and 79 mm from a splice.",
+  "_recut": "Piece lengths restated for the 10.30 m run (9.30 m building + 0.50 m verge each end). The SPLICE POSITIONS are as-built and do not move - lower at -0.65, upper at -1.65, +1.35, +3.35 - because the cut comes off the ends, not the middle. F16a is WORSE under the 600 mm tie setout, not better: J6 at -1.60 and J11 at +1.40 now sit 50 mm from an upper-layer splice, against 72 and 79 mm before. See joists._spliceClash.",
   "jointType": "lap",
   "lapLength": 0.3,
   "boltFromJoint": 0.1,
@@ -361,13 +372,15 @@
    "eaves",
    "purlin"
   ],
-  "_why": "NOT for lateral-torsional buckling - kcrit is 0.99 at 50x150, the rafter does not need it. Three other reasons: (a) EN 1995 wants the rafter held upright where it bears on the plate and on the purlin; (b) F19 deleted the roof-plane braces, so the 12.9 kN gable triangle now relies on the sheeting acting as a diaphragm, and sheeting cannot do that unless the rafters are tied to one another; (c) they hold the 576 mm setout while you work. No ridge row - the rafters are screwed to the ridge purlin, which already does it.",
-  "_qty": "2 rows x 20 bays x 2 slopes = 80 spacers, 526 mm long, cut from rafter offcuts.",
+  "_why": "NOT for lateral-torsional buckling - kcrit is 0.99 at 50x150, the rafter does not need it. Three other reasons: (a) EN 1995 wants the rafter held upright where it bears on the plate and on the purlin; (b) F19 deleted the roof-plane braces, so the 12.9 kN gable triangle now relies on the sheeting acting as a diaphragm, and sheeting cannot do that unless the rafters are tied to one another; (c) they hold the 600 mm setout while you work. No ridge row - the rafters are screwed to the ridge purlin, which already does it.",
+  "_qty": "2 rows x 17 bays x 2 slopes = 68 spacers, 550 mm long in the 600 mm bays, cut from rafter offcuts.",
   "_section": "50x100, free. Ripping 42 rafters from 50x250 down to 50x150 throws off 252 m of 50x100; the 80 spacers need 42 m of it. They are not bending members - they hold the rafters upright and tie them together - so 100 deep is ample."
  },
  "stair": {
-  "atX": 4.029,
-  "_which": "J16 only, the bay between J15 and the end tie J17. J17 sits at +4.605 and the gable wall at +4.655, so the opening's far edge IS the end wall - the stair runs tight against it and the middle of the loft floor stays clear. Owner decision 2026-08-15.",
+  "atX": 3.9,
+  "openingWidth": 1.3,
+  "_which": "The CLOSE-OUT BAY at the back, between the tie at +3.20 and the end tie at +4.60. The station at +3.80 is set out but carries no tie - only the rafter beside it and the tail joist that closes the deck past the opening. The end tie sits at +4.60 and the gable wall at +4.65, so the opening's far edge IS the end wall: the stair runs tight against it and the middle of the loft floor stays clear. Owner decision 2026-08-15, re-set out on the 600 mm grid 2026-08-21.",
+  "_openingWidth": "1.30 m clear, 1.40 m centre to centre. Was 1.051 m. It got wider for free: the 200 mm that 9.20 m leaves over after thirteen 600 mm bays lands here. Owner asked for 1.20 m minimum for the stair - this beats it by 100 mm.",
   "openingLength": 2.0,
   "openingFromY": -1.0,
   "trimmerSection": [
@@ -419,7 +432,7 @@
    "_newel150": "50x150 newel carries it: the strings' mid-span reaction is about 7.1 kN and even on the weak axis (lambda 127.5, kc 0.195) capacity is 21.2 kN, factor 3.0. 100x100 would give 12.9 but needs a section bought for one 1.84 m piece."
   },
   "omitTies": [
-   16
+   13
   ],
   "_widened": "REVERTED to one omitted tie. I had sized the opening at 1627 mm on the premise that a 1200 x 2500 board has to pass through horizontally. It does not - carried ON EDGE, 1200 vertical and the long axis up the slope, the board's plan footprint is its THICKNESS. It needs about 250 mm of width including hands, against 1051 mm available. What actually has to fit is the LENGTH: 2500 tilted at 41.2 deg projects 1881 mm against a 2.0 m opening, 119 mm spare. Owner confirmed they carry board vertically.",
   "_trimmer": "50x150 over the widened 1.727 m span carrying two tail joists: 3.5 MPa, 0.6 mm.",
@@ -509,8 +522,8 @@
   "src": "given 2026-08-15 - board at the rafter ends to carry the gutter",
   "_height": "2 x 150 = 300 mm. ONE board cannot do it: the rafter is 150 deep perpendicular to the slope but cut PLUMB, so the vertical face it presents is 150/cos(54) = 255 mm. A 250 board misses by 5 mm. Adding the batten build-up (25+20)xcos(54) = 26.5 mm gives 282 mm for full cover to the underside of the sheet; 300 leaves 18 mm of adjustment.",
   "_thickness": "50 mm. Gutter bracket screws want 25 mm minimum; 50 if the brackets fix to the fascia alone rather than through into the rafter end. 20 mm batten stock is NOT suitable here.",
-  "_snowSlide": "Statically the fascia is nothing - a full gutter is 0.10 kN/m over a 576 mm span, 0.02 MPa. The real load is snow SLIDING off a 54 deg roof. The snow load is small (mu1 0.16, 0.24 kPa on plan) but it arrives as an impact when the slab lets go, not as a static load. Mount the gutter LOW so sliding snow passes over it, or fit snow stops. Do not hang a gutter in the slide path of a 54 deg roof.",
-  "_quantity": "2 runs x 10.31 m x 2 pieces = 41.2 m -> 7 boards of 50x150."
+  "_snowSlide": "Statically the fascia is nothing - a full gutter is 0.10 kN/m over a 600 mm span, 0.02 MPa. The real load is snow SLIDING off a 54 deg roof. The snow load is small (mu1 0.16, 0.24 kPa on plan) but it arrives as an impact when the slab lets go, not as a static load. Mount the gutter LOW so sliding snow passes over it, or fit snow stops. Do not hang a gutter in the slide path of a 54 deg roof.",
+  "_quantity": "2 runs x 10.30 m x 2 pieces = 41.2 m -> 7 boards of 50x150."
  },
  "kneeBraces": {
   "section": [
@@ -518,14 +531,21 @@
    0.1
   ],
   "angleDeg": 45,
-  "count": 32,
+  "count": 26,
   "length": 0.453,
+  "bearingSeat": true,
+  "seatLocating": 0.01,
+  "_STRUCTURAL": "PROMOTED 2026-08-21 from a wind brace to a PRIMARY VERTICAL SUPPORT. At 700 mm tie centres the loft floor does not pass on a plain 6 m span - 27.3 mm against a 24 mm limit - and what makes it pass is these braces propping the tie 395 mm inboard of each bearing, cutting the span to 5.06 m and the deflection to 13.2 mm. They are no longer optional and they are no longer a 0.78 kN member. Demand is now 4.07 kN vertical per brace, 5.75 kN axial at 45 deg.",
+  "_seat": "BEAR THE BRACE, DO NOT SCREW IT. Cut the brace head to a flat level face so it bears directly up against the tie underside: 50 x 100 cut square at 45 deg gives a 7071 mm2 bearing face, and 4.07 kN on it is 0.58 MPa against fc,90,d 1.73 - factor 3.0. Locate it sideways with a SHALLOW 10 mm housing or a cleat each side; screws then only stop it falling out. The same at the foot on the post top. This is the same principle the purlin/post joint already follows - CUT THE COMPRESSION MEMBER, NOT THE BENDING ONE.",
+  "_notANotch": "DO NOT house the brace into the tie by 25 mm or more. A rebate on the UNDERSIDE of a beam at a support is the one case EN 1995 6.5.2 singles out: the re-entrant corner starts a shear crack along the grain and it runs, and the prop point is exactly where shear peaks. 10 mm to locate is fine and is not a structural notch; if you cut deeper, radius the internal corner to 8-10 mm and never square it.",
+  "_whyNotScrews": "The screwed detail CANNOT carry this. 4 x 6x100 connector screws give about 5.6 kN against a 5.75 kN axial demand - at capacity, with nothing spare, on a joint that was designed with a factor of 7 against 0.78 kN of wind. Worse, every millimetre of screw slip comes straight off the deflection benefit, because the whole gain lives in that joint: at Kser for a 6 mm screw the pair of joints is about 2.2 kN/mm, which is soft enough to hand a few millimetres back. Bearing on wood has no slip.",
+  "_thrust": "The 45 deg prop pushes the wall top OUTWARD by 4.07 kN at each brace foot. This is contained, not loose in the frame: the two braces on a tie push against each other and the tie picks up 4.07 kN of AXIAL COMPRESSION between the brace heads. Checked - Euler on 100x250 weak axis over 5.06 m is 88 kN, factor 22, and it partly cancels the 2.38 kN of rafter-thrust tension already in the tie. Nothing to do about it, but know that it is there before anyone decides to leave a brace out.",
   "src": "owner 2026-08-15 - braces below the ties, lowest top-wall course to tie, 45 deg",
   "_geometry": "Lowest top-wall course bottom 3.270, tie underside 3.590 - 320 mm of rise, so at 45 deg the run is 320 and the brace is 453 mm. Short: this is a corner gusset, not a long knee brace.",
   "_why": "TRANSVERSE stability, which nothing else provides between the gables. The wind girder fixes longitudinal racking (F0/F16). Across the width, posts + ties + sills form a rectangle with pinned corners - a mechanism - resisted only by the two gable walls and eventually the loft deck. These make every tie a portal frame.",
   "_capacity": "Wind on the long wall is 1.11 kN per tie bay, half arriving at tie level, so the brace takes 0.78 kN axial at 45 deg. A 50x100 at 453 mm has lambda 31, kc 0.94 and 68.4 kN capacity - a factor of 87. Buckling is irrelevant at this length.",
   "_connection": "THE CONNECTION IS THE WHOLE DESIGN, not the timber. 0.78 kN axial resolves to 0.55 kN horizontal and 0.55 kN vertical at each end. A 6x100 screw gives about 1.4 kN in single shear, so 3 would do - use 4 each end: 2 into the face and 2 skewed, so the joint cannot rotate open. A knee brace that can hinge at its ends does nothing.",
-  "_material": "32 x 453 mm = 14.5 m of 50x100, free from the rafter rip byproduct (118 m spare before this). One 6 m board yields 13 braces if cut as 45 deg pairs."
+  "_material": "26 x 453 mm = 11.8 m of 50x100, free from the rafter rip byproduct. One 6 m board yields 13 braces if cut as 45 deg pairs. The material was never the cost here and still is not - the SEAT CUT is, 26 of them, and it is the cheapest structural upgrade in the building."
  },
  "wallBattens": {
   "section": [
