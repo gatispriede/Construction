@@ -32,7 +32,7 @@
       -3.0,
       0.1
     ],
-    "one_line": "RAISED to high 2026-08-15 - not because the frost got worse, but because the sill is now bolted to the piles. Loose on brick the frame could ride out heave; bolted, 28-42 kN of adfreeze uplift goes straight into the sill and nothing in the connection resists it (a 60x60 washer yields at 6.0 kN). The base is AT the 1.2 m frost line, not below it. Fit a bituminous or polythene slip sleeve over the top 1.0 m of every pile shaft, before backfill settles. This is the single cheapest unfixed risk.",
+    "one_line": "RAISED to high 2026-08-15 - not because the frost got worse, but because the sill is now bolted to the piles. Loose on brick the frame could ride out heave; bolted, 28-42 kN of adfreeze uplift goes straight into the sill and nothing in the connection resists it (a 60x60 washer yields at 6.0 kN). The base is AT the 1.2 m frost line, not below it. Fit a bituminous or polythene slip sleeve over the top 1.0 m of every pile shaft, before backfill settles. This is the single cheapest unfixed risk. NOT CLOSED by the sill DPC (owner 2026-08-21). The two are both bituminous and get confused: the DPC is a horizontal layer ON TOP of the pile head against rising damp, and it closed the F5 item. The slip sleeve wraps the OUTSIDE of the buried shaft over the top 1.0 m against frozen soil bonding to it. Adfreeze grips the sides, below grade, where a layer on the pile head cannot reach.",
     "layer": "piers"
   },
   {
@@ -61,14 +61,14 @@
   },
   {
     "id": "F5",
-    "title": "Sill: ventilated and isolated — splash is what is left",
-    "severity": "medium",
+    "title": "Sill: ventilated, isolated and now DPC'd — splash is what is left",
+    "severity": "low",
     "at": [
       4.0,
       -3.0,
       0.35
     ],
-    "one_line": "Improved 2026-08-15: concrete will not touch the timber, the underside stays ventilated in summer, and ground falls away. That is what keeps the frame in service class 2 - at class 3 kdef goes 0.80 to 2.00 and the tie fails at 36.6 mm. TWO THINGS LEFT: drainage moves standing water but not SPLASH, and the sill at ~200 mm sits inside the ~300 mm splash zone - lay a 300-500 mm gravel margin, not soil or grass. And the barrier is pierced at all 24 M12 anchors: fit a DPC pad under the sill at each pile head.",
+    "one_line": "Improved 2026-08-15: concrete will not touch the timber, the underside stays ventilated in summer, and ground falls away. That is what keeps the frame in service class 2 - at class 3 kdef goes 0.80 to 2.00 and the tie fails at 36.6 mm. The DPC item is CLOSED 2026-08-21: bituminous membrane is laid between every pile head and the sill, so the barrier is no longer pierced at the 24 M12 anchors. ONE THING LEFT: drainage moves standing water but not SPLASH, and the sill at ~200 mm sits inside the ~300 mm splash zone - lay a 300-500 mm gravel margin, not soil or grass.",
     "layer": "sills"
   },
   {
