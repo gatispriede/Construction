@@ -301,15 +301,15 @@
  },
  {
   "id": "F25",
-  "title": "The front gable cannot take its half of the transverse wind",
-  "severity": "high",
+  "title": "Front gable is not a shear wall - agreed not a failure, but it is a dependency",
+  "severity": "medium",
   "at": [
    -4.6,
    0,
    2.0
   ],
   "layer": "must_frontGablePanels",
-  "one_line": "From the 2026-08-21 stability re-run, docs/stability.md. Wind across the ridge is 44 kN characteristic and half this building's side elevation is roof, so 32 kN arrives at loft-deck level - 49 kN design. Hand the gables a tributary half-share each and the front one cannot take it: the 3 m entrance leaves two 1.5 m piers at 2.3:1, and rocking one needs 41.8 kNm against the 18 kNm its pile group can hold (three piles a side counting the corner; two would have given 12). Inverted, the front gable is good for about 22% of the transverse shear, not 50%. That is NOT a failure, because the tributary split is not how the load actually goes: the knee-brace PORTALS have 77 kN of capacity against the 49 kN total, so they can carry everything the gable does not take. What it means is that the front gable is not a shear wall you may rely on, and F24 - the brace seats and the ledger - is what makes the building stable across its width. The insulation and the loft deck do not change this: the deck is what DELIVERS the load to the gables, and insulation carries nothing."
+  "one_line": "OWNER 2026-08-21 judges this not an issue, and on strength that AGREES with what the finding already said: the tributary half-share is not how the load goes, and the knee-brace portals carry the whole 48.55 kN transverse shear at 77.22 kN, factor 1.6, with the deck ignored entirely. Downgraded, but NOT closed, because it is the marker for a dependency chain and two of the links are not built yet. (1) That 77 kN is the brace END CONNECTIONS at factor 1.6 - it is F24. No seats, no portal, and then the front gable really is being asked for a half share it can only give 22% of, at factor 0.4. (2) SWAY at tie level, portals only with the deck ignored, is 12.82 mm against a 12.08 mm H/250 limit - factor 0.9, H/236. The portals carry the strength on their own but they do NOT meet sway on their own; the loft deck has to be on and screwed at 150 mm on panel EDGES, not the 300 the schedule used to say. So F25 is not an issue ONCE F24 is cut and the deck is down. Between now and then it is exactly the state stability.md calls the worst case, and that window is the build."
  },
  {
   "id": "F26",

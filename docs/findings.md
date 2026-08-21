@@ -521,6 +521,12 @@ choice to make now, because it changes every rafter length.
    of what the braces buy. The 2026-08-21 re-run in [stability.md](stability.md)
    adds a second reason: the front gable cannot take its half of the transverse
    wind (F25), so the brace portals are the primary system across the width too.
+   The owner judges F25 not an issue and on strength that is right — but it is a
+   **dependency, not a closure**: the portals only reach 77 kN through the brace
+   end connections (F24), and on their own they miss sway at 12.82 mm against
+   12.08 (H/236). The loft deck, screwed at **150 mm on panel edges**, is the
+   other half. Until both are in, this is the state stability.md calls the worst
+   case — and that window is the build itself.
    None of it can be inspected once the loft is decked.
 
 Steps 2 and 3 are worth doing before anything else goes on the frame. Everything
