@@ -120,9 +120,11 @@
   "_dpcNotTheSleeve": "IT IS NOT THE FROST SLEEVE, and the two get confused because both are bituminous. The DPC is a horizontal layer ON TOP of the pile head, against damp rising into the sill. The F2 slip sleeve wraps the OUTSIDE of the buried shaft over the top 1.0 m, against frozen soil bonding to it and dragging the pile up. Different surface, different mechanism, and a layer on the pile head cannot reach the one that matters: adfreeze grips the sides, below grade. F2 stays open.",
   "_dpcAndShear": "The slip plane the membrane introduces at the sill is harmless. Base shear goes through the M12 anchors in shear - 2.56 kN per pile against 20 kN - not through friction between timber and concrete, so losing that friction costs nothing.",
   "sillAnchor": {
-   "size": "M12",
+   "size": "M14 x 300",
    "onePer": "pile",
-   "src": "given 2026-08-15 - lowest wall course screwed into the concrete",
+   "src": "given 2026-08-15, size confirmed by the owner 2026-08-21 - lowest wall course screwed into the concrete with M14 x 300",
+   "_asBuilt": "M14 x 300, not the M12 previously recorded. For WIND this is hugely over-specified and that question is closed: stability.md has hold-down at 0.77 kN per windward pile against 8.00 (factor 10.4) and shear at 2.56 against 20.00 (factor 7.8). An M14 at that embedment beats both several times over.",
+   "_doesNotCloseF2": "IT DOES NOT ANSWER F2, AND IT SLIGHTLY WORSENS THE CONSEQUENCE. F2 is about the GROUND, not the anchor: the piles bear AT 1.2 m, which is the Latvian frost line rather than below it, and the mechanism that matters is ADFREEZE on the shaft - 28-42 kN of uplift on a lightly loaded pile. Nothing about a bigger anchor reduces that load; it only decides which link breaks. The binding limit was never the anchor steel, it is the WASHER BEARING ON THE SILL - 5.96 kN at 60x60, 10.8 kN at 80x80, against fc,90,d 1.73. So with an M12 there was at least a chance the anchor let go and relieved the frame, a crude fuse. An M14 x 300 removes that fuse and guarantees the SILL is what splits. The slip sleeve over the top 1.0 m of every shaft is what removes the 28-42 kN in the first place, and it is now the only thing standing between the anchor and the sill.",
    "_capacity": "Demand is trivial: 1.07 kN per anchor in uplift (F6 door-open, 9.7 kN per long wall over ~9 anchors) and 1.81 kN in shear (16.3 kN base shear per wall). An M12 in C20/25 gives 7-10 kN tension and 6-8 kN shear.",
    "_washer": "USE 60x60 WASHERS MINIMUM. The anchor is not the weak link - the washer bearing on the sill is. At fc,90,d 1.73 MPa a 40x40 washer crushes the timber at 2.50 kN and a 50x50 at 4.06 kN, both below what the anchor can deliver. 60x60 gives 5.96 kN, 80x80 gives 10.8 kN."
   },

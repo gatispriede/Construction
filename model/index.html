@@ -8,7 +8,13 @@
   canvas { display:block; }
   .panel { position:fixed; background:var(--panel); border:1px solid #d0d7de;
            border-radius:10px; padding:12px 14px; backdrop-filter:blur(6px); }
-  #ctl { top:14px; left:14px; width:210px; }
+  /* Scrolls, and stops short of #readout (bottom:14 + ~44 tall) so the last
+     few checkboxes are not sitting underneath it where they cannot be clicked.
+     max-height rather than a bottom anchor, so a short panel still hugs its
+     content instead of drawing a full-height border round empty space. */
+  #ctl { top:14px; left:14px; width:210px;
+         max-height:calc(100vh - 82px); overflow-y:auto;
+         overscroll-behavior:contain; scrollbar-width:thin; }
   #ctl h1 { font-size:13px; margin:0 0 2px; letter-spacing:.02em; }
   #ctl .sub { color:#57606a; font-size:11px; margin-bottom:10px; }
   #ctl h2 { font-size:10px; text-transform:uppercase; letter-spacing:.09em;
@@ -99,4 +105,4 @@
     "three/addons/": "https://unpkg.com/three@0.169.0/examples/jsm/"
 } }
 </script>
-<script type="module" src="./src/viewer.js?v=1787333797"></script>
+<script type="module" src="./src/viewer.js?v=1787333923"></script>
