@@ -6,7 +6,7 @@
 // decides length — 6 x 100 is not always enough.
 
 import * as THREE from 'three';
-import { derive } from './geometry.js?v=1787033584';
+import { derive } from './geometry.js?v=1787317534';
 // Connections are labelled with the LAYER NAMES they join, not reference
 // letters. The letters were a 30-row lookup table you had to learn; the layer
 // name is already in the panel on the left, so "ties -> plates" points at two
@@ -89,8 +89,21 @@ export function schedule(p, d, Z) {
       [-L / 2 - 0.35, -2.2, 1.7]],
     [`${Z('must_frontGablePanels')}→${Z('sills')}  panel hold-down`, '2 × M14 · post head to sill · 6.9 kN', 'M14',
       [-L / 2 - 0.35, 1.55, 1.1]],
-    [`${Z('loftDeck')}→${Z('ties')}  deck to tie`, '6×100 at 300 mm, every crossing', '6×100',
+    [`${Z('loftDeck')}→${Z('ties')}  deck to tie`,
+      '6×100 at 150 mm on panel EDGES, 300 mm in the field', '6×100',
       [1.5, -1.8, d.loftFloorTop + 0.25]],
+    // The deck is a diaphragm, not a floor: at a flat 300 mm it runs 4.7 kN/m
+    // against a 4.05 kN/m demand, factor 1.2. Halving the EDGE spacing is free
+    // and takes it to 2.3. See docs/stability.md.
+    [`${Z('kneeBraces')}→${Z('ties')}  brace head to tie`,
+      '12 mm locating housing + 6 × 6×120 · 2 face, 4 skewed', '6×120',
+      [xs[3], bear - d.kneeRun - 0.15, d.tieBottom - 0.15]],
+    [`${Z('kneeBraces')}→${Z('braceLedger')}  brace foot to ledger`,
+      'cut seat, 12 mm housing + 6 × 6×120 · the pair works in TENSION', '6×120',
+      [xs[5], bear - 0.55, d.ledgerTop - 0.45]],
+    [`${Z('braceLedger')}→${Z('posts')}  ledger to post`,
+      '3 × 8×200 at EVERY post · withdrawal governs · 12 kN', '8×200',
+      [xs[6], -bear + 0.5, d.ledgerTop - 0.45]],
 
     [`${Z('plateSplices')}  plate splice`, '4 × 6×200 each side, staggered over 600 mm', '6×200',
       [-0.66, -3.0, 3.95]],

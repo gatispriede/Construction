@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1787033584';
-import { derive, stations, spaced } from './geometry.js?v=1787033584';
+import { allocator } from './stock.js?v=1787317534';
+import { derive, stations, spaced } from './geometry.js?v=1787317534';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -506,25 +506,56 @@ export function buildFrame(p) {
   }
   layers.stairs = stair;
 
-  // --- Knee braces, wall top to tie ---------------------------------------
-  // 45 deg, from the lowest top-wall course up to the tie underside. Short —
-  // 453 mm — so this is a corner gusset, not a long brace, and buckling is
-  // irrelevant. What it does is triangulate a joint that is currently a hinge.
+  // --- Brace ledger, and the knee braces that stand on it -----------------
+  //
+  // The ledger is a continuous 100 x 100 run along the inner face of both long
+  // walls with its TOP at the brace-foot height. It does two things a screwed
+  // butt joint into the wall face cannot:
+  //
+  //   1. gives every brace foot a bearing SEAT, so the vertical component of
+  //      the brace force goes into timber instead of into screws;
+  //   2. carries the mid-bay braces to a post. Ties are at 576 mm and posts at
+  //      ~1164, so every other brace foot lands on nothing — without the
+  //      ledger it pushes on the lapped plate courses between posts, which are
+  //      the weakest part of the wall top (F16/F16a).
+  //
+  // 100 x 100, not 50 x 100, and that is what makes it the only bought part of
+  // this detail: below the plate the wall between posts is open frame, so the
+  // ledger genuinely SPANS 1.16 m, and the tension brace at mid-bay pulls it
+  // off the wall. 50 mm of thickness fails that; 100 passes at 3.2.
+  //
+  // Its height is not a parameter: it follows kneeBraces.length through
+  // geometry.js, so the two can never disagree.
+  const ledger = layer('braceLedger');
+  {
+    const [lt, ld] = p.braceLedger.section;
+    const yL = W / 2 - p.sections.wallThickness - lt / 2;
+    let li = 0;
+    for (const sgn of [-1, 1]) {
+      bar(ledger, M('braceLedger', li++, 2), [0, sgn * yL, d.ledgerTop - ld / 2],
+          [L - 2 * p.sections.wallThickness, lt, ld]);
+    }
+  }
+  layers.braceLedger = ledger;
+
+  // 45 deg, ledger top up to the tie underside — 600 mm, so the foot lands
+  // 104 mm below the plate courses and delivers its thrust into the POSTS.
   //
   // The wind girder fixes LONGITUDINAL racking. Across the width, posts + ties
   // + sills are a rectangle with pinned corners, i.e. a mechanism, resisted
   // only by the two gable walls and eventually the loft deck. In between,
-  // nothing. These make every tie a portal frame.
+  // nothing. These make every tie a portal frame — and the 2026-08-21
+  // stability re-run makes that path load-bearing rather than a nicety: the
+  // front gable cannot take a half share of the transverse wind (F25).
   const knees = layer('kneeBraces');
   {
     const [kw, kd] = p.kneeBraces.section;
-    const rise = d.tieBottom - d.postTop;      // 320 mm
     const yIn = W / 2 - p.sections.wallThickness;
     for (const x of builtTies) {
       for (const sgn of [-1, 1]) {
         strut(knees, MAT.have,
-          [x, sgn * yIn, d.postTop],
-          [x, sgn * (yIn - rise), d.tieBottom], kw, kd);
+          [x, sgn * yIn, d.braceFootZ],
+          [x, sgn * (yIn - d.kneeRun), d.tieBottom], kw, kd);
       }
     }
   }

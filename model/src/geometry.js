@@ -39,6 +39,16 @@ export function derive(p) {
   const tieBottom = plateTop - p.joists.endNotch;
   const tieTop = tieBottom + p.sections.joist[1];
 
+  // Knee braces and the ledger their feet land on. LENGTH and ANGLE are the
+  // given; the foot height follows from them, and the ledger follows the foot.
+  // Change kneeBraces.length in params and the ledger moves with it — the two
+  // must never be able to disagree.
+  const kneeAngle = (p.kneeBraces.angleDeg * Math.PI) / 180;
+  const kneeRise = p.kneeBraces.length * Math.sin(kneeAngle);
+  const kneeRun = p.kneeBraces.length * Math.cos(kneeAngle);
+  const braceFootZ = tieBottom - kneeRise;
+  const ledgerTop = braceFootZ;
+
   // Loft: floor sits on the tie beams. Full walking height is only available
   // where the rafter underside clears floor + target headroom.
   const loftFloorTop = tieTop + p.loft.floorThickness;
@@ -65,6 +75,10 @@ export function derive(p) {
     gableStations: stations(p.plan.width, p.bays.gableWallPosts - 1),
     bayWidth: p.plan.width / (p.bays.gableWallPosts - 1),
     loftFloorTop,
+    kneeRise,
+    kneeRun,
+    braceFootZ,
+    ledgerTop,
     tieBottom,
     tieTop,
     headroomAt,

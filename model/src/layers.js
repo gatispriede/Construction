@@ -17,7 +17,7 @@ export const LAYER_GROUPS = [
     'must_frontGablePanels', 'wallBattens', 'cladding_white',
   ]],
   ['Loft floor', [
-    'ties', 'kneeBraces', 'blocking', 'must_tieBolts',
+    'ties', 'braceLedger', 'kneeBraces', 'blocking', 'must_tieBolts',
     'must_windGirder', 'loftDeck',
   ]],
   ['Stair', [

@@ -68,7 +68,7 @@ const QUEUE = [
   // 50 x 100 — 36 m of rip byproduct
   // Blocking moved here from 50 x 250 — it is 50 x 100 now, and free.
   { group: 'blocking',        section: '50x100_m', boards: 20.0 },
-  { group: 'kneeBraces',      section: '50x100_m', boards: 14.5 },
+  { group: 'kneeBraces',      section: '50x100_m', boards: 19.2 },
   // Queued explicitly now. They were drawn blue unconditionally, which meant
   // 37.3 m of 50 x 100 sat outside the take-off entirely.
   { group: 'rafterSpacers',   section: '50x100_m', boards: 37.3 },
@@ -83,6 +83,9 @@ const QUEUE = [
   { group: 'struts',          section: '100x100', boards: 8  },
   { group: 'gableStuds',      section: '100x100', boards: 7  },
   { group: 'windGirder',      section: '100x100', boards: 6  },
+  // The brace ledger. 100 x 100 because it SPANS between the posts - a 50 mm
+  // board is pulled off the wall by the tension brace at mid-bay. 2 x 9.01 m.
+  { group: 'braceLedger',     section: '100x100', boards: 4  },
 
   // Roof battens, 25 x 100. All bought — see the note on OWNED above.
   { group: 'battens',         section: '25x100_m', boards: 433.0 },

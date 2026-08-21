@@ -286,5 +286,29 @@
     ],
     "layer": "piers",
     "one_line": "The frame is bolted to 1.2 m piles; the slab bears at grade. Piles below frost do not move, a slab does. PARTLY resolved by the slab detail: finishing 50 mm below the sill with a 20 mm compressible perimeter gap means the slab can heave without levering the frame. What is still open is the entrance JAMBS - put 2 more piles under them rather than standing them on the slab."
+  },
+  {
+    "id": "F24",
+    "title": "Knee brace feet: a ledger and a cut seat, before the deck goes on",
+    "severity": "high",
+    "at": [
+      0,
+      -2.85,
+      3.17
+    ],
+    "layer": "braceLedger",
+    "one_line": "The knee braces are load-bearing now (F25), and the joint they were given is not sized for it. Their feet run onto a continuous 100x100 ledger along the inner wall face, top at 3.166 - 424 mm below the tie underside, 104 mm below the plate courses, so the thrust lands on the POSTS and not on the lapped plate. CUT THE SEAT: a 12 mm locating housing in the ledger top and a squared toe, not a deep notch, and the same at the brace head against the tie. Screws are not the bearing - but they ARE the tension path, because the leeward brace of every pair pulls: 6 x 6x120 each end, 2 into the face and 4 skewed. The ledger is 100 mm thick, not 50, because between posts it spans 1.16 m and a 50 mm board is pulled off the wall by the tension brace at 21 MPa against 16.6. 3 x 8x200 into every post. All of it has to be cut and inspected BEFORE the loft is decked - afterwards you cannot see any of it."
+  },
+  {
+    "id": "F25",
+    "title": "The front gable cannot take its half of the transverse wind",
+    "severity": "high",
+    "at": [
+      -4.6,
+      0,
+      2.0
+    ],
+    "layer": "must_frontGablePanels",
+    "one_line": "From the 2026-08-21 stability re-run. Wind across the ridge is 44.4 kN characteristic and half the building's side elevation is roof, so 32.4 kN arrives at loft-deck level. On the diaphragm route that is 24.3 kN design into each gable, and the 3 m entrance leaves the front gable two 1.5 m piers at 2.3:1 - 27.9 kN of hold-down at each jamb against about 16 kN of pile. Factor 0.6. The answer is not to rebuild the gable: it is that the knee-brace PORTALS carry the width (95 kN capacity against 48.6 kN demand, deck ignored) and the gables are the second path. That is what makes F24 a critical detail rather than a nicety. If you want the front gable to count, put 2 more piles under the entrance jambs and anchor into them - which F23 asks for anyway."
   }
 ]

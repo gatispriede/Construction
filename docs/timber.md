@@ -40,6 +40,8 @@ Cut list off the model, 2026-08-15. 16 ties @ 576 mm (J15 omitted), 0.50 m verge
 | gable stud | 100 × 100 | 0.30 / 1.38 / 2.46 / 3.54 | 4 each |
 | wind girder | 100 × 100 | 6.00 + 1.33 spliced | 4 diagonals |
 | purlin vertical | 50 × 100 — free from the rip | 1.61 / 1.81 / 2.00 | 16 / 2 / 2 |
+| knee brace | 50 × 100 — free from the rip | 0.60, 45° both ends | 32 |
+| **brace ledger** | **100 × 100 — bought** | 6.00 + 3.01 spliced | **2 runs** |
 
 ## Rafters at 50 × 150
 
@@ -188,8 +190,8 @@ the birdsmouth does nothing for it.
 | 50 × 250 × 6 m | 46 | 50 (40 free + 10 in temporary bracing) | **0** — 4 spare |
 | 50 × 150 × 6 m | 39.1 m | 0 | **7** |
 | 100 × 250 × 6 m | 16 ties | 16 | **0** |
-| 100 × 100 × 6 m | 16 | 0 | **16** |
-| 50 × 100 | 113 m | 228 m from the rafter rip | **0** |
+| 100 × 100 × 6 m | 20 | 0 | **20** |
+| 50 × 100 | 128.9 m | 228 m from the rafter rip | **0** |
 | 25 × 100 battens | 433 m | 140 m @ 20 mm | **293 m** |
 | 25 × 100 counter-battens | 228 m | 0 | **228 m** |
 
@@ -208,12 +210,17 @@ inclusive total by a factor of 1.21.
 | Section | Length | **Order** | Metres | Need | Spare | m³ | ex VAT | **incl VAT** |
 |---|---|---|---|---|---|---|---|---|
 | 50 × 150 | 6.0 m | **25** | 150 | 23 | 2 (9%) | 1.125 | 288.22 | 348.75 |
-| 100 × 100 | 6.0 m | **20** | 120 | 18 | 2 (11%) | 1.200 | 307.44 | 372.00 |
+| 100 × 100 | 6.0 m | **24** | 144 | 22 | 2 (9%) | 1.440 | 368.93 | 446.40 |
 | 25 × 100 roof battens | 6.0 m | **84** | 504 | 76 | 8 (11%) | 1.260 | 322.81 | 390.60 |
 | 25 × 50 counter + wall battens | 6.0 m | **110** | 660 | 100 | 10 (10%) | 0.825 | 211.36 | 255.75 |
-| **TOTAL** | | **239** | **1,434** | | | **4.410** | **1,129.83** | **€1,367.10** |
+| **TOTAL** | | **243** | **1,458** | | | **4.650** | **1,191.33** | **€1,441.50** |
 
-€237.27 of that is VAT. **Budget €1,367.10 all in.**
+€250.17 of that is VAT. **Budget €1,441.50 all in.**
+
+The 100 × 100 line went 20 → 24 on 2026-08-21: 4 boards, €74.40, for the
+**brace ledger** under the knee braces. It is the only thing that change buys —
+the longer braces themselves come out of the rip byproduct. See
+[stability.md](stability.md) for why it has to be 100 mm thick and not 50.
 
 ### Nothing to buy in these — all from your own stock
 
@@ -221,7 +228,7 @@ inclusive total by a factor of 1.21.
 |---|---|---|---|
 | 50 × 250 | 46 | 50 | 38 ripped for rafters, 6 roof support, 2 gable diagonals — **4 spare** |
 | 100 × 250 | 16 | 16 | the 16 ties, exactly |
-| 50 × 100 | 124.2 m | 228 m | all from the rafter rip — blocking, spacers, collars, verticals |
+| 50 × 100 | 128.9 m | 228 m | all from the rafter rip — blocking, spacers, collars, verticals, knee braces |
 
 ### Sort the 50 × 150 before you cut
 
@@ -303,7 +310,9 @@ the sheeting. See F21.
 - Wind girder: 100 × 100, each 7.33 m diagonal spliced 6.00 + 1.33 so the joint lands
   on a tie crossing. 4 diagonals.
 - Both rips throw off 50 × 100: the levelling course 36 m, the rafters 252 m. Total
-  288 m against a 94.5 m demand (verticals, collars, spacers). 194 m spare.
+  228 m against a 128.9 m demand (verticals, collars, spacers, blocking, knee
+  braces). 99 m spare. The levelling course is bought as 50 × 150 now, so it no
+  longer throws off byproduct — that is why this is 228 and not 288.
 - Rafters need the straightest stock. Sort before cutting.
 - Nest the short items longest-first. The board counts above assume it: 0.6% waste on
   50 × 250 and 11.8% on 100 × 100. Cutting ad hoc costs 3–4 more boards.

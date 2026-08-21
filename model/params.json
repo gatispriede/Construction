@@ -310,7 +310,7 @@
    "src": "owner 2026-08-15 - through-bolting 700 mm of tie plus wall is not realistic",
    "_supersedes": "Replaces the 2 x M14 through-rod detail. That needed a 700 mm hole through the 250 mm tie and 450 mm of wall top; the owner's drill reaches 800 mm but the hole is not a realistic site operation.",
    "_capacity": "Demand 3.13 kN horizontal and 0.92 kN uplift per tie end. A 5x40 connector screw through thin steel gives 0.98 kN design (EN 1995 8.2.3, mode a governs). 6 per leg x 2 brackets = 11.8 kN, factor 3.8. The angle steel itself rates 5-8 kN for a 2.5 mm 90x90, so the pair is 10-12 kN whichever way it is counted.",
-   "_secondPath": "The 45 deg knee braces give the horizontal force an independent route - tie to brace to wall, 320 mm below the plate top - taking most of the 1.96 kN thrust component off the bracket. Neither detail is relied on alone, which is what you want in a joint that cannot be inspected once the loft is decked.",
+   "_secondPath": "The 45 deg knee braces give the horizontal force an independent route - tie to brace to ledger to POSTS, 424 mm below the tie underside and 104 mm below the plate courses - taking most of the 1.96 kN thrust component off the bracket, and keeping it off the lapped plate (F16) altogether. Neither detail is relied on alone, which is what you want in a joint that cannot be inspected once the loft is decked.",
    "_notTheNotch": "Do NOT count the 50 mm housing as restraint. The tie runs out to the wall face and on into the building, so the trench is open at both ends along the tie axis. It locates the tie sideways and carries it vertically; it resists nothing along its length.",
    "_workmanship": "1. Z275 HOT-DIP galvanised, not electroplated - unheated building, Baltic winter, condensation off a metal roof. 2. Manufacturer's hardened connector screws, NOT drywall screws: drywall screws are brittle in shear and this is a pure shear connection, they snap without warning. 3. FILL EVERY HOLE in both legs - the rating assumes it, and a part-filled bracket is an eccentric joint that peels rather than a weaker one. 4. BOTH sides, or the tie rotates about the single bracket and pries the screws out. 5. Knee brace screws SKEWED, 2 into the face and 2 angled - four square screws let the joint hinge, and a hinged knee brace does nothing."
   },
@@ -519,14 +519,36 @@
   ],
   "angleDeg": 45,
   "count": 32,
-  "length": 0.453,
-  "src": "owner 2026-08-15 - braces below the ties, lowest top-wall course to tie, 45 deg",
-  "_geometry": "Lowest top-wall course bottom 3.270, tie underside 3.590 - 320 mm of rise, so at 45 deg the run is 320 and the brace is 453 mm. Short: this is a corner gusset, not a long knee brace.",
-  "_why": "TRANSVERSE stability, which nothing else provides between the gables. The wind girder fixes longitudinal racking (F0/F16). Across the width, posts + ties + sills form a rectangle with pinned corners - a mechanism - resisted only by the two gable walls and eventually the loft deck. These make every tie a portal frame.",
-  "_capacity": "Wind on the long wall is 1.11 kN per tie bay, half arriving at tie level, so the brace takes 0.78 kN axial at 45 deg. A 50x100 at 453 mm has lambda 31, kc 0.94 and 68.4 kN capacity - a factor of 87. Buckling is irrelevant at this length.",
-  "_connection": "THE CONNECTION IS THE WHOLE DESIGN, not the timber. 0.78 kN axial resolves to 0.55 kN horizontal and 0.55 kN vertical at each end. A 6x100 screw gives about 1.4 kN in single shear, so 3 would do - use 4 each end: 2 into the face and 2 skewed, so the joint cannot rotate open. A knee brace that can hinge at its ends does nothing.",
-  "_material": "32 x 453 mm = 14.5 m of 50x100, free from the rafter rip byproduct (118 m spare before this). One 6 m board yields 13 braces if cut as 45 deg pairs."
+  "length": 0.6,
+  "screwsPerEnd": 6,
+  "bearsOn": "braceLedger",
+  "src": "owner 2026-08-15 - braces below the ties, 45 deg. Lengthened to 600 mm 2026-08-21 when the feet moved onto a continuous ledger.",
+  "_geometry": "600 mm at 45 deg is 424 mm of rise and 424 mm of run. Tie underside 3.590, so the foot bears at 3.166 - which is 104 mm BELOW the post tops at 3.270, i.e. off the wall plate entirely and onto the ledger. That is the whole point of the change: at 453 mm the foot landed on the lowest top-wall course, which is the lapped and spliced part of the wall (F16/F16a). At 600 it lands on a ledger screwed to the POSTS.",
+  "_why": "TRANSVERSE stability, which nothing else provides between the gables. The wind girder fixes longitudinal racking (F0/F16). Across the width, posts + ties + sills form a rectangle with pinned corners - a mechanism - resisted only by the two gable walls and eventually the loft deck. These make every tie a portal frame. The 2026-08-21 stability re-run makes that path load-bearing rather than a nicety: the front gable cannot take a half share of the transverse wind (F25), so the portals have to.",
+  "_capacity": "RECOMPUTED 2026-08-21, and the old number was optimistic. It counted the wall only. Each rafter pair plus its tie is a triangle in its own plane, so ALL of the roof wind lands at the two wall tops as well - 3.47 kN/m at deck level against the 1.93 kN/m the wall alone gives. Per 576 mm bay that is 3.00 kN design and 4.25 kN axial in the brace, not 0.78. The TIMBER does not care: a 50x100 at 600 mm has lambda 42, kc 0.87 and 63.4 kN, a factor of 15. Lengthening it from 453 cost 7% of the buckling capacity and bought a stiffer portal - sway at tie level improves from H/255 to H/288 because the effective post height drops by the same 104 mm.",
+  "_connection": "THE CONNECTION IS THE WHOLE DESIGN, not the timber - and at 4.25 kN axial it is now the governing item in the whole transverse system. 4 x 6x120 gives 5.6 kN, a factor of 1.3. Use SIX each end: 8.4 kN, factor 2.0, and the portal path then covers the entire transverse base shear (95 kN against 48.6) without any help from the front gable. Screws, not bearing, are what carry it: the leeward brace of every pair works in TENSION. 2 into the face and 4 skewed so the joint cannot rotate open - a knee brace that can hinge at its ends does nothing.",
+  "_material": "32 x 600 mm = 19.2 m of 50x100, free from the rafter rip byproduct. One 6 m board yields 9 braces cut as 45 deg pairs, so 4 boards."
  },
+ "braceLedger": {
+  "section": [
+   0.1,
+   0.1
+  ],
+  "orientation": "100 x 100, laid against the inner wall face, 100 mm proud of it",
+  "seatDepth": 0.1,
+  "housing": 0.012,
+  "screwsPerPost": 3,
+  "screwSize": "8 x 200 partial thread",
+  "src": "owner 2026-08-21 - a support running the length of the wall under the tie-to-wall connection, for the brace feet to land on",
+  "_why": "Two jobs, and the second is the one that sizes it. (1) It gives every brace foot a BEARING SEAT instead of a screwed butt against a wall face, so the vertical component goes into timber, not into screws. (2) It carries the mid-bay braces to a post. Ties are at 576 mm and posts at 1164, so every other brace foot lands halfway between two posts - and below 3.270 there is nothing between posts but air, because the plate courses start there. Without the ledger those braces hang off the lapped plate (F16/F16a); with it, every foot is delivered to a post.",
+  "_geometry": "Top face at 3.166 = tie underside less the 424 mm brace rise, so the ledger FOLLOWS kneeBraces.length - change one and the model moves the other. 100 deep, so it occupies 3.066-3.166 on the inner face: 104 mm clear below the post tops and 126 mm clear above the girt at 2.940. Runs 9.01 m between the gable walls each side, spliced over a post.",
+  "_section": "100 x 100, NOT 50 x 100, and this is the one number in the detail that is not free. The governing case is the leeward brace of each pair, which works in TENSION and tries to pull the ledger off the wall at mid-bay: 3.0 kN at the centre of a 1.164 m span. On a 50 mm thick board that is 21 MPa against 16.6 and 8.6 mm of deflection - it fails. At 100 mm thick it is 5.2 MPa and 1.1 mm. There is no cheaper way out: below 3.270 the wall between posts is open frame, so the ledger genuinely spans, and thickness is what carries a pull perpendicular to the wall.",
+  "_fixing": "3 x 8x200 into every post - 100 mm through the ledger, 100 mm into the post - plus one skewed. WITHDRAWAL governs, not shear: 6.0 kN per post bay with both braces of a bay pulling at once, against 12 kN of screw. Splices land over a post, never mid-bay.",
+  "_seat": "Cut the seat, do not rely on the screws. The foot bears on the ledger TOP FACE with a 12 mm locating housing and the toe squared off at the ledger face - 0.6 MPa across the grain against 2.6. It is the same rule as the brace HEAD against the tie: a shallow locating housing or cleats, never a deep notch into a member that is carrying something else. Cut both ends before the loft is decked; after the deck goes on neither can be inspected.",
+  "_material": "2 x 9.01 m = 18.0 m, 4 boards of 100x100. BOUGHT: the order goes from 20 to 24 boards, EUR 74.40 incl VAT. It is the only cash this change costs.",
+  "_alternative": "If the 4 boards are not wanted: keep the braces at 453 mm and the seat lands at 3.270, tight under the plate, where the ledger is backed by solid plate for its whole length instead of spanning between posts - a 50 x 100 off the rip byproduct does it for nothing. That was the pre-2026-08-21 geometry. What it gives up is where the thrust lands: on the lapped plate courses rather than on the posts, and a slightly softer portal (sway H/255 against H/288)."
+ },
+
  "wallBattens": {
   "section": [
    0.025,

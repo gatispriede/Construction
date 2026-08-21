@@ -1,12 +1,12 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { buildFrame } from './frame.js?v=1787033584';
-import { derive } from './geometry.js?v=1787033584';
-import { buildDims } from './dims.js?v=1787033584';
-import { buildFasteners, schedule } from './fasteners.js?v=1787033584';
-import { LAYER_GROUPS, inOrder } from './layers.js?v=1787033584';
-import { buildFloorNotes } from './floornotes.js?v=1787033584';
-import { buildMarks } from './marks.js?v=1787033584';
+import { buildFrame } from './frame.js?v=1787317534';
+import { derive } from './geometry.js?v=1787317534';
+import { buildDims } from './dims.js?v=1787317534';
+import { buildFasteners, schedule } from './fasteners.js?v=1787317534';
+import { LAYER_GROUPS, inOrder } from './layers.js?v=1787317534';
+import { buildFloorNotes } from './floornotes.js?v=1787317534';
+import { buildMarks } from './marks.js?v=1787317534';
 
 const params = await (await fetch('./params.json')).json();
 const findings = await (await fetch('./findings.json')).json();
@@ -158,12 +158,16 @@ document.getElementById('markers').onchange = (e) => { markers.visible = e.targe
     if (!byType.has(type)) byType.set(type, []);
     byType.get(type).push([conn, spec]);
   }
-  const ORDER = ['6×100', '6×200', 'M14', 'strap', 'none'];
+  // Every `type` the schedule can emit has to appear here — anything missing is
+  // silently dropped from the panel, which is how a connection goes unbought.
+  const ORDER = ['6×100', '6×120', '6×200', '8×200', 'M14', 'strap', 'none'];
   const TITLE = {
-    '6×100': '6 × 100 screws', '6×200': '6 × 200 screws',
+    '6×100': '6 × 100 screws', '6×120': '6 × 120 screws',
+    '6×200': '6 × 200 screws', '8×200': '8 × 200 screws',
     'M14': 'M14 bolts, washers + nut', 'strap': 'galvanised straps',
     'none': 'nothing specified yet',
   };
+  for (const t of byType.keys()) if (!ORDER.includes(t)) console.warn('unlisted fastener type', t);
   let html = '<h3>Screw schedule — by fastener</h3>';
   for (const t of ORDER) {
     const list = byType.get(t);

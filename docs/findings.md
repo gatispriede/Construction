@@ -422,6 +422,12 @@ choice to make now, because it changes every rafter length.
    Previously this read: decide before the last ties go in — ceiling only,
    or a real floor with a centre beam.
 5. **Treat the timber (F11)** while every face is still reachable.
+6. **Cut the knee-brace seats and fit the ledger before the deck goes down
+   (F24).** The 2026-08-21 stability re-run in [stability.md](stability.md)
+   moved the knee-brace portals from a nicety to the primary transverse system,
+   because the front gable cannot take its half of the width (F25). Every brace
+   end is now a structural connection: 6 screws, not 4, and a cut bearing seat
+   at both ends. None of it can be inspected once the loft is decked.
 
 Steps 2 and 3 are worth doing before anything else goes on the frame. Everything
 above the sill is reversible; the foundation stops being reversible the moment
