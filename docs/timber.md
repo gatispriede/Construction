@@ -413,44 +413,31 @@ The vertical is stiffer than the strut — 35.6 kN/mm against 29.0 — so it tak
 And the strut then carries 3.10 kN instead of 6.89, so **its own head bearing improves
 from 1.38 to 0.62 MPa**. Both paths get easier.
 
-### Two verticals, different heights, both on the tie
+### The head is a T in plan — two 50 × 100, no third piece
 
-**Owner 2026-08-21.** They do different jobs and only one of them is a support.
+**Owner 2026-08-21.** Two pieces of different height, both standing on the tie,
+forming a T when you look down on them. Each is turned for its own job.
 
-| | | |
+| | orientation | job |
 |---|---|---|
-| **Short** | stops under the purlin | **bears** — 5000 mm², 0.77 MPa, factor 2.2 |
-| **Tall** | beside the purlin, runs past to its top | **restrains** — holds a 5:1 purlin upright, anchors the X-brace ends |
+| **Bar** — short, stops under the purlin | **100 mm along** the building | **bears** — 5000 mm², 0.77 MPa, factor 2.2 |
+| **Stem** — long, past the purlin to its top | **100 mm across**, perpendicular | **restrains** — screwed to the purlin face and to the bar |
 
-The separation is the point: the tall one is not under the purlin, so it adds no
-stiffness and steals no load from the strut. One piece supports, the other restrains,
-and neither compromises the other. Tie sits at **23.3 mm**.
+Tie sits at **23.3 mm** against 24.
 
-> **Lay the short one 100 mm ALONG the building, 50 across.** That gives 100 × 50 =
-> 5000 mm² of seat under a purlin that is only 50 wide. Turned the other way it is
-> 50 × 50 = 2500, bearing goes 0.77 → 1.54 MPa and the factor 2.2 → **1.1**. Same
-> board, same cut, one turn of the wrist — and it is the whole detail.
+**Why each is turned that way, because it is not obvious and it is the whole detail:**
 
-### And a bolster on the short one, if you want the margin
+- The purlin is only **50 wide**, so on the bar only the *along* dimension buys seat
+  area. 100 along gives 5000 mm²; turned the other way it is 2500 and the factor
+  halves to **1.1**.
+- Roll restraint is a **stiffness** job, not a strength one. Perpendicular, the stem
+  sways **2.1 mm** as a cantilever off the tie; turned parallel, **8.4 mm**. Four times
+  stiffer for the same board, and the stresses are trivial either way.
 
-A 50 × 100 laid **flat** on the short piece, 300 mm long, under the purlin. Crushed
-across its grain it is soft, and that wins twice:
-
-| | without | **with the bolster** |
-|---|---|---|
-| Seat area | 5000 mm² | **15 000 mm²** |
-| Bearing | 0.77 MPa — factor 2.2 | **0.18 MPa — factor 9.7** |
-| Vertical's share | 56% | **39%** |
-| Tie | 23.3 mm | **19.8 mm** |
-
-E90 is about E/30, so the bolster is 37 kN/mm in through-thickness compression —
-in series with the column it halves the vertical's stiffness, and the load it sheds
-goes to the strut, which lands over the wall instead of mid-span on a tie.
-
-> **Soft is the mechanism, not a compromise.** Two supports under one purlin share by
-> *stiffness*. Every attempt to fix the bearing by making the vertical stouter —
-> doubling it, a full-height T, a long stiff flange — made it take a bigger share and
-> pushed the tie the wrong way. The bolster fixes the bearing by getting softer.
+**The stem is beside the purlin, not under it**, so it adds no axial stiffness in the
+load path and steals no share from the strut. Only the bar bears. That separation is
+what lets each piece be optimised without compromising the other — and it is why the
+tie stays at 23.3 mm rather than the 26.5 a single stiffer post would cause.
 
 ### Roll restraint
 

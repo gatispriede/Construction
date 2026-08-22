@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1787387340';
-import { derive, stations, spaced } from './geometry.js?v=1787387340';
+import { allocator } from './stock.js?v=1787387630';
+import { derive, stations, spaced } from './geometry.js?v=1787387630';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -884,9 +884,9 @@ export function buildFrame(p) {
     // a 5:1 purlin upright and anchors the X-brace ends. It is NOT under the
     // purlin, so it adds no stiffness and steals no load from the strut.
     //
-    // BOLSTER on the short one: 50 x 100 laid flat, 300 long. Crushed across
-    // the grain it is soft, which both spreads the seat (0.18 MPa, factor 9.7)
-    // and sheds the vertical's share 56% -> 39%, dropping the tie to 19.8 mm.
+    // No bolster — owner 2026-08-21, two pieces at the head and not three. The
+    // bar bears the purlin directly: 0.77 MPa against 1.73, factor 2.2, and the
+    // tie sits at 23.3 mm against 24. Both pass.
     const bolT = pu.bolster ? pu.bolster[2] : 0;
     const shortH = postH - bolT;
     const tallH = postH + ud;
@@ -897,9 +897,14 @@ export function buildFrame(p) {
         bar(purlins, M('purlinVerticals', vi++, nVert),
             [x, s * puY, tieTop + shortH + bolT / 2], pu.bolster);
       }
+      // The STEM, and it is turned PERPENDICULAR to the bar — 100 mm across the
+      // building, 50 along. Roll restraint is a STIFFNESS job, not a strength
+      // one: as a cantilever off the tie it sways 2.1 mm this way against 8.4
+      // turned parallel, four times stiffer for the same board. Screwed to the
+      // purlin's face and to the bar, the two make a T in plan.
       if (pu.tallVertical) {
         bar(purlins, M('purlinVerticals', vi++, nVert),
-            [x, s * (puY - (uw + pd) / 2 - 0.0), tieTop + tallH / 2], [pw, pd, tallH]);
+            [x, s * (puY - uw / 2 - pw / 2), tieTop + tallH / 2], [pd, pw, tallH]);
       }
     }
     // 2. Collar tying the two purlin lines together, so the pair cannot sway
