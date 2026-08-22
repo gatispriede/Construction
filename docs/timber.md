@@ -225,16 +225,33 @@ the birdsmouth does nothing for it.
 | 25 × 100 battens | 433 m | 140 m @ 20 mm | **293 m** |
 | 25 × 50 counter-battens | 188.8 m | 0 | **188.8 m** |
 
-**48 counted in the yard, 2026-08-21 — not the 50 previously carried, and 46 are
-committed.** That is a margin of **2 boards** on the section that does the most work
-in the building. It used to be 12. Two things ate it: the 1 m verge added 4 rafters
-and 2 purlin/ridge pieces, and the count came in 2 short.
+### The 48 are not interchangeable
 
-Some of those 48 are still holding the **temporary diagonals**, and they cannot be
-released until the wind girder and gable panels are in (F0). So the boards are owned
-but not all available yet — which is why rafters sit at the tail of the allocation
-queue in `model/src/stock.js`. **Sort and count before cutting rafters**, because at
-2 spare there is no room for a board that turns out to be unusable.
+Counted 2026-08-21, and the split is what matters:
+
+| | | |
+|---|---|---|
+| **Uncut 50 × 250** | **6** | the only boards that can be a purlin or a ridge |
+| Already ripped to 50 × 150 | 42 | fine for rafters, never a purlin |
+
+**Ripped pile: 42 against 38 committed** — 36 rafters and 2 gable panel diagonals.
+4 spare, comfortable.
+
+**Uncut pile: 6 against 7 needed.** Purlins take 5, the ridge takes 2.
+
+**The seventh board comes out of the temporary diagonals.** They are built from
+**1 × 50 × 250 and 2 × 50 × 150**, and they are not part of the 48 because they are
+up in the frame, not in the yard. Releasing them gives +1 uncut and +2 ripped — which
+lands on **7 of 7, nothing spare.**
+
+> **So F0 is now a material dependency, not only a stability one.** The diagonals
+> cannot come out until the wind girder and gable panels are in, and **the ridge
+> cannot be cut until they do**. The sequence works — the girder is bought 100 × 100
+> and the gable panels come off the ripped pile, so neither touches those six boards
+> — but the ordering has stopped being a preference.
+
+At zero spare on the uncut pile, **sort those six before you cut anything.** One bad
+board and the ridge waits on a delivery.
 
 ## Buy — order this
 

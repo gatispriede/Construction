@@ -286,13 +286,18 @@
   "_xBraceDischarge": "It has to land somewhere at both ends or it is a truss floating in the middle. The end frames sit at x = +-4.60 against the gable walls at +-4.65, so the end panels discharge straight into the gables - but that end connection has to be as real as the rest. Below, the X dumps into the ties, the ties into the wind girder (factor 10.3), the girder into the walls.",
   "_erectionSequence": "BRACE EACH BAY BEFORE YOU LEAVE IT. 1. Ties bolted down first - 2 x M14 every end, permanent now (kneeBraces._endUplift), and you are standing on them. 2. Start at a gable: the end frame is held by the gable wall for free, and that is the anchor for the whole run. 3. Stand the next frame and fit its X back to the previous one IMMEDIATELY - never leave a frame standing on the purlin alone overnight. 4. The purlin FOLLOWS the frames; a 50x250 will not span 10.3 m of air waiting for supports. 5. Work in from one gable, or from both ends toward the middle. Until the second bay is braced a single braced bay carries everything - fine for erection wind, but do not leave it part-braced with weather coming.",
   "spliceAtFrames": [
-   -1.8,
-   3.1
+   -3.2,
+   1.0
   ],
+  "ridgePieceLengths": [
+   5.32,
+   5.98
+  ],
+  "ridgeSpliceAtRafter": -0.325,
   "pieceLengths": [
-   3.85,
-   4.9,
-   2.55
+   2.45,
+   4.2,
+   4.65
   ],
   "_splice": "THREE PIECES, 3.85 + 4.90 + 2.55, splicing on the frames at -1.80 and +3.10. At an 11.30 m run NO single splice can land on a frame with both pieces under 6 m - that needs a frame within 0.35 m of centre and the nearest is at -0.40 - so the two-piece solution below is dead. Both end pieces run past the gable and carry the 1.05 m verge cantilever unspliced, which is the part that matters. SUPERSEDED NOTE: 4.75 + 5.55, NOT the 6.00 + 4.30 the cut list had. 6.00 + 4.30 puts the joint at x = +0.85 and the nearest frame is at +1.00 - a 50x250 lap hanging 150 mm off its support. 4.75 + 5.55 lands it exactly on the frame at -0.40. Same two boards, both inside 6 m stock, no extra material; it is only which end you cut from. It is also the ONLY option: for a splice to reach a frame with both pieces under 6 m the frame must sit within +-0.85 m of centre, and -0.40 is the only one that does. Both purlin runs splice there - they are 3 m apart across the building, so the joints are not adjacent.",
   "jointType": "housed into the post head, purlin uncut",
@@ -398,7 +403,7 @@
   "_gableStudSpacing": "600 mm (588 actual), changed from 800 on 2026-08-15. NOT a strength fix - 800 already passed at combined ratio 0.36 and 12.2 mm deflection. The reason is the CLADDING GRID: gable battens sit on the studs, so at 800 the sheet would land on 600 mm spacing up the wall and 800 across the gable. 600 makes it one grid top to bottom. Costs 10.3 m more 100x100, 2 boards, EUR 37. At 588 mm the tallest stud is now 4.08 m (a stud lands at the centre, where there was none before): combined 0.38, 16.2 mm against an L/200 limit of 20.4 mm.",
   "gablePanelSection": [
    0.05,
-   0.25
+   0.15
   ],
   "_gablePanelSection": "50x250, matching the 2 boards in the take-off. The model drew these at 160x60, a section that appears nowhere in the order. Caught in the same audit.",
   "gableStudBearsOn": "end tie",

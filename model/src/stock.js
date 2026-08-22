@@ -21,11 +21,29 @@
 // still the first thing to buy.
 
 export const OWNED = {
-  // COUNTED 2026-08-21: 48, not the 50 previously carried. Some of these are
-  // still holding the temporary diagonals and cannot be released until the wind
-  // girder and gable panels are in (F0) — which is why rafters sit at the tail
-  // of the queue. 46 are committed, so the margin is 2 boards, not 4.
-  '50x250': 48,
+  // 48 counted 2026-08-21 — but they are NOT interchangeable, and that is now
+  // the binding constraint. Only SIX are uncut full-section 50 x 250. The other
+  // 42 are already ripped down to 50 x 150, so they can serve rafters but can
+  // never be a purlin or a ridge, which need the full 250 depth.
+  //
+  // SECTION is the issue, not availability. And the count is left at 6 on
+  // purpose: 7 are needed, so the model shows the last board's worth of ridge
+  // as yellow, which is exactly the situation.
+  //
+  // The SEVENTH board comes out of the TEMPORARY DIAGONALS — owner 2026-08-21,
+  // they are built from 1 x 50 x 250 and 2 x 50 x 150, and they are not part of
+  // the 48 in the yard because they are up in the frame. Releasing them gives
+  // +1 uncut and +2 ripped, which lands on 7 of 7 with nothing spare.
+  //
+  // That makes F0 a MATERIAL dependency now, not only a stability one: the
+  // diagonals cannot come out until the wind girder and gable panels are in,
+  // and the ridge cannot be cut until they do. The sequence works — the girder
+  // is bought 100 x 100 and the gable panels come off the ripped pile, so
+  // neither touches these six — but it is no longer optional ordering.
+  '50x250': 6,
+  // The 42 already ripped. Tracked apart from bought '50x150' so the fascia and
+  // stair do not colour blue off timber that is spoken for.
+  '50x150_ripped': 42,
   '100x250': 16,
   '100x100': 0,   // struts, gable studs, wind girder, stair newel
   // ZERO. Every 50 x 150 is BOUGHT — levelling course, stair trimmer and tail
@@ -72,14 +90,22 @@ const QUEUE = [
   // zero so the 50 x 150 arithmetic still reads, but it draws as standing.
   { group: 'levelling',       section: '50x150',  boards: 0  },
   { group: 'fascia',          section: '50x150',  boards: 8  },
+  // 2.45 + 4.20 + 4.65 per run, splices on the frames at -3.20 and +1.00. The
+  // two 2.45s share a board. NOT the 4-board packing: that splices at -4.60,
+  // which puts a joint at the ROOT of the 1.05 m verge cantilever.
   { group: 'purlins',         section: '50x250',  boards: 5  },
-  { group: 'ridgePurlin',     section: '50x250',  boards: 3  },
-  { group: 'gablePanels',     section: '50x250',  boards: 2  },
+  // 5.32 + 5.98, splicing on the rafter at -0.325. The ridge is not tied to the
+  // purlin frames, so it has far more freedom and packs into 2 boards.
+  { group: 'ridgePurlin',     section: '50x250',  boards: 2  },
+  // Dropped to 50 x 150 — the 250 was take-off habit, not a calculation. The
+  // back-gable diagonal runs 12.94 kN against 203.54 at 50 x 250, factor 15.7;
+  // at 50 x 150 it is still 9.4. Frees 2 of the six uncut boards.
+  { group: 'gablePanels',     section: '50x150_ripped', boards: 2  },
   // Rafters last: they are the biggest claim and the latest work, so this is
   // where the yard runs out. At 50 x 150 they still take one board each.
   // 30, down from 38: the rafters follow the tie setout, and 700 mm centres
   // over 9.30 m is 15 lines where 576 mm gave 19.
-  { group: 'rafters',         section: '50x250',  boards: 36 },
+  { group: 'rafters',         section: '50x150_ripped', boards: 36 },
 
   // 50 x 100 — 36 m of rip byproduct
   // Blocking moved here from 50 x 250 — it is 50 x 100 now, and free.
