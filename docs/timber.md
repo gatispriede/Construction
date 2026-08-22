@@ -416,16 +416,30 @@ from 1.38 to 0.62 MPa**. Both paths get easier.
 ### Widen the head, never the column
 
 Doubling the column is the wrong fix and makes it worse: stiffness doubles, the share
-goes 55% → 71%, and the tie goes over. **Put a 100 × 100 × 100 block on a 50 × 100
-column instead:**
+goes 57% → 72%, and the tie goes over. **Widen only the head.**
 
 | | contact under the 50 wide purlin | |
 |---|---|---|
 | Bare 50 × 100 head | 2500 mm² | 1.52 MPa — factor 1.1 |
-| **With a 100 × 100 head block** | **5000 mm²** | **0.76 MPa — factor 2.3** |
+| **100 mm wide head** | **5000 mm²** | **0.78 MPa — factor 2.2** |
 
-The column's stiffness — and so its share of the load — is untouched. Two 50 × 100
-offcuts 100 mm long make each block; 3.2 m of byproduct for all sixteen.
+**Make it a T from two 50 × 100** (owner 2026-08-21) rather than a loose block — the
+flange screws to the column, so it cannot drop out while you are erecting the frame,
+where a 100 mm cube relies on being captured between two bearing faces.
+
+**Keep the flange to 200 mm.** It is a bearing head, not a column, and the flange
+length is the dial on how much load the vertical steals from the strut:
+
+| flange | share | tie |
+|---|---|---|
+| none | 57% | 23.5 mm |
+| 100 mm | 58% | 23.7 mm |
+| **200 mm** | **59%** | **23.8 mm** ✓ |
+| 400 mm | 60% | 24.2 mm — over |
+| full height T | 72% | 26.7 mm — over |
+
+Anything up to ~250 mm is free. Past that you are trading tie margin for nothing,
+because the bearing was already solved at 100 mm of width.
 
 ### Roll restraint
 

@@ -114,8 +114,8 @@ const QUEUE = [
   // them from separate material, deliberately kept out of this order. They
   // used to draw 22.1 m off the rip byproduct — that is now free for
   // something else. frame.js draws them blue unconditionally.
-  // 16 x 1.445 m column + 16 head blocks (2 x 100 mm each) + 4 gable posts.
-  { group: 'purlinVerticals', section: '50x100_m', boards: 34.7 },
+  // 16 x 1.345 m column + 16 T heads (2 x 200 mm each) + 4 gable posts.
+  { group: 'purlinVerticals', section: '50x100_m', boards: 35.3 },
   { group: 'collars',         section: '50x100_m', boards: 18.9 },
   // 4 corner dragon ties, 1.131 m. Free off the rip.
   { group: 'cornerBraces',    section: '50x100_m', boards: 4.6 },

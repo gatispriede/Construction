@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1787386326';
-import { derive, stations, spaced } from './geometry.js?v=1787386326';
+import { allocator } from './stock.js?v=1787386644';
+import { derive, stations, spaced } from './geometry.js?v=1787386644';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),

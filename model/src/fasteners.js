@@ -6,7 +6,7 @@
 // decides length — 6 x 100 is not always enough.
 
 import * as THREE from 'three';
-import { derive } from './geometry.js?v=1787386326';
+import { derive } from './geometry.js?v=1787386644';
 // Connections are labelled with the LAYER NAMES they join, not reference
 // letters. The letters were a 30-row lookup table you had to learn; the layer
 // name is already in the panel on the left, so "ties -> plates" points at two
@@ -86,6 +86,15 @@ export function schedule(p, d, Z) {
       [0, 0.35, d.roofTop + 0.30]],
     [`${Z('purlins')}→${Z('plates')}  strut to plate`, '2 × 6×200 + strap at the foot', '6×200',
       [xs[2], bear - 0.6, d.plateTop + 0.9]],
+    // Both of these BEAR. The screws stop the joint opening; they carry nothing.
+    // The two heads share the purlin reaction 55/45 by stiffness, so a head that
+    // touches in two places simply hands its share to the other one.
+    [`${Z('purlins')}  purlin onto the vertical`,
+      'T head from 2 × 50×100, flange 200 — screw the flange to the column, then 4 × 6×120',
+      '6×120', [xs[3], puY - 0.42, puTop - 0.38]],
+    [`${Z('purlins')}  purlin onto the strut`,
+      'SQUARE-CUT head at 47.8° — mark off the erected frame, then 4 × 6×120',
+      '6×120', [xs[5], puY + 0.46, puTop - 0.38]],
     [`${Z('must_windGirder')}→${Z('ties')}  girder to tie end`, '7 × 6×200 · through 100 girder into tie', '6×200',
       [xs[1], bear - 1.2, d.tieBottom - 0.35]],
     [`${Z('must_windGirder')}→${Z('ties')}  girder at crossings`, '2 × 6×200 at EVERY tie it crosses', '6×200',
