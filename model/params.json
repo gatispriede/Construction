@@ -159,11 +159,12 @@
   "installed": false
  },
  "plateOverhang": {
-  "gableEnd": 0.5,
+  "gableEnd": 1.0,
   "asBuiltLower": 0.5,
   "asBuiltUpper": 1.0,
+  "topCourse": 1.0,
   "src": "measured - lower plate course projects 0.50 m past each gable, upper 1.00 m.",
-  "_cutBack": "The upper course was run 1.00 m specifically to carry a 1.0 m verge. Bringing the verge in to 0.50 m means CUTTING THE UPPER COURSE BACK to 0.50 m at all four corners - 4 cuts. Left long it projects 0.50 m past the roof edge with nothing over it and will rot. This is work already done being undone, and it is the real cost of shortening the verge.",
+  "_cutBack": "CANCELLED 2026-08-21 - the verge stays at 1.0 m, so nothing gets cut back. This note used to say the upper course had to come back to 0.50 m at all four corners, which was work already done being undone. It is not happening, and that is the cheapest decision of the day. WHAT THE WALL TOP ACTUALLY DOES at the gable, owner 2026-08-21: lower plate course projects 0.50 m, upper plate course 1.00 m, and the 50 mm levelling course on top of it also 1.00 m. Only the lower course stops short.",
   "_notStructural": "F9 was about a 4.0 m purlin cantilever with NO gable bearing: 38.7 MPa and 113 mm droop. The gable studs fixed that. At 1.0 m the verge cantilever ran 2.4 MPa and 0.4 mm - comfortable. Shortening to 0.50 m is a material and appearance decision, not a structural fix."
  },
  "opening": {
@@ -197,11 +198,11 @@
   "tailSlopeLength": 0.9,
   "bearingOnWall": 0.05,
   "bearingOnPurlin": 0.05,
-  "ridgeLength": 10.3,
+  "ridgeLength": 11.3,
   "rafterSpacing": 0.7,
   "src": "given - rafters 50x250x6.0 m, bearing 50 mm on the top wall beam. Backspan to the wall is 5.10 m, leaving 0.90 m of tail past it.",
   "rafterTotalLength": 6.0,
-  "_ridgeNote": "9.30 m building + 0.50 m verge overhang each end. Was 11.31 m at a 1.0 m verge; shortened 2026-08-15 at owner's request. 0.50 m is also the approved figure.",
+  "_ridgeNote": "11.30 m = 9.30 m building + 1.00 m verge each end. REVERTED to 1.0 m on 2026-08-21: the owner confirms the verge is staying at 1 m, which is what the plate courses were built for. It had been shortened to 0.50 m on 2026-08-15. The approved drawings show 0.50 m, so this is a second departure from the permit envelope alongside the ridge height (F14) - it is not a setback problem, the boundary is 7 m away, but the drawings no longer describe the building.",
   "rafterSetout": "oneBesideEachTie",
   "_setout": "One rafter beside each SETOUT station, so the rafters run at exactly 600 mm centres like the ties, and there is a rafter beside the station at +3.80 even though no tie is built there. Every rafter foot has a direct thrust path into a tie rather than going via the plate, except the one at the stair station, which goes into the plate as it always did at the omitted tie.",
   "_rafterCloseOut": "The 600 mm grid runs out against the back gable and the widest rafter bay in the roof becomes 650 mm - not 800, because the last rafter sits on the INNER face of the end tie while the rest sit on the outer face, which gives 75 mm back. Checked 2026-08-21 and it is nowhere near close: 50x150 rafter goes 3.05 -> 3.44 MPa against 16.6 (factor 4.8) and 1.0 -> 1.13 mm against an 8.5 mm limit; 25x100 battens at 300 mm centres over 650 go to about 1.1 MPa against 16.6. The purlin bears on the gable 0.5 m away, so nothing accumulates there. Verge close-outs are 575 mm, tighter than the grid, which is the harmless direction.",
@@ -284,12 +285,16 @@
   "_xBracePromotes": "It promotes two members. The VERTICALS go from 0.06 kN at a factor of 302 - genuinely throwaway - to 7.21 kN, factor 2.7 at 50x100 over 1.565 m. Still fine, but they now need real fixings top and bottom, not just locating. The PURLIN becomes the top chord at 6.4 kN axial, 0.52 MPa in a 50x250 - nothing.",
   "_xBraceDischarge": "It has to land somewhere at both ends or it is a truss floating in the middle. The end frames sit at x = +-4.60 against the gable walls at +-4.65, so the end panels discharge straight into the gables - but that end connection has to be as real as the rest. Below, the X dumps into the ties, the ties into the wind girder (factor 10.3), the girder into the walls.",
   "_erectionSequence": "BRACE EACH BAY BEFORE YOU LEAVE IT. 1. Ties bolted down first - 2 x M14 every end, permanent now (kneeBraces._endUplift), and you are standing on them. 2. Start at a gable: the end frame is held by the gable wall for free, and that is the anchor for the whole run. 3. Stand the next frame and fit its X back to the previous one IMMEDIATELY - never leave a frame standing on the purlin alone overnight. 4. The purlin FOLLOWS the frames; a 50x250 will not span 10.3 m of air waiting for supports. 5. Work in from one gable, or from both ends toward the middle. Until the second bay is braced a single braced bay carries everything - fine for erection wind, but do not leave it part-braced with weather coming.",
-  "spliceAtFrame": -0.4,
-  "pieceLengths": [
-   4.75,
-   5.55
+  "spliceAtFrames": [
+   -1.8,
+   3.1
   ],
-  "_splice": "RECUT 2026-08-21: 4.75 + 5.55, NOT the 6.00 + 4.30 the cut list had. 6.00 + 4.30 puts the joint at x = +0.85 and the nearest frame is at +1.00 - a 50x250 lap hanging 150 mm off its support. 4.75 + 5.55 lands it exactly on the frame at -0.40. Same two boards, both inside 6 m stock, no extra material; it is only which end you cut from. It is also the ONLY option: for a splice to reach a frame with both pieces under 6 m the frame must sit within +-0.85 m of centre, and -0.40 is the only one that does. Both purlin runs splice there - they are 3 m apart across the building, so the joints are not adjacent.",
+  "pieceLengths": [
+   3.85,
+   4.9,
+   2.55
+  ],
+  "_splice": "THREE PIECES, 3.85 + 4.90 + 2.55, splicing on the frames at -1.80 and +3.10. At an 11.30 m run NO single splice can land on a frame with both pieces under 6 m - that needs a frame within 0.35 m of centre and the nearest is at -0.40 - so the two-piece solution below is dead. Both end pieces run past the gable and carry the 1.05 m verge cantilever unspliced, which is the part that matters. SUPERSEDED NOTE: 4.75 + 5.55, NOT the 6.00 + 4.30 the cut list had. 6.00 + 4.30 puts the joint at x = +0.85 and the nearest frame is at +1.00 - a 50x250 lap hanging 150 mm off its support. 4.75 + 5.55 lands it exactly on the frame at -0.40. Same two boards, both inside 6 m stock, no extra material; it is only which end you cut from. It is also the ONLY option: for a splice to reach a frame with both pieces under 6 m the frame must sit within +-0.85 m of centre, and -0.40 is the only one that does. Both purlin runs splice there - they are 3 m apart across the building, so the joints are not adjacent.",
   "jointType": "housed into the post head, purlin uncut",
   "housingDepth": 0.03,
   "_rabbet": "Owner 2026-08-16: rabbet joint at the purlin/post 90 deg connection. CUT THE POST, NOT THE PURLIN. A rebate on the underside of a beam at a support is the one case EN 1995 6.5.2 singles out - the re-entrant corner starts a shear crack along the grain and it runs. Numbers for a 50x250 purlin at V=4.65 kN: uncut 23.1 kN (factor 5.0), 25 mm rebate 19.6 (4.2), 50 mm 13.0 (2.8), 75 mm 9.8 (2.1). It does not fail on numbers, but three things do not show in that check: the purlin is CONTINUOUS so the notch sits where hogging moment and peak shear coincide and kv is optimistic; the purlin is only 50 mm wide so the corner splits easily when the fixing is driven; and the post head is in pure compression where a housing costs bearing area and nothing else.",

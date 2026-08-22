@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1787382380';
-import { derive, stations, spaced } from './geometry.js?v=1787382380';
+import { allocator } from './stock.js?v=1787382994';
+import { derive, stations, spaced } from './geometry.js?v=1787382994';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -287,7 +287,10 @@ export function buildFrame(p) {
     const z = d.plateTop - ptc / 2;
     const n = p.heights.topCourseOnGables ? 4 : 2;
     let lv = 0;
-    for (const y of [-wy(tw), wy(tw)]) bar(plates, M('levelling', lv++, n), [0, y, z], [L, tw, ptc]);
+    // Runs out over the gable with the plate courses under it — 1.0 m each
+    // end, same as the upper plate course (owner 2026-08-21).
+    const lvRun = L + 2 * p.plateOverhang.gableEnd;
+    for (const y of [-wy(tw), wy(tw)]) bar(plates, M('levelling', lv++, n), [0, y, z], [lvRun, tw, ptc]);
     if (p.heights.topCourseOnGables) {
       bar(plates, M('levelling', lv++, n), [wx(tw), 0, z], [tw, W, ptc]);
       bar(plates, M('levelling', lv++, n), [-wx(tw), 0, z], [tw, W, ptc]);
@@ -623,11 +626,23 @@ export function buildFrame(p) {
   const beside = jw / 2 + rw / 2;
   const rafterXs = tieXs.map((x, i) =>
     x + (i === tieXs.length - 1 ? -beside : beside));
-  // Carry the same rhythm out over the gable overhangs.
-  const vergeStep = tieXs[1] - tieXs[0];
-  for (let x = tieXs[0] - vergeStep; x > -p.roof.ridgeLength / 2; x -= vergeStep) rafterXs.push(x);
-  for (let x = tieXs[tieXs.length - 1] + vergeStep; x < p.roof.ridgeLength / 2; x += vergeStep) rafterXs.push(x);
-  rafterXs.push(-p.roof.ridgeLength / 2 + rw, p.roof.ridgeLength / 2 - rw);
+  // The VERGE ZONE is divided evenly, not stepped out on the tie rhythm.
+  //
+  // Stepping out at vergeStep from the last TIE station lands badly, because the
+  // rafters sit 37.5 mm off the tie centres: at a 1.0 m verge it produced a
+  // 775 mm bay and then a 300 mm one against the tip. Dividing the zone into the
+  // fewest bays that keep the spacing at or under the grid gives 2 x 538 mm at
+  // each end — regular, and shorter than the field, which is the safe direction.
+  const tipX = p.roof.ridgeLength / 2 - rw;
+  const lastIn = rafterXs[rafterXs.length - 1];
+  const vergeZone = tipX - lastIn;
+  if (vergeZone > 1e-6) {
+    const nV = Math.ceil(vergeZone / (tieXs[1] - tieXs[0]));
+    for (let i = 1; i <= nV; i++) {
+      rafterXs.push(lastIn + (vergeZone * i) / nV);
+      rafterXs.push(rafterXs[0] - (vergeZone * i) / nV);
+    }
+  }
 
   const uEave = underAt(d.roofRun), uApex = underAt(apexY);
   rafterXs.forEach((x, i) => {

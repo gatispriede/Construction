@@ -68,15 +68,15 @@ const QUEUE = [
   // 50 x 250 — 40 boards
   // Long walls only now — the gables get no levelling course. 18.6 m, 4 boards.
   { group: 'levelling',       section: '50x150',  boards: 4  },
-  { group: 'fascia',          section: '50x150',  boards: 7  },
-  { group: 'purlins',         section: '50x250',  boards: 4  },
-  { group: 'ridgePurlin',     section: '50x250',  boards: 2  },
+  { group: 'fascia',          section: '50x150',  boards: 8  },
+  { group: 'purlins',         section: '50x250',  boards: 5  },
+  { group: 'ridgePurlin',     section: '50x250',  boards: 3  },
   { group: 'gablePanels',     section: '50x250',  boards: 2  },
   // Rafters last: they are the biggest claim and the latest work, so this is
   // where the yard runs out. At 50 x 150 they still take one board each.
   // 30, down from 38: the rafters follow the tie setout, and 700 mm centres
   // over 9.30 m is 15 lines where 576 mm gave 19.
-  { group: 'rafters',         section: '50x250',  boards: 32 },
+  { group: 'rafters',         section: '50x250',  boards: 36 },
 
   // 50 x 100 — 36 m of rip byproduct
   // Blocking moved here from 50 x 250 — it is 50 x 100 now, and free.
@@ -109,13 +109,13 @@ const QUEUE = [
   { group: 'braceLedger',     section: '100x100', boards: 4  },
 
   // Roof battens, 25 x 100. All bought — see the note on OWNED above.
-  { group: 'battens',         section: '25x100_m', boards: 433.0 },
+  { group: 'battens',         section: '25x100_m', boards: 475.0 },
 
   // 25 x 50 — same section, separate counts. Roof counter-battens make the
   // roof's ventilation cavity; wall battens make the wall's drained cavity and
   // also carry the sheet. Different jobs, different lines.
   // One per rafter line, full slope length. 15 lines now, not 19.
-  { group: 'counterBattens',  section: '25x50_roof_m', boards: 188.8 },
+  { group: 'counterBattens',  section: '25x50_roof_m', boards: 212.4 },
   // 182 m plain wall (incl. 8 corner battens and 2 entrance jambs)
   // + 42 m of gable triangle and over-head strip = 225 m.
   { group: 'wallBattens',     section: '25x50_wall_m', boards: 225.0 },

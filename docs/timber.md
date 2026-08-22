@@ -34,16 +34,16 @@ packs drop into every bay uncut**. Counts below reflect it: **13 ties, 30 rafter
 
 ## Members still to make
 
-Cut list off the model, 2026-08-21. 13 ties @ 700 mm centres, 0.50 m verge. 14 setout
+Cut list off the model, 2026-08-21. 13 ties @ 700 mm centres, **1.00 m verge**. 14 setout
 stations; the one at 8,450 mm from the front face carries a rafter and a tail joist
 but no tie — that is the stair opening.
 
 | member | section | length m | off |
 |---|---|---|---|
-| rafter | 50 × 150 — ripped from 50 × 250 | 6.00 | 32 |
+| rafter | 50 × 150 — ripped from 50 × 250 | 6.00 | 36 |
 | rafter spacer | 50 × 100 — free from the rip | 0.65 | 60 |
-| purlin | 50 × 250 | **4.75 + 5.55** spliced on the frame at −0.40 | 2 runs |
-| ridge purlin | 50 × 250 | 6.00 + 4.30 spliced | 1 run |
+| purlin | 50 × 250 | **3.85 + 4.90 + 2.55**, splices on the frames at −1.80 and +3.10 | 2 runs |
+| ridge purlin | 50 × 250 | 3.85 + 4.90 + 2.55, splices on a rafter | 1 run |
 | tie spacer (blocking) | 50 × 100 — free from the rip | 0.60 | 33 |
 | gable panel diagonal | 50 × 250 | 3.60 | 2 |
 | levelling course | 50 × 150 — **bought** | 6.00 | 6 |
@@ -239,13 +239,21 @@ inclusive total by a factor of 1.21.
 
 | Section | Length | **Order** | Metres | Need | Spare | m³ | ex VAT | **incl VAT** |
 |---|---|---|---|---|---|---|---|---|
-| 50 × 150 | 6.0 m | **24** | 144 | 22 | 2 (9%) | 1.080 | 276.70 | 334.80 |
+| 50 × 150 | 6.0 m | **24** | 144 | **21** | 3 (14%) | 1.080 | 276.70 | 334.80 |
 | 100 × 100 | 6.0 m | **24** | 144 | 22 | 2 (9%) | 1.440 | 368.93 | 446.40 |
-| 25 × 100 roof battens | 6.0 m | **86** | 516 | 78 | 8 (10%) | 1.290 | 330.50 | 399.90 |
-| 25 × 50 counter + wall battens | 6.0 m | **98** | 588 | 89 | 9 (10%) | 0.735 | 188.31 | 227.85 |
+| 25 × 100 roof battens | 6.0 m | **86** | 516 | **85** | 1 (1%) | 1.290 | 330.50 | 399.90 |
+| 25 × 50 counter + wall battens | 6.0 m | **98** | 588 | **94** | 4 (4%) | 0.735 | 188.31 | 227.85 |
 | **TOTAL** | | **233** | **1,398** | | | **4.590** | **1,175.96** | **€1,422.90** |
 
 €246.94 of that is VAT. **Budget €1,422.90 all in.**
+
+> **The 1 m verge ate most of the contingency, 2026-08-21.** Going back to a 1.0 m
+> verge lengthened the ridge 10.30 → 11.30 m, which lengthens every batten run and
+> adds two rafter lines. Roof battens go from 78 boards needed to **85 of 86 ordered**
+> and 25 × 50 from 89 to **94 of 98**. Both still fit, but the batten line is now
+> **1 board of slack, not 8**. Order a few more if you want any room for a bad cut.
+> Nothing else changed: 50 × 150 actually improved (the levelling course dropped to
+> the long walls only) and 100 × 100 is untouched.
 
 Down €18.60 from the 576 mm setout on the battens, and back up €74.40 on the
 100 × 100 — which is the **brace ledger** the knee braces now stand on (F24).
@@ -259,7 +267,7 @@ has to be 100 mm thick and not 50.
 
 | Section | Used | Own | |
 |---|---|---|---|
-| 50 × 250 | 40 | 50 | 32 ripped for rafters, 6 roof support, 2 gable diagonals — **10 spare** |
+| 50 × 250 | 46 | 50 | 36 rafters, 8 purlin/ridge, 2 gable diagonals — **4 spare** |
 | 100 × 250 | 14 | 16 | 13 ties + the stair trimmer, **2 spare** |
 | 50 × 100 | 184.5 m | 228 m | all from the rafter rip — blocking, spacers, collars, verticals, knee braces, X-braces |
 
@@ -403,16 +411,18 @@ the girder into the walls.
    braced a single braced bay carries everything — fine for erection wind, but do not
    leave it part-braced with weather coming.
 
-### Purlin splice — recut 4.75 + 5.55
+### Purlin splice — three pieces at a 1 m verge
 
-The cut list said **6.00 + 4.30**, which puts the joint at x = **+0.85** and the nearest
-frame at **+1.00** — a 50 × 250 lap hanging 150 mm off its support.
+At the 1.0 m verge the purlin run is **11.30 m**, and **no two-piece split works**: a
+splice on a frame needs both pieces under 6 m, which means a frame within ±0.35 m of
+centre, and the nearest is at −0.40.
 
-**4.75 + 5.55 lands it exactly on the frame at −0.40.** Same two boards, both inside 6 m
-stock, no extra material; it is only which end you cut from. It is also the *only*
-option — for a splice to reach a frame with both pieces under 6 m the frame has to sit
-within ±0.85 m of centre, and −0.40 is the only one that does. Both purlin runs splice
-there; they are 3 m apart across the building, so the joints are not adjacent.
+**Three pieces: 3.85 + 4.90 + 2.55**, splicing on the frames at **−1.80** and **+3.10**.
+Both end pieces run out past the gable and carry the 1.05 m verge cantilever
+**unspliced**, which is the part that actually matters — a joint in a cantilever is the
+one place you cannot put one.
+
+Costs 2 extra boards of 50 × 250 (purlins 4 → 5, ridge 2 → 3), out of stock.
 
 ## Knee braces — now primary supports, not wind braces
 
