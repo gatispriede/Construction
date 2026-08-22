@@ -391,51 +391,55 @@ edge meets a tie only every sixth bay. Cut edges falling between ties need noggi
 The insulation module won this argument over the sheet module — that is a real
 trade, not a free win.
 
-## Purlin verticals — beside the purlin, not under it
+## Purlin verticals — under the purlin, with a wider head
 
-**Changed 2026-08-21.** The vertical used to stop at the purlin underside. That made
-it a second support, and it does not politely wait its turn — **it is stiffer than the
-strut**, 35.6 kN/mm against 29.0, so it takes 5.1 of the 9.3 kN and delivers it into
-the **middle of a tie**.
+**Owner 2026-08-21, and they were right to insist.** The roof wants a direct bearing
+path down to the tie and the wall, not one that leans on the strut alone.
 
-That is precisely what F4 struts the purlin to avoid, and the cost is not small:
+### The note that said otherwise was wrong
 
-| | |
-|---|---|
-| Tie, strut carrying the purlin alone | **11.7 mm** |
-| Tie, with a tight vertical under the purlin | **27.1 mm** — over the 24 mm limit |
+An earlier version of this section said a vertical under the purlin drove the tie to
+27.1 mm and failed. **It used the strut's axial force, 9.3 kN, as the load being
+shared.** What gets shared is the purlin's **reaction** — the vertical component —
+which at 47.8° is **6.89 kN**. Redone:
 
-**So it runs past the purlin to its top face — 1.795 m, not 1.545 — and is screwed to
-the purlin's side.** It keeps both jobs it is actually for and carries no roof load:
+| | vertical takes | tie | |
+|---|---|---|---|
+| Strut alone | — | 11.7 mm | |
+| **50 × 100 column** | **3.80 kN** | **23.1 mm** | passes |
+| Doubled 100 × 100 column | 4.90 kN | 26.5 mm | fails |
 
-1. **Stops the purlin rolling.** A 50 × 250 on edge is 5:1 and wants to lie down. This
-   holds it upright at every frame.
-2. **Anchors the X-brace ends** — 7 × 6×120 in tension each.
+The vertical is stiffer than the strut — 35.6 kN/mm against 29.0 — so it takes 55%.
+And the strut then carries 3.10 kN instead of 6.89, so **its own head bearing improves
+from 1.38 to 0.62 MPa**. Both paths get easier.
 
-### And no notch
+### Widen the head, never the column
 
-A 250 mm rebate down a 50 × 100 to leave a 50 × 50 tongue makes a **re-entrant corner**
-at the shoulder — the one detail EN 1995 6.5.2 singles out, and one this schedule has
-already refused twice (the purlin rabbet, the knee brace seat). Two pieces of different
-height side by side give the same shape with square cuts and no corner, and are better
-than notching *if* you want that form. The tall piece alone is better still, because it
-keeps the vertical out of the load path altogether.
+Doubling the column is the wrong fix and makes it worse: stiffness doubles, the share
+goes 55% → 71%, and the tie goes over. **Put a 100 × 100 × 100 block on a 50 × 100
+column instead:**
 
-**Do not double them to 100 × 100.** It was considered, to widen a bearing seat, and it
-is wrong twice: the vertical is not supposed to bear, and doubling makes it stiffer, so
-it steals *more* from the strut and makes the tie worse.
+| | contact under the 50 wide purlin | |
+|---|---|---|
+| Bare 50 × 100 head | 2500 mm² | 1.52 MPa — factor 1.1 |
+| **With a 100 × 100 head block** | **5000 mm²** | **0.76 MPa — factor 2.3** |
 
-### Which leaves the strut head carrying everything — and it was recorded 2× optimistic
+The column's stiffness — and so its share of the load — is untouched. Two 50 × 100
+offcuts 100 mm long make each block; 3.2 m of byproduct for all sixteen.
 
-The note in the model said the purlin-on-post bearing was **0.93 MPa**, which implies a
-100 × 100 contact — 10 000 mm². **The purlin is only 50 wide.** A 100 × 100 strut head
-can never contact more than **100 × 50 = 5000 mm²**, so the real figure is **1.86 MPa**.
+### Roll restraint
 
-Against fc,90,d 1.73 that is over on its own, and it works only on kc,90 = 1.5 for a
-discrete bearing away from the member end — 2.60, **factor 1.4.** It is now the
-tightest bearing in the roof.
+The purlin is 5:1 on edge and wants to lie down. The head block and the rafter-spacer
+row over the purlin cover it between them. For more, run **one 50 × 100 up alongside
+the purlin to its top face** and screw it to the purlin's side — restraint with nothing
+added to the load path.
 
-**Cut the strut head square.** A head that touches in two places has no factor at all.
+> **One number here is flagged, not resolved.** The 6.89 kN reaction comes from the
+> schedule's 9.3 kN strut axial. A first-principles check off the roof loads — dead
+> 0.15 kPa on slope, snow 0.141, wind 0.52, rafters at 700, purlin at mid-backspan —
+> gives **2.99 kN at SLS and 4.39 at ULS**, a factor of 1.6 lower. The two cannot be
+> reconciled from the notes. Everything above uses the conservative figure; if the
+> lower one is right, the tie lands nearer 19 mm than 23.
 
 ## Purlin X-bracing — buildability first, F19 second
 

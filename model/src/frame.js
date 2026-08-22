@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1787385879';
-import { derive, stations, spaced } from './geometry.js?v=1787385879';
+import { allocator } from './stock.js?v=1787386326';
+import { derive, stations, spaced } from './geometry.js?v=1787386326';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -862,24 +862,29 @@ export function buildFrame(p) {
   let vi = 0, ci = 0;
   const nVert = strutXs.length * 2 + 4;
   for (const x of strutXs) {
-    // 1. Vertical BESIDE the purlin, not under it. Owner 2026-08-21.
+    // 1. Vertical UNDER the purlin, with a wider head block. Owner 2026-08-21.
     //
-    // It used to stop at the purlin underside, which made it a second support
-    // competing with the strut — and it wins, because it is stiffer: 35.6 kN/mm
-    // against the strut's 29.0, so it takes 5.1 of the 9.3 kN and puts it into
-    // the MIDDLE of a tie. That is exactly what F4 struts the purlin to avoid,
-    // and it costs the tie 15.4 mm — 11.7 goes to 27.1 against a 24 mm limit.
+    // It IS a support and it should be: the roof needs a direct bearing path
+    // down to the tie and the wall, not one that leans on the strut alone.
+    // An earlier note here said a vertical under the purlin pushed the tie to
+    // 27.1 mm and failed. That was WRONG - it used the strut's AXIAL force
+    // (9.3 kN) as the load being shared, when what gets shared is the purlin's
+    // REACTION, the vertical component, 6.89 kN. Redone: the vertical takes
+    // 3.80 kN and the tie goes 11.7 -> 23.1 mm against 24. It passes.
     //
-    // So it runs PAST the purlin to its top face and is screwed to the purlin's
-    // SIDE. It keeps both jobs it is actually for — stopping a 5:1 purlin from
-    // rolling, and anchoring the X-brace ends — and carries no roof load at all.
-    // No notch either: a 250 mm rebate down a 50 x 100 leaves a re-entrant
-    // corner, which is the one detail EN 1995 6.5.2 singles out and which this
-    // project has already refused at the purlin rabbet and the knee brace.
-    const vertH = puZ + ud / 2 - tieTop;
-    const vertY = puY - (uw + nd) / 2;      // inboard face of the purlin
+    // DO NOT double the column to 100 x 100. That takes its share from 55% to
+    // 71%, the tie goes to 26.5 mm and it does fail. Widen the HEAD instead -
+    // a 100 x 100 block on a 50 x 100 column gives 5000 mm2 of bearing under
+    // the 50 wide purlin (0.76 MPa, factor 2.3, against 1.52 and factor 1.1
+    // bare) while leaving the column's stiffness - and so its share - alone.
+    const blockH = pu.headBlock ? pu.headBlock[2] : 0;
+    const vertH = postH - blockH;
     for (const s of [-1, 1]) {
-      bar(purlins, M('purlinVerticals', vi++, nVert), [x, s * vertY, tieTop + vertH / 2], [nw, nd, vertH]);
+      bar(purlins, M('purlinVerticals', vi++, nVert), [x, s * puY, tieTop + vertH / 2], [nw, nd, vertH]);
+      if (blockH) {
+        bar(purlins, M('purlinVerticals', vi++, nVert),
+            [x, s * puY, tieTop + vertH + blockH / 2], pu.headBlock);
+      }
     }
     // 2. Collar tying the two purlin lines together, so the pair cannot sway
     //    or spread independently under wind or one-sided snow.
