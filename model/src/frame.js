@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1787386644';
-import { derive, stations, spaced } from './geometry.js?v=1787386644';
+import { allocator } from './stock.js?v=1787387175';
+import { derive, stations, spaced } from './geometry.js?v=1787387175';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -872,18 +872,28 @@ export function buildFrame(p) {
     // REACTION, the vertical component, 6.89 kN. Redone: the vertical takes
     // 3.80 kN and the tie goes 11.7 -> 23.1 mm against 24. It passes.
     //
-    // DO NOT double the column to 100 x 100. That takes its share from 55% to
-    // 71%, the tie goes to 26.5 mm and it does fail. Widen the HEAD instead -
-    // a 100 x 100 block on a 50 x 100 column gives 5000 mm2 of bearing under
-    // the 50 wide purlin (0.76 MPa, factor 2.3, against 1.52 and factor 1.1
-    // bare) while leaving the column's stiffness - and so its share - alone.
-    const blockH = pu.headBlock ? pu.headBlock[2] : 0;
+    // The head is a BOLSTER — a 50 x 100 laid FLAT on the column, running along
+    // under the purlin. Owner 2026-08-21, and it beats every head detail tried
+    // before it because it wins on both checks for the same reason: it is
+    // crushed ACROSS its grain, so it is deliberately soft.
+    //
+    // BEARING: contact on the purlin underside goes from 100 x 50 to 300 x 50,
+    // 0.18 MPa against 1.73 — factor 9.6, up from 2.2.
+    // TIE: E90 is E/30, so the bolster is 37 kN/mm in through-thickness
+    // compression. In series with the column's 38 that gives 18.8, the
+    // vertical's share of the purlin reaction falls 59% -> 39%, and the tie
+    // drops from 23.8 to 19.9 mm. The soft layer sheds load onto the strut,
+    // which is exactly where F4 wants it.
+    //
+    // DO NOT stiffen this joint. Doubling the column, or a full-height T, does
+    // the opposite of what is wanted here.
+    const blockH = pu.bolster ? pu.bolster[2] : 0;
     const vertH = postH - blockH;
     for (const s of [-1, 1]) {
       bar(purlins, M('purlinVerticals', vi++, nVert), [x, s * puY, tieTop + vertH / 2], [nw, nd, vertH]);
       if (blockH) {
         bar(purlins, M('purlinVerticals', vi++, nVert),
-            [x, s * puY, tieTop + vertH + blockH / 2], pu.headBlock);
+            [x, s * puY, tieTop + vertH + blockH / 2], pu.bolster);
       }
     }
     // 2. Collar tying the two purlin lines together, so the pair cannot sway

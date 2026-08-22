@@ -413,33 +413,31 @@ The vertical is stiffer than the strut — 35.6 kN/mm against 29.0 — so it tak
 And the strut then carries 3.10 kN instead of 6.89, so **its own head bearing improves
 from 1.38 to 0.62 MPa**. Both paths get easier.
 
-### Widen the head, never the column
+### The head is a bolster — 50 × 100 laid flat
 
-Doubling the column is the wrong fix and makes it worse: stiffness doubles, the share
-goes 57% → 72%, and the tie goes over. **Widen only the head.**
+**Owner 2026-08-21, and it beats every head detail tried before it.** A 50 × 100 laid
+**flat** on the column, 300 mm long, running along under the purlin.
 
-| | contact under the 50 wide purlin | |
+It wins on **both** checks, for the same reason: laid flat it is crushed **across its
+grain**, so it is deliberately soft.
+
+| | before | **with the bolster** |
 |---|---|---|
-| Bare 50 × 100 head | 2500 mm² | 1.52 MPa — factor 1.1 |
-| **100 mm wide head** | **5000 mm²** | **0.78 MPa — factor 2.2** |
+| Contact on the purlin underside | 100 × 50 = 5000 mm² | **300 × 50 = 15 000 mm²** |
+| Bearing there | 0.78 MPa — factor 2.2 | **0.18 MPa — factor 9.6** |
+| Vertical's share of the reaction | 59% | **39%** |
+| Tie | 23.8 mm | **19.9 mm** |
 
-**Make it a T from two 50 × 100** (owner 2026-08-21) rather than a loose block — the
-flange screws to the column, so it cannot drop out while you are erecting the frame,
-where a 100 mm cube relies on being captured between two bearing faces.
+E90 is about E/30, so the bolster is **37 kN/mm** in through-thickness compression. In
+series with the column's 38.1 that gives **18.8** — half the bare column — and the load
+it sheds goes to the strut, which lands over the wall instead of mid-span on a tie.
+Bolster onto the column head is 0.54 MPa, factor 3.2.
 
-**Keep the flange to 200 mm.** It is a bearing head, not a column, and the flange
-length is the dial on how much load the vertical steals from the strut:
-
-| flange | share | tie |
-|---|---|---|
-| none | 57% | 23.5 mm |
-| 100 mm | 58% | 23.7 mm |
-| **200 mm** | **59%** | **23.8 mm** ✓ |
-| 400 mm | 60% | 24.2 mm — over |
-| full height T | 72% | 26.7 mm — over |
-
-Anything up to ~250 mm is free. Past that you are trading tie margin for nothing,
-because the bearing was already solved at 100 mm of width.
+> **Soft is the point, not a compromise.** The instinct with a joint like this is to
+> stiffen it. Here that is backwards: two supports under one purlin share by
+> *stiffness*, the vertical lands mid-span on a tie and the strut lands over the wall,
+> so every kN the vertical sheds is a kN delivered somewhere better. Which is also why
+> doubling the column, a full-height T, and a long stiff flange all made it worse.
 
 ### Roll restraint
 

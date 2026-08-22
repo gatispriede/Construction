@@ -6,7 +6,7 @@
 // decides length — 6 x 100 is not always enough.
 
 import * as THREE from 'three';
-import { derive } from './geometry.js?v=1787386644';
+import { derive } from './geometry.js?v=1787387175';
 // Connections are labelled with the LAYER NAMES they join, not reference
 // letters. The letters were a 30-row lookup table you had to learn; the layer
 // name is already in the panel on the left, so "ties -> plates" points at two
@@ -90,7 +90,7 @@ export function schedule(p, d, Z) {
     // The two heads share the purlin reaction 55/45 by stiffness, so a head that
     // touches in two places simply hands its share to the other one.
     [`${Z('purlins')}  purlin onto the vertical`,
-      'T head from 2 × 50×100, flange 200 — screw the flange to the column, then 4 × 6×120',
+      'BOLSTER 50×100 laid flat, 300 long, on the column head — then 4 × 6×120',
       '6×120', [xs[3], puY - 0.42, puTop - 0.38]],
     [`${Z('purlins')}  purlin onto the strut`,
       'SQUARE-CUT head at 47.8° — mark off the erected frame, then 4 × 6×120',
