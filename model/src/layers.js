@@ -18,7 +18,7 @@ export const LAYER_GROUPS = [
   ]],
   ['Loft floor', [
     'ties', 'braceLedger', 'kneeBraces', 'blocking', 'must_tieBolts',
-    'must_windGirder', 'loftDeck',
+    'must_windGirder', 'cornerBraces', 'loftDeck',
   ]],
   ['Stair', [
     'stairOpening', 'stairs',

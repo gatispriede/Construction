@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1787382994';
-import { derive, stations, spaced } from './geometry.js?v=1787382994';
+import { allocator } from './stock.js?v=1787383535';
+import { derive, stations, spaced } from './geometry.js?v=1787383535';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -290,10 +290,15 @@ export function buildFrame(p) {
     // Runs out over the gable with the plate courses under it — 1.0 m each
     // end, same as the upper plate course (owner 2026-08-21).
     const lvRun = L + 2 * p.plateOverhang.gableEnd;
-    for (const y of [-wy(tw), wy(tw)]) bar(plates, M('levelling', lv++, n), [0, y, z], [lvRun, tw, ptc]);
+    // INSTALLED (owner 2026-08-21), so it is fabric, not stock: drawn in sawn
+    // brown like the rest of the standing wall rather than allocated blue or
+    // yellow. It is sawn, not hewn, so it reads a shade lighter than the
+    // salvaged plate courses under it.
+    const lvMat = p.heights.topCourseInstalled ? MAT.sawn : M('levelling', lv++, n);
+    for (const y of [-wy(tw), wy(tw)]) bar(plates, lvMat, [0, y, z], [lvRun, tw, ptc]);
     if (p.heights.topCourseOnGables) {
-      bar(plates, M('levelling', lv++, n), [wx(tw), 0, z], [tw, W, ptc]);
-      bar(plates, M('levelling', lv++, n), [-wx(tw), 0, z], [tw, W, ptc]);
+      bar(plates, lvMat, [wx(tw), 0, z], [tw, W, ptc]);
+      bar(plates, lvMat, [-wx(tw), 0, z], [tw, W, ptc]);
     }
   }
   layers.plates = plates;
@@ -1007,6 +1012,32 @@ export function buildFrame(p) {
             adv.girderSection[0], adv.girderSection[1]);
     }
   }
+  // --- Corner dragon ties, in plan under the wind girder ------------------
+  // Owner 2026-08-21. A short 45 deg member across each corner, in a plane
+  // just under the girder. It makes the plan rectangle rigid at the corner and
+  // - the real reason - gives the wind girder's end somewhere to land: each
+  // diagonal delivers 12.57 kN into a corner that is otherwise a lap joint
+  // between two hewn plates.
+  //
+  // RUN IS 0.8 m, NOT 1.0. At 1.0 m the tie crosses the second tie line at
+  // y = 2.600 and the knee brace sweeps y 2.526-2.626 through that same z
+  // band - a direct clash. 0.8 m clears it by 174 mm. See params.cornerBraces.
+  const corner = layer('cornerBraces');
+  if (adv.cornerBraceRun > 0) {
+    const [cbw, cbd] = adv.cornerBraceSection;
+    const r = adv.cornerBraceRun;
+    const cz = wgZ - adv.girderSection[1] / 2 - cbd / 2;   // tucked under the girder
+    const cx = L / 2 - tw / 2, cy = W / 2 - tw / 2;
+    let ci = 0;
+    for (const sx of [-1, 1]) {
+      for (const sy of [-1, 1]) {
+        strut(corner, M('cornerBraces', ci++, 4),
+              [sx * (cx - r), sy * cy, cz], [sx * cx, sy * (cy - r), cz], cbw, cbd);
+      }
+    }
+  }
+  layers.cornerBraces = corner;
+
   layers.must_tieBolts = mTie;
   layers.must_rafterStraps = mRaft;
   layers.must_frontGablePanels = mGable;

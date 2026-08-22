@@ -351,6 +351,13 @@
   "boltSpacing": 0.12,
   "strapDrop": 0.3,
   "windBraceRun": 2.5,
+  "cornerBraceRun": 0.8,
+  "cornerBraceSection": [
+   0.05,
+   0.1
+  ],
+  "_cornerBrace": "OWNER 2026-08-21: 45 deg diagonals across each corner, in plan, in a plane just under the wind girder. Four off, 50x100, 1.131 m long, free from the rafter rip. What they buy: the plan rectangle goes rigid at the corner, and - the real reason - the wind girder gets somewhere to land. Each girder diagonal delivers 12.57 kN into a corner that is otherwise a lap joint between two hewn plates. A 50x100 at 1.131 m carries 33.8 kN in compression (lambda 78, kc 0.465) and 38.8 in tension, so factor 2.7 even if one takes the whole girder force.",
+  "_cornerBraceRun": "0.8 m, NOT 1.0 - and this is a clash, not a preference. The tie sits in the z band 3.410-3.510, tucked under the girder. The KNEE BRACES sweep through y 2.526-2.626 in that same band. At a 1.0 m run the dragon tie crosses the second tie line at y = 2.600, which is inside that sweep: a hard clash with the knee brace at x = 3.90. At 0.8 m it crosses at y = 2.800 and clears by 174 mm. 0.6 m clears by 226 mm and 1.2 m by 126 mm, so if you want it longer, 1.2 works and 1.0 does not - the clash is a window, not a threshold.",
   "_legend": "YELLOW = must. WHITE = required by the all-directions wind check. Orange precautions dropped 2026-08-14 - roof-plane bracing became mandatory (white), the extra purlin struts were superseded by the two-panel X, and the verge outriggers were declined.",
   "src": "recommendation, not as-built",
   "girderSection": [

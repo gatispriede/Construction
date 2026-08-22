@@ -67,7 +67,9 @@ const QUEUE = [
 
   // 50 x 250 — 40 boards
   // Long walls only now — the gables get no levelling course. 18.6 m, 4 boards.
-  { group: 'levelling',       section: '50x150',  boards: 4  },
+  // INSTALLED 2026-08-21 — it is fabric now, not stock. Left in the queue at
+  // zero so the 50 x 150 arithmetic still reads, but it draws as standing.
+  { group: 'levelling',       section: '50x150',  boards: 0  },
   { group: 'fascia',          section: '50x150',  boards: 8  },
   { group: 'purlins',         section: '50x250',  boards: 5  },
   { group: 'ridgePurlin',     section: '50x250',  boards: 3  },
@@ -96,6 +98,8 @@ const QUEUE = [
   // something else. frame.js draws them blue unconditionally.
   { group: 'purlinVerticals', section: '50x100_m', boards: 32.4 },
   { group: 'collars',         section: '50x100_m', boards: 18.9 },
+  // 4 corner dragon ties, 1.131 m. Free off the rip.
+  { group: 'cornerBraces',    section: '50x100_m', boards: 4.6 },
   // 7 bays x 2 diagonals x 2 slopes x 2.29 m. Free off the rafter rip — and it
   // was always going to be built, as temporary works if not as a member.
   { group: 'purlinXBraces',   section: '50x100_m', boards: 58.8 },
