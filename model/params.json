@@ -264,6 +264,25 @@
   "_evened": "Was 5. Raised to 8 so the load lands on 8 of the 9 posts instead of 5: strut post 12.3 -> 9.4 kN, pier 197 -> 151 kPa. Not needed for capacity - needed so a foundation that is staying as-is settles evenly. F17.",
   "_verticals": "50x100, not 100x100. They carry 0.06 kN - factor 302 even at 50x100. And they come FREE from the levelling-course rip: ripping 50x250 into 50x150 for the wall top leaves 36 m of 50x100 as byproduct, against 25.8 m of verticals needed.",
   "_strutBearsOn": "Changed to 'tie' 2026-08-15 at owner's request. The struts and the purlin verticals now all sit ON the ties instead of dropping past them onto the wall plate, so the whole purlin frame sits in one plane. The old note - 'a post onto the tie adds 15 mm of sag to a beam already at its limit' - no longer applies: that was a post near MIDSPAN, and the ties were at 1151 mm deflecting 45.6 mm. The strut foot lands 25 mm inside the tie's bearing point, so it adds 0.36 mm. Tie goes 22.8 -> 23.2 mm against a 24 mm limit. Bearing on the tie top is 0.93 MPa against fc,90,d 1.73. The load drops straight through the tie depth into the plate - no bending path at all.",
+  "xBracing": true,
+  "xBraceSection": [
+   0.05,
+   0.1
+  ],
+  "xBraceDesign": "tension-only",
+  "xBraceScrewsPerEnd": 8,
+  "_xBracing": "OWNER 2026-08-21, and the reason is BUILDABILITY before it is stability. Each purlin frame is triangulated ACROSS the building - strut plus vertical make a triangle, collar ties the two sides. ALONG the building there is NOTHING: 8 frames joined only by two 50x250 purlins is a pinned parallelogram, and the rafters that would eventually stop it cannot go on until the purlins are already up. So this bracing was always going to exist; the only question was whether it was scrap that gets binned or a permanent member. Free either way off the rafter rip, so it stays in.",
+  "_xBraceNumbers": "7 bays per slope, frames 1.40 m apart, verticals 1.815 m: diagonal 2.29 m at 52.4 deg. Panel force is half the 12.9 kN gable triangle per purlin line, 6.45 kN, giving 10.6 kN in the diagonal. TENSION-ONLY: a 50x100 over 2.29 m has lambda 159 and kc 0.128, so 9.3 kN against 10.6 - as a COMPRESSION member it FAILS at 0.88. In tension the net section gives 38.8 kN, factor 3.7. Fit both diagonals of every X and let whichever is in tension do the work; the other goes slack and buckles harmlessly.",
+  "_xBraceConnection": "THE CONNECTION IS THE DESIGN, because tension bracing has no bearing to fall back on. 10.6 kN needs about 8 x 6x120 per end - 28 diagonals x 2 ends is roughly 450 screws, and that is the real cost of this, not the timber.",
+  "_xBracePromotes": "It promotes two members. The VERTICALS go from 0.06 kN at a factor of 302 - genuinely throwaway - to 8.4 kN, factor 1.74 at 50x100. Still fine, but they now need real fixings top and bottom, not just locating. The PURLIN becomes the top chord at 6.5 kN axial, 0.52 MPa in a 50x250 - nothing.",
+  "_xBraceDischarge": "It has to land somewhere at both ends or it is a truss floating in the middle. The end frames sit at x = +-4.60 against the gable walls at +-4.65, so the end panels discharge straight into the gables - but that end connection has to be as real as the rest. Below, the X dumps into the ties, the ties into the wind girder (factor 10.3), the girder into the walls.",
+  "_erectionSequence": "BRACE EACH BAY BEFORE YOU LEAVE IT. 1. Ties bolted down first - 2 x M14 every end, permanent now (kneeBraces._endUplift), and you are standing on them. 2. Start at a gable: the end frame is held by the gable wall for free, and that is the anchor for the whole run. 3. Stand the next frame and fit its X back to the previous one IMMEDIATELY - never leave a frame standing on the purlin alone overnight. 4. The purlin FOLLOWS the frames; a 50x250 will not span 10.3 m of air waiting for supports. 5. Work in from one gable, or from both ends toward the middle. Until the second bay is braced a single braced bay carries everything - fine for erection wind, but do not leave it part-braced with weather coming.",
+  "spliceAtFrame": -0.4,
+  "pieceLengths": [
+   4.75,
+   5.55
+  ],
+  "_splice": "RECUT 2026-08-21: 4.75 + 5.55, NOT the 6.00 + 4.30 the cut list had. 6.00 + 4.30 puts the joint at x = +0.85 and the nearest frame is at +1.00 - a 50x250 lap hanging 150 mm off its support. 4.75 + 5.55 lands it exactly on the frame at -0.40. Same two boards, both inside 6 m stock, no extra material; it is only which end you cut from. It is also the ONLY option: for a splice to reach a frame with both pieces under 6 m the frame must sit within +-0.85 m of centre, and -0.40 is the only one that does. Both purlin runs splice there - they are 3 m apart across the building, so the joints are not adjacent.",
   "jointType": "housed into the post head, purlin uncut",
   "housingDepth": 0.03,
   "_rabbet": "Owner 2026-08-16: rabbet joint at the purlin/post 90 deg connection. CUT THE POST, NOT THE PURLIN. A rebate on the underside of a beam at a support is the one case EN 1995 6.5.2 singles out - the re-entrant corner starts a shear crack along the grain and it runs. Numbers for a 50x250 purlin at V=4.65 kN: uncut 23.1 kN (factor 5.0), 25 mm rebate 19.6 (4.2), 50 mm 13.0 (2.8), 75 mm 9.8 (2.1). It does not fail on numbers, but three things do not show in that check: the purlin is CONTINUOUS so the notch sits where hogging moment and peak shear coincide and kv is optimistic; the purlin is only 50 mm wide so the corner splits easily when the fixing is driven; and the post head is in pure compression where a housing costs bearing area and nothing else.",
@@ -416,13 +435,15 @@
   "openingLength": 2.0,
   "openingFromY": -1.0,
   "trimmerSection": [
-   0.05,
-   0.15
+   0.1,
+   0.25
   ],
   "tailJoistSection": [
-   0.05,
-   0.15
+   0.1,
+   0.25
   ],
+  "_fromThe14thTie": "OWNER 2026-08-21 has 14 ties placed, one at every setout station INCLUDING 8450 - the one the model omits for the stair. It cannot stay: with it in, the two gaps are 600 and 700 mm clear and the 900 mm flight passes through neither. And the reason offered for keeping it does not hold - the tie flanking the stair is the LEAST loaded tie in the building, not the most, at 9.6 mm final against 11.7 for a typical one, because it loses the deck over four of its six metres. There is no pressure there to reduce. BUT DO NOT PULL IT OUT WHOLE. Cut it at y = +1.0: the outer 2.0 m is already notched into the wall at y = +3.0 and IS the tail joist, in 100x250 instead of a bought 50x150, with no handling at all. The 4 m offcut yields the 1.50 m trimmer in the same section. Everything then sits flush top and bottom with the ties, which removes the depth mismatch the 50x150 pair had, and it takes the stairOpening board out of the order.",
+  "_trimmerHeadroom": "The deeper trimmer costs 100 mm of headroom at the head of the stair - its underside drops from tie-top-less-150 to the tie underside. 2.51 m becomes 2.41 m over the top tread. Still comfortable; noted because the stair tops out at y = +1.0, which is exactly where this member sits.",
   "_headroom": "The binding constraint is NOT the opening, it is loft headroom. Full standing height exists only within +/-1.23 m of the centre (2.20 m at 1.23 m, 1.82 m at 1.50 m), so the stair has to EMERGE near the middle. Running from the wall at y=-3.0 to y=+1.0 gives a 4.00 m run over a 3.68 m rise: 21 risers at 175 mm, 200 mm going, 41.2 deg. Steep - a domestic stair wants 220 going - but this is a workshop.",
   "_opening": "Only 2.0 m of opening is needed, not the whole 4.0 m run. The loft floor only blocks your head once you are above 1.88 m of climb, which is the top 49% of the run. The rest of the bay is closed by a tail joist from the trimmer to the wall.",
   "_structure": "Tail joist 1.9 m delivers 1.09 kN to the trimmer; the trimmer spans 1.151 m between J14 and J16 at 1.7 MPa against 14.8. The rafter at J15 loses its tie, so its 0.98 kN thrust goes into the plate instead - plate bending about the vertical axis is 0.41 MPa. Both negligible.",

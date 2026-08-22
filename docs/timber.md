@@ -24,11 +24,12 @@ packs drop into every bay uncut**. Counts below reflect it: **13 ties, 30 rafter
 | Purlin verticals | 50 × 100 | carry 0.06 kN; free from the rips |
 | Tie spacers (blocking) | 50 × 100 | tie is too stocky to need restraint — kcrit 1.00 |
 | Rafter spacers | 50 × 100 | not bending members; free from the rips |
-| Ties | 100 × 250 | 6 m span, loft floor — **13 from stock, 3 spare** |
+| Ties | 100 × 250 | 6 m span, loft floor — **13 from stock, 2 spare** (the 14th becomes the stair trimmer) |
 | **Wind girder** | **100 × 100** | bought — no longer eats 100 × 250 |
 | Gable studs | 100 × 100 | **bending** governs — wind on the gable over 3.54 m |
 | **Knee braces** | 50 × 100 | **props now, not wind braces** — 11.6 kN worst case, factor 4.9 |
 | **Brace ledger** | **100 × 100** | stiffness, not strength: a 50 mm ledger sags 3.5 mm under the prop |
+| **Purlin X-brace** | 50 × 100 | **tension-only** — 38.8 kN in tension, but only 9.3 in compression |
 | Levelling course | 50 × 150 | **bought**, not ripped — see below |
 
 ## Members still to make
@@ -41,14 +42,14 @@ but no tie — that is the stair opening.
 |---|---|---|---|
 | rafter | 50 × 150 — ripped from 50 × 250 | 6.00 | 30 |
 | rafter spacer | 50 × 100 — free from the rip | 0.65 | 56 |
-| purlin | 50 × 250 | 6.00 + 4.30 spliced | 2 runs |
+| purlin | 50 × 250 | **4.75 + 5.55** spliced on the frame at −0.40 | 2 runs |
 | ridge purlin | 50 × 250 | 6.00 + 4.30 spliced | 1 run |
 | tie spacer (blocking) | 50 × 100 — free from the rip | 0.60 | 33 |
 | gable panel diagonal | 50 × 250 | 3.60 | 2 |
 | levelling course | 50 × 150 — **bought** | 6.00 | 6 |
 | **TIE** | 100 × 250 | 6.00 | **13** |
-| stair trimmer | 50 × 150 — bought | 1.50 | 1 |
-| stair tail joist | 50 × 150 — bought | 2.00 | 1 |
+| stair trimmer | **100 × 250 — from the 14th tie** | 1.50 | 1 |
+| stair tail joist | **100 × 250 — the 14th tie's own outer 2 m, in place** | 2.00 | 1 |
 | purlin strut | 100 × 100 | 1.94 — bears on the tie | 16 |
 | collar | 50 × 100 — free from the rip | 2.37 | 8 |
 | gable stud | 100 × 100 | 0.30 / 1.38 / 2.46 / 3.54 | 4 each |
@@ -56,6 +57,7 @@ but no tie — that is the stair opening.
 | purlin vertical | 50 × 100 — free from the rip | 1.61 / 1.81 / 2.00 | 16 / 2 / 2 |
 | **knee brace** | 50 × 100 — free from the rip | 0.60, 45° both ends, **seat cut** | **26** |
 | **brace ledger** | **100 × 100 — bought** | 5.82 + 3.18 spliced over a post | **2 runs** |
+| **purlin X-brace** | **50 × 100 — free from the rip** | 2.29, 45°-ish both ends, **tension-only** | **28** |
 
 ## Rafters at 50 × 150
 
@@ -237,7 +239,7 @@ inclusive total by a factor of 1.21.
 
 | Section | Length | **Order** | Metres | Need | Spare | m³ | ex VAT | **incl VAT** |
 |---|---|---|---|---|---|---|---|---|
-| 50 × 150 | 6.0 m | **25** | 150 | 23 | 2 (9%) | 1.125 | 288.22 | 348.75 |
+| 50 × 150 | 6.0 m | **24** | 144 | 22 | 2 (9%) | 1.080 | 276.70 | 334.80 |
 | 100 × 100 | 6.0 m | **24** | 144 | 22 | 2 (9%) | 1.440 | 368.93 | 446.40 |
 | 25 × 100 roof battens | 6.0 m | **86** | 516 | 78 | 8 (10%) | 1.290 | 330.50 | 399.90 |
 | 25 × 50 counter + wall battens | 6.0 m | **98** | 588 | 89 | 9 (10%) | 0.735 | 188.31 | 227.85 |
@@ -355,6 +357,62 @@ easily (0.10 mm) and is the alternative.
 edge meets a tie only every sixth bay. Cut edges falling between ties need noggins.
 The insulation module won this argument over the sheet module — that is a real
 trade, not a free win.
+
+## Purlin X-bracing — buildability first, F19 second
+
+**Owner 2026-08-21.** Each purlin frame is triangulated **across** the building —
+strut plus vertical make a triangle, the collar ties the two sides. **Along** the
+building there is nothing: eight frames joined only by two 50 × 250 purlins is a
+pinned parallelogram. It stands up and then leans over, and the rafters that would
+eventually stop it cannot go on until the purlins are already up.
+
+So this bracing was always going to exist. The only question was whether it was scrap
+that gets binned or a permanent member — and it is free either way.
+
+| | |
+|---|---|
+| 7 bays per slope, frames 1.40 m apart, verticals 1.815 m | diagonal **2.29 m at 52.4°** |
+| Panel force, half the 12.9 kN gable triangle per purlin line | 6.45 kN |
+| Diagonal axial | **10.6 kN** |
+| As **compression**, 50 × 100, λ 159, kc 0.128 | 9.3 kN — **factor 0.88, fails** |
+| As **tension**, net section 80% | 38.8 kN — **factor 3.7** ✓ |
+| Verticals, promoted from 0.06 kN | 8.4 kN — factor 1.74 |
+| Purlin as top chord | 0.52 MPa — nothing |
+| Material, 28 diagonals | **64.2 m of 50 × 100 — free off the rafter rip** |
+
+**Tension-only.** Fit both diagonals of every X; whichever is in tension does the work
+and the other goes slack and buckles harmlessly. **The connection is the design** —
+tension bracing has no bearing to fall back on: about **8 × 6×120 per end**, ~450 screws
+in total, and that is the real cost.
+
+**It has to discharge.** End frames sit at x = ±4.60 against the gable walls at ±4.65,
+so the end panels land on the gables — but that connection has to be as real as the
+rest. Below, the X dumps into the ties, the ties into the wind girder (factor 10.3),
+the girder into the walls.
+
+### Erection — brace each bay before you leave it
+
+1. **Ties bolted down first.** 2 × M14 every end; permanent now, and you stand on them.
+2. **Start at a gable.** The end frame is held by the gable wall for free — that is the
+   anchor for the whole run.
+3. **Stand the next frame and fit its X back immediately.** Never leave a frame standing
+   on the purlin alone overnight.
+4. **The purlin follows the frames.** A 50 × 250 will not span 10.3 m of air waiting for
+   supports.
+5. Work in from one gable, or from both ends toward the middle. Until the second bay is
+   braced a single braced bay carries everything — fine for erection wind, but do not
+   leave it part-braced with weather coming.
+
+### Purlin splice — recut 4.75 + 5.55
+
+The cut list said **6.00 + 4.30**, which puts the joint at x = **+0.85** and the nearest
+frame at **+1.00** — a 50 × 250 lap hanging 150 mm off its support.
+
+**4.75 + 5.55 lands it exactly on the frame at −0.40.** Same two boards, both inside 6 m
+stock, no extra material; it is only which end you cut from. It is also the *only*
+option — for a splice to reach a frame with both pieces under 6 m the frame has to sit
+within ±0.85 m of centre, and −0.40 is the only one that does. Both purlin runs splice
+there; they are 3 m apart across the building, so the joints are not adjacent.
 
 ## Knee braces — now primary supports, not wind braces
 

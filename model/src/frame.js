@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1787333923';
-import { derive, stations, spaced } from './geometry.js?v=1787333923';
+import { allocator } from './stock.js?v=1787380699';
+import { derive, stations, spaced } from './geometry.js?v=1787380699';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -877,6 +877,40 @@ export function buildFrame(p) {
   }
 
   layers.purlins = purlins;
+
+  // --- Longitudinal X-bracing between the purlin frames -------------------
+  // Owner 2026-08-21, and the reason is BUILDABILITY before it is stability.
+  // Each purlin frame is triangulated ACROSS the building — strut plus vertical
+  // make a triangle and the collar ties the two sides. ALONG the building there
+  // is nothing: eight frames joined only by two 50 x 250 purlins is a pinned
+  // parallelogram. It stands up and then leans over, and the rafters that would
+  // eventually stop it cannot go on until the purlins are already up.
+  //
+  // So this bracing was always going to exist — the only question was whether
+  // it was scrap that gets binned or a permanent member. It is free either way
+  // (rafter-rip byproduct), so it stays in, and it also gives F19's gable
+  // triangle a timber path instead of leaving it all on the sheeting.
+  //
+  // TENSION-ONLY. A 50 x 100 over 2.29 m has lambda 159 and kc 0.128: 9.3 kN
+  // against a 10.6 kN panel force, so as a compression member it FAILS. Both
+  // diagonals of each X are fitted and whichever is in tension does the work
+  // (38.8 kN, factor 3.7); the other goes slack and buckles harmlessly.
+  const xb = layer('purlinXBraces');
+  if (pu.xBracing) {
+    const [xw, xd] = pu.xBraceSection;
+    const zBot = tieTop, zTop = puZ - ud / 2;
+    let bi = 0;
+    const nX = (strutXs.length - 1) * 4;
+    for (let i = 1; i < strutXs.length; i++) {
+      const x1 = strutXs[i - 1], x2 = strutXs[i];
+      for (const s of [-1, 1]) {
+        // Both diagonals of the X, in the plane of the purlin line.
+        strut(xb, M('purlinXBraces', bi++, nX), [x1, s * puY, zBot], [x2, s * puY, zTop], xw, xd);
+        strut(xb, M('purlinXBraces', bi++, nX), [x1, s * puY, zTop], [x2, s * puY, zBot], xw, xd);
+      }
+    }
+  }
+  layers.purlinXBraces = xb;
 
   // --- MUST: named separately so each recommendation can be seen alone ----
   const adv = p.advice;

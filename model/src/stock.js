@@ -50,7 +50,10 @@ const QUEUE = [
   // 13 ties at 700 mm centres = 600 mm CLEAR, as built. Down from 16 at 576.
   // THREE BOARDS SPARE, the first real margin this section has had.
   { group: 'ties',            section: '100x250', boards: 13 },
-  { group: 'stairOpening',    section: '50x150',  boards: 1  },
+  // ZERO now. Owner placed a 14th tie at the stair station; cut at y = +1.0 it
+  // yields both the tail joist (its own outer 2 m, already notched into the
+  // wall) and the 1.50 m trimmer. Both in 100 x 250, flush with the ties.
+  { group: 'stairOpening',    section: '100x250', boards: 1  },
   // Stair back in, built entirely from 50 x 150: 2 strings, 40 tread pieces
   // (two per step — a single 150 leaves a 50 mm gap against a 200 going) and
   // the newel. 9 boards, and EUR 14 cheaper than the mixed-section version
@@ -87,6 +90,9 @@ const QUEUE = [
   // something else. frame.js draws them blue unconditionally.
   { group: 'purlinVerticals', section: '50x100_m', boards: 33.4 },
   { group: 'collars',         section: '50x100_m', boards: 19.0 },
+  // 7 bays x 2 diagonals x 2 slopes x 2.29 m. Free off the rafter rip — and it
+  // was always going to be built, as temporary works if not as a member.
+  { group: 'purlinXBraces',   section: '50x100_m', boards: 64.2 },
 
   // 100 x 100 — none owned, so all of this is yellow
   { group: 'struts',          section: '100x100', boards: 8  },

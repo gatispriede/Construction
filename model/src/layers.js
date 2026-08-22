@@ -24,7 +24,7 @@ export const LAYER_GROUPS = [
     'stairOpening', 'stairs',
   ]],
   ['Roof', [
-    'roof', 'rafterSpacers', 'must_rafterStraps', 'purlins',
+    'roof', 'rafterSpacers', 'must_rafterStraps', 'purlins', 'purlinXBraces',
     'reinforce_gableStuds', 'fascia', 'battens',
   ]],
   ['Annotation', [

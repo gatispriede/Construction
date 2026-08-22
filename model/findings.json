@@ -217,15 +217,15 @@
  },
  {
   "id": "F19",
-  "title": "Roof plane relies wholly on the sheeting - screwed at every rib, side laps outstanding",
-  "severity": "medium",
+  "title": "Roof plane: sheeting plus a timber X between the purlin frames",
+  "severity": "low",
   "at": [
    0,
    0,
    6.6
   ],
   "layer": "roof",
-  "one_line": "Owner decision: no corner-to-ridge braces, so the 12.9 kN gable triangle has one path only - the metal sheeting as a diaphragm. Owner confirms 2026-08-21 that every rib is screwed into the battens, which is the condition the finding asked for: 0.81 kN/m demand against 1.50 capacity, factor 1.9. TWO THINGS REMAIN. (1) SIDE LAPS must be stitched sheet-to-sheet - rib screws fix each sheet to the roof, but only stitching makes adjacent sheets act as ONE plate, and unstitched the diaphragm is worth a fraction of 1.50 kN/m. (2) SEQUENCE: until the sheeting is on, the roof plane has nothing, which is exactly when the frame is open and the temporary diagonals may be coming out."
+  "one_line": "DOWN TO LOW 2026-08-21. Two independent paths now. (1) The sheeting: every rib screwed into the battens, 0.81 kN/m against 1.50, factor 1.9 - still stitch the SIDE LAPS or each sheet works alone. (2) NEW - longitudinal X-bracing between the purlin frames, 7 bays per slope, which gives the 12.9 kN gable triangle a timber path that exists BEFORE the sheeting goes on. That was the real gap: 'until the sheeting is on, the roof plane has nothing.' The X was going to be built anyway as temporary works - the purlin frames are triangulated across the building but a pinned parallelogram along it, and the rafters that would stop them leaning cannot go on until the purlins are already up. TENSION-ONLY: 10.6 kN in the diagonal, 38.8 kN in tension (factor 3.7) but only 9.3 kN in compression (factor 0.88), so fit both diagonals and let the tension one work. 8 x 6x120 per end. Free timber off the rafter rip."
  },
  {
   "id": "F20",
