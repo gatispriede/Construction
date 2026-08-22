@@ -21,7 +21,7 @@ packs drop into every bay uncut**. Counts below reflect it: **13 ties, 30 rafter
 | Purlins, ridge | 50 × 250 | rafters bear on them; the depth carries it |
 | Purlin struts | 100 × 100 | 9.3 kN at 2.19 m; 50 × 100 gives factor 1.1 |
 | Collars | 50 × 100 | 2 kN axial, no transverse load — factor 4.4 |
-| Purlin verticals | 50 × 100 | carry 0.06 kN; free from the rips |
+| Purlin verticals | 50 × 100 | **beside the purlin, not under it** — see below |
 | Tie spacers (blocking) | 50 × 100 | tie is too stocky to need restraint — kcrit 1.00 |
 | Rafter spacers | 50 × 100 | not bending members; free from the rips |
 | Ties | 100 × 250 | 6 m span, loft floor — **13 from stock, 2 spare** (the 14th becomes the stair trimmer) |
@@ -54,7 +54,8 @@ but no tie — that is the stair opening.
 | collar | 50 × 100 — free from the rip | 2.37 | 8 |
 | gable stud | 100 × 100 | 0.30 / 1.38 / 2.46 / 3.54 | 4 each |
 | wind girder | 100 × 100 | 6.00 + 1.33 spliced | 4 diagonals |
-| purlin vertical | 50 × 100 — free from the rip | 1.61 / 1.81 / 2.00 | 16 / 2 / 2 |
+| purlin vertical | 50 × 100 — free from the rip | **1.795**, beside the purlin | **16** |
+| gable purlin post | 50 × 100 — free from the rip | 1.86 | 4 |
 | **knee brace** | 50 × 100 — free from the rip | 0.60, 45° both ends, **seat cut** | **26** |
 | **brace ledger** | **100 × 100 — bought** | 5.82 + 3.18 spliced over a post | **2 runs** |
 | **purlin X-brace** | **50 × 100 — free from the rip** | **2.10**, 48.2° both ends, **tension-only** | **28** |
@@ -389,6 +390,52 @@ easily (0.10 mm) and is the alternative.
 edge meets a tie only every sixth bay. Cut edges falling between ties need noggins.
 The insulation module won this argument over the sheet module — that is a real
 trade, not a free win.
+
+## Purlin verticals — beside the purlin, not under it
+
+**Changed 2026-08-21.** The vertical used to stop at the purlin underside. That made
+it a second support, and it does not politely wait its turn — **it is stiffer than the
+strut**, 35.6 kN/mm against 29.0, so it takes 5.1 of the 9.3 kN and delivers it into
+the **middle of a tie**.
+
+That is precisely what F4 struts the purlin to avoid, and the cost is not small:
+
+| | |
+|---|---|
+| Tie, strut carrying the purlin alone | **11.7 mm** |
+| Tie, with a tight vertical under the purlin | **27.1 mm** — over the 24 mm limit |
+
+**So it runs past the purlin to its top face — 1.795 m, not 1.545 — and is screwed to
+the purlin's side.** It keeps both jobs it is actually for and carries no roof load:
+
+1. **Stops the purlin rolling.** A 50 × 250 on edge is 5:1 and wants to lie down. This
+   holds it upright at every frame.
+2. **Anchors the X-brace ends** — 7 × 6×120 in tension each.
+
+### And no notch
+
+A 250 mm rebate down a 50 × 100 to leave a 50 × 50 tongue makes a **re-entrant corner**
+at the shoulder — the one detail EN 1995 6.5.2 singles out, and one this schedule has
+already refused twice (the purlin rabbet, the knee brace seat). Two pieces of different
+height side by side give the same shape with square cuts and no corner, and are better
+than notching *if* you want that form. The tall piece alone is better still, because it
+keeps the vertical out of the load path altogether.
+
+**Do not double them to 100 × 100.** It was considered, to widen a bearing seat, and it
+is wrong twice: the vertical is not supposed to bear, and doubling makes it stiffer, so
+it steals *more* from the strut and makes the tie worse.
+
+### Which leaves the strut head carrying everything — and it was recorded 2× optimistic
+
+The note in the model said the purlin-on-post bearing was **0.93 MPa**, which implies a
+100 × 100 contact — 10 000 mm². **The purlin is only 50 wide.** A 100 × 100 strut head
+can never contact more than **100 × 50 = 5000 mm²**, so the real figure is **1.86 MPa**.
+
+Against fc,90,d 1.73 that is over on its own, and it works only on kc,90 = 1.5 for a
+discrete bearing away from the member end — 2.60, **factor 1.4.** It is now the
+tightest bearing in the roof.
+
+**Cut the strut head square.** A head that touches in two places has no factor at all.
 
 ## Purlin X-bracing — buildability first, F19 second
 

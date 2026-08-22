@@ -270,7 +270,11 @@
   "collarAboveTie": 2.25,
   "_collar": "50x100, dropped from 100x100 2026-08-15. The collar carries about 2 kN axial and nothing else - no transverse load, nothing bears on it. At 2.37 m the 50x100 buckles at 8.7 kN, a factor of 4.4. The strut cannot follow it down: at 2.19 m a 50x100 gives 10.2 kN against a 9.3 kN demand, factor 1.1, so strutSection stays 100x100.",
   "_evened": "Was 5. Raised to 8 so the load lands on 8 of the 9 posts instead of 5: strut post 12.3 -> 9.4 kN, pier 197 -> 151 kPa. Not needed for capacity - needed so a foundation that is staying as-is settles evenly. F17.",
-  "_verticals": "50x100, not 100x100. They carry 0.06 kN - factor 302 even at 50x100. And they come FREE from the levelling-course rip: ripping 50x250 into 50x150 for the wall top leaves 36 m of 50x100 as byproduct, against 25.8 m of verticals needed.",
+  "_verticals": "50x100, running from the tie top PAST the purlin to its top face - 1.795 m, not the 1.545 that stopped at the underside. Owner 2026-08-21. Screwed to the SIDE of the purlin, never under it.",
+  "_whyBesideNotUnder": "A vertical stopping at the purlin underside is a second support, and it does not politely wait its turn - it is STIFFER than the strut (35.6 kN/mm against 29.0), so it takes 5.1 of the 9.3 kN and delivers it into the MIDDLE of a tie. That is precisely what F4 struts the purlin to avoid. It costs the tie 15.4 mm: 11.7 becomes 27.1 against a 24 mm limit, and the loft floor fails. Beside the purlin it carries no roof load and the tie stays at 11.7.",
+  "_stillTwoJobs": "It is not decorative. (1) A 50x250 purlin on edge is 5:1 and wants to roll over; this holds it upright at every frame. (2) The X-brace ends anchor to it, 7 x 6x120 in tension each. Both jobs are done by fixing to the purlin's side - neither needs bearing.",
+  "_noNotch": "AND NO NOTCH. A 250 mm rebate down a 50x100 to make a 50x50 tongue leaves a re-entrant corner at the shoulder - the one detail EN 1995 6.5.2 singles out, and one this project has already refused twice (purlins._rabbet, kneeBraces._notANotch). Two pieces of different height side by side give the same shape with square cuts and no corner, and are better than notching if you want the tongue-and-shoulder form. But the tall piece ALONE is better still, because it keeps the vertical out of the load path entirely.",
+  "_doNotDouble": "DO NOT double these to 100x100. It was considered on 2026-08-21 to widen a bearing seat, and it is the wrong move twice over: the vertical is not supposed to bear, and doubling makes it stiffer, so it steals MORE load from the strut and makes the tie worse.",
   "_strutBearsOn": "Changed to 'tie' 2026-08-15 at owner's request. The struts and the purlin verticals now all sit ON the ties instead of dropping past them onto the wall plate, so the whole purlin frame sits in one plane. The old note - 'a post onto the tie adds 15 mm of sag to a beam already at its limit' - no longer applies: that was a post near MIDSPAN, and the ties were at 1151 mm deflecting 45.6 mm. The strut foot lands 25 mm inside the tie's bearing point, so it adds 0.36 mm. Tie goes 22.8 -> 23.2 mm against a 24 mm limit. Bearing on the tie top is 0.93 MPa against fc,90,d 1.73. The load drops straight through the tie depth into the plate - no bending path at all.",
   "xBracing": true,
   "xBraceSection": [
@@ -285,25 +289,21 @@
   "_xBracePromotes": "It promotes two members. The VERTICALS go from 0.06 kN at a factor of 302 - genuinely throwaway - to 7.21 kN, factor 2.7 at 50x100 over 1.565 m. Still fine, but they now need real fixings top and bottom, not just locating. The PURLIN becomes the top chord at 6.4 kN axial, 0.52 MPa in a 50x250 - nothing.",
   "_xBraceDischarge": "It has to land somewhere at both ends or it is a truss floating in the middle. The end frames sit at x = +-4.60 against the gable walls at +-4.65, so the end panels discharge straight into the gables - but that end connection has to be as real as the rest. Below, the X dumps into the ties, the ties into the wind girder (factor 10.3), the girder into the walls.",
   "_erectionSequence": "BRACE EACH BAY BEFORE YOU LEAVE IT. 1. Ties bolted down first - 2 x M14 every end, permanent now (kneeBraces._endUplift), and you are standing on them. 2. Start at a gable: the end frame is held by the gable wall for free, and that is the anchor for the whole run. 3. Stand the next frame and fit its X back to the previous one IMMEDIATELY - never leave a frame standing on the purlin alone overnight. 4. The purlin FOLLOWS the frames; a 50x250 will not span 10.3 m of air waiting for supports. 5. Work in from one gable, or from both ends toward the middle. Until the second bay is braced a single braced bay carries everything - fine for erection wind, but do not leave it part-braced with weather coming.",
-  "spliceAtFrames": [
-   -3.2,
-   1.0
-  ],
+  "spliceAt": -0.35,
   "ridgePieceLengths": [
-   5.32,
-   5.98
+   5.3,
+   6.0
   ],
-  "ridgeSpliceAtRafter": -0.325,
+  "_cutShortPieceFirst": "TWO BOARDS PER RUN, 5.30 + 6.00, AND THE ORDER MATTERS. 11.30 m from 6 m stock is obviously two boards with 0.70 m off - the owner is right and an earlier 3-piece scheme here was over-cautious, costing a board AND adding two more joints. What the earlier scheme was chasing was a joint over a support, and cutting in the right order gets that for free: run the 5.30 piece from the FRONT and the joint lands at -0.35, which is 50 mm from the purlin frame at -0.40 and 25 mm from the rafter at -0.325. Cut 6.00 first instead and the same joint lands at +0.35 - 650 mm from the nearest frame, out in the middle of a bay. Same two boards, same waste, and the difference is which end you start from. ALL THREE RUNS use the same cut, so 3 x 2 = 6 boards, exactly the six uncut in the yard.",
   "pieceLengths": [
-   2.45,
-   4.2,
-   4.65
+   5.3,
+   6.0
   ],
   "_splice": "THREE PIECES, 3.85 + 4.90 + 2.55, splicing on the frames at -1.80 and +3.10. At an 11.30 m run NO single splice can land on a frame with both pieces under 6 m - that needs a frame within 0.35 m of centre and the nearest is at -0.40 - so the two-piece solution below is dead. Both end pieces run past the gable and carry the 1.05 m verge cantilever unspliced, which is the part that matters. SUPERSEDED NOTE: 4.75 + 5.55, NOT the 6.00 + 4.30 the cut list had. 6.00 + 4.30 puts the joint at x = +0.85 and the nearest frame is at +1.00 - a 50x250 lap hanging 150 mm off its support. 4.75 + 5.55 lands it exactly on the frame at -0.40. Same two boards, both inside 6 m stock, no extra material; it is only which end you cut from. It is also the ONLY option: for a splice to reach a frame with both pieces under 6 m the frame must sit within +-0.85 m of centre, and -0.40 is the only one that does. Both purlin runs splice there - they are 3 m apart across the building, so the joints are not adjacent.",
   "jointType": "housed into the post head, purlin uncut",
   "housingDepth": 0.03,
   "_rabbet": "Owner 2026-08-16: rabbet joint at the purlin/post 90 deg connection. CUT THE POST, NOT THE PURLIN. A rebate on the underside of a beam at a support is the one case EN 1995 6.5.2 singles out - the re-entrant corner starts a shear crack along the grain and it runs. Numbers for a 50x250 purlin at V=4.65 kN: uncut 23.1 kN (factor 5.0), 25 mm rebate 19.6 (4.2), 50 mm 13.0 (2.8), 75 mm 9.8 (2.1). It does not fail on numbers, but three things do not show in that check: the purlin is CONTINUOUS so the notch sits where hogging moment and peak shear coincide and kv is optimistic; the purlin is only 50 mm wide so the corner splits easily when the fixing is driven; and the post head is in pure compression where a housing costs bearing area and nothing else.",
-  "_housingDepth": "30 mm into the 100x100 post head. Bearing check at 9.3 kN: no housing 0.93 MPa, 25 mm 1.24, 40 mm 1.55, all under fc,90,d 1.73 - but 50 mm gives 1.86 and FAILS. Keep the housing at or under 40 mm.",
+  "_housingDepth": "CORRECTED 2026-08-21. The old figures here assumed a 100 x 100 contact under the purlin - 0.93 MPa at 9.3 kN implies 10,000 mm2. The purlin is only 50 WIDE, so a 100x100 strut head can never contact more than 100 x 50 = 5000 mm2, and the real number is 1.86 MPa. Against fc,90,d 1.73 that is over on its own and relies on kc,90 = 1.5 for a discrete bearing away from the member end, giving 2.60 and a factor of 1.4. It works, but it is the tightest bearing in the roof and it has been recorded 2x optimistic since it was written. CUT THE STRUT HEAD SQUARE so it actually delivers that 100 x 50 - a head that touches in two places has no factor at all.",
   "_ifYouRebatePurlin": "If the purlin is rebated anyway: 25 mm maximum (10% of depth); do NOT square the internal corner - drill it to an 8-10 mm radius or taper the cut, because a square re-entrant corner is the crack starter and that is the entire failure mode; keep fixings at least 50 mm clear of the corner."
  },
  "loft": {

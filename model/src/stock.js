@@ -26,20 +26,11 @@ export const OWNED = {
   // 42 are already ripped down to 50 x 150, so they can serve rafters but can
   // never be a purlin or a ridge, which need the full 250 depth.
   //
-  // SECTION is the issue, not availability. And the count is left at 6 on
-  // purpose: 7 are needed, so the model shows the last board's worth of ridge
-  // as yellow, which is exactly the situation.
-  //
-  // The SEVENTH board comes out of the TEMPORARY DIAGONALS — owner 2026-08-21,
-  // they are built from 1 x 50 x 250 and 2 x 50 x 150, and they are not part of
-  // the 48 in the yard because they are up in the frame. Releasing them gives
-  // +1 uncut and +2 ripped, which lands on 7 of 7 with nothing spare.
-  //
-  // That makes F0 a MATERIAL dependency now, not only a stability one: the
-  // diagonals cannot come out until the wind girder and gable panels are in,
-  // and the ridge cannot be cut until they do. The sequence works — the girder
-  // is bought 100 x 100 and the gable panels come off the ripped pile, so
-  // neither touches these six — but it is no longer optional ordering.
+  // SECTION is the issue, not availability. Six uncut boards, and six is exactly
+  // what the roof needs: three runs of 11.30 m, two boards each at 5.30 + 6.00.
+  // The temporary diagonals hold one more (they are 1 x 50x250 and 2 x 50x150),
+  // so there is a spare behind these six once they come down — but nothing in
+  // the roof waits on it.
   '50x250': 6,
   // The 42 already ripped. Tracked apart from bought '50x150' so the fascia and
   // stair do not colour blue off timber that is spoken for.
@@ -90,12 +81,12 @@ const QUEUE = [
   // zero so the 50 x 150 arithmetic still reads, but it draws as standing.
   { group: 'levelling',       section: '50x150',  boards: 0  },
   { group: 'fascia',          section: '50x150',  boards: 8  },
-  // 2.45 + 4.20 + 4.65 per run, splices on the frames at -3.20 and +1.00. The
-  // two 2.45s share a board. NOT the 4-board packing: that splices at -4.60,
-  // which puts a joint at the ROOT of the 1.05 m verge cantilever.
-  { group: 'purlins',         section: '50x250',  boards: 5  },
-  // 5.32 + 5.98, splicing on the rafter at -0.325. The ridge is not tied to the
-  // purlin frames, so it has far more freedom and packs into 2 boards.
+  // 5.30 + 6.00 per run — two boards, 0.70 m off. Cut the SHORT piece first and
+  // the joint lands at -0.35, 50 mm off the frame at -0.40. Cut the 6.00 first
+  // and it lands at +0.35, 650 mm out in a bay. Same boards, same waste.
+  { group: 'purlins',         section: '50x250',  boards: 4  },
+  // Same cut as the purlins: 5.30 + 6.00, joint at -0.35, 25 mm off the rafter
+  // at -0.325. One rule for all three runs.
   { group: 'ridgePurlin',     section: '50x250',  boards: 2  },
   // Dropped to 50 x 150 — the 250 was take-off habit, not a calculation. The
   // back-gable diagonal runs 12.94 kN against 203.54 at 50 x 250, factor 15.7;
@@ -123,7 +114,9 @@ const QUEUE = [
   // them from separate material, deliberately kept out of this order. They
   // used to draw 22.1 m off the rip byproduct — that is now free for
   // something else. frame.js draws them blue unconditionally.
-  { group: 'purlinVerticals', section: '50x100_m', boards: 32.4 },
+  // 16 x 1.795 m — tie top to purlin TOP now, running past the purlin rather
+  // than stopping under it — plus 4 gable posts, which DO bear (no strut there).
+  { group: 'purlinVerticals', section: '50x100_m', boards: 36.1 },
   { group: 'collars',         section: '50x100_m', boards: 18.9 },
   // 4 corner dragon ties, 1.131 m. Free off the rip.
   { group: 'cornerBraces',    section: '50x100_m', boards: 4.6 },
