@@ -40,8 +40,8 @@ but no tie — that is the stair opening.
 
 | member | section | length m | off |
 |---|---|---|---|
-| rafter | 50 × 150 — ripped from 50 × 250 | 6.00 | 30 |
-| rafter spacer | 50 × 100 — free from the rip | 0.65 | 56 |
+| rafter | 50 × 150 — ripped from 50 × 250 | 6.00 | 32 |
+| rafter spacer | 50 × 100 — free from the rip | 0.65 | 60 |
 | purlin | 50 × 250 | **4.75 + 5.55** spliced on the frame at −0.40 | 2 runs |
 | ridge purlin | 50 × 250 | 6.00 + 4.30 spliced | 1 run |
 | tie spacer (blocking) | 50 × 100 — free from the rip | 0.60 | 33 |
@@ -57,7 +57,7 @@ but no tie — that is the stair opening.
 | purlin vertical | 50 × 100 — free from the rip | 1.61 / 1.81 / 2.00 | 16 / 2 / 2 |
 | **knee brace** | 50 × 100 — free from the rip | 0.60, 45° both ends, **seat cut** | **26** |
 | **brace ledger** | **100 × 100 — bought** | 5.82 + 3.18 spliced over a post | **2 runs** |
-| **purlin X-brace** | **50 × 100 — free from the rip** | 2.29, 45°-ish both ends, **tension-only** | **28** |
+| **purlin X-brace** | **50 × 100 — free from the rip** | **2.10**, 48.2° both ends, **tension-only** | **28** |
 
 ## Rafters at 50 × 150
 
@@ -259,9 +259,9 @@ has to be 100 mm thick and not 50.
 
 | Section | Used | Own | |
 |---|---|---|---|
-| 50 × 250 | 38 | 50 | 30 ripped for rafters, 6 roof support, 2 gable diagonals — **12 spare** |
-| 100 × 250 | 13 | 16 | the 13 ties, **3 spare** — real margin at last |
-| 50 × 100 | 124.2 m | 228 m | all from the rafter rip — blocking, spacers, collars, verticals, knee braces |
+| 50 × 250 | 40 | 50 | 32 ripped for rafters, 6 roof support, 2 gable diagonals — **10 spare** |
+| 100 × 250 | 14 | 16 | 13 ties + the stair trimmer, **2 spare** |
+| 50 × 100 | 184.5 m | 228 m | all from the rafter rip — blocking, spacers, collars, verticals, knee braces, X-braces |
 
 ### Sort the 50 × 150 before you cut
 
@@ -371,18 +371,18 @@ that gets binned or a permanent member — and it is free either way.
 
 | | |
 |---|---|
-| 7 bays per slope, frames 1.40 m apart, verticals 1.815 m | diagonal **2.29 m at 52.4°** |
+| 7 bays per slope, frames 1.40 m apart, verticals **1.565 m** | diagonal **2.10 m at 48.2°** |
 | Panel force, half the 12.9 kN gable triangle per purlin line | 6.45 kN |
-| Diagonal axial | **10.6 kN** |
-| As **compression**, 50 × 100, λ 159, kc 0.128 | 9.3 kN — **factor 0.88, fails** |
-| As **tension**, net section 80% | 38.8 kN — **factor 3.7** ✓ |
-| Verticals, promoted from 0.06 kN | 8.4 kN — factor 1.74 |
+| Diagonal axial | **9.67 kN** |
+| As **compression**, 50 × 100, λ 145, kc 0.152 | 11.0 kN — **factor 1.14**, no margin |
+| As **tension**, net section 80% | 38.8 kN — **factor 4.0** ✓ |
+| Verticals, promoted from 0.06 kN | 7.21 kN — factor 2.7 |
 | Purlin as top chord | 0.52 MPa — nothing |
-| Material, 28 diagonals | **64.2 m of 50 × 100 — free off the rafter rip** |
+| Material, 28 diagonals | **58.8 m of 50 × 100 — free off the rafter rip** |
 
 **Tension-only.** Fit both diagonals of every X; whichever is in tension does the work
 and the other goes slack and buckles harmlessly. **The connection is the design** —
-tension bracing has no bearing to fall back on: about **8 × 6×120 per end**, ~450 screws
+tension bracing has no bearing to fall back on: **7 × 6×120 per end**, ~390 screws
 in total, and that is the real cost.
 
 **It has to discharge.** End frames sit at x = ±4.60 against the gable walls at ±4.65,

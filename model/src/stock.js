@@ -1,7 +1,12 @@
 // What you already own, and therefore what the model can colour blue.
 //
-// Blue  = the material for this piece is in the yard right now.
-// Yellow = you have to buy it before this piece can exist.
+// Blue   = the material is IN THE YARD.
+// Yellow = the material is ON ORDER — placed 2026-08-21, not yet delivered.
+//
+// The logic did not change when the order went in, only the label: yellow has
+// always meant "not covered by owned stock", and everything in that bucket is
+// now bought rather than merely needed. Quantities below were RERUN off the
+// model geometry on 2026-08-21 rather than carried forward by hand.
 //
 // Sections do not map one-to-one onto members, so stock has to be ALLOCATED.
 // Within a section every board is interchangeable, so "which 22 of the 42
@@ -70,7 +75,7 @@ const QUEUE = [
   // where the yard runs out. At 50 x 150 they still take one board each.
   // 30, down from 38: the rafters follow the tie setout, and 700 mm centres
   // over 9.30 m is 15 lines where 576 mm gave 19.
-  { group: 'rafters',         section: '50x250',  boards: 30 },
+  { group: 'rafters',         section: '50x250',  boards: 32 },
 
   // 50 x 100 — 36 m of rip byproduct
   // Blocking moved here from 50 x 250 — it is 50 x 100 now, and free.
@@ -83,19 +88,19 @@ const QUEUE = [
   { group: 'kneeBraces',      section: '50x100_m', boards: 15.6 },
   // Queued explicitly now. They were drawn blue unconditionally, which meant
   // 37.3 m of 50 x 100 sat outside the take-off entirely.
-  { group: 'rafterSpacers',   section: '50x100_m', boards: 36.4 },
+  { group: 'rafterSpacers',   section: '50x100_m', boards: 39.0 },
   // The 15 girt-to-corner wall braces are NOT queued: owner is supplying
   // them from separate material, deliberately kept out of this order. They
   // used to draw 22.1 m off the rip byproduct — that is now free for
   // something else. frame.js draws them blue unconditionally.
-  { group: 'purlinVerticals', section: '50x100_m', boards: 33.4 },
-  { group: 'collars',         section: '50x100_m', boards: 19.0 },
+  { group: 'purlinVerticals', section: '50x100_m', boards: 32.4 },
+  { group: 'collars',         section: '50x100_m', boards: 18.9 },
   // 7 bays x 2 diagonals x 2 slopes x 2.29 m. Free off the rafter rip — and it
   // was always going to be built, as temporary works if not as a member.
-  { group: 'purlinXBraces',   section: '50x100_m', boards: 64.2 },
+  { group: 'purlinXBraces',   section: '50x100_m', boards: 58.8 },
 
   // 100 x 100 — none owned, so all of this is yellow
-  { group: 'struts',          section: '100x100', boards: 8  },
+  { group: 'struts',          section: '100x100', boards: 6  },
   { group: 'gableStuds',      section: '100x100', boards: 7  },
   { group: 'windGirder',      section: '100x100', boards: 6  },
   // The brace ledger. 100 x 100 because it SPANS between the posts - a 50 mm
