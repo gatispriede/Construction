@@ -66,7 +66,8 @@ const QUEUE = [
   { group: 'stair',           section: '50x150',  boards: 9  },
 
   // 50 x 250 — 40 boards
-  { group: 'levelling',       section: '50x150',  boards: 6  },
+  // Long walls only now — the gables get no levelling course. 18.6 m, 4 boards.
+  { group: 'levelling',       section: '50x150',  boards: 4  },
   { group: 'fascia',          section: '50x150',  boards: 7  },
   { group: 'purlins',         section: '50x250',  boards: 4  },
   { group: 'ridgePurlin',     section: '50x250',  boards: 2  },

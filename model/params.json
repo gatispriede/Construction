@@ -48,7 +48,9 @@
   "plannedTopCourse": 0.05,
   "measuredTimberHeight": 3.44,
   "_girtNote": "Girt bottom at 60% of the post height above the sill, photo-read from 20260814_155048.jpg and _155004.jpg where it sits clearly above mid-height (roughly 57-64% in two views). Was 1.50 m, which put it at 34%.",
-  "_plannedTopCourse": "50 mm levelling course, ripped from 50x250 into 50x150 (wall width) with 50x100 as byproduct. Let into the existing wall top, not stacked on it. 6 boards."
+  "topCourseOnGables": false,
+  "topCourseInstalled": "long walls, 2026-08-21",
+  "_plannedTopCourse": "50 mm levelling course, 50x150, let into the existing wall top rather than stacked on it. INSTALLED on the two LONG WALLS, owner 2026-08-21 - this is no longer a planned member on those runs. NOT on the gables: the end ties bear on the gable plate for their whole 6 m and drop into it, so a 50 mm course there has nothing left to level. 2 runs of 9.30 m = 18.6 m, 4 boards, against 30.6 m and 6 for all four walls. The order is already placed, so the 2 boards are spare, not a saving."
  },
  "sections": {
   "post": [
@@ -148,7 +150,12 @@
    11
   ],
   "_spliceClash": "RECOMPUTED 2026-08-21 for the 600 mm setout, and it got tighter. Plate splices are as-built and do not move: lower -0.65, upper -1.65, +1.35, +3.35. Ties now land at -1.60 and +1.40 - 50 mm from an upper-layer splice, against 72 and 79 mm before. EN 1995 wants 7d = 98 mm end distance for a loaded M14. It is still not critical for the same reason as before: the LOWER layer is continuous at both of those stations (its only splice is at -0.65, a metre away), so the load has a path. Two things make it less of a problem than it looks: the tie-to-wall connection is now a bracket pair, not the 2 x M14 through-rod that F16a was written about, and the rafter-seat M14 goes rafter-to-tie, not into the plate. STILL strap those two splices (F16 detail, 4 x 6x200 each side, staggered over 600 mm) BEFORE the ties go down.",
-  "endNotch": 0.05,
+  "endNotch": 0.03,
+  "_endNotch": "30 mm, not 50 - owner 2026-08-21. The tie is let into the 50 mm LEVELLING COURSE, not down into the plate below it, so the 185 mm plate course keeps its full depth and there is 20 mm of levelling course still under the tie. The tie therefore sits 20 mm HIGHER than the model had it, not lower. Everything keyed to it moves up 20 mm: tie top 3.840 -> 3.860, loft floor 3.880 -> 3.900, brace ledger 3.166 -> 3.186. Loft headroom loses 20 mm (3.889 -> 3.869 at the centre) and the stair riser gains 1 mm (175.2 -> 176.2 over 21). Nothing near a limit moves.",
+  "cantilever": 0.05,
+  "_cantilever": "COGGED LIP, owner 2026-08-21, and it is a better detail than the one it replaces. The ties came in at roughly 6.15-6.20 m against a 6.00 m building, and rather than trim them flush the owner is cutting so about 50 mm is left projecting past each OUTER wall face, dropped below the bearing plane so it HOOKS OVER the wall. That gives the rafter-thrust spread a path in BEARING ON WOOD instead of through fasteners: 3.80 kN per tie end at 700 mm spacing, on a 50 x 100 lip, is 0.76 MPa against fc,90,d 1.73 (factor 2.3) and 0.76 against fv,d 2.77 in shear along the tie (factor 3.6). Deeper is better and nearly free while you have the saw out - 60 mm gives 2.7, 80 mm gives 3.6.",
+  "_lipDoesNotDoUplift": "THE LIP DOES NOT HOLD THE TIE DOWN. It stops the walls SPREADING; it does nothing against the tie lifting off, and uplift is no longer a wind-only case - the knee-brace props take more than the whole floor, so the tie ends carry 4.01 kN of permanent uplift (stability.md). The 2 x M14 at every tie end stay MANDATORY, factor 3.5. A lip is not a substitute for a hold-down and it would be easy to think it was.",
+  "_lipMeetsTheCladding": "26 lips project 50 mm past the outer wall face, right at the head of the wall and squarely in the rainscreen plane - the wall battens are 25 x 50 on that face. Do NOT notch the cladding around 26 of them; that is 26 details and 26 places for water to get behind. Stop the cladding below the tie line and close the head with one continuous trim or soffit above it. One horizontal line instead of 26 cut-outs. The lips themselves are fine for weather - the eaves overhang 0.53 m horizontally, so they sit well inside the drip line.",
   "installed": false
  },
  "plateOverhang": {

@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1787381850';
-import { derive, stations, spaced } from './geometry.js?v=1787381850';
+import { allocator } from './stock.js?v=1787382380';
+import { derive, stations, spaced } from './geometry.js?v=1787382380';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -278,13 +278,20 @@ export function buildFrame(p) {
   // Planned 5 cm course, let into the top of the existing wall rather than
   // stacked on it, and stopping at the wall — it does not run out over the
   // gable the way the plate below it does.
+  // LONG WALLS ONLY, owner 2026-08-21 — and it is already in. The gables get
+  // no levelling course: the end ties bear on the gable plate for their whole
+  // 6 m, and once they drop into it there is nothing left of a 50 mm course to
+  // level anything with. Two runs, not four: 18.6 m instead of 30.6 m.
   const ptc = p.heights.plannedTopCourse;
   if (ptc > 0) {
     const z = d.plateTop - ptc / 2;
+    const n = p.heights.topCourseOnGables ? 4 : 2;
     let lv = 0;
-    for (const y of [-wy(tw), wy(tw)]) bar(plates, M('levelling', lv++, 4), [0, y, z], [L, tw, ptc]);
-    bar(plates, M('levelling', lv++, 4), [wx(tw), 0, z], [tw, W, ptc]);
-    bar(plates, M('levelling', lv++, 4), [-wx(tw), 0, z], [tw, W, ptc]);
+    for (const y of [-wy(tw), wy(tw)]) bar(plates, M('levelling', lv++, n), [0, y, z], [L, tw, ptc]);
+    if (p.heights.topCourseOnGables) {
+      bar(plates, M('levelling', lv++, n), [wx(tw), 0, z], [tw, W, ptc]);
+      bar(plates, M('levelling', lv++, n), [-wx(tw), 0, z], [tw, W, ptc]);
+    }
   }
   layers.plates = plates;
   // --- Plate splices ------------------------------------------------------
