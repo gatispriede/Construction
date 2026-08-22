@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1787387175';
-import { derive, stations, spaced } from './geometry.js?v=1787387175';
+import { allocator } from './stock.js?v=1787387340';
+import { derive, stations, spaced } from './geometry.js?v=1787387340';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -872,28 +872,34 @@ export function buildFrame(p) {
     // REACTION, the vertical component, 6.89 kN. Redone: the vertical takes
     // 3.80 kN and the tie goes 11.7 -> 23.1 mm against 24. It passes.
     //
-    // The head is a BOLSTER — a 50 x 100 laid FLAT on the column, running along
-    // under the purlin. Owner 2026-08-21, and it beats every head detail tried
-    // before it because it wins on both checks for the same reason: it is
-    // crushed ACROSS its grain, so it is deliberately soft.
+    // TWO verticals of different heights, both standing on the tie. Owner
+    // 2026-08-21, sketched. They do different jobs and only one is a support.
     //
-    // BEARING: contact on the purlin underside goes from 100 x 50 to 300 x 50,
-    // 0.18 MPa against 1.73 — factor 9.6, up from 2.2.
-    // TIE: E90 is E/30, so the bolster is 37 kN/mm in through-thickness
-    // compression. In series with the column's 38 that gives 18.8, the
-    // vertical's share of the purlin reaction falls 59% -> 39%, and the tie
-    // drops from 23.8 to 19.9 mm. The soft layer sheds load onto the strut,
-    // which is exactly where F4 wants it.
+    // SHORT — stops under the purlin and BEARS. It must lie 100 mm ALONG the
+    // building and 50 across: that gives 100 x 50 = 5000 mm2 under the 50 wide
+    // purlin. Turned the other way it is 50 x 50 = 2500 and the factor falls
+    // from 2.2 to 1.1. The orientation is the whole detail.
     //
-    // DO NOT stiffen this joint. Doubling the column, or a full-height T, does
-    // the opposite of what is wanted here.
-    const blockH = pu.bolster ? pu.bolster[2] : 0;
-    const vertH = postH - blockH;
+    // TALL — sits BESIDE the purlin and runs past it to the top face. It holds
+    // a 5:1 purlin upright and anchors the X-brace ends. It is NOT under the
+    // purlin, so it adds no stiffness and steals no load from the strut.
+    //
+    // BOLSTER on the short one: 50 x 100 laid flat, 300 long. Crushed across
+    // the grain it is soft, which both spreads the seat (0.18 MPa, factor 9.7)
+    // and sheds the vertical's share 56% -> 39%, dropping the tie to 19.8 mm.
+    const bolT = pu.bolster ? pu.bolster[2] : 0;
+    const shortH = postH - bolT;
+    const tallH = postH + ud;
+    const [pw, pd] = [0.1, 0.05];              // 100 ALONG the building, 50 across
     for (const s of [-1, 1]) {
-      bar(purlins, M('purlinVerticals', vi++, nVert), [x, s * puY, tieTop + vertH / 2], [nw, nd, vertH]);
-      if (blockH) {
+      bar(purlins, M('purlinVerticals', vi++, nVert), [x, s * puY, tieTop + shortH / 2], [pw, pd, shortH]);
+      if (bolT) {
         bar(purlins, M('purlinVerticals', vi++, nVert),
-            [x, s * puY, tieTop + vertH + blockH / 2], pu.bolster);
+            [x, s * puY, tieTop + shortH + bolT / 2], pu.bolster);
+      }
+      if (pu.tallVertical) {
+        bar(purlins, M('purlinVerticals', vi++, nVert),
+            [x, s * (puY - (uw + pd) / 2 - 0.0), tieTop + tallH / 2], [pw, pd, tallH]);
       }
     }
     // 2. Collar tying the two purlin lines together, so the pair cannot sway

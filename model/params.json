@@ -270,6 +270,13 @@
   "collarAboveTie": 2.25,
   "_collar": "50x100, dropped from 100x100 2026-08-15. The collar carries about 2 kN axial and nothing else - no transverse load, nothing bears on it. At 2.37 m the 50x100 buckles at 8.7 kN, a factor of 4.4. The strut cannot follow it down: at 2.19 m a 50x100 gives 10.2 kN against a 9.3 kN demand, factor 1.1, so strutSection stays 100x100.",
   "_evened": "Was 5. Raised to 8 so the load lands on 8 of the 9 posts instead of 5: strut post 12.3 -> 9.4 kN, pier 197 -> 151 kPa. Not needed for capacity - needed so a foundation that is staying as-is settles evenly. F17.",
+  "tallVertical": true,
+  "verticalSection": [
+   0.1,
+   0.05
+  ],
+  "_verticalOrientation": "100 mm ALONG the building, 50 across - and this is the whole detail, not a preference. The short piece under the purlin gives 100 x 50 = 5000 mm2 of seat under a purlin that is only 50 wide. Turned the other way it is 50 x 50 = 2500, the bearing goes 0.77 -> 1.54 MPa and the factor 2.2 -> 1.1. Same board, same cut, one turn of the wrist.",
+  "_twoVerticals": "TWO per purlin per frame, different heights, both standing on the tie - owner 2026-08-21. SHORT stops under the purlin and bears. TALL sits BESIDE it and runs past to the purlin top: it holds a 5:1 purlin upright and anchors the X-brace ends, and because it is not under the purlin it adds no stiffness and steals no load from the strut. That separation is the point - one piece supports, the other restrains, and neither compromises the other.",
   "bolster": [
    0.3,
    0.1,
