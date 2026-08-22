@@ -217,7 +217,7 @@ the birdsmouth does nothing for it.
 
 | section | need | have | **buy** |
 |---|---|---|---|
-| 50 × 250 × 6 m | 38 | 50 (40 free + 10 in temporary bracing) | **0** — 12 spare |
+| 50 × 250 × 6 m | 46 | **48 counted 2026-08-21** | **0** — 2 spare |
 | 50 × 150 × 6 m | 39.1 m | 0 | **7** |
 | 100 × 250 × 6 m | 13 ties | 16 | **0** — 3 spare |
 | 100 × 100 × 6 m | 20 | 0 | **20** |
@@ -225,9 +225,16 @@ the birdsmouth does nothing for it.
 | 25 × 100 battens | 433 m | 140 m @ 20 mm | **293 m** |
 | 25 × 50 counter-battens | 188.8 m | 0 | **188.8 m** |
 
-The 10 boards holding the temporary diagonals cannot be released until the wind
-girder and gable panels are in — which is why rafters sit at the tail of the
-allocation queue in `model/src/stock.js`, and why the last rafters show yellow.
+**48 counted in the yard, 2026-08-21 — not the 50 previously carried, and 46 are
+committed.** That is a margin of **2 boards** on the section that does the most work
+in the building. It used to be 12. Two things ate it: the 1 m verge added 4 rafters
+and 2 purlin/ridge pieces, and the count came in 2 short.
+
+Some of those 48 are still holding the **temporary diagonals**, and they cannot be
+released until the wind girder and gable panels are in (F0). So the boards are owned
+but not all available yet — which is why rafters sit at the tail of the allocation
+queue in `model/src/stock.js`. **Sort and count before cutting rafters**, because at
+2 spare there is no room for a board that turns out to be unusable.
 
 ## Buy — order this
 
@@ -267,7 +274,7 @@ has to be 100 mm thick and not 50.
 
 | Section | Used | Own | |
 |---|---|---|---|
-| 50 × 250 | 46 | 50 | 36 rafters, 8 purlin/ridge, 2 gable diagonals — **4 spare** |
+| 50 × 250 | 46 | **48** | 36 rafters, 8 purlin/ridge, 2 gable diagonals — **2 spare** |
 | 100 × 250 | 14 | 16 | 13 ties + the stair trimmer, **2 spare** |
 | 50 × 100 | 184.5 m | 228 m | all from the rafter rip — blocking, spacers, collars, verticals, knee braces, X-braces |
 

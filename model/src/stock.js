@@ -21,10 +21,11 @@
 // still the first thing to buy.
 
 export const OWNED = {
-  // 40 free, plus 10 currently holding the temporary diagonals. Those 10 cannot
-  // be released until the wind girder and gable panels are in, so they are only
-  // good for late work — which is why rafters sit at the tail of the queue.
-  '50x250': 50,
+  // COUNTED 2026-08-21: 48, not the 50 previously carried. Some of these are
+  // still holding the temporary diagonals and cannot be released until the wind
+  // girder and gable panels are in (F0) — which is why rafters sit at the tail
+  // of the queue. 46 are committed, so the margin is 2 boards, not 4.
+  '50x250': 48,
   '100x250': 16,
   '100x100': 0,   // struts, gable studs, wind girder, stair newel
   // ZERO. Every 50 x 150 is BOUGHT — levelling course, stair trimmer and tail
