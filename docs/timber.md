@@ -6,7 +6,8 @@ temporary and cannot come out until the permanent bracing is in, so they are not
 **Re-set out at 700 mm centres — 600 mm CLEAR — 2026-08-21, AS BUILT.** The wall was
 re-measured along the tie run at **9.30 m** front outer edge to back outer edge, and
 the owner has set the ties out at 700 mm centres so the **600 × 1000 mm insulation
-packs drop into every bay uncut**. Counts below reflect it: **13 ties, 30 rafters**.
+packs drop into every bay uncut**. Counts below reflect it: **13 ties, 36 rafters** — 18 pairs, 14 beside a tie
+and 2 verge lines at each end.
 
 > **This spacing only passes because the knee braces are now structural props.**
 > On a plain 6 m span the loft floor runs 27.3 mm against a 24 mm limit. Propped by
