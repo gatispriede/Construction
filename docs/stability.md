@@ -105,20 +105,20 @@ member fixed to the posts.
 | ledger fixing, withdrawal at each post | 7.31 kN | 24.00 kN | **3.3** | both braces of the bay pulling at once, 8 x 200 partial thread |
 | brace foot bearing on the ledger seat | 0.73 MPa | 2.60 MPa | **3.6** | 100 mm seat, across the grain |
 | portal path, whole transverse shear | 48.55 kN | 77.22 kN | **1.6** | 13 braced bays x 5.9 kN - this is the path that does not depend on the front gable |
-| post, frame moment at the knee | 4.74 kNm | 11.15 kNm | **2.4** | pinned base, rigid corner |
+| post, frame moment at the knee | 4.78 kNm | 11.15 kNm | **2.3** | pinned base, rigid corner |
 | post, out-of-plane bending between sill and plate | 1.06 MPa | 16.62 MPa | **15.7** | 1162 mm apart, 150 mm wall |
 | loft deck diaphragm, unit shear | 4.05 kN/m | 9.33 kN/m | **2.3** | 6x100 at 150 mm on panel EDGES. At the 300 mm the schedule used to say, it is 4.7 kN/m and a factor of 1.2 |
 | deck chord force in the edge tie | 9.41 kN | 242.31 kN | **25.8** | the two edge ties are the chords - the SPLICES carry this |
 | back gable, force per built diagonal | 12.94 kN | 203.54 kN | **15.7** | 4 diagonals, timber is fine - the ENDS are not specified |
 | front gable pier, overturning on its pile group | 41.75 kNm | 18.00 kNm | **0.4** | 3 m opening leaves two 1.5 m piers at 2.3:1. 3 piles a side counting the corner - two would give 12 kNm. Tributary half-share assumed; see the note |
 | jamb pile, vertical from the entrance header | 3.46 kN | 28.00 kN | **8.1** | the job the jamb piles actually do - and they now do it on a pile instead of on a slab that heaves (F8, F23) |
-| sway at tie level, portal only, deck ignored | 12.82 mm | 12.08 mm | **0.9** | characteristic wind, H/250; = H/236 |
+| sway at tie level, portal only, deck ignored | 13.12 mm | 12.16 mm | **0.9** | characteristic wind, H/250; = H/232 |
 | roof sheeting as a diaphragm (F19) | 0.81 kN/m | 1.50 kN/m | **1.9** | no roof-plane braces: the sheeting is the only path |
 | wind girder diagonal, 100x100 | 12.57 kN | 129.35 kN | **10.3** | restrained every 700 mm along it, kc 0.89 |
 | long wall, force per built diagonal | 10.59 kN | 203.54 kN | **19.2** | 4 per wall, end bays - ends again unspecified |
-| overturning across the ridge, self weight alone | 243.29 kNm | 201.57 kNm | **0.8** | self weight 75 kN at 0.9 |
-| hold-down needed per windward pile | 0.77 kN | 8.00 kN | **10.4** | 9 piles down the windward wall - this is F6, and now it has a number |
-| overturning along the ridge | 127.21 kNm | 312.43 kNm | **2.5** | the long way is never the problem |
+| overturning across the ridge, self weight alone | 243.29 kNm | 209.67 kNm | **0.9** | self weight 78 kN at 0.9 |
+| hold-down needed per windward pile | 0.62 kN | 8.00 kN | **12.9** | 9 piles down the windward wall - this is F6, and now it has a number |
+| overturning along the ridge | 127.21 kNm | 325.00 kNm | **2.6** | the long way is never the problem |
 | sliding, shear per pile connection | 2.56 kN | 20.00 kN | **7.8** | 26 piles, M14 anchor in single shear |
 | net uplift per rafter foot | 1.88 kN | 8.00 kN | **4.2** | strap per F3/F6 |
 | tie deflection, braces propping it | 12.04 mm | 24.00 mm | **2.0** | 27.3 mm unpropped; 3.0 where a foot lands on a post |
@@ -141,9 +141,9 @@ ends (F10) the joint slip dominates and a braced gable panel comes out no
 stiffer than a handful of portals, so the real split is nothing like 50/50. It
 cannot be computed properly until those joints are specified.
 
-**Overturning across the ridge, 0.8** — 75 kN of building against 243 kNm of
-overturning leaves a 42 kNm shortfall, which is 7 kN spread over the 9 piles
-down the windward wall. **0.8 kN each.** Any real sill-to-pile anchor covers it
+**Overturning across the ridge, 0.9** — 78 kN of building against 243 kNm of
+overturning leaves a 34 kNm shortfall, which is 5.6 kN spread over the 9 piles
+down the windward wall. **0.6 kN each.** Any real sill-to-pile anchor covers it
 many times over; no anchor at all does not. This is F6, and it is why F6 is not
 optional.
 

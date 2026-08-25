@@ -109,7 +109,9 @@ VBt = FB_wall + FB_tri
 
 # --- Dead load, for overturning ------------------------------------------
 # Lower-bound on purpose: light where light is unfavourable.
-G_roof = 0.25 * (2 * slopeHalf + 2 * P['roof']['tailSlopeLength']) * (L + 1.0)
+# Roof plan length is the RIDGE, not the walls: the verge went back to 1.0 m
+# each end on 2026-08-21, so this is 11.30 and not 10.30.
+G_roof = 0.25 * (2 * slopeHalf + 2 * P['roof']['tailSlopeLength']) * P['roof']['ridgeLength']
 G_deck = 0.12 * L * Wd
 G_ties = 0.1 * 0.25 * Wd * (nTies - 1) * RHO_TIMBER
 perM = (2 * 0.15 * h['sillCourse'] + 2 * 0.15 * h['plateCourse']
@@ -244,7 +246,7 @@ check(A, 'sway at tie level, portal only, deck ignored', sway,
 
 # === B. Along the ridge ==================================================
 V_long = VBt * GQ
-roofPlane = 2 * slopeHalf * (L + 1.0)
+roofPlane = 2 * slopeHalf * P['roof']['ridgeLength']
 check(B, 'roof sheeting as a diaphragm (F19)', FB_tri * GQ / 2 / (2 * slopeHalf),
       1.5, 'kN/m', 'no roof-plane braces: the sheeting is the only path')
 diag = math.hypot(L / 2, Wd)
