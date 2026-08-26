@@ -76,7 +76,8 @@ const QUEUE = [
   { group: 'stair',           section: '50x150',  boards: 9  },
 
   // 50 x 250 — 40 boards
-  // Long walls only now — the gables get no levelling course. 18.6 m, 4 boards.
+  // Long walls only now — the gables get no levelling course. It runs out 1.0 m
+  // over each gable with the plate under it, so 2 x 11.30 = 22.6 m, 4 boards.
   // INSTALLED 2026-08-21 — it is fabric now, not stock. Left in the queue at
   // zero so the 50 x 150 arithmetic still reads, but it draws as standing.
   { group: 'levelling',       section: '50x150',  boards: 0  },

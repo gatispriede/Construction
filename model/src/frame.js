@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1787743777';
-import { derive, stations, spaced } from './geometry.js?v=1787743777';
+import { allocator } from './stock.js?v=1787744018';
+import { derive, stations, spaced } from './geometry.js?v=1787744018';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -281,7 +281,7 @@ export function buildFrame(p) {
   // LONG WALLS ONLY, owner 2026-08-21 — and it is already in. The gables get
   // no levelling course: the end ties bear on the gable plate for their whole
   // 6 m, and once they drop into it there is nothing left of a 50 mm course to
-  // level anything with. Two runs, not four: 18.6 m instead of 30.6 m.
+  // level anything with. Two runs, not four: 22.6 m instead of 34.6 m.
   const ptc = p.heights.plannedTopCourse;
   if (ptc > 0) {
     const z = d.plateTop - ptc / 2;
@@ -568,7 +568,7 @@ export function buildFrame(p) {
   layers.braceLedger = ledger;
 
   // 45 deg, ledger top up to the tie underside — 600 mm, so the foot lands
-  // 104 mm below the plate courses and delivers its thrust into the POSTS.
+  // 84 mm below the plate courses and delivers its thrust into the POSTS.
   //
   // The wind girder fixes LONGITUDINAL racking. Across the width, posts + ties
   // + sills are a rectangle with pinned corners, i.e. a mechanism, resisted
