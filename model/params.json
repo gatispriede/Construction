@@ -469,12 +469,12 @@
   "_section": "50x100, free. Ripping 42 rafters from 50x250 down to 50x150 throws off 252 m of 50x100; the 80 spacers need 42 m of it. They are not bending members - they hold the rafters upright and tie them together - so 100 deep is ample."
  },
  "stair": {
-  "atX": -2.5,
+  "atX": 3.8,
   "openingWidth": 1.3,
   "_which": "The CLOSE-OUT BAY at the back, between the tie at +3.20 and the end tie at +4.60. The station at +3.80 is set out but carries no tie - only the rafter beside it and the tail joist that closes the deck past the opening. The end tie sits at +4.60 and the gable wall at +4.65, so the opening's far edge IS the end wall: the stair runs tight against it and the middle of the loft floor stays clear. Owner decision 2026-08-15, re-set out on the 600 mm grid 2026-08-21.",
   "_openingWidth": "1.30 m clear, 1.40 m centre to centre. Was 1.051 m. It got wider for free: the 200 mm that 9.20 m leaves over after thirteen 600 mm bays lands here. Owner asked for 1.20 m minimum for the stair - this beats it by 100 mm.",
-  "openingLength": 2.385,
-  "openingFromY": -1.155,
+  "openingLength": 2.65,
+  "openingFromY": -1.42,
   "trimmerSection": [
    0.1,
    0.25
@@ -490,14 +490,14 @@
   "_structure": "Tail joist 1.9 m delivers 1.09 kN to the trimmer; the trimmer spans 1.151 m between J14 and J16 at 1.7 MPa against 14.8. The rafter at J15 loses its tie, so its 0.98 kN thrust goes into the plate instead - plate bending about the vertical axis is 0.41 MPa. Both negligible.",
   "_tailJoist": "50x150, not 100x250 - changed 2026-08-15. Over its 1.9 m span it runs 2.77 MPa against 14.8 and deflects 2.3 mm final against a 7.6 mm limit. It is a FLOOR JOIST, not a rafter tie: the tie at J15 is gone entirely and that rafter's thrust already goes into the plate. Trimmer and tail joist together are 3.05 m, so both come out of one ripped 50x250 - which removes 100x250 from the order completely.",
   "flight": {
-   "risers": 19,
+   "risers": 20,
    "going": 0.265,
    "width": 0.9,
    "treadThickness": 0.05,
    "startY": -3.0,
    "floorLevel": 0.2,
    "_status": "SHOWN IN RED, NOT IN THE TAKE-OFF. It bears on a concrete floor that is not poured yet - that comes after the roof is on. Drawn only to check it clears the opening and the rafters. stock.js does not know about it.",
-   "_geometry": "19 risers at 195 mm over the 3.700 m rise, 265 mm going. LOWER flight 6 risers running +x from the front inner face at -4.50, against the -y wall. LANDING at 1.368 m, 1.125 x 0.900. UPPER flight 13 risers running +y from -1.95 to +1.23, in the tie gap at x -2.95 to -2.05. Turn is to the LEFT facing into the building.",
+   "_geometry": "20 risers at 185 mm over the 3.700 m rise, 265 going. LOWER flight 7 risers running +x from x 1.76 to the landing at 3.35, against the -y wall. LANDING 900 x 900 at 1.495 m. UPPER flight 13 risers running +y from -1.95 to +1.23, in the omitted-tie gap at x 3.35-4.25.",
    "stringSection": [
     0.05,
     0.15
@@ -524,21 +524,21 @@
    "_allOneSection": "Owner 2026-08-16: build the whole stair from 50x150 and put it back in the order. Works, and it comes out EUR 14 CHEAPER than the mixed-section version (125.55 against 139.50) because 0.90 m tread pieces nest 6 to a board while 50x250 treads waste a third of every board. One section instead of three.",
    "_treadsDoubled": "TWO 50x150 per tread, butted - 300 mm deep. A SINGLE 150 board does not work: the going is 200 mm, so one board leaves a 50 mm GAP between consecutive treads and drops the effective going to 150. Open risers need treads to OVERLAP by at least 16 mm. Doubled gives 100 mm of overlap. 40 pieces for 20 treads.",
    "_newel150": "50x150 newel carries it: the strings' mid-span reaction is about 7.1 kN and even on the weak axis (lambda 127.5, kc 0.195) capacity is 21.2 kN, factor 3.0. 100x100 would give 12.9 but needs a section bought for one 1.84 m piece.",
-   "risersLower": 6,
+   "risersLower": 7,
    "risersUpper": 13,
-   "rise": 0.1947,
-   "landingLevel": 1.368,
+   "rise": 0.185,
+   "landingLevel": 1.495,
    "landingX": [
-    -3.175,
-    -2.05
+    3.35,
+    4.25
    ],
    "landingY": [
     -2.85,
     -1.95
    ],
    "flight1X": [
-    -4.5,
-    -3.175
+    1.76,
+    3.35
    ],
    "flight2Y": [
     -1.95,
@@ -548,11 +548,11 @@
    "_landingIsOversize": "The landing is 1.125 m in x, not 900. Flight 1 needs only 5 goings = 1.325 m of its 1.55 m of available run, so the 225 mm left over goes into the landing rather than being lost. A bigger landing at a turn is never wrong, and it is below the loft so it costs no opening.",
    "_supersededStraight": "SUPERSEDED 2026-08-24 by the quarter-turn. STAYS STRAIGHT. A turn was considered and rejected: the scarce dimension is the 6 m width, and a landing eats the same 3.85 m the flight needs. Every landing variant came out at 170-209 mm going against 196 mm straight - no better, mostly worse. And a turn is precisely what stops you carrying sheets: a 2.5 m board can round a right angle between 1.2 m widths only ON EDGE, which needs 2.5 m of headroom, and a mid-height landing has 2.04 m under the loft floor. Straight is better for both the pitch and the boards.",
    "newels": 2,
-   "_newels": "TWO now, and for different reasons. One at the TURN, carrying the landing corner. One MID-FLIGHT on the upper flight, because a housed 50x150 string over its 4.07 m still deflects about 34 mm against a 13.6 mm limit - the same failure the straight stair had at 5.44 m, just less of it. The LOWER flight needs none: its string is 1.77 m and comes out at about 1.2 mm.",
-   "_stringLengths": "lower 1.77 m x 2, upper 4.07 m x 2 - against a single 5.44 m pair before."
+   "_newels": "TWO. One at the TURN carrying the landing corner. One MID-FLIGHT on the upper run, because a housed 50x150 string over its 4.07 m still deflects about 34 mm against a 13.6 mm limit. The LOWER flight needs none - its string is 2.13 m and comes out near 2 mm.",
+   "_stringLengths": "lower 2.13 m x 2, upper 4.07 m x 2 - against a single 5.44 m pair on the straight version."
   },
   "omitTies": [
-   4
+   13
   ],
   "_widened": "REVERTED to one omitted tie. I had sized the opening at 1627 mm on the premise that a 1200 x 2500 board has to pass through horizontally. It does not - carried ON EDGE, 1200 vertical and the long axis up the slope, the board's plan footprint is its THICKNESS. It needs about 250 mm of width including hands, against 1051 mm available. What actually has to fit is the LENGTH: 2500 tilted at 42.6 deg projects 1881 mm against a 2.0 m opening, 119 mm spare. Owner confirmed they carry board vertically.",
   "_trimmer": "50x150 over the widened 1.727 m span carrying two tail joists: 3.5 MPa, 0.6 mm.",
@@ -570,10 +570,11 @@
   "_topPosition": "The flight can START anywhere; where it ENDS is fixed by the roof. Headroom over the top tread: 2.51 m at y=1.0, 2.20 m at y=1.23, 1.82 m at y=1.5, 1.14 m at y=2.0. Top out beyond 1.23 m from the centre and you hit the roof standing on the last tread. That is geometry from the 54 deg pitch and the 3.88 m floor, not a preference - so the stair tops out at y=+1.0 and cannot be pushed further toward the long wall.",
   "type": "quarter-turn, left",
   "openingToY": 1.23,
-  "_quarterTurn": "REBUILT AS A QUARTER-TURN 2026-08-24, owner's call: in at the FRONT of the building, then 90 deg LEFT and up. This reverses the 2026-08-15 decision to stay straight, and the reversal is right - the old analysis was sound but it only ever considered turns INSIDE the 6 m width, where a landing eats the same run the flight needs. Coming in at the front borrows run from the 9.30 m LENGTH instead, which the straight stair never touched. That is the whole gain.",
-  "_whyItIsBetter": "Straight: 21 risers at 176 mm, 200 going, 41.2 deg, 2R+G = 552 - a going 20 mm under domestic minimum and a pitch the notes called steep. Quarter-turn: 19 risers at 195 mm, 265 going, 36.3 deg, 2R+G = 654, which is inside the 600-660 comfort band for the first time. The going grows 65 mm and the pitch drops 5 degrees.",
-  "_theThreeConstraints": "Three things fix this layout and none of them is preference. (1) FLIGHT 1 CROSSES THE TIES, so its ceiling is the tie underside at 3.610, not the deck at 3.860 - the landing has to sit at or below 1.610 for 2.0 m of headroom, which caps the lower flight at 6 risers. (2) FLIGHT 2 RUNS BETWEEN TIES, parallel to them, so it must fit a single omitted-tie gap: 900 wide in the 1300 clear that taking out one tie leaves. That fixes its x to 2.95-2.05 and therefore fixes flight 1's run at 1.55 m. (3) YOU MUST EMERGE WITHIN 1.23 m OF THE CENTRE or the roof is on your head - flight 2 tops out at exactly y = +1.23, headroom 2.18 m.",
-  "_openingIsBigger": "2.385 m of opening against 2.0 m before, and it needs TWO trimmers rather than one, because the hole is now in the middle of a bay instead of hard against the gable. Opening runs y -1.155 to +1.23: below -1.155 you are still under the deck with 2.0 m clear, so the tie stub and the deck stay. Trimmers span the 1.40 m between the ties at -3.20 and -1.80."
+  "_quarterTurn": "QUARTER-TURN, owner 2026-08-24. The stair still SURFACES WHERE IT ALWAYS DID - the back bay, station 13 omitted, emerging at y +1.23. Only the APPROACH moved: instead of the whole run coming off the -y wall across the width, the lower flight now runs ALONG the building toward the back and turns 90 deg LEFT onto the upper flight. You face the back as you climb, then turn to face the centre.",
+  "_whyItIsBetter": "The straight stair had to find its whole 4.00 m run inside the 6 m width, and lost: 21 risers at 176 mm with a 200 going, 41.2 deg, 2R+G 552 - a going 20 mm under domestic minimum. The turn lets the LOWER flight borrow run from the 9.30 m length, which the straight version never touched. 20 risers at 185, 265 going, 34.9 deg, 2R+G 635 - inside the 600-660 band. The going grows 65 mm and the pitch drops 6.3 degrees, for no extra floor area that was doing anything else.",
+  "_theThreeConstraints": "(1) THE LOWER FLIGHT CROSSES THE TIES, so its ceiling is the tie underside at 3.610, not the deck at 3.860. The landing must sit at or below 1.610 for 2.0 m of headroom, which caps the lower flight at 7 risers - it lands at 1.495, with 115 mm to spare. 21 risers would put it at exactly 1.610 and was rejected for that. (2) THE UPPER FLIGHT RUNS BETWEEN TIES, parallel to them, so it has to fit the 1.40 m clear that omitting station 13 leaves: 900 wide at x 3.35-4.25, 250 mm each side. (3) YOU MUST EMERGE WITHIN 1.23 m OF THE CENTRE or the roof is on your head. The upper flight tops out at exactly +1.23, headroom 2.18 m. All three are geometry, not preference.",
+  "_openingIsBigger": "2.385 m of opening against 2.0 m before, and it needs TWO trimmers rather than one, because the hole is now in the middle of a bay instead of hard against the gable. Opening runs y -1.155 to +1.23: below -1.155 you are still under the deck with 2.0 m clear, so the tie stub and the deck stay. Trimmers span the 1.40 m between the ties at -3.20 and -1.80.",
+  "_openingGrew": "y -1.42 to +1.23, 2.65 m, and TWO trimmers instead of one - the hole is in the middle of a bay now, bounded at both ends. Below -1.42 you are still under the deck with 2.0 m clear, so the tie stub and the decking stay. Trimmers span the 1.50 m between the ties at +3.10 and +4.60."
  },
  "slab": {
   "thickness": 0.15,

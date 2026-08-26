@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1787747631';
-import { derive, stations, spaced } from './geometry.js?v=1787747631';
+import { allocator } from './stock.js?v=1787747752';
+import { derive, stations, spaced } from './geometry.js?v=1787747752';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -497,9 +497,10 @@ export function buildFrame(p) {
   layers.stairOpening = stairs;
 
   // --- Stair (red: fit study only, not in the take-off) --------------------
-  // Quarter-turn: in at the FRONT, up 6 risers along the side wall, left onto a
-  // landing, then 13 risers across to emerge at y = +1.23 — the furthest out you
-  // can surface and still stand up under a 54 deg roof.
+  // Quarter-turn. It surfaces WHERE IT ALWAYS DID — the back bay, emerging at
+  // y = +1.23, the furthest out you can come up and still stand under a 54 deg
+  // roof. Only the approach moved: the lower flight now runs ALONG the building
+  // toward the back and turns 90 deg LEFT onto the upper flight.
   //
   // Three things fix this and none is preference. Flight 1 CROSSES the ties, so
   // its ceiling is the tie underside at 3.610 and the landing has to sit under
@@ -516,7 +517,7 @@ export function buildFrame(p) {
     const f2x = (lx1 + lx0) / 2 + (lx1 - lx0) / 2 - fl.width / 2;   // flight 2 sits at the landing's far end
     const f2cx = lx1 - fl.width / 2;
     // Lower flight — treads run ACROSS the climb, so they are `width` in y.
-    for (let i = 1; i <= fl.risersLower; i++) {
+    for (let i = 1; i < fl.risersLower; i++) {
       bar(stair, MAT.future,
           [f1x0 + (i - 0.5) * fl.going, (ly0 + ly1) / 2, floorZ + i * rise],
           [fl.going, fl.width, fl.treadThickness]);
