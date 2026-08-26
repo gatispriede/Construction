@@ -176,7 +176,7 @@ only exists within ±1.23 m of the centre:
 
 So the stair has to **emerge near the middle**, which fixes its run. Wall (y = −3.0)
 to y = +1.0 is 4.00 m over a 3.68 m rise: **21 risers at 175 mm, 200 mm going,
-41.2°**. Steep — a domestic stair wants 220 going — but this is a workshop.
+42.6°**. Steep — a domestic stair wants 220 going — but this is a workshop.
 
 **The opening only needs to be 2.0 m long, not 4.0.** The loft floor does not
 threaten your head until you are 1.88 m up, which is the top 49% of the climb.
