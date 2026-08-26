@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="900" viewBox="0 0 1180 900" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<defs><pattern id="off" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#e8e5e0"/><line x1="0" y1="0" x2="0" y2="7" stroke="#c6c1b9" stroke-width="2.5"/></pattern></defs>
+<rect width="1180" height="900" fill="#fbfaf8"/>
+<text x="50" y="52" font-size="27" font-weight="700" fill="#1f2328">Stair — 50 × 150, 9 boards at 6.00 m</text>
+<text x="50" y="76" font-size="14.5" fill="#57606a">2 strings · 40 tread pieces (20 treads, doubled) · 1 newel   —   48.70 m used of 54 m bought, 5.30 m offcut (10%)</text>
+<text x="50" y="114" font-size="12.5" font-weight="700" fill="#57606a" letter-spacing="1.4">CUT LIST — EACH BAR IS ONE 6 m BOARD</text>
+<text x="94" y="150" font-size="13" font-weight="700" fill="#57606a" text-anchor="end">1</text>
+<rect x="110" y="132" width="900.0" height="26" fill="url(#off)" stroke="#c6c1b9" rx="2"/>
+<rect x="110.0" y="132" width="814.8" height="26" fill="#2f6f4e" rx="2"/>
+<text x="517.4" y="149" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">5.43</text>
+<text x="1020.0" y="150" font-size="11.5" fill="#8b949e">0.57 m off</text>
+<text x="94" y="188" font-size="13" font-weight="700" fill="#57606a" text-anchor="end">2</text>
+<rect x="110" y="170" width="900.0" height="26" fill="url(#off)" stroke="#c6c1b9" rx="2"/>
+<rect x="110.0" y="170" width="814.8" height="26" fill="#2f6f4e" rx="2"/>
+<text x="517.4" y="187" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">5.43</text>
+<text x="1020.0" y="188" font-size="11.5" fill="#8b949e">0.57 m off</text>
+<text x="94" y="226" font-size="13" font-weight="700" fill="#57606a" text-anchor="end">3</text>
+<rect x="110" y="208" width="900.0" height="26" fill="url(#off)" stroke="#c6c1b9" rx="2"/>
+<rect x="110.0" y="208" width="275.6" height="26" fill="#7b3f9d" rx="2"/>
+<text x="247.8" y="225" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">1.84</text>
+<rect x="385.6" y="208" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="453.1" y="225" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="520.6" y="208" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="588.1" y="225" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="655.6" y="208" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="723.1" y="225" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="790.6" y="208" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="858.1" y="225" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<text x="1020.0" y="226" font-size="11.5" fill="#8b949e">0.56 m off</text>
+<text x="94" y="264" font-size="13" font-weight="700" fill="#57606a" text-anchor="end">4</text>
+<rect x="110" y="246" width="900.0" height="26" fill="url(#off)" stroke="#c6c1b9" rx="2"/>
+<rect x="110.0" y="246" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="177.5" y="263" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="245.0" y="246" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="312.5" y="263" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="380.0" y="246" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="447.5" y="263" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="515.0" y="246" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="582.5" y="263" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="650.0" y="246" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="717.5" y="263" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="785.0" y="246" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="852.5" y="263" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<text x="1020.0" y="264" font-size="11.5" fill="#8b949e">0.60 m off</text>
+<text x="94" y="302" font-size="13" font-weight="700" fill="#57606a" text-anchor="end">5</text>
+<rect x="110" y="284" width="900.0" height="26" fill="url(#off)" stroke="#c6c1b9" rx="2"/>
+<rect x="110.0" y="284" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="177.5" y="301" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="245.0" y="284" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="312.5" y="301" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="380.0" y="284" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="447.5" y="301" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="515.0" y="284" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="582.5" y="301" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="650.0" y="284" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="717.5" y="301" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="785.0" y="284" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="852.5" y="301" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<text x="1020.0" y="302" font-size="11.5" fill="#8b949e">0.60 m off</text>
+<text x="94" y="340" font-size="13" font-weight="700" fill="#57606a" text-anchor="end">6</text>
+<rect x="110" y="322" width="900.0" height="26" fill="url(#off)" stroke="#c6c1b9" rx="2"/>
+<rect x="110.0" y="322" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="177.5" y="339" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="245.0" y="322" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="312.5" y="339" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="380.0" y="322" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="447.5" y="339" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="515.0" y="322" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="582.5" y="339" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="650.0" y="322" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="717.5" y="339" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="785.0" y="322" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="852.5" y="339" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<text x="1020.0" y="340" font-size="11.5" fill="#8b949e">0.60 m off</text>
+<text x="94" y="378" font-size="13" font-weight="700" fill="#57606a" text-anchor="end">7</text>
+<rect x="110" y="360" width="900.0" height="26" fill="url(#off)" stroke="#c6c1b9" rx="2"/>
+<rect x="110.0" y="360" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="177.5" y="377" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="245.0" y="360" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="312.5" y="377" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="380.0" y="360" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="447.5" y="377" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="515.0" y="360" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="582.5" y="377" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="650.0" y="360" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="717.5" y="377" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="785.0" y="360" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="852.5" y="377" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<text x="1020.0" y="378" font-size="11.5" fill="#8b949e">0.60 m off</text>
+<text x="94" y="416" font-size="13" font-weight="700" fill="#57606a" text-anchor="end">8</text>
+<rect x="110" y="398" width="900.0" height="26" fill="url(#off)" stroke="#c6c1b9" rx="2"/>
+<rect x="110.0" y="398" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="177.5" y="415" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="245.0" y="398" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="312.5" y="415" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="380.0" y="398" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="447.5" y="415" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="515.0" y="398" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="582.5" y="415" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="650.0" y="398" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="717.5" y="415" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="785.0" y="398" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="852.5" y="415" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<text x="1020.0" y="416" font-size="11.5" fill="#8b949e">0.60 m off</text>
+<text x="94" y="454" font-size="13" font-weight="700" fill="#57606a" text-anchor="end">9</text>
+<rect x="110" y="436" width="900.0" height="26" fill="url(#off)" stroke="#c6c1b9" rx="2"/>
+<rect x="110.0" y="436" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="177.5" y="453" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="245.0" y="436" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="312.5" y="453" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="380.0" y="436" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="447.5" y="453" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="515.0" y="436" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="582.5" y="453" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="650.0" y="436" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="717.5" y="453" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<rect x="785.0" y="436" width="135.0" height="26" fill="#b5762a" rx="2"/>
+<text x="852.5" y="453" font-size="11.5" fill="#fff" text-anchor="middle" font-weight="600">0.90</text>
+<text x="1020.0" y="454" font-size="11.5" fill="#8b949e">0.60 m off</text>
+<line x1="110" y1="480" x2="1010.0" y2="480" stroke="#c6c1b9"/>
+<line x1="110.0" y1="480" x2="110.0" y2="486" stroke="#c6c1b9"/><text x="110.0" y="501" font-size="11" fill="#8b949e" text-anchor="middle">0 m</text>
+<line x1="260.0" y1="480" x2="260.0" y2="486" stroke="#c6c1b9"/><text x="260.0" y="501" font-size="11" fill="#8b949e" text-anchor="middle">1 m</text>
+<line x1="410.0" y1="480" x2="410.0" y2="486" stroke="#c6c1b9"/><text x="410.0" y="501" font-size="11" fill="#8b949e" text-anchor="middle">2 m</text>
+<line x1="560.0" y1="480" x2="560.0" y2="486" stroke="#c6c1b9"/><text x="560.0" y="501" font-size="11" fill="#8b949e" text-anchor="middle">3 m</text>
+<line x1="710.0" y1="480" x2="710.0" y2="486" stroke="#c6c1b9"/><text x="710.0" y="501" font-size="11" fill="#8b949e" text-anchor="middle">4 m</text>
+<line x1="860.0" y1="480" x2="860.0" y2="486" stroke="#c6c1b9"/><text x="860.0" y="501" font-size="11" fill="#8b949e" text-anchor="middle">5 m</text>
+<line x1="1010.0" y1="480" x2="1010.0" y2="486" stroke="#c6c1b9"/><text x="1010.0" y="501" font-size="11" fill="#8b949e" text-anchor="middle">6 m</text>
+<text x="50" y="530" font-size="12.5" font-weight="700" fill="#57606a" letter-spacing="1.4">WHAT EACH PIECE IS</text>
+<rect x="50" y="548" width="26" height="15" fill="#2f6f4e" rx="2"/><text x="88" y="560" font-size="14" fill="#1f2328" font-weight="600">2 strings · 5.43 m</text><text x="88" y="576" font-size="12" fill="#8b949e">HOUSED, not cut — a cut string at 150 deep leaves 18 mm</text>
+<rect x="50" y="578" width="26" height="15" fill="#b5762a" rx="2"/><text x="88" y="590" font-size="14" fill="#1f2328" font-weight="600">40 tread pieces · 0.90 m</text><text x="88" y="606" font-size="12" fill="#8b949e">2 per tread, butted to 300 deep — a single 150 leaves a 50 mm gap</text>
+<rect x="50" y="608" width="26" height="15" fill="#7b3f9d" rx="2"/><text x="88" y="620" font-size="14" fill="#1f2328" font-weight="600">1 newel · 1.84 m</text><text x="88" y="636" font-size="12" fill="#8b949e">mid-flight, STRUCTURAL — without it the string deflects 110 mm</text>
+<text x="560" y="530" font-size="12.5" font-weight="700" fill="#57606a" letter-spacing="1.4">ELEVATION — 21 risers @ 175, 200 going, 42.6°</text>
+<line x1="600.0" y1="838.0" x2="1000.0" y2="470.5" stroke="#2f6f4e" stroke-width="15" opacity="0.95"/>
+<rect x="600.0" y="815.5" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="620.0" y="798.0" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="640.0" y="780.5" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="660.0" y="763.0" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="680.0" y="745.5" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="700.0" y="728.0" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="720.0" y="710.5" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="740.0" y="693.0" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="760.0" y="675.5" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="780.0" y="658.0" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="800.0" y="640.5" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="820.0" y="623.0" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="840.0" y="605.5" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="860.0" y="588.0" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="880.0" y="570.5" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="900.0" y="553.0" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="920.0" y="535.5" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="940.0" y="518.0" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="960.0" y="500.5" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="980.0" y="483.0" width="30.0" height="5.0" fill="#b5762a" stroke="#8a5a1e" stroke-width="0.6"/>
+<rect x="797.5" y="654.2" width="5.0" height="183.8" fill="#7b3f9d" rx="1"/>
+<text x="800" y="856" font-size="11.5" fill="#7b3f9d" text-anchor="middle" font-weight="600">newel</text>
+<line x1="566" y1="838" x2="1024" y2="838" stroke="#1f2328" stroke-width="1.6"/>
+<text x="570" y="856" font-size="11.5" fill="#57606a">slab</text>
+<line x1="1000" y1="470" x2="1076" y2="470" stroke="#1f2328" stroke-width="1.6"/>
+<text x="1006" y="462" font-size="11.5" fill="#57606a">loft floor 3.88</text>
+<text x="800" y="878" font-size="12" fill="#57606a" text-anchor="middle">run 4.00 m · rise 3.675 m · 900 wide</text>
+<text x="50" y="876" font-size="11.5" fill="#8b949e">Generated from model/params.json · stair.flight · the flight waits on the slab, which waits on the roof</text>
+</svg>
