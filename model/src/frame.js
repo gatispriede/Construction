@@ -2,8 +2,8 @@
 // userData.layer so the viewer can toggle it without knowing what's inside.
 
 import * as THREE from 'three';
-import { allocator } from './stock.js?v=1787744018';
-import { derive, stations, spaced } from './geometry.js?v=1787744018';
+import { allocator } from './stock.js?v=1787747631';
+import { derive, stations, spaced } from './geometry.js?v=1787747631';
 
 const MAT = {
   hewn:     new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.9 }),
@@ -464,72 +464,82 @@ export function buildFrame(p) {
   layers.floorSlab = slab;
 
   // --- Stair opening ------------------------------------------------------
-  // J15 is left out so a stair can come up to the loft. What closes the rest
-  // of that bay is a TRIMMER between J14 and J16, and a TAIL JOIST from the
-  // trimmer back to the wall.
+  // QUARTER-TURN since 2026-08-24, so the opening moved off the back gable and
+  // into the middle of a bay. That costs a second trimmer: the hole is bounded
+  // in y at BOTH ends now, not just at the top.
   //
-  // The opening only needs to be 2.0 m long, not the whole 4.0 m stair run:
-  // the loft floor does not threaten your head until you are 1.88 m up, which
-  // is the top half of the climb. Below that you are walking under a floor
-  // that is 3.88 m up.
+  // It only spans y -1.155 to +1.23. Below -1.155 you are still under the deck
+  // with 2.0 m clear, so the tie stub and the decking stay there.
   const stairs = layer('stairOpening');
   if (p.stair) {
     const st = p.stair;
-    // The opening is bounded by the ties that SURVIVE either side of the
-    // omitted run, not by the omitted stations themselves. That distinction
-    // matters now the setout is non-uniform: the stair bay is the close-out
-    // bay, so it is 1.40 m centre to centre while every other bay is 0.60.
     const om = st.omitTies;
     const oA = d.tieStations[om[0] - 2];             // last tie before the hole
     const oB = d.tieStations[om[om.length - 1]];     // first tie after it
     const sx = (oA + oB) / 2;
-    const yTrim = st.openingFromY + st.openingLength;
-    const [tmw, tmd] = st.trimmerSection;
-    // Trimmer spans between the two ties that survive, top flush with them.
-    // Spans the FULL opening — from J14 to J16, i.e. two tie spacings, because
-    // the tie between them is the one taken out. One spacing would leave it
-    // hanging in mid-air over the opening.
-    // Reaches from the last surviving tie on one side to the first on the
-    // other, so it spans however many were taken out — measured, not counted
-    // in bays, because the bays are no longer all the same size.
     const openSpan = oB - oA;
-    bar(stairs, M('stairOpening', 0, 2), [sx, yTrim, d.tieTop - tmd / 2],
-        [openSpan, tmw, tmd]);
-    // Tail joist closes the bay from the trimmer out to the far wall.
+    const [tmw, tmd] = st.trimmerSection;
+    // TWO trimmers, one at each end of the opening.
+    for (const yT of [st.openingFromY, st.openingToY]) {
+      bar(stairs, M('stairOpening', 0, 2), [sx, yT, d.tieTop - tmd / 2],
+          [openSpan, tmw, tmd]);
+    }
+    // Tail joists: what is left of the omitted tie, outboard of each trimmer.
     const [tjw, tjd] = st.tailJoistSection;
-    const tailLen = W / 2 - yTrim;
-    // One tail joist per omitted tie station, so the deck beyond the opening
-    // still spans 576 mm and not the full 1.63 m hole.
     for (const j of om) {
-      bar(stairs, M('stairOpening', 1, 2),
-          [d.tieStations[j - 1], yTrim + tailLen / 2, d.tieBottom + tjd / 2],
-          [tjw, tailLen, tjd]);
+      const x = d.tieStations[j - 1];
+      for (const [yA, yB] of [[-W / 2, st.openingFromY], [st.openingToY, W / 2]]) {
+        bar(stairs, M('stairOpening', 1, 2),
+            [x, (yA + yB) / 2, d.tieBottom + tjd / 2], [tjw, yB - yA, tjd]);
+      }
     }
   }
   layers.stairOpening = stairs;
 
   // --- Stair (red: fit study only, not in the take-off) --------------------
-  // Bears on a concrete floor that is not poured yet — that comes after the
-  // roof is on. Drawn to check it clears the opening and the rafters, nothing
-  // more. stock.js does not know about it and the schedule does not count it.
+  // Quarter-turn: in at the FRONT, up 6 risers along the side wall, left onto a
+  // landing, then 13 risers across to emerge at y = +1.23 — the furthest out you
+  // can surface and still stand up under a 54 deg roof.
+  //
+  // Three things fix this and none is preference. Flight 1 CROSSES the ties, so
+  // its ceiling is the tie underside at 3.610 and the landing has to sit under
+  // 1.610 — that caps the lower flight at 6 risers. Flight 2 runs BETWEEN ties,
+  // so it has to fit the 1300 clear that one omitted tie leaves. And you must
+  // emerge within 1.23 m of the centre.
   const stair = layer('stairs');
   if (p.stair && p.stair.flight) {
-    const st = p.stair, fl = st.flight;
-    const om = st.omitTies;
-    const sx = (d.tieStations[om[0] - 2] + d.tieStations[om[om.length - 1]]) / 2;
+    const fl = p.stair.flight;
     const floorZ = fl.floorLevel;
     const rise = (d.loftFloorTop - floorZ) / fl.risers;
-    const y0 = fl.startY;
-    for (let i = 1; i < fl.risers; i++) {
+    const [f1x0] = fl.flight1X;
+    const [lx0, lx1] = fl.landingX, [ly0, ly1] = fl.landingY;
+    const f2x = (lx1 + lx0) / 2 + (lx1 - lx0) / 2 - fl.width / 2;   // flight 2 sits at the landing's far end
+    const f2cx = lx1 - fl.width / 2;
+    // Lower flight — treads run ACROSS the climb, so they are `width` in y.
+    for (let i = 1; i <= fl.risersLower; i++) {
       bar(stair, MAT.future,
-          [sx, y0 + (i - 0.5) * fl.going, floorZ + i * rise],
+          [f1x0 + (i - 0.5) * fl.going, (ly0 + ly1) / 2, floorZ + i * rise],
+          [fl.going, fl.width, fl.treadThickness]);
+    }
+    // Landing.
+    bar(stair, MAT.future,
+        [(lx0 + lx1) / 2, (ly0 + ly1) / 2, floorZ + fl.risersLower * rise],
+        [lx1 - lx0, ly1 - ly0, fl.treadThickness]);
+    // Upper flight — turns left, treads now `width` in x.
+    for (let i = 1; i < fl.risersUpper; i++) {
+      bar(stair, MAT.future,
+          [f2cx, ly1 + (i - 0.5) * fl.going, floorZ + (fl.risersLower + i) * rise],
           [fl.width, fl.going, fl.treadThickness]);
     }
-    // Strings each side, foot to landing.
+    // Strings: one pair per flight.
     for (const o of [-1, 1]) {
       strut(stair, MAT.future,
-            [sx + o * (fl.width / 2 + 0.025), y0, floorZ],
-            [sx + o * (fl.width / 2 + 0.025), y0 + (fl.risers - 1) * fl.going,
+            [f1x0, (ly0 + ly1) / 2 + o * (fl.width / 2 + 0.025), floorZ],
+            [f1x0 + fl.risersLower * fl.going, (ly0 + ly1) / 2 + o * (fl.width / 2 + 0.025),
+             floorZ + fl.risersLower * rise], 0.05, 0.25);
+      strut(stair, MAT.future,
+            [f2cx + o * (fl.width / 2 + 0.025), ly1, floorZ + fl.risersLower * rise],
+            [f2cx + o * (fl.width / 2 + 0.025), ly1 + (fl.risersUpper - 1) * fl.going,
              d.loftFloorTop], 0.05, 0.25);
     }
   }

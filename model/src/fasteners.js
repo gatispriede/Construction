@@ -6,7 +6,7 @@
 // decides length — 6 x 100 is not always enough.
 
 import * as THREE from 'three';
-import { derive } from './geometry.js?v=1787744018';
+import { derive } from './geometry.js?v=1787747631';
 // Connections are labelled with the LAYER NAMES they join, not reference
 // letters. The letters were a 30-row lookup table you had to learn; the layer
 // name is already in the panel on the left, so "ties -> plates" points at two
