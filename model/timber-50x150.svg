@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="700" viewBox="0 0 1180 700" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<defs><pattern id="off" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#e8e5e0"/><line x1="0" y1="0" x2="0" y2="7" stroke="#c6c1b9" stroke-width="2.5"/></pattern></defs>
+<rect width="1180" height="700" fill="#fbfaf8"/>
+<text x="50" y="52" font-size="27" font-weight="700" fill="#1f2328">50 × 150 — every board, and where it goes</text>
+<text x="50" y="76" font-size="14.5" fill="#57606a">66 boards of 6.00 m from two sources. One chip = one board.</text>
+<text x="50" y="128" font-size="15" font-weight="700" fill="#1f2328">IN THE YARD — already ripped from 50 × 250</text>
+<text x="1130" y="128" font-size="15" font-weight="700" fill="#57606a" text-anchor="end">42 boards</text>
+<text x="50" y="148" font-size="12.5" fill="#8b949e">Ripped down, so they can be a rafter but never a purlin or a ridge — those need the full 250 depth.</text>
+<rect x="50" y="166" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="119" y="166" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="188" y="166" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="257" y="166" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="326" y="166" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="395" y="166" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="464" y="166" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="533" y="166" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="602" y="166" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="671" y="166" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="740" y="166" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="809" y="166" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="50" y="199" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="119" y="199" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="188" y="199" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="257" y="199" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="326" y="199" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="395" y="199" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="464" y="199" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="533" y="199" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="602" y="199" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="671" y="199" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="740" y="199" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="809" y="199" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="50" y="232" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="119" y="232" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="188" y="232" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="257" y="232" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="326" y="232" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="395" y="232" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="464" y="232" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="533" y="232" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="602" y="232" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="671" y="232" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="740" y="232" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="809" y="232" width="62" height="26" rx="3" fill="#2f6f4e"/>
+<rect x="50" y="265" width="62" height="26" rx="3" fill="#3f8f7a"/>
+<rect x="119" y="265" width="62" height="26" rx="3" fill="#3f8f7a"/>
+<rect x="188" y="265" width="62" height="26" rx="3" fill="url(#off)" stroke="#c6c1b9"/>
+<rect x="257" y="265" width="62" height="26" rx="3" fill="url(#off)" stroke="#c6c1b9"/>
+<rect x="326" y="265" width="62" height="26" rx="3" fill="url(#off)" stroke="#c6c1b9"/>
+<rect x="395" y="265" width="62" height="26" rx="3" fill="url(#off)" stroke="#c6c1b9"/>
+<rect x="50" y="320" width="22" height="14" rx="2" fill="#2f6f4e"/>
+<text x="80" y="332" font-size="13" fill="#1f2328"><tspan font-weight="700">36</tspan> rafters · 18 pairs</text>
+<rect x="249.20000000000002" y="320" width="22" height="14" rx="2" fill="#3f8f7a"/>
+<text x="279.20000000000005" y="332" font-size="13" fill="#1f2328"><tspan font-weight="700">2</tspan> gable panel diagonals</text>
+<rect x="470.6" y="320" width="22" height="14" rx="2" fill="url(#off)" stroke="#c6c1b9"/>
+<text x="500.6" y="332" font-size="13" fill="#1f2328"><tspan font-weight="700">4</tspan> SPARE</text>
+<line x1="50" y1="358" x2="1130" y2="358" stroke="#e8e5e0" stroke-width="1.5"/>
+<text x="50" y="394" font-size="15" font-weight="700" fill="#1f2328">BOUGHT — on the 2026-08-21 order</text>
+<text x="1130" y="394" font-size="15" font-weight="700" fill="#57606a" text-anchor="end">24 boards · €334.80</text>
+<text x="50" y="414" font-size="12.5" fill="#8b949e">Nothing here comes out of the yard — every bought 50 × 150 in the project is on this row.</text>
+<rect x="50" y="432" width="62" height="26" rx="3" fill="#7b3f9d"/>
+<rect x="119" y="432" width="62" height="26" rx="3" fill="#7b3f9d"/>
+<rect x="188" y="432" width="62" height="26" rx="3" fill="#7b3f9d"/>
+<rect x="257" y="432" width="62" height="26" rx="3" fill="#7b3f9d"/>
+<rect x="326" y="432" width="62" height="26" rx="3" fill="#7b3f9d"/>
+<rect x="395" y="432" width="62" height="26" rx="3" fill="#7b3f9d"/>
+<rect x="464" y="432" width="62" height="26" rx="3" fill="#7b3f9d"/>
+<rect x="533" y="432" width="62" height="26" rx="3" fill="#7b3f9d"/>
+<rect x="602" y="432" width="62" height="26" rx="3" fill="#7b3f9d"/>
+<rect x="671" y="432" width="62" height="26" rx="3" fill="#b5762a"/>
+<rect x="740" y="432" width="62" height="26" rx="3" fill="#b5762a"/>
+<rect x="809" y="432" width="62" height="26" rx="3" fill="#b5762a"/>
+<rect x="50" y="465" width="62" height="26" rx="3" fill="#b5762a"/>
+<rect x="119" y="465" width="62" height="26" rx="3" fill="#b5762a"/>
+<rect x="188" y="465" width="62" height="26" rx="3" fill="#b5762a"/>
+<rect x="257" y="465" width="62" height="26" rx="3" fill="#b5762a"/>
+<rect x="326" y="465" width="62" height="26" rx="3" fill="#b5762a"/>
+<rect x="395" y="465" width="62" height="26" rx="3" fill="#3b6fb5"/>
+<rect x="464" y="465" width="62" height="26" rx="3" fill="#3b6fb5"/>
+<rect x="533" y="465" width="62" height="26" rx="3" fill="#3b6fb5"/>
+<rect x="602" y="465" width="62" height="26" rx="3" fill="#3b6fb5"/>
+<rect x="671" y="465" width="62" height="26" rx="3" fill="url(#off)" stroke="#c6c1b9"/>
+<rect x="740" y="465" width="62" height="26" rx="3" fill="url(#off)" stroke="#c6c1b9"/>
+<rect x="809" y="465" width="62" height="26" rx="3" fill="url(#off)" stroke="#c6c1b9"/>
+<rect x="50" y="520" width="22" height="14" rx="2" fill="#7b3f9d"/>
+<text x="80" y="532" font-size="13" fill="#1f2328"><tspan font-weight="700">9</tspan> stair</text>
+<rect x="153.0" y="520" width="22" height="14" rx="2" fill="#b5762a"/>
+<text x="183.0" y="532" font-size="13" fill="#1f2328"><tspan font-weight="700">8</tspan> eaves fascia</text>
+<rect x="307.8" y="520" width="22" height="14" rx="2" fill="#3b6fb5"/>
+<text x="337.8" y="532" font-size="13" fill="#1f2328"><tspan font-weight="700">4</tspan> levelling · INSTALLED</text>
+<rect x="529.2" y="520" width="22" height="14" rx="2" fill="url(#off)" stroke="#c6c1b9"/>
+<text x="559.2" y="532" font-size="13" fill="#1f2328"><tspan font-weight="700">3</tspan> SPARE</text>
+<line x1="50" y1="558" x2="1130" y2="558" stroke="#e8e5e0" stroke-width="1.5"/>
+<rect x="50" y="576" width="4" height="74" fill="#d4a72c" rx="2"/>
+<text x="68" y="594" font-size="13.5" font-weight="700" fill="#1f2328">One open question: the 4 levelling boards</text>
+<text x="68" y="616" font-size="12.5" fill="#57606a">stock.js says the levelling course is INSTALLED — fabric now, queued at zero. But the order it belongs to is recorded</text>
+<text x="68" y="635" font-size="12.5" fill="#57606a">as placed, not delivered. If those 4 came out of this order there are 3 spare; if the course was built from something</text>
+<text x="68" y="654" font-size="12.5" fill="#57606a">already on site, 7 of the 24 are spare and the order could have been 20. Worth about €75.</text>
+<text x="50" y="678" font-size="11.5" fill="#8b949e">Board counts from model/src/stock.js · rafters and gable panels draw on 50x150_ripped, everything else on bought 50x150</text>
+</svg>

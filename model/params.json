@@ -619,7 +619,8 @@
   "_height": "2 x 150 = 300 mm. ONE board cannot do it: the rafter is 150 deep perpendicular to the slope but cut PLUMB, so the vertical face it presents is 150/cos(54) = 255 mm. A 250 board misses by 5 mm. Adding the batten build-up (25+20)xcos(54) = 26.5 mm gives 282 mm for full cover to the underside of the sheet; 300 leaves 18 mm of adjustment.",
   "_thickness": "50 mm. Gutter bracket screws want 25 mm minimum; 50 if the brackets fix to the fascia alone rather than through into the rafter end. 20 mm batten stock is NOT suitable here.",
   "_snowSlide": "Statically the fascia is nothing - a full gutter is 0.10 kN/m over a 600 mm span, 0.02 MPa. The real load is snow SLIDING off a 54 deg roof. The snow load is small (mu1 0.16, 0.24 kPa on plan) but it arrives as an impact when the slab lets go, not as a static load. Mount the gutter LOW so sliding snow passes over it, or fit snow stops. Do not hang a gutter in the slide path of a 54 deg roof.",
-  "_quantity": "2 runs x 10.30 m x 2 pieces = 41.2 m -> 7 boards of 50x150."
+  "_quantity": "2 runs x 11.30 m x 2 pieces = 45.2 m -> 8 boards of 50x150. Was 41.2 m and 7 boards at a 10.30 m ridge; the verge went back to 1.0 m each end on 2026-08-21 and the fascia follows roof.ridgeLength, so it grew with it.",
+  "_position": "At the RAFTER ENDS, y = +-3.554 - which is 529 mm out past the wall face at 3.000, the eaves overhang. Two pieces stacked, bottom at 2.862 and top at 3.162, so the fascia sits BELOW the wall plate top (3.640): it is on the tail of the rafter, not on the wall. It runs the full 11.30 m of roof including both verges."
  },
  "kneeBraces": {
   "section": [
