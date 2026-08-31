@@ -296,7 +296,10 @@ check(C, 'net uplift per rafter foot',
 # Four supports, not two: the wall bearing at each end and a prop at each brace
 # head. Solved by the flexibility method with the two props as the redundants,
 # so the prop can be given a real stiffness instead of being assumed rigid.
-TIE_W = 1.391                      # N/mm on one tie at 700 mm centres
+FLOOR_LOAD_KPA = 2.0               # workshop floor, full imposed load
+TIE_W = FLOOR_LOAD_KPA * tieSp          # N/mm - kPa x m tributary width IS N/mm
+                                    # directly (kN/m2 x m = kN/m = N/mm), and
+                                    # this now moves with joists.spacing
 CREEP = 1.665                      # instantaneous -> final, same factor as F7
 TIE_SPAN = 6000.0
 I_TIE = P['sections']['joist'][0] * 1e3 * (P['sections']['joist'][1] * 1e3) ** 3 / 12
@@ -359,8 +362,8 @@ if lg:
 
 ASSUMPTIONS = [
     f"Floor load on one tie is {TIE_W*1000:.0f} N/m at {tieSp*1000:.0f} mm centres, and "
-    f"final deflection is {CREEP:.3f}x instantaneous - both taken from the 700 mm "
-    "setout in params.joists so this file and F7 cannot drift apart.",
+    f"final deflection is {CREEP:.3f}x instantaneous - both taken from the "
+    f"{tieSp*1000:.0f} mm setout in params.joists so this file and F7 cannot drift apart.",
     f"vb = {VB:.0f} m/s, terrain III. Terrain II would raise qp from "
     f"{QP*1000:.0f} to {QP_II*1000:.0f} Pa - divide every wind factor by "
     f"{QP_II/QP:.2f} to see it.",

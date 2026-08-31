@@ -251,48 +251,56 @@ Nothing about the section fixes that; 250 mm is already the deepest stock on sit
 **Spacing is the only lever**, and it is a direct one — halve the spacing, halve the
 load each tie carries, halve the deflection.
 
-**Ties are at 700 mm — 13 of them, not 9.** 700 mm centres on a 100 mm tie is
-**600 mm clear**, which is what takes the owner's 600 × 1000 mm insulation packs
-uncut. Set out on site and reported 2026-08-21. Superseded 576 mm (an even division)
-and a brief 600 mm centres.
+**Ties are at 600 mm — 15 of them, not 13.** 700 mm centres (600 mm clear) did not
+work on site; the owner respaced to 600 mm centres, **500 mm clear**, 2026-08-26.
+That is now the third setout this project has carried, after 576 mm and 700 mm.
 
-**This spacing does not pass on a plain span, and that is the finding.**
+**This spacing passes on a plain span, unlike the 700 mm one — barely.**
 
 | How the tie is modelled | Instant | **Final, with creep** | |
 |---|---|---|---|
-| Simply supported, 6.00 m — the basis of every earlier figure here | 16.4 mm | **27.3 mm** | **14% over**, L/220 |
-| Simply supported on the true bearing centres, 5.85 m | 14.8 mm | **24.6 mm** | 2.5% over |
-| **Propped by the knee braces — 5.06 m span** | 7.9 mm | **13.2 mm** | factor 1.8 ✓ |
+| Simply supported, 6.00 m — the basis of every earlier figure here | 14.1 mm | **23.5 mm** | **2% under**, L/255 |
+| Simply supported on the true bearing centres, 5.85 m | 12.8 mm | **21.3 mm** | 11% under |
+| **Propped by the knee braces**, ledger flex included | — | **10.4 mm** | factor 2.3 ✓ |
 
-Limit is L/250 = 24 mm on the full 2.0 kPa workshop floor load. The method reproduces
-the model's own 22.8 mm at 576 mm exactly, so the load basis is sound.
+Limit is L/250 = 24 mm on the full 2.0 kPa workshop floor load. Tighter centres cut
+the load per tie, which is why this setout clears the plain-span case that 700 mm
+missed by 14% — a smaller bay is a strict structural improvement even though fit,
+not load, is what actually drove the change.
 
-**The two bounds straddle the limit.** Unpropped it fails; propped it passes with real
-margin. Which one you get is decided by a joint detail — see F24.
+**Both bounds now clear the limit, so the joint in F24 is a margin decision, not a
+pass/fail one.** Build it anyway: it is still where the real capacity comes from,
+and it is still what an unpropped tie deck can never be inspected into afterwards.
 
 Still to watch:
 
-- The tie does **three jobs** — loft floor, rafter tie, eaves cantilever. Bending is
-  8.41 MPa against 14.8 unpropped, 5.98 propped: never the problem. The rafter-tie
-  horizontal goes 3.13 → 3.80 kN per tie end against 11.8 kN of bracket, factor 3.1.
-- **Deck goes to 22 mm OSB.** 18 mm is rated to 600 mm centres, not 700.
-- **1200 mm sheet no longer lands on a tie** — 1200 is not a multiple of 700, so a
-  sheet edge meets a tie only every sixth bay. Cut edges need noggins.
-- **Batten waste goes up**, 4% → 6.7%: a 6 m batten is 8 bays of 700, using 5.60 m.
+- The tie does **three jobs** — loft floor, rafter tie, eaves cantilever. Bending
+  and the rafter-tie horizontal are unaffected by the respacing and were never the
+  problem here.
+- **Deck stays 22 mm OSB.** 18 mm is rated to 600 mm centres exactly — no margin
+  left on that swap either.
+- **The 100 × 250 tie order goes to zero spare.** 15 ties + the stair trimmer board
+  uses all 16 owned; the 700 mm setout had left 3.
+- **The 50 × 150 rafter pile runs 2 boards short.** 21 rafter pairs (42 pieces) now
+  claim the ripped 50 × 250 stock; buy 2 more 50 × 150 rather than ripping into the
+  6 uncut boards the roof needs whole — see docs/timber.md.
 
-### F16a — resolved by the 700 mm setout
+### F16a — re-opened by the 600 mm setout, still not critical
 
-Two ties used to land within the end distance of a plate splice. At 700 mm centres
-they no longer do.
+Resolved cleanly at 700 mm. The 600 mm respacing (2026-08-26) brought two ties back
+within end distance of a splice — tighter than either earlier setout.
 
-| | 576 mm | 600 mm (considered) | **700 mm (built)** |
+| | 576 mm | 700 mm | **600 mm (built)** |
 |---|---|---|---|
-| worst clearance, tie to splice | 72 mm | 50 mm | **150 mm** |
+| worst clearance, tie to splice | 72 mm | 150 mm | **50 mm** |
 
-EN 1995 wants 7d = 98 mm for a loaded M14. Splices sit at −0.65 (lower) and −1.65,
-+1.35, +3.35 (upper), and are as-built — they do not move. The nearest tie to any of
-them is now 150 mm. **Nothing to do.** Strapping the splices is still worth doing for
-F16's own reasons, but it is no longer a tie-bolt problem.
+EN 1995 wants 7d = 98 mm for a loaded M14; 50 mm is a factor of 0.51. Splices sit at
+−0.65 (lower) and −1.65, +1.35, +3.35 (upper) and are as-built — they do not move,
+so this keeps happening every time the tie setout changes and a station lands near
+one. **Still not critical, for the reason it never was**: the lower layer's only
+splice is at −0.65, nowhere near either tight spot, so it stays continuous exactly
+where the upper layer is tight and the load has a path through it. Set those two lap
+bolts deliberately, not by eye, and strap the splices per F16 regardless.
 
 ### F24 — The knee braces are now primary supports, and the joint is wrong for it
 
@@ -507,9 +515,10 @@ choice to make now, because it changes every rafter length.
    straps cast in, sill raised to 300 mm+.
 3. **Birdsmouth and strap every rafter (F3).** Do not cut a single rafter until
    this is settled — it changes the setting-out.
-4. **Loft (F7) is decided** — 13 ties at 700 mm, sized for full workshop floor
-   load **only with the F24 brace seats cut**. Without them it is 14% over on
-   load. Order the ties before setting any out, because the run is continuous.
+4. **Loft (F7) is decided** — 15 ties at 600 mm, passes full workshop floor
+   load on a plain span with 2% to spare, and comfortably with **F24's brace
+   seats cut**. Order the ties before setting any out, because the run is
+   continuous.
    Previously this read: decide before the last ties go in — ceiling only,
    or a real floor with a centre beam.
 5. **Treat the timber (F11)** while every face is still reachable.

@@ -136,10 +136,11 @@
   "direction": "across-width",
   "cantilever": 0.05,
   "src": "given - 100x250 ties, flush with the outer wall faces, notched 50 mm each end. NOT YET INSTALLED as of 2026-08-14 - still in the yard, so they draw on stock.",
-  "spacing": 0.7,
+  "spacing": 0.6,
   "spacingExact": true,
-  "maxSpacing": 0.7,
-  "_spacing": "700 mm CENTRES = 600 mm CLEAR. AS BUILT - the owner set the ties out at 700 and reported it 2026-08-21. The driver is the insulation: it comes in 600 x 1000 mm packs, and 600 clear between 100 mm ties is what takes a pack without cutting. History: one tie per post at 1151 mm deflected 45.6 mm (L/132) against a 24 mm limit; 576 mm gave 22.8 mm; 600 mm centres gave 23.8 mm. THIS SPACING DOES NOT PASS ON THE MODEL'S ORIGINAL BASIS - see _deflection. It passes on the knee braces acting as props, which is now a REQUIRED detail, not an optional one.",
+  "maxSpacing": 0.6,
+  "_spacing": "600 mm CENTRES = 500 mm CLEAR. CORRECTED 2026-08-26 - the owner found 600 mm clear does not work on site and respaced to 500. This SUPERSEDES the 700 mm setout of 2026-08-21, not the 576 mm one before it: same reasoning (clear width for the insulation packs), tighter number. Two more ties than the 700 mm setout: 14 setout stations become 16, and one omitted for the stair still leaves 15 built against 13 before - see stair.omitTies, which moves to the new last-but-one station. Structurally this is a strict improvement, not a new dependency: tighter centres means a shorter propped span for every tie, so it moves further away from the 24 mm limit, not closer. See docs/stability.md, re-run after this change.",
+  "_supersedes700": "The 700 mm setout (2026-08-21) is now history, kept here only so the file's own back-references still resolve. Every '700 mm', 'centres', or tie-count figure elsewhere in the docs that has not been touched since 2026-08-26 is describing the SUPERSEDED geometry - the source of truth is always this file, regenerate before trusting a written number.",
   "_deflection": "THE ONE THING TO GET RIGHT ON THIS FLOOR. Three ways to model the same tie at 700 mm centres, w = 1391 N/m, 100x250, limit L/250 = 24 mm:  (a) simply supported over the modelled 6.00 m, which is what every earlier figure in this project used: 16.4 mm instant, 27.3 mm final - 14% OVER, L/220.  (b) simply supported over the TRUE bearing centres, 5.85 m: 14.8 -> 24.6 mm, 2.5% over.  (c) propped by the knee braces at +-2.53 m, so a 5.06 m span with 0.47 m overhangs: 7.9 -> 13.2 mm, factor 1.8 - PASSES with real margin. The truth is between (b) and (c) and the bounds straddle the limit, which is exactly why the model was conservative before. The BEARING SEAT on the knee brace is what turns (c) from an argument into a fact. Fit it and the floor is 13 mm; leave the braces screwed-only and the honest answer is somewhere in 13-25 mm and you cannot say which.",
   "_otherJobs": "The tie does three more jobs and 700 mm centres was checked against all of them 2026-08-21. BENDING: 8.41 MPa against 14.8 unpropped, 5.98 propped - factor 1.8 either way, bending was never the problem. RAFTER TIE: horizontal demand per tie end goes 3.13 -> 3.80 kN against 11.8 kN of bracket, factor 3.1 (was 3.8). STRUT BEARING: unchanged, 8 struts per side whatever the tie count, 0.93 MPa against fc,90,d 1.73. PLATE SPLICES: F16a is GONE - at 700 mm the nearest tie to any splice is 150 mm, against the 98 mm EN 1995 wants and the 50 mm that 600 mm centres produced.",
   "_closeOut": "9.30 m outer to outer, end ties flush, so the centreline run is 9.20 m, and 9.20 does not divide by 700 either. The remainder goes into the LAST bay against the back gable, which becomes 800 mm centres - and that is the bay whose tie is omitted for the stair, so the odd dimension lands in the one opening where nothing spans. Result: eleven bays at exactly 600 mm CLEAR, a stair bay 1.50 m centre to centre and 1.40 m clear, and 13 ties. Setout from the front outer face: 50, 750, 1450, 2150, 2850, 3550, 4250, 4950, 5650, 6350, 7050, 7750, [8450 - rafter and tail joist, no tie], 9250.",
@@ -198,7 +199,7 @@
   "bearingOnWall": 0.05,
   "bearingOnPurlin": 0.05,
   "ridgeLength": 11.3,
-  "rafterSpacing": 0.7,
+  "rafterSpacing": 0.6,
   "src": "given - rafters 50x250x6.0 m, bearing 50 mm on the top wall beam. Backspan to the wall is 5.10 m, leaving 0.90 m of tail past it.",
   "rafterTotalLength": 6.0,
   "_ridgeNote": "11.30 m = 9.30 m building + 1.00 m verge each end. REVERTED to 1.0 m on 2026-08-21: the owner confirms the verge is staying at 1 m, which is what the plate courses were built for. It had been shortened to 0.50 m on 2026-08-15. The approved drawings show 0.50 m, so this is a second departure from the permit envelope alongside the ridge height (F14) - it is not a setback problem, the boundary is 7 m away, but the drawings no longer describe the building.",
@@ -552,7 +553,7 @@
    "_stringLengths": "lower 2.13 m x 2, upper 4.07 m x 2 - against a single 5.44 m pair on the straight version."
   },
   "omitTies": [
-   13
+   15
   ],
   "_widened": "REVERTED to one omitted tie. I had sized the opening at 1627 mm on the premise that a 1200 x 2500 board has to pass through horizontally. It does not - carried ON EDGE, 1200 vertical and the long axis up the slope, the board's plan footprint is its THICKNESS. It needs about 250 mm of width including hands, against 1051 mm available. What actually has to fit is the LENGTH: 2500 tilted at 42.6 deg projects 1881 mm against a 2.0 m opening, 119 mm spare. Owner confirmed they carry board vertically.",
   "_trimmer": "50x150 over the widened 1.727 m span carrying two tail joists: 3.5 MPa, 0.6 mm.",

@@ -1,326 +1,326 @@
 [
- {
-  "id": "F0",
-  "title": "Lean straightened — hold it with permanent bracing",
-  "severity": "high",
-  "at": [
-   0,
-   3.0,
-   3.4
-  ],
-  "layer": "posts",
-  "one_line": "Owner straightened the frame 2026-08-15; it is plumb now. That closes the P-delta problem: the 50 mm eccentricity that was self-feeding is gone. It is NOT finished. Nothing permanent holds it there - the temporary diagonals are doing it, and they cannot come out until the wind girder and the front gable panels are in. Build the girder FIRST, then remove the temporaries, then re-check plumb. Removing them first puts you straight back where you started, and the lap-bolted plate (F16) is what now gives the wall top the continuity to stay straight."
- },
- {
-  "id": "F1",
-  "title": "Foundation is bored concrete piles — F1 withdrawn",
-  "severity": "low",
-  "at": [
-   -4.5,
-   -3.0,
-   0.2
-  ],
-  "one_line": "WITHDRAWN 2026-08-15. F1 said 192 kPa on soil good for 50-75 and told you to keep the frame re-levellable. It was written on the premise of 250 mm dry-laid brick on grade, read off photographs. The foundation is 300 mm dia x 1.2 m reinforced concrete piles. At 1.2 m the allowable base pressure is 150-250 kPa, and with shaft friction each pile carries 28-46 kN against 19.1 kN on the worst one. Factor 1.4-2.4. There is no settlement problem and no need to design for re-levelling.",
-  "layer": "piers"
- },
- {
-  "id": "F2",
-  "title": "Frost: adfreeze on the shaft, not heave under the base",
-  "severity": "high",
-  "at": [
-   0,
-   -3.0,
-   0.1
-  ],
-  "one_line": "OWNER 2026-08-21: the sill is anchored with M14 x 300, not the M12 recorded. Good anchor, and it closes the WIND question outright - 0.77 kN of hold-down per windward pile against 8.00, and 2.56 kN of shear against 20.00. IT DOES NOT CLOSE F2, because F2 is about the GROUND. The piles bear AT the 1.2 m frost line rather than below it, and the mechanism is ADFREEZE on the shaft: 28-42 kN of uplift on a lightly loaded pile. A bigger anchor does not reduce that load, it only decides which link breaks - and the binding limit was never the anchor steel but the WASHER BEARING ON THE SILL, 5.96 kN at 60x60 against fc,90,d 1.73. With an M12 there was at least a chance the anchor let go first and relieved the frame. An M14 x 300 removes that accidental fuse and guarantees the sill is what splits. THE FIX IS UNCHANGED AND NOW MATTERS MORE: a slip sleeve - smooth, bituminous or polythene - over the top 1.0 m of every shaft, including the four lightly loaded jamb piles. It has a closing window: once the backfill is in and settled it is a dig-out rather than a wrap.",
-  "layer": "piers"
- },
- {
-  "id": "F3",
-  "title": "Rafter seat: birdsmouth + M14 to every 2nd tie",
-  "severity": "low",
-  "at": [
-   1.5,
-   -3.0,
-   3.7
-  ],
-  "one_line": "Owner decision 2026-08-15. Birdsmouth converts thrust from friction into bearing; M14 into every second tie takes it straight into the tie as tension, bypassing the plate. 10 bolts x 7.1 kN = 71 kN against 20.6 kN per wall, factor 3.4. On a 50x150 rafter the 50 mm cut is EXACTLY the 1/3 limit - do not go deeper. Keep straps on unbolted rafters for uplift (F6).",
-  "layer": "roof"
- },
- {
-  "id": "F4",
-  "title": "Purlin frames: braces are the load path, and they are in",
-  "severity": "low",
-  "at": [
-   0,
-   -2.2,
-   4.6
-  ],
-  "one_line": "The diagonal brace takes 99.2% of the 7.18 kN, the vertical 0.8%. That is still true, and it is why strutSection is 100x100 while the vertical is 50x100. Resolved in design: 8 braced frames per side, struts now bearing on the ties. The warning that remains is a SEQUENCING one - do not load the roof before the braces are in, or the ties sag 26-37 mm instead of 0.25 mm.",
-  "layer": "purlins"
- },
- {
-  "id": "F5",
-  "title": "Sill: ventilated, isolated and now DPC'd — splash is what is left",
-  "severity": "low",
-  "at": [
-   4.0,
-   -3.0,
-   0.35
-  ],
-  "one_line": "Improved 2026-08-15: concrete will not touch the timber, the underside stays ventilated in summer, and ground falls away. That is what keeps the frame in service class 2 - at class 3 kdef goes 0.80 to 2.00 and the tie fails at 36.6 mm. The DPC item is CLOSED 2026-08-21: bituminous membrane is laid between every pile head and the sill, so the barrier is no longer pierced at the 24 M12 anchors. ONE THING LEFT: drainage moves standing water but not SPLASH, and the sill at ~200 mm sits inside the ~300 mm splash zone - lay a 300-500 mm gravel margin, not soil or grass.",
-  "layer": "sills"
- },
- {
-  "id": "F6",
-  "title": "Uplift load path — now complete to ground",
-  "severity": "low",
-  "at": [
-   0,
-   3.0,
-   4.2
-  ],
-  "one_line": "CLOSED 2026-08-15. The path is continuous and mechanical: rafter -> tie (M14, every 2nd) -> plate (M14) -> post -> sill -> M12 -> concrete pile -> ground. Net uplift is 0.46 kN per rafter door-open and about zero sealed, once the deck and ties are counted. Metal walls and insulation contribute nothing; the ties and the OSB do.",
-  "layer": "roof"
- },
- {
-  "id": "F7",
-  "title": "Tie beams: 13 at 700 mm, and they need the knee braces",
-  "severity": "low",
-  "at": [
-   0,
-   0,
-   3.65
-  ],
-  "one_line": "700 mm centres = 600 mm clear, set out on site so the 600x1000 insulation packs go in uncut. On a plain 6 m span that is 27.3 mm against a 24 mm limit - 14% OVER. What makes it pass is the knee braces propping each tie inboard of its bearing. At 600 mm braces the prop lands 574 mm in and the floor runs 12.1 mm final, factor 2.0 - and that figure INCLUDES the ledger the props stand on flexing 1.8 mm, which the earlier 13.2 mm did not. The braces are therefore structural now, and so is the ledger: see F24. Deck goes to 22 mm OSB, not 18.",
-  "layer": "ties"
- },
- {
-  "id": "F8",
-  "title": "Entrance: lintel passes and the jambs are now piled — closed",
-  "severity": "low",
-  "at": [
-   -4.5,
-   0,
-   1.6
-  ],
-  "one_line": "Re-checked 2026-08-15 with the lighter roof: the 220x185 plate as a lintel over 3.0 m runs 2.07 MPa against 14.8 and deflects 3.4 mm final against a 10 mm limit - it PASSES, which it did not with the 250 rafters. The open item was what the jambs stand on. CLOSED 2026-08-21: each side of the entrance is built on THREE piles counting the corner, one of them directly under the jamb. The header puts 3.5 kN into that pile against 28 kN of capacity, factor 8, and it bears on a 1.2 m pile like the rest of the frame instead of on a slab that heaves independently of it.",
-  "layer": "opening"
- },
- {
-  "id": "F9",
-  "title": "Purlin verge cantilever — resolved by gable bearing",
-  "severity": "low",
-  "at": [
-   4.5,
-   -1.5,
-   5.6
-  ],
-  "one_line": "The 4.0 m cantilever and its 38.7 MPa / 113 mm droop only existed with NO gable bearing. Gable studs catch the purlin at each end, which cut it to 2.4 MPa and 0.4 mm at a 1.0 m verge. The verge was then shortened to 0.50 m (2026-08-15), which is a material decision, not a structural one - and it requires cutting the upper plate course back from 1.00 m at all four corners.",
-  "layer": "purlins"
- },
- {
-  "id": "F10",
-  "title": "Brace-to-girt joint: housed girt, closed",
-  "severity": "low",
-  "at": [
-   -3.0,
-   -3.0,
-   2.3
-  ],
-  "one_line": "CLOSED 2026-08-21, owner: the girt is HOUSED INTO THE POSTS and screwed with 6 x 10 mm. That answers the actual worry, which was never the timber (factor 19) but whether the 3.92 kN per brace could cross into the post at all - the finding assumed 4 x 6 mm screws that had to bite the post behind. Housed, the load crosses as BEARING ON WOOD: girt end 50 x 100 on the post, 0.55 MPa against fc,90,d 1.73, factor 3.1. The screws are now a retaining fixing, and even taken alone they carry it - 6 x 10 mm gives 24.6 kN design against 3.92, factor 6.3, against 8.9 kN and factor 2.3 for the 4 x 6 mm assumed.",
-  "layer": "braces"
- },
- {
-  "id": "F11",
-  "title": "Salvaged posts: insecticide done, fire retardant and the existing damage are not",
-  "severity": "medium",
-  "at": [
-   4.5,
-   1.2,
-   2.0
-  ],
-  "one_line": "PART CLOSED 2026-08-21: the owner treated the timber with a standard insecticidal preservative before use. That covers one of the three things under F11. STILL OPEN: (a) FIRE RETARDANT is a separate product, not a property of an insecticidal preservative, and the permit names it explicitly - degsanas aizsardzibas lidzekli. A workshop raises the fire duty further: solvents, sawdust, electrical load. (b) Treatment does not reverse damage already there - the boring holes and softened surface in 20260814_155102.jpg are section already lost. Sound every post with a mallet and probe with an awl before the roof goes on; soft more than ~15 mm deep is not carrying its section. (c) Record the product name and date for the permit file.",
-  "layer": "posts"
- },
- {
-  "id": "F13",
-  "title": "Front wall reaches level on one plate course",
-  "severity": "low",
-  "at": [
-   -4.6,
-   2.4,
-   3.6
-  ],
-  "one_line": "Same finished height as the other walls but a single 185 mm course instead of two, and that course alone spans the 3 m entrance as the lintel.",
-  "layer": "plates"
- },
- {
-  "id": "F14",
-  "title": "Ridge exceeds the approved 7.70 m - owner accepts, but 7.82 is not the number",
-  "severity": "high",
-  "at": [
-   0,
-   0,
-   7.9
-  ],
-  "one_line": "OWNER 2026-08-21: accepts the ridge height, not dropping the pitch. RECORDED - but the 7.82 m in this finding is STALE and none of the current model numbers match it. As the model now stands: the setting-out ridge line is 7.769 (0.07 over), the TOP OF TIMBER at the ridge is 7.940 (0.24 over), and the FINISHED ridge with counter-batten, batten and sheet is about 8.03 (0.33 over), before a ridge cap. A surveyor measures the finished roof, so the exposure is about 0.33 m, not 0.12. This is a permit matter, not a structural one - area 55.86 m2 is still inside the 60 m2 limit and the setbacks still work. Re-confirm the decision against 8.03, not 7.82.",
-  "layer": "roof"
- },
- {
-  "id": "F15",
-  "title": "Layers: what each colour means",
-  "severity": "low",
-  "at": [
-   0,
-   0,
-   -0.6
-  ],
-  "one_line": "Blue = your design, not yet built. Yellow = must add. White = wind reinforcement, split into reinforce_gableStuds and reinforce_roofBracing. Both are mandatory and neither is built.",
-  "layer": "must_tieBolts"
- },
- {
-  "id": "F16",
-  "title": "Wall plate is lap-jointed and bolted — resolved",
-  "severity": "low",
-  "at": [
-   -0.66,
-   -3.0,
-   3.6
-  ],
-  "layer": "plates",
-  "one_line": "Corrected 2026-08-15: the joints are LAPS with M14 through, not butts, and the two courses are bolted to each other. A butt carries zero tension - that was the whole finding. A lap carries the 4.46 kN chord force in bolt shear: 7.1 kN on one M14, 14.2 on two. Bolting the courses together also makes a 150x370 section, 4x stiffer. Needs 300 mm of lap for 2 bolts each side (a1 5d, a3,t 7d, a4 3d)."
- },
- {
-  "id": "F17",
-  "title": "Strut load spread to 8 posts — resolved",
-  "severity": "low",
-  "at": [
-   -1.03,
-   -3.0,
-   0.35
-  ],
-  "layer": "piers",
-  "one_line": "Was 5 struts on 5 of 9 posts: 12.3 kN, 197 kPa. Now 8 struts on 8 posts: 9.4 kN, 151 kPa. Still over what the ground carries, but the settlement is now even rather than lumpy, which is what a timber frame tolerates."
- },
- {
-  "id": "F18",
-  "title": "Corner hold-down — closed, M12 into the piles",
-  "severity": "low",
-  "at": [
-   4.5,
-   3.0,
-   1.8
-  ],
-  "layer": "posts",
-  "one_line": "CLOSED 2026-08-15: the lowest wall course is screwed into the concrete with M12 at every pile. Demand 1.07 kN uplift and 1.81 kN shear per anchor against 7-10 and 6-8 kN capacity. ONE CONDITION: use 60x60 washers minimum - the anchor is not the weak link, washer bearing on the sill is, and a 40x40 crushes the timber at 2.50 kN."
- },
- {
-  "id": "F19",
-  "title": "Roof plane: sheeting plus a timber X between the purlin frames",
-  "severity": "low",
-  "at": [
-   0,
-   0,
-   6.6
-  ],
-  "layer": "roof",
-  "one_line": "DOWN TO LOW 2026-08-21. Two independent paths now. (1) The sheeting: every rib screwed into the battens, 0.81 kN/m against 1.50, factor 1.9 - still stitch the SIDE LAPS or each sheet works alone. (2) NEW - longitudinal X-bracing between the purlin frames, 7 bays per slope, which gives the 12.9 kN gable triangle a timber path that exists BEFORE the sheeting goes on. That was the real gap: 'until the sheeting is on, the roof plane has nothing.' The X was going to be built anyway as temporary works - the purlin frames are triangulated across the building but a pinned parallelogram along it, and the rafters that would stop them leaning cannot go on until the purlins are already up. TENSION-ONLY: 10.6 kN in the diagonal, 38.8 kN in tension (factor 3.7) but only 9.3 kN in compression (factor 0.88), so fit both diagonals and let the tension one work. 8 x 6x120 per end. Free timber off the rafter rip."
- },
- {
-  "id": "F20",
-  "title": "Floor: slab specified, 150 mm on 150 hardcore",
-  "severity": "medium",
-  "at": [
-   0,
-   0,
-   0.35
-  ],
-  "layer": "ground",
-  "one_line": "Specified 2026-08-16. 150 mm C25/30 with A252 at mid-depth, on 50 mm blinding on 150 mm compacted hardcore, over a 0.3 mm DPM. Slab TOP at 150 mm - 50 mm below the sill underside - which gives a continuous ventilated slot under the wall and means the slab never touches timber. Dig 200 mm below grade. Thicken to 200 mm for 1.5 m at the entrance: free corner plus all the wheel traffic."
- },
- {
-  "id": "F21",
-  "title": "Metal roof condensation - drained membrane accepted, discharge point is the detail",
-  "severity": "medium",
-  "at": [
-   2.0,
-   0,
-   7.0
-  ],
-  "layer": "roof",
-  "one_line": "OWNER 2026-08-21: a membrane over the rafters catches condensate off the underside of the steel and guides it out rather than letting it drip inside. That is the standard cold-roof answer and it is accepted - with the 25 mm counter-batten cavity already in the design it is a coherent detail. ONE THING DECIDES WHETHER IT WORKS: the membrane must discharge OUTSIDE THE WALL LINE, into the gutter or over the fascia. Stopped short at the wall top it dumps every drop into the eaves, onto the plate and the tie ends - the one place in the building you cannot inspect once the loft is decked. Also: laps shingle-style, upper over lower, and dress it over the fascia not behind it. Use a breather/HPV type, not a vapour barrier. Vented ridge and eaves are now advisory rather than mandatory - the moisture load in an unheated store is low and the membrane drains it."
- },
- {
-  "id": "F24",
-  "title": "Knee braces are primary supports: cut the seats, and give the feet something to stand on",
-  "severity": "high",
-  "at": [
-   0,
-   2.43,
-   3.59
-  ],
-  "layer": "kneeBraces",
-  "one_line": "At 700 mm tie centres the loft floor only passes because the knee braces prop each tie inboard of its bearing - 27.3 mm becomes 12.1 mm. They were designed as 0.78 kN wind braces held by 4 x 6x100 screws. As props the demand is 5.1 kN vertical per foot, 7.3 kN axial, and up to 8.2 / 11.6 kN where a foot lands over a post and the prop goes rigid. TWO FIXES, both before the loft is decked, because neither can be inspected afterwards. (1) CUT THE SEATS. Flat bearing face on the brace head against the tie underside - 1.16 MPa against fc,90,d 2.31 - located with a 10 mm housing or cleats, NEVER a 25 mm notch in the tie. (2) THE FEET NEED A LEDGER. Below 3.270 the wall between posts is open frame, so a foot landing mid-bay has AIR under it, and at 700 mm ties against 1163 mm posts most of them do. A continuous 100x100 along the inner wall face, top at 3.186, housed 20 mm into every post and screwed 6 x 8x200, carries them. It has to be 100 thick for STIFFNESS, not strength: at 50 thick the ledger sags 3.5 mm under the prop and the tie finishes at 20.1 mm instead of 12.1, giving back three quarters of what the braces were fitted to buy. Braces went 453 -> 600 mm to reach it, which also moves the prop 104 mm further inboard. 4 boards of 100x100, EUR 74.40."
- },
- {
-  "id": "F22",
-  "title": "No daylight designed",
-  "severity": "medium",
-  "at": [
-   0,
-   -3.1,
-   2.4
-  ],
-  "layer": "posts",
-  "one_line": "Zero windows. A workshop wants 10-20% of the 55.9 m2 floor. Six bays at 1.0 x 1.2 m gives 13%, and mid-bay windows cost no racking because the braces are in the end bays."
- },
- {
-  "id": "F16a",
-  "title": "Tie bolts near a lap: check spacing, not end distance",
-  "severity": "resolved",
-  "at": [
-   -1.727,
-   -3.0,
-   3.55
-  ],
-  "layer": "plateSplices",
-  "one_line": "RESOLVED by the 700 mm setout. Ties used to sit 72 mm from a plate splice (and 50 mm at the 600 mm spacing that was briefly considered), against the 98 mm EN 1995 wants. At 700 mm the nearest tie to any splice is 150 mm. Nothing to do."
- },
- {
-  "id": "F23",
-  "title": "Two foundation systems under one bolted frame — closed",
-  "severity": "low",
-  "at": [
-   -4.5,
-   0,
-   0.1
-  ],
-  "layer": "piers",
-  "one_line": "The frame is bolted to 1.2 m piles; the slab bears at grade. Piles below frost do not move, a slab does. Resolved in two steps. (1) The slab detail: finishing 50 mm below the sill with a 20 mm compressible perimeter gap lets the slab heave without levering the frame. (2) The entrance jambs, which were the last part of the frame standing on slab rather than pile - as built 2026-08-21 each side of the opening has three piles counting the corner, so the jambs are piled like everything else. NOTE what that adds: the four new piles are lightly loaded, about 3.5 kN each, and adfreeze threatens the LIGHTLY loaded piles hardest (F2). Slip-sleeve these four with the rest - do not skip them because they carry least."
- },
- {
-  "id": "F25",
-  "title": "Front gable is not a shear wall - agreed not a failure, but it is a dependency",
-  "severity": "medium",
-  "at": [
-   -4.6,
-   0,
-   2.0
-  ],
-  "layer": "must_frontGablePanels",
-  "one_line": "OWNER 2026-08-21 judges this not an issue, and on strength that AGREES with what the finding already said: the tributary half-share is not how the load goes, and the knee-brace portals carry the whole 48.55 kN transverse shear at 77.22 kN, factor 1.6, with the deck ignored entirely. Downgraded, but NOT closed, because it is the marker for a dependency chain and two of the links are not built yet. (1) That 77 kN is the brace END CONNECTIONS at factor 1.6 - it is F24. No seats, no portal, and then the front gable really is being asked for a half share it can only give 22% of, at factor 0.4. (2) SWAY at tie level, portals only with the deck ignored, is 12.82 mm against a 12.08 mm H/250 limit - factor 0.9, H/236. The portals carry the strength on their own but they do NOT meet sway on their own; the loft deck has to be on and screwed at 150 mm on panel EDGES, not the 300 the schedule used to say. So F25 is not an issue ONCE F24 is cut and the deck is down. Between now and then it is exactly the state stability.md calls the worst case, and that window is the build."
- },
- {
-  "id": "F26",
-  "title": "Rise-up door gear does not fit above the opening",
-  "severity": "medium",
-  "at": [
-   -4.6,
-   0,
-   3.45
-  ],
-  "layer": "plates",
-  "one_line": "Planned 2026-08-21: automatic rise-up doors. The opening head sits at 3.370 and the tie underside at 3.610, so the gear gets 240 mm - 85 mm before it meets the lintel. A standard-lift sectional door wants 300-450 mm for the shaft and curved track; a roller shutter needs a 350-450 mm barrel and does not fit at all internally. Three ways out: a LOW-HEADROOM sectional kit (double track, front shaft, about 180-200 mm - price this first, it changes nothing about the building); drop the opening head 2.8 -> 2.5 m for 520 mm of space; or face-fix a roller outside in a hood, which puts the barrel in the rainscreen and clashes with the cladding grid. Settle it BEFORE the opening is trimmed. Two other things come with the door: hang the horizontal tracks off the TIES, spread over two each, remembering they are propped members already at 12.0 of 24 mm (F24); and through-bolt the torsion shaft to the lintel rather than screwing into the underside of a single 220x185 plate course that is carrying the gable (F8). The door does NOT help F25 - it carries no in-plane shear, so the 3 m of front gable stays a hole as far as racking goes. On wind it is neutral: the owner's rule is that the door is shut in high wind, which EN 1991-1-4 7.2.9 treats as an ACCIDENTAL situation at gQ 1.0, and on that basis door-open uplift (1.78 kN per rafter foot) is lower than the sealed persistent case (1.88). Nothing in the frame is sized by the door. The doors have a manual failsafe close, so the rule does not depend on the grid staying up during the storm that takes it down. The remaining item is a line on the order, not a change to the building: the shut leaf sees 0.61 kPa on 8.4 m2, so specify EN 12424 CLASS 3 and ask for the maker's wind-bracing struts by name - on a 3 m leaf they are an option, not standard."
- }
+  {
+    "id": "F0",
+    "title": "Lean straightened — hold it with permanent bracing",
+    "severity": "high",
+    "at": [
+      0,
+      3.0,
+      3.4
+    ],
+    "layer": "posts",
+    "one_line": "Owner straightened the frame 2026-08-15; it is plumb now. That closes the P-delta problem: the 50 mm eccentricity that was self-feeding is gone. It is NOT finished. Nothing permanent holds it there - the temporary diagonals are doing it, and they cannot come out until the wind girder and the front gable panels are in. Build the girder FIRST, then remove the temporaries, then re-check plumb. Removing them first puts you straight back where you started, and the lap-bolted plate (F16) is what now gives the wall top the continuity to stay straight."
+  },
+  {
+    "id": "F1",
+    "title": "Foundation is bored concrete piles — F1 withdrawn",
+    "severity": "low",
+    "at": [
+      -4.5,
+      -3.0,
+      0.2
+    ],
+    "one_line": "WITHDRAWN 2026-08-15. F1 said 192 kPa on soil good for 50-75 and told you to keep the frame re-levellable. It was written on the premise of 250 mm dry-laid brick on grade, read off photographs. The foundation is 300 mm dia x 1.2 m reinforced concrete piles. At 1.2 m the allowable base pressure is 150-250 kPa, and with shaft friction each pile carries 28-46 kN against 19.1 kN on the worst one. Factor 1.4-2.4. There is no settlement problem and no need to design for re-levelling.",
+    "layer": "piers"
+  },
+  {
+    "id": "F2",
+    "title": "Frost: adfreeze on the shaft, not heave under the base",
+    "severity": "high",
+    "at": [
+      0,
+      -3.0,
+      0.1
+    ],
+    "one_line": "OWNER 2026-08-21: the sill is anchored with M14 x 300, not the M12 recorded. Good anchor, and it closes the WIND question outright - 0.77 kN of hold-down per windward pile against 8.00, and 2.56 kN of shear against 20.00. IT DOES NOT CLOSE F2, because F2 is about the GROUND. The piles bear AT the 1.2 m frost line rather than below it, and the mechanism is ADFREEZE on the shaft: 28-42 kN of uplift on a lightly loaded pile. A bigger anchor does not reduce that load, it only decides which link breaks - and the binding limit was never the anchor steel but the WASHER BEARING ON THE SILL, 5.96 kN at 60x60 against fc,90,d 1.73. With an M12 there was at least a chance the anchor let go first and relieved the frame. An M14 x 300 removes that accidental fuse and guarantees the sill is what splits. THE FIX IS UNCHANGED AND NOW MATTERS MORE: a slip sleeve - smooth, bituminous or polythene - over the top 1.0 m of every shaft, including the four lightly loaded jamb piles. It has a closing window: once the backfill is in and settled it is a dig-out rather than a wrap.",
+    "layer": "piers"
+  },
+  {
+    "id": "F3",
+    "title": "Rafter seat: birdsmouth + M14 to every 2nd tie",
+    "severity": "low",
+    "at": [
+      1.5,
+      -3.0,
+      3.7
+    ],
+    "one_line": "Owner decision 2026-08-15. Birdsmouth converts thrust from friction into bearing; M14 into every second tie takes it straight into the tie as tension, bypassing the plate. 10 bolts x 7.1 kN = 71 kN against 20.6 kN per wall, factor 3.4. On a 50x150 rafter the 50 mm cut is EXACTLY the 1/3 limit - do not go deeper. Keep straps on unbolted rafters for uplift (F6).",
+    "layer": "roof"
+  },
+  {
+    "id": "F4",
+    "title": "Purlin frames: braces are the load path, and they are in",
+    "severity": "low",
+    "at": [
+      0,
+      -2.2,
+      4.6
+    ],
+    "one_line": "The diagonal brace takes 99.2% of the 7.18 kN, the vertical 0.8%. That is still true, and it is why strutSection is 100x100 while the vertical is 50x100. Resolved in design: 8 braced frames per side, struts now bearing on the ties. The warning that remains is a SEQUENCING one - do not load the roof before the braces are in, or the ties sag 26-37 mm instead of 0.25 mm.",
+    "layer": "purlins"
+  },
+  {
+    "id": "F5",
+    "title": "Sill: ventilated, isolated and now DPC'd — splash is what is left",
+    "severity": "low",
+    "at": [
+      4.0,
+      -3.0,
+      0.35
+    ],
+    "one_line": "Improved 2026-08-15: concrete will not touch the timber, the underside stays ventilated in summer, and ground falls away. That is what keeps the frame in service class 2 - at class 3 kdef goes 0.80 to 2.00 and the tie fails at 36.6 mm. The DPC item is CLOSED 2026-08-21: bituminous membrane is laid between every pile head and the sill, so the barrier is no longer pierced at the 24 M12 anchors. ONE THING LEFT: drainage moves standing water but not SPLASH, and the sill at ~200 mm sits inside the ~300 mm splash zone - lay a 300-500 mm gravel margin, not soil or grass.",
+    "layer": "sills"
+  },
+  {
+    "id": "F6",
+    "title": "Uplift load path — now complete to ground",
+    "severity": "low",
+    "at": [
+      0,
+      3.0,
+      4.2
+    ],
+    "one_line": "CLOSED 2026-08-15. The path is continuous and mechanical: rafter -> tie (M14, every 2nd) -> plate (M14) -> post -> sill -> M12 -> concrete pile -> ground. Net uplift is 0.46 kN per rafter door-open and about zero sealed, once the deck and ties are counted. Metal walls and insulation contribute nothing; the ties and the OSB do.",
+    "layer": "roof"
+  },
+  {
+    "id": "F7",
+    "title": "Tie beams: 15 at 600 mm, and they need the knee braces",
+    "severity": "low",
+    "at": [
+      0,
+      0,
+      3.65
+    ],
+    "one_line": "600 mm centres = 500 mm clear, set out on site 2026-08-26 after 600 mm clear (700 mm centres) did not work. On a plain 6 m span the tie still needs the knee braces propping it: 23.5 mm against a 24 mm limit unpropped, 2% under - a plain span passes now, unlike at 700 mm, but with almost nothing spare. Propped, it runs 10.4 mm final, factor 2.3 - better than the 700 mm setout's 12.0 mm, because a tighter setout is a strict structural improvement even though the reason for it was fit, not load. The braces stay structural, and so does the ledger: see F24. Deck stays 22 mm OSB.",
+    "layer": "ties"
+  },
+  {
+    "id": "F8",
+    "title": "Entrance: lintel passes and the jambs are now piled — closed",
+    "severity": "low",
+    "at": [
+      -4.5,
+      0,
+      1.6
+    ],
+    "one_line": "Re-checked 2026-08-15 with the lighter roof: the 220x185 plate as a lintel over 3.0 m runs 2.07 MPa against 14.8 and deflects 3.4 mm final against a 10 mm limit - it PASSES, which it did not with the 250 rafters. The open item was what the jambs stand on. CLOSED 2026-08-21: each side of the entrance is built on THREE piles counting the corner, one of them directly under the jamb. The header puts 3.5 kN into that pile against 28 kN of capacity, factor 8, and it bears on a 1.2 m pile like the rest of the frame instead of on a slab that heaves independently of it.",
+    "layer": "opening"
+  },
+  {
+    "id": "F9",
+    "title": "Purlin verge cantilever — resolved by gable bearing",
+    "severity": "low",
+    "at": [
+      4.5,
+      -1.5,
+      5.6
+    ],
+    "one_line": "The 4.0 m cantilever and its 38.7 MPa / 113 mm droop only existed with NO gable bearing. Gable studs catch the purlin at each end, which cut it to 2.4 MPa and 0.4 mm at a 1.0 m verge. The verge was then shortened to 0.50 m (2026-08-15), which is a material decision, not a structural one - and it requires cutting the upper plate course back from 1.00 m at all four corners.",
+    "layer": "purlins"
+  },
+  {
+    "id": "F10",
+    "title": "Brace-to-girt joint: housed girt, closed",
+    "severity": "low",
+    "at": [
+      -3.0,
+      -3.0,
+      2.3
+    ],
+    "one_line": "CLOSED 2026-08-21, owner: the girt is HOUSED INTO THE POSTS and screwed with 6 x 10 mm. That answers the actual worry, which was never the timber (factor 19) but whether the 3.92 kN per brace could cross into the post at all - the finding assumed 4 x 6 mm screws that had to bite the post behind. Housed, the load crosses as BEARING ON WOOD: girt end 50 x 100 on the post, 0.55 MPa against fc,90,d 1.73, factor 3.1. The screws are now a retaining fixing, and even taken alone they carry it - 6 x 10 mm gives 24.6 kN design against 3.92, factor 6.3, against 8.9 kN and factor 2.3 for the 4 x 6 mm assumed.",
+    "layer": "braces"
+  },
+  {
+    "id": "F11",
+    "title": "Salvaged posts: insecticide done, fire retardant and the existing damage are not",
+    "severity": "medium",
+    "at": [
+      4.5,
+      1.2,
+      2.0
+    ],
+    "one_line": "PART CLOSED 2026-08-21: the owner treated the timber with a standard insecticidal preservative before use. That covers one of the three things under F11. STILL OPEN: (a) FIRE RETARDANT is a separate product, not a property of an insecticidal preservative, and the permit names it explicitly - degsanas aizsardzibas lidzekli. A workshop raises the fire duty further: solvents, sawdust, electrical load. (b) Treatment does not reverse damage already there - the boring holes and softened surface in 20260814_155102.jpg are section already lost. Sound every post with a mallet and probe with an awl before the roof goes on; soft more than ~15 mm deep is not carrying its section. (c) Record the product name and date for the permit file.",
+    "layer": "posts"
+  },
+  {
+    "id": "F13",
+    "title": "Front wall reaches level on one plate course",
+    "severity": "low",
+    "at": [
+      -4.6,
+      2.4,
+      3.6
+    ],
+    "one_line": "Same finished height as the other walls but a single 185 mm course instead of two, and that course alone spans the 3 m entrance as the lintel.",
+    "layer": "plates"
+  },
+  {
+    "id": "F14",
+    "title": "Ridge exceeds the approved 7.70 m - owner accepts, but 7.82 is not the number",
+    "severity": "high",
+    "at": [
+      0,
+      0,
+      7.9
+    ],
+    "one_line": "OWNER 2026-08-21: accepts the ridge height, not dropping the pitch. RECORDED - but the 7.82 m in this finding is STALE and none of the current model numbers match it. As the model now stands: the setting-out ridge line is 7.769 (0.07 over), the TOP OF TIMBER at the ridge is 7.940 (0.24 over), and the FINISHED ridge with counter-batten, batten and sheet is about 8.03 (0.33 over), before a ridge cap. A surveyor measures the finished roof, so the exposure is about 0.33 m, not 0.12. This is a permit matter, not a structural one - area 55.86 m2 is still inside the 60 m2 limit and the setbacks still work. Re-confirm the decision against 8.03, not 7.82.",
+    "layer": "roof"
+  },
+  {
+    "id": "F15",
+    "title": "Layers: what each colour means",
+    "severity": "low",
+    "at": [
+      0,
+      0,
+      -0.6
+    ],
+    "one_line": "Blue = your design, not yet built. Yellow = must add. White = wind reinforcement, split into reinforce_gableStuds and reinforce_roofBracing. Both are mandatory and neither is built.",
+    "layer": "must_tieBolts"
+  },
+  {
+    "id": "F16",
+    "title": "Wall plate is lap-jointed and bolted — resolved",
+    "severity": "low",
+    "at": [
+      -0.66,
+      -3.0,
+      3.6
+    ],
+    "layer": "plates",
+    "one_line": "Corrected 2026-08-15: the joints are LAPS with M14 through, not butts, and the two courses are bolted to each other. A butt carries zero tension - that was the whole finding. A lap carries the 4.46 kN chord force in bolt shear: 7.1 kN on one M14, 14.2 on two. Bolting the courses together also makes a 150x370 section, 4x stiffer. Needs 300 mm of lap for 2 bolts each side (a1 5d, a3,t 7d, a4 3d)."
+  },
+  {
+    "id": "F17",
+    "title": "Strut load spread to 8 posts — resolved",
+    "severity": "low",
+    "at": [
+      -1.03,
+      -3.0,
+      0.35
+    ],
+    "layer": "piers",
+    "one_line": "Was 5 struts on 5 of 9 posts: 12.3 kN, 197 kPa. Now 8 struts on 8 posts: 9.4 kN, 151 kPa. Still over what the ground carries, but the settlement is now even rather than lumpy, which is what a timber frame tolerates."
+  },
+  {
+    "id": "F18",
+    "title": "Corner hold-down — closed, M12 into the piles",
+    "severity": "low",
+    "at": [
+      4.5,
+      3.0,
+      1.8
+    ],
+    "layer": "posts",
+    "one_line": "CLOSED 2026-08-15: the lowest wall course is screwed into the concrete with M12 at every pile. Demand 1.07 kN uplift and 1.81 kN shear per anchor against 7-10 and 6-8 kN capacity. ONE CONDITION: use 60x60 washers minimum - the anchor is not the weak link, washer bearing on the sill is, and a 40x40 crushes the timber at 2.50 kN."
+  },
+  {
+    "id": "F19",
+    "title": "Roof plane: sheeting plus a timber X between the purlin frames",
+    "severity": "low",
+    "at": [
+      0,
+      0,
+      6.6
+    ],
+    "layer": "roof",
+    "one_line": "DOWN TO LOW 2026-08-21. Two independent paths now. (1) The sheeting: every rib screwed into the battens, 0.81 kN/m against 1.50, factor 1.9 - still stitch the SIDE LAPS or each sheet works alone. (2) NEW - longitudinal X-bracing between the purlin frames, 7 bays per slope, which gives the 12.9 kN gable triangle a timber path that exists BEFORE the sheeting goes on. That was the real gap: 'until the sheeting is on, the roof plane has nothing.' The X was going to be built anyway as temporary works - the purlin frames are triangulated across the building but a pinned parallelogram along it, and the rafters that would stop them leaning cannot go on until the purlins are already up. TENSION-ONLY: 10.6 kN in the diagonal, 38.8 kN in tension (factor 3.7) but only 9.3 kN in compression (factor 0.88), so fit both diagonals and let the tension one work. 8 x 6x120 per end. Free timber off the rafter rip."
+  },
+  {
+    "id": "F20",
+    "title": "Floor: slab specified, 150 mm on 150 hardcore",
+    "severity": "medium",
+    "at": [
+      0,
+      0,
+      0.35
+    ],
+    "layer": "ground",
+    "one_line": "Specified 2026-08-16. 150 mm C25/30 with A252 at mid-depth, on 50 mm blinding on 150 mm compacted hardcore, over a 0.3 mm DPM. Slab TOP at 150 mm - 50 mm below the sill underside - which gives a continuous ventilated slot under the wall and means the slab never touches timber. Dig 200 mm below grade. Thicken to 200 mm for 1.5 m at the entrance: free corner plus all the wheel traffic."
+  },
+  {
+    "id": "F21",
+    "title": "Metal roof condensation - drained membrane accepted, discharge point is the detail",
+    "severity": "medium",
+    "at": [
+      2.0,
+      0,
+      7.0
+    ],
+    "layer": "roof",
+    "one_line": "OWNER 2026-08-21: a membrane over the rafters catches condensate off the underside of the steel and guides it out rather than letting it drip inside. That is the standard cold-roof answer and it is accepted - with the 25 mm counter-batten cavity already in the design it is a coherent detail. ONE THING DECIDES WHETHER IT WORKS: the membrane must discharge OUTSIDE THE WALL LINE, into the gutter or over the fascia. Stopped short at the wall top it dumps every drop into the eaves, onto the plate and the tie ends - the one place in the building you cannot inspect once the loft is decked. Also: laps shingle-style, upper over lower, and dress it over the fascia not behind it. Use a breather/HPV type, not a vapour barrier. Vented ridge and eaves are now advisory rather than mandatory - the moisture load in an unheated store is low and the membrane drains it."
+  },
+  {
+    "id": "F24",
+    "title": "Knee braces are primary supports: cut the seats, and give the feet something to stand on",
+    "severity": "high",
+    "at": [
+      0,
+      2.43,
+      3.59
+    ],
+    "layer": "kneeBraces",
+    "one_line": "At 600 mm tie centres the loft floor only passes because the knee braces prop each tie inboard of its bearing - 23.5 mm becomes 10.4 mm. They were designed as 0.78 kN wind braces held by 4 x 6x100 screws. As props the demand is 4.4 kN vertical per foot, 6.3 kN axial, and up to 7.1 / 10.0 kN where a foot lands over a post and the prop goes rigid. TWO FIXES, both before the loft is decked, because neither can be inspected afterwards. (1) CUT THE SEATS. Flat bearing face on the brace head against the tie underside - 1.16 MPa against fc,90,d 2.31 - located with a 10 mm housing or cleats, NEVER a 25 mm notch in the tie. (2) THE FEET NEED A LEDGER. Below 3.270 the wall between posts is open frame, so a foot landing mid-bay has AIR under it, and at 600 mm ties against 1163 mm posts most of them do. A continuous 100x100 along the inner wall face, top at 3.186, housed 20 mm into every post and screwed 6 x 8x200, carries them. It has to be 100 thick for STIFFNESS, not strength: at 50 thick the ledger sags proportionally more under the prop for the same reason, giving back three quarters of what the braces were fitted to buy. Braces went 453 -> 600 mm to reach it, which also moves the prop 104 mm further inboard. 4 boards of 100x100, EUR 74.40."
+  },
+  {
+    "id": "F22",
+    "title": "No daylight designed",
+    "severity": "medium",
+    "at": [
+      0,
+      -3.1,
+      2.4
+    ],
+    "layer": "posts",
+    "one_line": "Zero windows. A workshop wants 10-20% of the 55.9 m2 floor. Six bays at 1.0 x 1.2 m gives 13%, and mid-bay windows cost no racking because the braces are in the end bays."
+  },
+  {
+    "id": "F16a",
+    "title": "F16a re-opens under the 600 mm setout — tight, still redundant",
+    "severity": "low",
+    "at": [
+      -1.727,
+      -3.0,
+      3.55
+    ],
+    "layer": "plateSplices",
+    "one_line": "REVERSED 2026-08-26. It was RESOLVED at 700 mm (nearest tie 150 mm from any splice, against the 98 mm EN 1995 wants). The tie setout has since gone to 600 mm centres, and two upper-layer splices are now only 50 mm from the nearest tie (-1.65 from tie -1.60, +1.35 from tie +1.40) - under the 98 mm limit, factor 0.51. STILL NOT CRITICAL, for the same reason it never was: the LOWER plate layer has its only splice at -0.65, nowhere near either tight spot, so it stays continuous exactly where the upper layer is tight - the load has a path. Set those two lap bolts deliberately, not by eye, and do not add a third splice near either station."
+  },
+  {
+    "id": "F23",
+    "title": "Two foundation systems under one bolted frame — closed",
+    "severity": "low",
+    "at": [
+      -4.5,
+      0,
+      0.1
+    ],
+    "layer": "piers",
+    "one_line": "The frame is bolted to 1.2 m piles; the slab bears at grade. Piles below frost do not move, a slab does. Resolved in two steps. (1) The slab detail: finishing 50 mm below the sill with a 20 mm compressible perimeter gap lets the slab heave without levering the frame. (2) The entrance jambs, which were the last part of the frame standing on slab rather than pile - as built 2026-08-21 each side of the opening has three piles counting the corner, so the jambs are piled like everything else. NOTE what that adds: the four new piles are lightly loaded, about 3.5 kN each, and adfreeze threatens the LIGHTLY loaded piles hardest (F2). Slip-sleeve these four with the rest - do not skip them because they carry least."
+  },
+  {
+    "id": "F25",
+    "title": "Front gable is not a shear wall - agreed not a failure, but it is a dependency",
+    "severity": "medium",
+    "at": [
+      -4.6,
+      0,
+      2.0
+    ],
+    "layer": "must_frontGablePanels",
+    "one_line": "OWNER 2026-08-21 judges this not an issue, and on strength that AGREES with what the finding already said: the tributary half-share is not how the load goes, and the knee-brace portals carry the whole 48.55 kN transverse shear at 77.22 kN, factor 1.6, with the deck ignored entirely. Downgraded, but NOT closed, because it is the marker for a dependency chain and two of the links are not built yet. (1) That 77 kN is the brace END CONNECTIONS at factor 1.6 - it is F24. No seats, no portal, and then the front gable really is being asked for a half share it can only give 22% of, at factor 0.4. (2) SWAY at tie level, portals only with the deck ignored, is 12.82 mm against a 12.08 mm H/250 limit - factor 0.9, H/236. The portals carry the strength on their own but they do NOT meet sway on their own; the loft deck has to be on and screwed at 150 mm on panel EDGES, not the 300 the schedule used to say. So F25 is not an issue ONCE F24 is cut and the deck is down. Between now and then it is exactly the state stability.md calls the worst case, and that window is the build."
+  },
+  {
+    "id": "F26",
+    "title": "Rise-up door gear does not fit above the opening",
+    "severity": "medium",
+    "at": [
+      -4.6,
+      0,
+      3.45
+    ],
+    "layer": "plates",
+    "one_line": "Planned 2026-08-21: automatic rise-up doors. The opening head sits at 3.370 and the tie underside at 3.610, so the gear gets 240 mm - 85 mm before it meets the lintel. A standard-lift sectional door wants 300-450 mm for the shaft and curved track; a roller shutter needs a 350-450 mm barrel and does not fit at all internally. Three ways out: a LOW-HEADROOM sectional kit (double track, front shaft, about 180-200 mm - price this first, it changes nothing about the building); drop the opening head 2.8 -> 2.5 m for 520 mm of space; or face-fix a roller outside in a hood, which puts the barrel in the rainscreen and clashes with the cladding grid. Settle it BEFORE the opening is trimmed. Two other things come with the door: hang the horizontal tracks off the TIES, spread over two each, remembering they are propped members already at 12.0 of 24 mm (F24); and through-bolt the torsion shaft to the lintel rather than screwing into the underside of a single 220x185 plate course that is carrying the gable (F8). The door does NOT help F25 - it carries no in-plane shear, so the 3 m of front gable stays a hole as far as racking goes. On wind it is neutral: the owner's rule is that the door is shut in high wind, which EN 1991-1-4 7.2.9 treats as an ACCIDENTAL situation at gQ 1.0, and on that basis door-open uplift (1.78 kN per rafter foot) is lower than the sealed persistent case (1.88). Nothing in the frame is sized by the door. The doors have a manual failsafe close, so the rule does not depend on the grid staying up during the storm that takes it down. The remaining item is a line on the order, not a change to the building: the shut leaf sees 0.61 kPa on 8.4 m2, so specify EN 12424 CLASS 3 and ask for the maker's wind-bracing struts by name - on a 3 m leaf they are an option, not standard."
+  }
 ]

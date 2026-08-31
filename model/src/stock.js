@@ -62,9 +62,11 @@ export const OWNED = {
 const QUEUE = [
   // 100 x 250 — 16 boards, now all available for ties: the wind girder moved to
   // bought 100 x 100 so it no longer takes 3 of them.
-  // 13 ties at 700 mm centres = 600 mm CLEAR, as built. Down from 16 at 576.
-  // THREE BOARDS SPARE, the first real margin this section has had.
-  { group: 'ties',            section: '100x250', boards: 13 },
+  // 15 ties at 600 mm centres = 500 mm CLEAR, as built 2026-08-26. Up from 13
+  // at 700/600-clear, which the owner found did not work on site. Together
+  // with the stairOpening board below this now uses all 16 owned - ZERO spare,
+  // where 700 mm centres left 3.
+  { group: 'ties',            section: '100x250', boards: 15 },
   // ZERO now. Owner placed a 14th tie at the stair station; cut at y = +1.0 it
   // yields both the tail joist (its own outer 2 m, already notched into the
   // wall) and the 1.50 m trimmer. Both in 100 x 250, flush with the ties.
@@ -95,22 +97,26 @@ const QUEUE = [
   { group: 'gablePanels',     section: '50x150_ripped', boards: 2  },
   // Rafters last: they are the biggest claim and the latest work, so this is
   // where the yard runs out. At 50 x 150 they still take one board each.
-  // 30, down from 38: the rafters follow the tie setout, and 700 mm centres
-  // over 9.30 m is 15 lines where 576 mm gave 19.
-  { group: 'rafters',         section: '50x150_ripped', boards: 36 },
+  // 42, up from 36: the rafters follow the tie setout, and 600 mm centres
+  // over 9.30 m is 21 lines where 700 mm gave 18.
+  // THIS IS WHERE THE RIP STOCK RUUT — gablePanels already takes 2 of the 42
+  // ripped boards, leaving 40, and 42 are needed. Buy 2 more 50 x 150 rather
+  // than ripping into the 6 uncut boards reserved for purlins and ridge -
+  // those are exactly sized for the roof already, with nothing spare.
+  { group: 'rafters',         section: '50x150_ripped', boards: 42 },
 
   // 50 x 100 — 36 m of rip byproduct
   // Blocking moved here from 50 x 250 — it is 50 x 100 now, and free.
-  // 11 blocked bays x 3 rows x 0.60 m clear (the stair bay is an opening, not
-  // a bay). Was 20.0 m at 16 ties and 476 mm clear.
-  { group: 'blocking',        section: '50x100_m', boards: 19.8 },
-  // 26 x 600 mm. These are now PRIMARY SUPPORTS, not wind braces - see
-  // params.kneeBraces._STRUCTURAL. The timber is still free; the seat cut and
-  // the ledger under it are the cost.
-  { group: 'kneeBraces',      section: '50x100_m', boards: 15.6 },
-  // Queued explicitly now. They were drawn blue unconditionally, which meant
-  // 37.3 m of 50 x 100 sat outside the take-off entirely.
-  { group: 'rafterSpacers',   section: '50x100_m', boards: 39.0 },
+  // 13 blocked bays x 3 rows x 0.50 m clear (the stair bay is an opening, not
+  // a bay). Was 19.8 m at 13 ties and 600 mm clear.
+  { group: 'blocking',        section: '50x100_m', boards: 19.5 },
+  // 30 x 600 mm - 15 ties x 2, up from 26. These are PRIMARY SUPPORTS, not wind
+  // braces - see params.kneeBraces._STRUCTURAL. The timber is still free; the
+  // seat cut and the ledger under it are the cost.
+  { group: 'kneeBraces',      section: '50x100_m', boards: 18.0 },
+  // Follows the 21 rafter lines now, not 18. Queued explicitly so they do not
+  // draw blue unconditionally outside the take-off.
+  { group: 'rafterSpacers',   section: '50x100_m', boards: 41.0 },
   // The 15 girt-to-corner wall braces are NOT queued: owner is supplying
   // them from separate material, deliberately kept out of this order. They
   // used to draw 22.1 m off the rip byproduct — that is now free for
@@ -141,8 +147,10 @@ const QUEUE = [
   // 25 x 50 — same section, separate counts. Roof counter-battens make the
   // roof's ventilation cavity; wall battens make the wall's drained cavity and
   // also carry the sheet. Different jobs, different lines.
-  // One per rafter line, full slope length. 15 lines now, not 19.
-  { group: 'counterBattens',  section: '25x50_roof_m', boards: 212.4 },
+  // One per rafter line, full slope length: 21 lines x 6.00 m = 126.1 m.
+  // Corrected 2026-08-26 - this had been carrying a stale figure from an
+  // even earlier (576 mm, 19-line) setout through two rafter-count changes.
+  { group: 'counterBattens',  section: '25x50_roof_m', boards: 126.1 },
   // 182 m plain wall (incl. 8 corner battens and 2 entrance jambs)
   // + 42 m of gable triangle and over-head strip = 225 m.
   { group: 'wallBattens',     section: '25x50_wall_m', boards: 225.0 },

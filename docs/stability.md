@@ -1,7 +1,7 @@
 # Stability and wind
 
-Re-run 2026-08-21, from scratch, against the 700 mm tie setout and the knee
-braces on their ledger. `python3 model/stability.py` regenerates every number
+Re-run 2026-08-26, from scratch, against the 600 mm tie setout (up from 700,
+after 700 did not work on site) and the knee braces on their ledger. `python3 model/stability.py` regenerates every number
 here from `model/params.json`; nothing below is typed in by hand.
 
 **The short version.** The building stands up, and no check in the frame comes
@@ -10,7 +10,7 @@ timber is above 10. What the re-run changes is *which parts are load-bearing*.
 Three of them were being treated as belt-and-braces and are not:
 
 1. **The knee braces are now the busiest members in the building.** They already
-   became vertical props at 700 mm tie centres (F7, F24). The re-run adds their
+   became vertical props at 600 mm tie centres (F7, F24). The re-run adds their
    other job: the front gable cannot take a half share of the transverse wind,
    so the brace portals are the primary lateral system across the width too.
 2. **A prop needs something to stand on, and mid-bay there is nothing.** Below
@@ -32,7 +32,7 @@ the sill anchors.
 | Base shear across the ridge | **44.4 kN** characteristic |
 | Base shear along the ridge | **26.5 kN** characteristic |
 | Arriving at loft-deck level | **32.4 kN**, 73% of the transverse total |
-| Per tie bay at 700 mm | 3.65 kN design → **5.17 kN** axial in each knee brace |
+| Per tie bay at 600 mm | 3.13 kN design → **4.43 kN** axial in each knee brace |
 | Floor load per tie | 1391 N/m → **5.1 kN** vertical per brace, 7.3 kN axial |
 
 Across the ridge is the case that governs, and the reason is the roof: at 54° it
@@ -73,7 +73,7 @@ the brace connections are structural, on top of the propping.
 
 The ledger is a spring under a prop, and every millimetre it sags is a
 millimetre handed back to the tie — the same objection F24 makes about screw
-slip at the brace head. Ties at 700 mm against posts at 1162 mm mean most brace
+slip at the brace head. Ties at 600 mm against posts at 1162 mm mean most brace
 feet land mid-bay, where the ledger spans:
 
 | ledger | spring | sag under the prop | tie, final |
@@ -96,39 +96,39 @@ member fixed to the posts.
 
 | check | demand | capacity | factor | note |
 |---|---|---|---|---|
-| knee brace 600 mm, buckling | 5.17 kN | 63.59 kN | **12.3** | lambda 42, kc 0.87 |
-| knee brace 600 mm, tension on the net section | 5.17 kN | 38.77 kN | **7.5** | the leeward brace of every pair pulls - 20% off for the screw holes |
-| knee brace end connection, 6 x 6 mm screws | 5.17 kN | 8.40 kN | **1.6** | 1.9 kN once the deck is on |
-| ledger bending, vertical (strong axis) | 6.37 MPa | 16.62 MPa | **2.6** | one mid-bay brace foot over 1162 mm |
-| ledger bending, horizontal (weak axis) | 6.37 MPa | 16.62 MPa | **2.6** | the tension brace pulling the ledger off the wall |
-| ledger deflection, weak axis | 1.30 mm | 3.88 mm | **3.0** | L/300 |
-| ledger fixing, withdrawal at each post | 7.31 kN | 24.00 kN | **3.3** | both braces of the bay pulling at once, 8 x 200 partial thread |
-| brace foot bearing on the ledger seat | 0.73 MPa | 2.60 MPa | **3.6** | 100 mm seat, across the grain |
-| portal path, whole transverse shear | 48.55 kN | 77.22 kN | **1.6** | 13 braced bays x 5.9 kN - this is the path that does not depend on the front gable |
-| post, frame moment at the knee | 4.78 kNm | 11.15 kNm | **2.3** | pinned base, rigid corner |
+| knee brace 600 mm, buckling | 4.43 kN | 63.59 kN | **14.4** | lambda 42, kc 0.87 |
+| knee brace 600 mm, tension on the net section | 4.43 kN | 38.77 kN | **8.8** | the leeward brace of every pair pulls - 20% off for the screw holes |
+| knee brace end connection, 6 x 6 mm screws | 4.43 kN | 8.40 kN | **1.9** | 1.6 kN once the deck is on |
+| ledger bending, vertical (strong axis) | 5.46 MPa | 16.62 MPa | **3.0** | one mid-bay brace foot over 1162 mm |
+| ledger bending, horizontal (weak axis) | 5.46 MPa | 16.62 MPa | **3.0** | the tension brace pulling the ledger off the wall |
+| ledger deflection, weak axis | 1.12 mm | 3.88 mm | **3.5** | L/300 |
+| ledger fixing, withdrawal at each post | 6.26 kN | 24.00 kN | **3.8** | both braces of the bay pulling at once, 8 x 200 partial thread |
+| brace foot bearing on the ledger seat | 0.63 MPa | 2.60 MPa | **4.1** | 100 mm seat, across the grain |
+| portal path, whole transverse shear | 48.55 kN | 89.10 kN | **1.8** | 15 braced bays x 5.9 kN - this is the path that does not depend on the front gable |
+| post, frame moment at the knee | 4.10 kNm | 11.15 kNm | **2.7** | pinned base, rigid corner |
 | post, out-of-plane bending between sill and plate | 1.06 MPa | 16.62 MPa | **15.7** | 1162 mm apart, 150 mm wall |
 | loft deck diaphragm, unit shear | 4.05 kN/m | 9.33 kN/m | **2.3** | 6x100 at 150 mm on panel EDGES. At the 300 mm the schedule used to say, it is 4.7 kN/m and a factor of 1.2 |
 | deck chord force in the edge tie | 9.41 kN | 242.31 kN | **25.8** | the two edge ties are the chords - the SPLICES carry this |
 | back gable, force per built diagonal | 12.94 kN | 203.54 kN | **15.7** | 4 diagonals, timber is fine - the ENDS are not specified |
 | front gable pier, overturning on its pile group | 41.75 kNm | 18.00 kNm | **0.4** | 3 m opening leaves two 1.5 m piers at 2.3:1. 3 piles a side counting the corner - two would give 12 kNm. Tributary half-share assumed; see the note |
 | jamb pile, vertical from the entrance header | 3.46 kN | 28.00 kN | **8.1** | the job the jamb piles actually do - and they now do it on a pile instead of on a slab that heaves (F8, F23) |
-| sway at tie level, portal only, deck ignored | 13.12 mm | 12.16 mm | **0.9** | characteristic wind, H/250; = H/232 |
+| sway at tie level, portal only, deck ignored | 11.25 mm | 12.16 mm | **1.1** | characteristic wind, H/250; = H/270 |
 | roof sheeting as a diaphragm (F19) | 0.81 kN/m | 1.50 kN/m | **1.9** | no roof-plane braces: the sheeting is the only path |
-| wind girder diagonal, 100x100 | 12.57 kN | 129.35 kN | **10.3** | restrained every 700 mm along it, kc 0.89 |
+| wind girder diagonal, 100x100 | 12.57 kN | 134.69 kN | **10.7** | restrained every 600 mm along it, kc 0.93 |
 | long wall, force per built diagonal | 10.59 kN | 203.54 kN | **19.2** | 4 per wall, end bays - ends again unspecified |
-| overturning across the ridge, self weight alone | 243.29 kNm | 209.67 kNm | **0.9** | self weight 78 kN at 0.9 |
-| hold-down needed per windward pile | 0.62 kN | 8.00 kN | **12.9** | 9 piles down the windward wall - this is F6, and now it has a number |
-| overturning along the ridge | 127.21 kNm | 325.00 kNm | **2.6** | the long way is never the problem |
+| overturning across the ridge, self weight alone | 243.29 kNm | 213.72 kNm | **0.9** | self weight 79 kN at 0.9 |
+| hold-down needed per windward pile | 0.55 kN | 8.00 kN | **14.6** | 9 piles down the windward wall - this is F6, and now it has a number |
+| overturning along the ridge | 127.21 kNm | 331.27 kNm | **2.6** | the long way is never the problem |
 | sliding, shear per pile connection | 2.56 kN | 20.00 kN | **7.8** | 26 piles, M14 anchor in single shear |
-| net uplift per rafter foot | 1.88 kN | 8.00 kN | **4.2** | strap per F3/F6 |
-| tie deflection, braces propping it | 12.04 mm | 24.00 mm | **2.0** | 27.3 mm unpropped; 3.0 where a foot lands on a post |
-| brace as a prop, axial | 11.57 kN | 56.52 kN | **4.9** | 7.3 kN mid-bay, 11.6 on a post. kmod 0.8, floor load |
-| brace head bearing on the tie underside | 1.16 MPa | 2.31 MPa | **2.0** | flat cut face, 7071 mm2 - NOT a notch in the tie |
-| tie end hold-down, uplift | 4.01 kN | 14.20 kN | **3.5** | 2 x M14. The props take more than the whole floor, so the ends LIFT |
-| tie axial compression between the brace heads | 5.14 kN | 57.34 kN | **11.2** | Euler, weak axis, between the props - self-contained, see _thrust |
-| ledger bending under the prop, mid-bay | 8.96 MPa | 14.77 MPa | **1.6** | k = 2.8 kN/mm, sags 1.8 mm |
-| brace foot bearing on the ledger seat, floor load | 1.64 MPa | 2.31 MPa | **1.4** | 100 mm seat, 12 mm locating housing |
-| ledger into each post, vertical | 8.18 kN | 18.00 kN | **2.2** | 6 x 8 x 200 partial thread in shear, PLUS a 20 mm housing so the shoulder bears |
+| net uplift per rafter foot | 1.61 kN | 8.00 kN | **5.0** | strap per F3/F6 |
+| tie deflection, braces propping it | 10.38 mm | 24.00 mm | **2.3** | 23.5 mm unpropped; 2.6 where a foot lands on a post |
+| brace as a prop, axial | 9.99 kN | 56.52 kN | **5.7** | 6.3 kN mid-bay, 10.0 on a post. kmod 0.8, floor load |
+| brace head bearing on the tie underside | 1.00 MPa | 2.31 MPa | **2.3** | flat cut face, 7071 mm2 - NOT a notch in the tie |
+| tie end hold-down, uplift | 3.46 kN | 14.20 kN | **4.1** | 2 x M14. The props take more than the whole floor, so the ends LIFT |
+| tie axial compression between the brace heads | 4.43 kN | 57.34 kN | **12.9** | Euler, weak axis, between the props - self-contained, see _thrust |
+| ledger bending under the prop, mid-bay | 7.73 MPa | 14.77 MPa | **1.9** | k = 2.8 kN/mm, sags 1.6 mm |
+| brace foot bearing on the ledger seat, floor load | 1.41 MPa | 2.31 MPa | **1.6** | 100 mm seat, 12 mm locating housing |
+| ledger into each post, vertical | 7.06 kN | 18.00 kN | **2.5** | 6 x 8 x 200 partial thread in shear, PLUS a 20 mm housing so the shoulder bears |
 
 ## The three that are not comfortable
 
@@ -169,23 +169,12 @@ built badly. Two specific holes:
 
 ## Assumptions that move the numbers
 
-- vb = 24 m/s, **terrain III**. Terrain II would raise qp from 557 to 790 Pa —
-  divide every wind factor by 1.42 to see it. The front gable and the
-  overturning rows get worse; the brace connection lands at 1.1.
-- **kmod 0.9 on the wind cases**, where EN 1995 allows 1.1 for instantaneous
-  load, so those rows have 22% more cover than they show. **kmod 0.8 on the
-  floor cases**, which is the right one for imposed load and is not conservative
-  — it is what medium-term duration gives.
-- cpe,10 walls +0.8 / −0.55, roof +0.7 / −0.25 at 54°, cpi ±0.2.
-- The propped tie is solved as a beam on **four** supports — a bearing at each
-  wall and a prop at each brace head — with the props given a real spring
-  stiffness. Earlier figures modelled it as props only, which is why they read
-  4.07 kN per prop where this reads 5.1: with the ends included, the props take
-  more than the whole floor load and the tie ends go into about 1 kN of uplift.
-- Pile uplift 8 kN: 2 kN of concrete plus shaft friction at a deliberately low
-  10 kPa, ÷1.5. Confirm against the real soil.
-- C24, service class 2, γM 1.3. Screw values are the ones already quoted in
-  `params.json`, so this file cannot silently disagree with the drawings.
+- Floor load on one tie is 1200 N/m at 600 mm centres, and final deflection is 1.665x instantaneous - both taken from the 600 mm setout in params.joists so this file and F7 cannot drift apart.
+- vb = 24 m/s, terrain III. Terrain II would raise qp from 557 to 790 Pa - divide every wind factor by 1.42 to see it.
+- kmod 0.9 throughout. EN 1995 allows 1.1 for instantaneous wind, so every wind row has 22% more cover than it shows.
+- cpe,10 walls +0.8 / -0.55, roof +0.7 / -0.25 at 54 deg, cpi +-0.2.
+- Racking capacity of the built diagonals is stated as force per diagonal, not kN/m: their end connections have never been specified (F10). That is also why the gable/portal SHARE cannot be computed properly: with 4 x 6 mm screws the joint slip dominates, and a braced gable panel comes out no stiffer than a handful of portals. So the front gable is checked on a tributary half-share, which is conservative, and the line above says what share it can actually take.
+- Pile uplift 8 kN: 2 kN of concrete plus shaft friction at 10 kPa, /1.5. Confirm against the real soil.
 
 None of this replaces the Latvian structural engineer that findings.md asks for
 before the roof goes up. It is a consistency check with its working shown.

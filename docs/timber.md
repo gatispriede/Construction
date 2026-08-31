@@ -3,11 +3,10 @@
 As of 2026-08-21. Ties are **not** installed — the light members in the photos are
 temporary and cannot come out until the permanent bracing is in, so they are not stock.
 
-**Re-set out at 700 mm centres — 600 mm CLEAR — 2026-08-21, AS BUILT.** The wall was
-re-measured along the tie run at **9.30 m** front outer edge to back outer edge, and
-the owner has set the ties out at 700 mm centres so the **600 × 1000 mm insulation
-packs drop into every bay uncut**. Counts below reflect it: **13 ties, 36 rafters** — 18 pairs, 14 beside a tie
-and 2 verge lines at each end.
+**Re-set out at 600 mm centres — 500 mm CLEAR — 2026-08-26, AS BUILT.** 600 mm clear
+(700 mm centres) did not work on site, so the owner respaced tighter. Wall run **9.30 m**
+front outer edge to back outer edge. Counts below reflect it: **15 ties, 42 rafters** — 21 pairs, 16 beside a tie
+and 5 verge lines across the two ends.
 
 > **This spacing only passes because the knee braces are now structural props.**
 > On a plain 6 m span the loft floor runs 27.3 mm against a 24 mm limit. Propped by
@@ -35,7 +34,7 @@ and 2 verge lines at each end.
 
 ## Members still to make
 
-Cut list off the model, 2026-08-21. 13 ties @ 700 mm centres, **1.00 m verge**. 14 setout
+Cut list off the model, 2026-08-26. 15 ties @ 600 mm centres, **1.00 m verge**. 16 setout
 stations; the one at 8,450 mm from the front face carries a rafter and a tail joist
 but no tie — that is the stair opening.
 
@@ -105,7 +104,7 @@ need help. Three other reasons:
 2. **Diaphragm.** F19 deleted the roof-plane braces, so the 12.9 kN gable triangle
    now relies on the sheeting acting as a plate. Sheeting cannot do that unless the
    rafters are tied to one another. This is the important one.
-3. They hold the 700 mm setout while you work.
+3. They hold the 600 mm setout while you work.
 
 2 rows × 14 bays × 2 slopes = **56**, cut from the rip byproduct. **€0.**
 
@@ -114,12 +113,12 @@ need help. Three other reasons:
 Changed from 100 × 125 so it no longer consumes 100 × 250. **It only works because
 the ties are close.**
 
-The girder is screwed to every tie it crosses. At 700 mm in x that is a restraint
+The girder is screwed to every tie it crosses. At 600 mm in x that is a restraint
 every **1114 mm** along the 7.33 m diagonal:
 
 | tie spacing | restraint along girder | λ | kc | capacity | vs 7.1 kN |
 |---|---|---|---|---|---|
-| **700 mm (now)** | 1114 mm | 38.6 | ~0.90 | **~130 kN** | 18.3 |
+| **600 mm (now)** | 1114 mm | 38.6 | ~0.90 | **~130 kN** | 18.3 |
 | 576 mm (was) | 917 mm | 31.8 | 0.939 | 136 kN | 19.2 |
 | 1151 mm (old) | 1834 mm | 63.4 | 0.633 | 92 kN | 13.0 |
 
@@ -131,7 +130,7 @@ is not optional** — it is what the capacity depends on.
 Measured 2026-08-15: 40 × 20 × 100 × 2000 (80 m) + 10 × 20 × 100 × 6000 (60 m) =
 **140 m, 0.28 m³**.
 
-**As battens it works.** Over the 700 mm rafter gap: 1.95 MPa against 16.6, and
+**As battens it works.** Over the 600 mm rafter gap: 1.95 MPa against 16.6, and
 0.93 mm deflection. Covers **29%** of the 475 m needed.
 
 **As counter-battens it does not.** 20 mm is under the 25 mm minimum, and that
@@ -155,13 +154,13 @@ of 50 × 250 (€93).
 
 ## Stair opening — the close-out bay at the back
 
-Owner decision 2026-08-15, re-set out on the 700 mm grid 2026-08-21: no tie on the
+Owner decision 2026-08-15, re-set out on the 600 mm grid 2026-08-26: no tie on the
 setout station at **8,450 mm from the front face**, which is the 13th of 14. That
 leaves **1400 mm clear** between the tie at 7,750 and the end tie at 9,250 — 1500 mm
 centre to centre. Was 1051 mm.
 
 The opening got wider for free: the remainder that a 9.20 m centreline run leaves over
-after eleven 700 mm bays lands in exactly this bay. Owner asked for 1200 mm minimum
+after the 600 mm bays lands in exactly this bay. Owner asked for 1200 mm minimum
 for the stair; this beats it by 200.
 
 **The binding constraint is loft headroom, not the opening.** Full standing height
@@ -222,7 +221,7 @@ the birdsmouth does nothing for it.
 |---|---|---|---|
 | 50 × 250 × 6 m | 46 | **48 counted 2026-08-21** | **0** — 2 spare |
 | 50 × 150 × 6 m | 39.1 m | 0 | **7** |
-| 100 × 250 × 6 m | 13 ties | 16 | **0** — 3 spare |
+| 100 × 250 × 6 m | 15 ties | 16 | **0** — no spare |
 | 100 × 100 × 6 m | 20 | 0 | **20** |
 | 50 × 100 | 124.2 m | 228 m from the rafter rip | **0** |
 | 25 × 100 battens | 433 m | 140 m @ 20 mm | **293 m** |
@@ -237,7 +236,7 @@ Counted 2026-08-21, and the split is what matters:
 | **Uncut 50 × 250** | **6** | the only boards that can be a purlin or a ridge |
 | Already ripped to 50 × 150 | 42 | fine for rafters, never a purlin |
 
-**Ripped pile: 42 against 38 committed** — 36 rafters and 2 gable panel diagonals.
+**Ripped pile: 42 against 44 committed** — 42 rafters and 2 gable panel diagonals, 2 SHORT: buy 2 more 50 x 150 rather than ripping into the 6 uncut boards the roof needs whole.
 4 spare, comfortable.
 
 **Uncut pile: 6 against 7 needed.** Purlins take 5, the ridge takes 2.
@@ -266,13 +265,31 @@ inclusive total by a factor of 1.21.
 
 | Section | Length | **Order** | Metres | Need | Spare | m³ | ex VAT | **incl VAT** |
 |---|---|---|---|---|---|---|---|---|
-| 50 × 150 | 6.0 m | **24** | 144 | **21** | 3 (14%) | 1.080 | 276.70 | 334.80 |
-| 100 × 100 | 6.0 m | **24** | 144 | 22 | 2 (9%) | 1.440 | 368.93 | 446.40 |
+| 50 × 150 | 6.0 m | **21** | 126 | **19** | 2 (10%) | 0.945 | 242.11 | 292.95 |
+| 100 × 100 | 6.0 m | **24** | 144 | 23 | 1 (4%) | 1.440 | 368.93 | 446.40 |
 | 25 × 100 roof battens | 6.0 m | **86** | 516 | **85** | 1 (1%) | 1.290 | 330.50 | 399.90 |
-| 25 × 50 counter + wall battens | 6.0 m | **98** | 588 | **94** | 4 (4%) | 0.735 | 188.31 | 227.85 |
-| **TOTAL** | | **233** | **1,398** | | | **4.590** | **1,175.96** | **€1,422.90** |
+| 25 × 50 counter + wall battens | 6.0 m | **98** | 588 | **~76** | ~22 (~29%) | 0.735 | 188.31 | 227.85 |
+| **TOTAL** | | **229** | **1,374** | | | **4.410** | **1,129.85** | **€1,367.10** |
 
-€246.94 of that is VAT. **Budget €1,422.90 all in.**
+€237.25 of that is VAT. **Budget €1,367.10 all in.**
+
+> **50 × 150 dropped 24 → 21 boards, and 100 × 100 tightened to zero-margin
+> equivalent.** Both are 2026-08-26 consequences of the tie respacing, not a
+> re-optimisation of anything else. 50 × 150's real need is 19: 17 for stair
+> and fascia, plus **2 to cover a rafter shortfall** — 42 rafters now claim
+> the ripped 50 × 250 pile, 2 more than the 42 available once the 2 gable
+> panel diagonals are taken out, so the last 2 rafters come off this line
+> instead of the rip pile. 100 × 100 is unaffected by the tie change (its
+> demand was already 23, a stale "22" in an earlier pass here) and keeps 1
+> spare board.
+>
+> **The 25 × 50 line is left at its old order of 98 boards, not re-optimised.**
+> Its real need dropped from 94 to about 76, because the roof counter-battens
+> (one per rafter line) had been carrying a stale figure through two rafter-
+> count changes and is now corrected to the true 21-line, 126.1 m total — see
+> `model/src/stock.js`. Leaving the order where it was only adds spare, never
+> creates a shortfall, so it is the safe place to under-invest effort; revisit
+> if you want the cash back.
 
 > **The 1 m verge ate most of the contingency, 2026-08-21.** Going back to a 1.0 m
 > verge lengthened the ridge 10.30 → 11.30 m, which lengthens every batten run and
@@ -294,8 +311,8 @@ has to be 100 mm thick and not 50.
 
 | Section | Used | Own | |
 |---|---|---|---|
-| 50 × 250 | 46 | **48** | 36 rafters, 8 purlin/ridge, 2 gable diagonals — **2 spare** |
-| 100 × 250 | 14 | 16 | 13 ties + the stair trimmer, **2 spare** |
+| 50 × 250 | 46 | **48** | 6 uncut (purlin/ridge), 42 rafters + 2 gable diagonals from the ripped 42 — **2 SHORT, buy 2 more 50x150** |
+| 100 × 250 | 16 | 16 | 15 ties + the stair trimmer, **0 spare** |
 | 50 × 100 | 184.5 m | 228 m | all from the rafter rip — blocking, spacers, collars, verticals, knee braces, X-braces |
 
 ### Sort the 50 × 150 before you cut
@@ -339,9 +356,9 @@ off the span tables. The 40 mm boarding in the model carries the 600 mm clear sp
 easily (0.10 mm) and is the alternative if boards are preferred to sheet. **Do not buy
 18 mm for this floor** — that figure was written when the ties were at 576.
 
-## Why the ties are at 700 mm — and what it costs
+## Why the ties are at 600 mm — and what it costs
 
-**As built, owner 2026-08-21.** 700 mm centres on a 100 mm tie is **600 mm clear**,
+**As built, owner 2026-08-26.** 600 mm centres on a 100 mm tie is **500 mm clear**,
 which is what takes a 600 × 1000 mm insulation pack with no cutting. That is the whole
 reason, and it is a good one — the alternative was binning 100 mm off every pack across
 55 m² of floor.
@@ -375,7 +392,7 @@ to change.
 
 ### The other three jobs, checked
 
-| | at 700 mm | |
+| | at 600 mm | |
 |---|---|---|
 | Bending | 8.41 MPa unpropped, 5.98 propped, vs 14.8 | factor 1.8 — never the problem |
 | Rafter tie, horizontal | 3.80 kN per tie end vs 11.8 kN of bracket | factor 3.1, was 3.8 |
@@ -550,9 +567,9 @@ but know it is there before anyone leaves a brace out.
 **Battens at 300 mm.** Suits tile-profile metal, and the grid ties all 30 rafters
 together every 300 mm up the slope — lateral restraint that partly covers what the
 deleted roof-plane braces would have done (F19). The battens are nowhere near
-working: 1.95 MPa over the 700 mm rafter gap, against 16.6.
+working: 1.95 MPa over the 600 mm rafter gap, against 16.6.
 
-**A 6 m batten is 8 bays at 700 mm.** Batten joints land on a rafter line, so every
+**A 6 m batten is 10 bays at 600 mm.** Batten joints land on a rafter line, so every
 piece has to be a whole number of bays: 8 × 700 = 5.60 m used, 400 mm binned — **6.7%
 waste**, worse than the 4% at 576 and much worse than the zero at 600. 433 m of batten
 is **78 boards**. Buying the insulation fit costs a little here.
@@ -566,7 +583,7 @@ the sheeting. See F21.
 - **All lengths assume 6 m stock.** At 4 m the 100 × 100 count goes to 30, at 3 m to 33,
   and the 5.52 m girder pieces no longer fit at all — every one would need an extra
   splice. Confirm 100 × 100 comes in 6 m before ordering.
-- The 13 ties come out of the 16 owned 100 × 250 with **three spare**. At 576 mm it was
+- The 15 ties come out of the 16 owned 100 × 250 with **no spare left**. At 576 mm it was
   16 of 16, exactly, with nothing to cover a bad board.
 - Wind girder: 100 × 100, each 7.33 m diagonal spliced 6.00 + 1.33 so the joint lands
   on a tie crossing. 4 diagonals.
