@@ -89,7 +89,7 @@
   "wallThickness": 0.15,
   "_thickness": "Walls are 150 mm through. Post along-wall dimension 179 mm is the average that makes the measured bays close on 9.31 m.",
   "_heights": "Course heights come from heights.sillCourse / heights.plateCourse ONLY. They used to be duplicated here at 150 and disagreed with the 185 there, leaving a 70 mm gap between sill and post.",
-  "_rafter": "50x150, dropped from 50x250 on 2026-08-15. The purlins break the 5.10 m backspan into two 2.55 m spans, so the rafter was never close to working: at 150 it runs 3.05 MPa against 16.6 (factor 5.4) and deflects 1.0 mm against an 8.5 mm limit. It is also BETTER for lateral-torsional buckling - h/b drops from 5.0 to 3.0 and kcrit goes from 0.827 to 0.992, so no intermediate restraint is needed. Ridge drops 0.17 m."
+  "_rafter": "50x150, dropped from 50x250 on 2026-08-15. The purlins break the 5.10 m backspan into two spans - 2.55/2.55 as drawn, 2.76/2.35 as corrected 2026-08-26 (purlins._positionCorrected) - so the rafter was never close to working: at 150 and the original even split it runs 3.05 MPa against 16.6 (factor 5.4) and deflects 1.0 mm against an 8.5 mm limit. The longer 2.76 m span scales that to roughly factor 4.6 bending, 1.4 mm deflection (factor 6.3) - still comfortable, nothing else about the section changes. It is also BETTER for lateral-torsional buckling - h/b drops from 5.0 to 3.0 and kcrit goes from 0.827 to 0.992, so no intermediate restraint is needed. Ridge drops 0.17 m."
  },
  "bays": {
   "longWallClearGaps": [
@@ -243,14 +243,15 @@
    0.05,
    0.25
   ],
-  "positionOnRafter": 0.5,
+  "positionOnRafter": 0.54,
   "queenPostSection": [
    0.05,
    0.1
   ],
   "src": "given: 2 purlins 50x250 at mid-rafter. No new cross beams - struts land on the wall plate at every tie beam, so the purlin load bypasses the ties.",
   "bearOnGables": true,
-  "_spans": "With gable bearing at +/-4.5 and frames at -3,-1,1,3 the purlin spans are 1.5, 2.0, 2.0, 2.0, 1.5 m plus a 1.0 m verge cantilever. Max 2.0 m.",
+  "_spans": "With gable bearing at +/-4.5 and frames at -3,-1,1,3 the purlin spans are 1.5, 2.0, 2.0, 2.0, 1.5 m plus a 1.0 m verge cantilever. Max 2.0 m. Unaffected by positionOnRafter - these are ALONG-BUILDING spans between frames, not the wall-to-purlin distance across a rafter, so the 2026-08-26 correction below does not touch this table.",
+  "_positionCorrected": "0.54, not 0.50 - owner as-built correction 2026-08-26. Both purlin runs were set out at the drawn mid-backspan (1.50 m from the wall) and the two rafter tops met with a 20 mm gap at the ridge against the 50 mm wanted - 15 mm too much. Moving each purlin support 70 mm toward the centreline closed it, because the wall bearing is a fixed pivot: an intermediate support's position error shows up roughly DOUBLED at the ridge, ~5 m further along. 70 mm at the purlin puts it 1.62 m from the outer wall face, positionOnRafter = 1.62/3.0 = 0.54. Confirmed the same at both ends, so this is a global correction, not a one-off. It splits the rafter's 5.10 m backspan 2.76/2.35 m instead of an even 2.55/2.55 - still nowhere near a governing case (see sections.rafter._rafter), so nothing else about the rafter section changes.",
   "support": "vertical post on the tie under each purlin with a 100x100 head block, plus a diagonal strut out to the wall and a collar tying the two purlin lines together",
   "strutSection": [
    0.1,
@@ -276,10 +277,11 @@
    0.05
   ],
   "_verticalOrientation": "100 mm ALONG the building, 50 across - and this is the whole detail, not a preference. The short piece under the purlin gives 100 x 50 = 5000 mm2 of seat under a purlin that is only 50 wide. Turned the other way it is 50 x 50 = 2500, the bearing goes 0.77 -> 1.54 MPa and the factor 2.2 -> 1.1. Same board, same cut, one turn of the wrist.",
-  "cutBar": 1.59,
-  "cutStem": 1.85,
-  "_cutLengths": "ROUND THEM IN OPPOSITE DIRECTIONS. Drawn heights are bar 1.595 and stem 1.845 off a tie top at 3.860, to a purlin underside of 5.455 and top of 5.705. The STEM rounds UP to 1.85 freely - it bears nothing, it is screwed to the purlin face. The BAR rounds DOWN to 1.59, or better, is scribed to fit. A bar 5 mm PROUD cannot compress 5 mm under a 6.89 kN reaction (it would take 172 kN at EA/L = 34.5 kN/mm), so the strut never touches: the bar takes 100% of the reaction instead of its 55% share and the tie goes 23.3 -> about 32 mm against a 24 mm limit. Five millimetres of tidiness costs the floor. Five millimetres SHORT is harmless the other way - the bar carries nothing, the strut carries the whole 6.89 kN, which is the pre-2026-08-21 design and still passes at 1.38 MPa head bearing against 1.73. Cut shy, scribe, and NEVER pack it up.",
-  "_setoutFromWall": "Measured in from the OUTER wall face along the tie, less 150 for the inner face. BAR centre 1500, occupying 1475-1525 - the same footprint as the purlin above it. STEM centre 1575, occupying 1525-1625, hard against the bar's inner face and turned the other way. The purlin line itself is at 1500 from the outer face, which is half the 3.0 m bearing run.",
+  "cutBar": 1.76,
+  "cutStem": 2.01,
+  "_cutLengthsSuperseded": "1.59 / 1.85 were correct for positionOnRafter 0.50, drawn heights bar 1.595 / stem 1.845. SUPERSEDED 2026-08-26 - the purlin moved to positionOnRafter 0.54 (purlins._positionCorrected) and, because it now sits further up the roof slope, it is also 165 mm HIGHER, not just further from the wall. Both verticals grew by that same 165 mm: bar 1.595 -> 1.760, stem 1.845 -> 2.010. If any were already cut to the old figures, they are 165 mm short - check before fitting.",
+  "_cutLengths": "ROUND THEM IN OPPOSITE DIRECTIONS, same rule as before, new numbers. Drawn heights are bar 1.760 and stem 2.010 off a tie top at 3.860, to a purlin underside of 5.620 and top of 5.870. The STEM rounds UP to 2.01 freely - it bears nothing, it is screwed to the purlin face. The BAR rounds DOWN to 1.76, or better, is scribed to fit. A bar 5 mm PROUD cannot compress 5 mm under a 6.89 kN reaction (it would take 172 kN at EA/L = 34.5 kN/mm), so the strut never touches: the bar takes 100% of the reaction instead of its 55% share and the tie goes 23.3 -> about 32 mm against a 24 mm limit. Five millimetres of tidiness costs the floor. Five millimetres SHORT is harmless the other way - the bar carries nothing, the strut carries the whole 6.89 kN, and still passes at 1.38 MPa head bearing against 1.73. Cut shy, scribe, and NEVER pack it up.",
+  "_setoutFromWall": "Measured in from the OUTER wall face along the tie, less 150 for the inner face. As drawn (positionOnRafter 0.5): BAR centre 1500, occupying 1475-1525 - the same footprint as the purlin above it. STEM centre 1575, occupying 1525-1625. AS CORRECTED 2026-08-26 (positionOnRafter 0.54, see purlins._positionCorrected): everything on this list moves 120 mm out with it, since bar/stem/purlin/strut/collar all key off the same puY. Bar now centres at 1620, occupying 1595-1645; stem at 1695, occupying 1645-1745.",
   "_twoVerticals": "A T IN PLAN, from two 50x100 of different heights, both standing on the tie - owner 2026-08-21. The BAR is short, sits directly under the purlin and bears. The STEM is long, sits beside the purlin turned PERPENDICULAR to it, runs past to the purlin top, and is screwed both to the purlin's face and to the bar. Looking down you see a T.",
   "_eachTurnedForItsOwnJob": "This is the part worth not losing. The BAR is turned 100 mm ALONG the building because the purlin is only 50 wide, so only the along dimension buys seat area: 100 x 50 = 5000 mm2, 0.77 MPa, factor 2.2. Turned the other way it is 2500 and the factor halves to 1.1. The STEM is turned 100 mm ACROSS the building because roll restraint is a STIFFNESS job, not a strength one: as a cantilever off the tie it sways 2.1 mm this way against 8.4 mm turned parallel - four times stiffer for the same board, and the stresses are trivial either way (1.08 vs 2.15 MPa on a 50 N restraint force). Swap either piece and it gets worse at its own job.",
   "_stemStealsNothing": "The stem is BESIDE the purlin, not under it, so it is not a second support: it adds no axial stiffness in the load path and steals no share from the strut. Only the bar bears. That separation is what lets each be optimised without compromising the other - and it is why the tie stays at 23.3 mm rather than the 26.5 a stiffer single post would cause.",

@@ -121,11 +121,14 @@ const QUEUE = [
   // them from separate material, deliberately kept out of this order. They
   // used to draw 22.1 m off the rip byproduct — that is now free for
   // something else. frame.js draws them blue unconditionally.
-  // The T: 16 bars at 1.595 + 16 stems at 1.845 + 4 gable posts (2 x 2.000 at
-  // the front, 2 x 1.815 at the back). No bolster — two pieces at the head, not
-  // three, so the bar runs to the purlin UNDERSIDE and the stem 250 mm past it
-  // to the top face. Read straight off the drawn geometry.
-  { group: 'purlinVerticals', section: '50x100_m', boards: 62.7 },
+  // The T: 16 bars at 1.76 + 16 stems at 2.01 + 4 gable posts (2 x 2.165 at
+  // the front, 2 x 1.980 at the back). Up from 1.595/1.845/2.000/1.815 -
+  // 2026-08-26, the purlin moved to positionOnRafter 0.54 and is 165 mm
+  // higher up the slope as well as further from the wall, so every vertical
+  // that reaches it grew by the same 165 mm. No bolster — two pieces at the
+  // head, not three, so the bar runs to the purlin UNDERSIDE and the stem
+  // 250 mm past it to the top face. Read straight off the drawn geometry.
+  { group: 'purlinVerticals', section: '50x100_m', boards: 68.6 },
   { group: 'collars',         section: '50x100_m', boards: 18.9 },
   // 4 corner dragon ties, 1.131 m. Free off the rip.
   { group: 'cornerBraces',    section: '50x100_m', boards: 4.6 },

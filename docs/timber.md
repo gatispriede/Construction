@@ -54,8 +54,8 @@ but no tie — that is the stair opening.
 | collar | 50 × 100 — free from the rip | 2.37 | 8 |
 | gable stud | 100 × 100 | 0.30 / 1.38 / 2.46 / 3.54 | 4 each |
 | wind girder | 100 × 100 | 6.00 + 1.33 spliced | 4 diagonals |
-| purlin vertical — **bar** | 50 × 100 — free from the rip | **1.59** — cut SHY, never proud | **16** |
-| purlin vertical — **stem** | 50 × 100 — free from the rip | **1.85** — round up freely | **16** |
+| purlin vertical — **bar** | 50 × 100 — free from the rip | **1.76** — cut SHY, never proud | **16** |
+| purlin vertical — **stem** | 50 × 100 — free from the rip | **2.01** — round up freely | **16** |
 | gable purlin post | 50 × 100 — free from the rip | 1.86 | 4 |
 | **knee brace** | 50 × 100 — free from the rip | 0.60, 45° both ends, **seat cut** | **26** |
 | **brace ledger** | **100 × 100 — bought** | 5.82 + 3.18 spliced over a post | **2 runs** |
