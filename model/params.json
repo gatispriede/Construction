@@ -721,6 +721,13 @@
   "_corners": "Corners were already covered: the 600 mm grid runs spaced() over the FULL length and width, which puts a station at each end, so every corner gets TWO battens - one on the long-wall face at (+/-4.655, +/-3.012) and one on the gable face at (+/-4.668, +/-3.000). They sit 12.5 mm apart in each direction and form an L, which is the correct detail: each sheet edge lands on its own timber and the corner trim covers the joint.",
   "_entranceJambs": "ADDED 2026-08-15. The sheet edge stops at the reveal, y = +/-1.50, while the nearest grid batten is at +/-1.80 - 300 mm of edge screwed into air. Two full-height jamb battens fix that. The 270 mm strip of wall ABOVE the opening head (3.37 to 3.64) also gets battens on the grid, otherwise the sheet there spans the full 3.0 m opening with nothing behind it."
  },
+ "wallInsulation": {
+  "planned": true,
+  "material": null,
+  "src": "owner 2026-09-04 - walls will be insulated too. Material not yet decided; OSB is a candidate.",
+  "_status": "PENDING - no thickness, layer order, or fixing detail decided. Do not assume a number here until the owner specifies one. OSB is being considered, most likely as an interior sheathing layer (stud - OSB - insulation - membrane - batten - sheet, or similar), not as the insulation itself.",
+  "_openQuestions": "1) OSB inside or outside the studs, and is it meant to be structural (racking diaphragm) or just a nailing/vapour-control layer. 2) Insulation type and thickness. 3) Whether an added interior sheet changes wallBattens fixing depth - those screws currently land straight into bare stud/girt/sill/plate, nothing else in the way."
+ },
  "timberPrice": {
   "eurPerM3": 310.0,
   "vatIncluded": true,
