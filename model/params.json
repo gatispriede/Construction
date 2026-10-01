@@ -218,8 +218,9 @@
     0.025,
     0.1
    ],
-   "spacing": 0.3,
-   "_note": "25x100 at 300 mm. Changed from 20x100 on 2026-08-15. Two reasons: sheet screws bite 25 mm instead of 20 - at ~200 mm rib spacing most fixings fall BETWEEN counter-battens, so the batten is all they get - and it puts the whole job on ONE thickness (25x100 roof battens, 25x50 counter-battens, 25x50 wall battens) instead of three to keep apart on site.",
+   "spacing": 0.1,
+   "_spacingCorrected": "100 mm, NOT 300 - owner 2026-10-01: the Classic 480 click panel needs 100 mm batten centres, not the 300 mm this file had speced for a face-screwed sheet. Supersedes the 300 mm figure and everything derived from it below (_note, _cost) - those describe the superseded 300 mm build-up and are kept only for the reasoning, not the number. Triples the row count: 6.0 m rafter length / 0.1 m is ~60 rows per slope instead of ~20. Roof battens in stock.js moved 475 -> ~1425 m on this same basis - re-verify once roof.pitchDeg/ridgeLength (2026-10-01 correction in progress) are finalised, this is a scaled estimate not a re-derivation from the corrected angle.",
+   "_note": "25x100. Changed from 20x100 on 2026-08-15. Two reasons: sheet screws bite 25 mm instead of 20 - at ~200 mm rib spacing most fixings fall BETWEEN counter-battens, so the batten is all they get - and it puts the whole job on ONE thickness (25x100 roof battens, 25x50 counter-battens, 25x50 wall battens) instead of three to keep apart on site.",
    "_noMixing": "Battens set the plane the sheeting lands on. A 5 mm step where 20 mm meets 25 mm telegraphs through the sheet as visible waves and preloads the fixings at the step. You cannot mix batten thicknesses on one slope - this is a defect, not a tolerance.",
    "_screws": "25 mm gives proper hold. At 20 mm the numbers passed - 0.05 kN per screw over a 200x298 mm tributary, 0.15 kN in the corner suction zones, against 800-1200 N pull-over - but it was the thinnest link in the fixing chain.",
    "counterBattenSection": [

@@ -145,7 +145,11 @@ const QUEUE = [
   { group: 'braceLedger',     section: '100x100', boards: 4  },
 
   // Roof battens, 25 x 100. All bought — see the note on OWNED above.
-  { group: 'battens',         section: '25x100_m', boards: 475.0 },
+  // 1425 m, not 475 - owner 2026-10-01: Classic 480 click panel needs 100 mm
+  // row centres, not the 300 mm this was ordered against. Scaled x3 (row
+  // count only, same row length) as a stopgap - re-derive properly once
+  // roof.pitchDeg/ridgeLength land (52 deg / 11.20 m correction in progress).
+  { group: 'battens',         section: '25x100_m', boards: 1425.0 },
 
   // 25 x 50 — same section, separate counts. Roof counter-battens make the
   // roof's ventilation cavity; wall battens make the wall's drained cavity and
