@@ -20,6 +20,13 @@
 // 100 x 100 on 2026-08-15, so it no longer competes with the ties — but it is
 // still the first thing to buy.
 
+// AS OF 2026-10-01 THIS WHOLE FILE IS HISTORICAL. Every timber section is bought,
+// delivered and FITTED except the 25 x 50 wall battens. The allocation below answers
+// "can I build this today?", and the answer is "it is built". Keep it for the
+// reasoning, not for a quantity: a figure here is a 2026-08 estimate, never a
+// delivery note, and comparing one against a current requirement produces a
+// shortfall that does not exist.
+
 export const OWNED = {
   // 48 counted 2026-08-21 — but they are NOT interchangeable, and that is now
   // the binding constraint. Only SIX are uncut full-section 50 x 250. The other

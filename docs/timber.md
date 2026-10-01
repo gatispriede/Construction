@@ -257,6 +257,16 @@ board and the ridge waits on a delivery.
 
 ## Buy — order this
 
+> **HISTORICAL as of 2026-10-01. Every timber section below is bought, delivered and
+> FITTED except the wall battens.** The table is a planning estimate from 2026-08-16,
+> not a record of what was delivered — no delivery note has ever been entered against
+> it. Do not read a line here as "we have N boards", and do not compute a shortfall by
+> comparing it against a current requirement: the roof battens were estimated at 86
+> boards on a 300 mm spacing and then built at 200 mm centres, so the estimate and the
+> building disagree by design. The building is right.
+>
+> The only line still live is **25 × 50 wall battens**.
+
 Confirmed quantities, 2026-08-16. Contingency is already inside each figure.
 
 **€310/m³ is VAT-INCLUSIVE** — €256.20/m³ ex VAT. Earlier versions of this
