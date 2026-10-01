@@ -761,5 +761,23 @@
   "_downpipesDeferred": "Owner 2026-10-01: downpipes ordered later, once the walls are done. Right reason - the pipe brackets fix THROUGH the finished cladding, so their standoff depends on the wall build-up that does not exist yet: 25 mm batten cavity + 22 mm cladding = 47 mm of packing before the bracket reaches anything structural. Order them against the built wall, not against a drawing. When it comes: 2 downpipes, each 1 x A likums + 1 x B likums to swan-neck back over the 696 mm eaves overhang, pipe to about 2.70 m of drop, 2 brackets, 1 lejasgals.",
   "_bracketsShort": "18 BRACKETS ORDERED FOR 22.4 m OF GUTTER - one per 1.24 m, and that is about half what this roof needs. Steel gutter wants 600 mm centres, so 40. The reason is not the water, it is the SNOW: eaves._snowSlide says the real load is snow releasing off the pitch as an impact, not a static load, and at 52 deg it releases hard. 22 more brackets at about EUR 4. This one is NOT deferrable with the downpipes - the brackets fix to the fascia and the gutter line has to be set before the karnize, because the karnize's 85 mm downturn has to discharge into it.",
   "_outletPosition": "One piltuve per run, at the MIDDLE. Two 5.60 m runs at 3 mm/m is 17 mm of fall each, against 34 mm for a single end outlet. Less total fall keeps the gutter lower relative to the roof line everywhere, which is what the snow-slide note asks for."
+ },
+ "vejdelis": {
+  "section": [
+   0.05,
+   0.2
+  ],
+  "runs": 4,
+  "lengthEach": 6.02,
+  "totalM": 24.08,
+  "outerFaceAt": 5.6,
+  "battenCutAt": 5.55,
+  "_new": "ADDED 2026-10-01. The barge board has been missing from this model from the start - the verge was drawn as a line with nothing closing it. It is the only roof timber still to buy.",
+  "_depth": "200 mm covers the stack at the verge: batten 25 + counter-batten 25 + rafter 150. Less and the rafter edge shows below the board. The purlin end is another 250 below that - leave it open or box it separately, it is not this board's job.",
+  "_thickness": "50 mm, NOT 25. It spans 2.64 m between the ridge end and the first purlin end, runs 6 m, and is fully exposed - 25 will cup and wave along that span. 50 also matches the rafter and purlin thickness so the end grain it screws into is the same family. The only case for 25 was keeping one thickness with the battens, which is not worth a wavy verge.",
+  "_thicknessDecidesTheCut": "THE THICKNESS SETS THE BATTEN CUT LINE, so choose it before cutting anything. The board's OUTER face lands on 5.600, flush with the purlin and ridge ends already there. So the battens are cut at 5.600 less the thickness: 5.575 at 25 mm, 5.568 at 32, 5.550 at 50. An earlier note said simply 'cut the battens at 5.600' - that is wrong whenever the board sits outboard of them, which it does.",
+  "_fixing": "FOUR structural points per rake, all 50 x 250 end grain: ridge end at 0.00 down the rake, the two purlin ends at 2.64, and the wall plate at 4.89. Pre-drill, 2 x 8x120 per point. The roughly 30 batten ends bear against the board along its length and give it support, but they are NOT fixings - a screw into the end of a 25 mm batten splits it and holds nothing.",
+  "_noRafterBehindIt": "Worth knowing before you go looking for one: the outermost rafter sits at 5.500-5.550, so its outer face is 50 mm INBOARD of the verge line. There is no rafter directly behind the board. That is why the purlin and ridge ends carry it.",
+  "_thenTheVejmala": "The vējmala (250 developed, on the Toode order) caps over: about 120 back onto the panel and about 90 down the board face. That leaves roughly the lower 110 mm of a 200 board as exposed timber - paint it before it goes up, both faces and the ends."
  }
 }
