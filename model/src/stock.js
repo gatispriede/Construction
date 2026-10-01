@@ -149,7 +149,11 @@ const QUEUE = [
   // row centres, not the 300 mm this was ordered against. Scaled x3 (row
   // count only, same row length) as a stopgap - re-derive properly once
   // roof.pitchDeg/ridgeLength land (52 deg / 11.20 m correction in progress).
-  { group: 'battens',         section: '25x100_m', boards: 1425.0 },
+  // 200 mm CENTRES (100 mm spacer + 100 mm batten), not the 100 mm centres this
+  // read before — that was zero gap, a solid deck. 31 rows per slope over the
+  // measured 6.02 m, 62 rows x 11.20 m = 694 m. The order was 86 boards / 516 m,
+  // so roughly 30 boards short.
+  { group: 'battens',         section: '25x100_m', boards: 694.0 },
 
   // 25 x 50 — same section, separate counts. Roof counter-battens make the
   // roof's ventilation cavity; wall battens make the wall's drained cavity and
