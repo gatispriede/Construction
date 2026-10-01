@@ -31,8 +31,9 @@
  },
  "plan": {
   "length": 9.3,
-  "width": 6.0,
-  "src": "given - re-measured 2026-08-21 along the tie run, front outer edge to back outer edge: 9.30 m. Was 9.31 from the 2026-08-14 wall measurement. 10 mm, but it is the number the 600 mm setout closes on, so it is the one to hold."
+  "width": 6.02,
+  "src": "given - re-measured 2026-08-21 along the tie run, front outer edge to back outer edge: 9.30 m. Was 9.31 from the 2026-08-14 wall measurement. 10 mm, but it is the number the 600 mm setout closes on, so it is the one to hold.",
+  "_widthCorrected": "0.02 m, owner 2026-10-01 - actual roof measurement came back 6.02 m, not 6.00. Small enough it does not move the tie/rafter setout, but it is now the number roof.pitchDeg and roof.ridgeLength were re-derived against."
  },
  "heights": {
   "pier": 0.2,
