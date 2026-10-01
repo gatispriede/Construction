@@ -87,7 +87,7 @@ QP = qp(ridgeZ)                 # ze = h <= b, so one value for the whole envelo
 QP_II = qp(ridgeZ, 0.05)        # terrain II, for the sensitivity line
 
 CPE_W, CPE_L = 0.8, -0.55       # walls, h/d ~ 1.3
-CPE_RW, CPE_RL = 0.7, -0.25     # duopitch 54 deg, wind across the ridge
+CPE_RW, CPE_RL = 0.7, -0.25     # duopitch 45-60 deg band (covers 52-54 deg as-built), wind across the ridge
 CPI = 0.2
 
 # Case A - wind ACROSS the ridge, per metre of building length.
@@ -369,7 +369,8 @@ ASSUMPTIONS = [
     f"{QP_II/QP:.2f} to see it.",
     "kmod 0.9 throughout. EN 1995 allows 1.1 for instantaneous wind, so every "
     "wind row has 22% more cover than it shows.",
-    "cpe,10 walls +0.8 / -0.55, roof +0.7 / -0.25 at 54 deg, cpi +-0.2.",
+    f"cpe,10 walls +0.8 / -0.55, roof +0.7 / -0.25 ({P['roof']['pitchDeg']:.0f} deg, "
+    "45-60 deg table band), cpi +-0.2.",
     "Racking capacity of the built diagonals is stated as force per diagonal, "
     "not kN/m: their end connections have never been specified (F10). That is "
     "also why the gable/portal SHARE cannot be computed properly: with 4 x 6 mm "
