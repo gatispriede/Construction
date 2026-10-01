@@ -752,5 +752,14 @@
   "src": "owner, confirmed VAT-inclusive 2026-08-16",
   "_correction": "310 EUR/m3 INCLUDES 21% VAT. Every timber figure produced before 2026-08-16 treated it as ex-VAT and added 21% on top, so the inclusive totals were 1.21x too high. The ex-VAT rate is 256.20. Board costs and comparisons between sections were unaffected - only the VAT line was wrong.",
   "_note": "Concrete is priced separately from the Vidzemes Betons list, which IS quoted ex VAT (93 EUR/m3 for C25/30). Do not apply this rate to the floor."
+ },
+ "drainage": {
+  "system": "Toode round, d=125 mm, RR2H3 antracite",
+  "ordered": "tekne 24 tm, savienotajs 6, arejais stiprinajums 140 mm x 18, gals 4, piltuve d=125-100 x 2",
+  "downpipesDeferred": true,
+  "_system": "ROUND d=125, not the kantaina (square) system in the catalogue page - the invoice is for apala. 125 round is ample: catchment is 67.4 m2 per slope, about 1.01 l/s, and a 125 gutter with one outlet carries well over 2.",
+  "_downpipesDeferred": "Owner 2026-10-01: downpipes ordered later, once the walls are done. Right reason - the pipe brackets fix THROUGH the finished cladding, so their standoff depends on the wall build-up that does not exist yet: 25 mm batten cavity + 22 mm cladding = 47 mm of packing before the bracket reaches anything structural. Order them against the built wall, not against a drawing. When it comes: 2 downpipes, each 1 x A likums + 1 x B likums to swan-neck back over the 696 mm eaves overhang, pipe to about 2.70 m of drop, 2 brackets, 1 lejasgals.",
+  "_bracketsShort": "18 BRACKETS ORDERED FOR 22.4 m OF GUTTER - one per 1.24 m, and that is about half what this roof needs. Steel gutter wants 600 mm centres, so 40. The reason is not the water, it is the SNOW: eaves._snowSlide says the real load is snow releasing off the pitch as an impact, not a static load, and at 52 deg it releases hard. 22 more brackets at about EUR 4. This one is NOT deferrable with the downpipes - the brackets fix to the fascia and the gutter line has to be set before the karnize, because the karnize's 85 mm downturn has to discharge into it.",
+  "_outletPosition": "One piltuve per run, at the MIDDLE. Two 5.60 m runs at 3 mm/m is 17 mm of fall each, against 34 mm for a single end outlet. Less total fall keeps the gutter lower relative to the roof line everywhere, which is what the snow-slide note asks for."
  }
 }
