@@ -744,8 +744,9 @@
   "planned": true,
   "material": null,
   "src": "owner 2026-09-04 - walls will be insulated too. Material not yet decided; OSB is a candidate.",
-  "_status": "PENDING - no thickness, layer order, or fixing detail decided. Do not assume a number here until the owner specifies one. OSB is being considered, most likely as an interior sheathing layer (stud - OSB - insulation - membrane - batten - sheet, or similar), not as the insulation itself.",
-  "_openQuestions": "1) OSB inside or outside the studs, and is it meant to be structural (racking diaphragm) or just a nailing/vapour-control layer. 2) Insulation type and thickness. 3) Whether an added interior sheet changes wallBattens fixing depth - those screws currently land straight into bare stud/girt/sill/plate, nothing else in the way."
+  "_status": "PENDING - no thickness, layer order, or fixing detail decided. Do not assume a number here until the owner specifies one.",
+  "_nonCombustible": "OWNER 2026-10-15: the interior lining and the insulation behind it must both be non-combustible - the workshop does metalwork (grinding/welding) against these walls, and OSB is now RULED OUT as the visible interior layer, it is wood. Interior lining candidates: Fermacell (gypsum fibre, A2, takes fixings directly - recommended for a workshop) or cement-fibre board (closer to A1, tougher, heavier, pricier) over plain fire-rated plasterboard (A2 but crumbles under impact, needs a fixing point behind every screw). Insulation MUST be mineral wool (akmens vate, A1) - NOT EPS/XPS/PUR foam, which is combustible and could ignite unseen inside the wall from a spark through a gap or screw hole. This is a hard constraint now, not a preference.",
+  "_openQuestions": "1) Fermacell vs cement-fibre board for the interior lining, and thickness. 2) Mineral wool thickness/density. 3) Whether the lining is structural (racking diaphragm) or just a fixing/fire layer. 4) Whether it changes wallBattens fixing depth - those screws currently land straight into bare stud/girt/sill/plate, nothing else in the way."
  },
  "timberPrice": {
   "eurPerM3": 310.0,
