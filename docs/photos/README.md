@@ -22,3 +22,12 @@ What they show:
 - Topmost gap wider than the rest; owner will redo it
 - Eaves fascia on, membrane dressed over it and hanging loose, not yet trimmed
 - Frame otherwise complete: ties, purlin frames, knee braces, bracing
+
+## 2026-10-15 — roof complete
+
+Classic 480 click panels, kore, vējmala and the kantaina gutter all on.
+
+- `roof-complete-ridge-apex.jpg` / `roof-complete-ridge-end.jpg` — kore at the gable corner, vējmala wrapping over its end as discussed.
+- `roof-complete-vertical-profile.jpg` / `roof-complete-gable-slope.jpg` — vertical-profile sheet on both slopes.
+- `roof-complete-gutter-corner.jpg` — kantaina gutter and outer corner piece at the eaves.
+- `roof-complete-gable-verge.jpg` — gable verge from below; exposed rafter tails below the vējmala are painted, not just preservative-treated (owner's weatherproofing choice for end grain left in the open — doesn't touch the still-open F11 fire-retardant question, different product, different purpose).
